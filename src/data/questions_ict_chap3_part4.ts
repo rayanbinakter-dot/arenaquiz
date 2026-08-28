@@ -23,10 +23,10 @@ export const ictChap3QuestionsPart4: Question[] = [
   {
     id: 160,
     topic: "৭. ডিজিটাল ডিভাইস",
-    question_text: "১৬০. যে বর্তনীতে ২ⁿ টি ইনপুট থেকে n টি আউটপুট পাওয়া যায় তাকে কী বলে? [য. বো. ২৫; অনুরূপ: রা. বো. ২৩]\n[এখানে চিত্র ছিল]",
+    question_text: "১৬০. ১৬০. নিচের চিত্রটি দ্বারা কোন বর্তনীকে নির্দেশ করে? [য. বো. ২৫; অনুরূপ: রা. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["হাফ-অ্যাডার", "ফুল অ্যাডার", "এনকোডার", "ডিকোডার"],
     correct_answer: "এনকোডার",
-    explanation: "এনকোডারের ইনপুট সংখ্যা 2ⁿ হলে আউটপুট লাইন সংখ্যা হয় n।",
+    explanation: "এনকোডার ক্ষেত্রে ইনপুট $2^n$ টি হলে আউটপুট $n$ টি হয়।",
     time_limit: 30
   },
   {
@@ -77,10 +77,11 @@ export const ictChap3QuestionsPart4: Question[] = [
   {
     id: 166,
     topic: "৭. ডিজিটাল ডিভাইস",
-    question_text: "১৬৬. IC এর আউটপুট ক্যারি লাইন কোন গেইট নির্দেশ করে? [মা. বো. ১৯]\n[এখানে চিত্র ছিল]",
-    options: ["A+B", "AB", "A ⊕ B", "(AB)\u0305"],
-    correct_answer: "AB",
-    explanation: "অ্যাডার সার্কিটে ক্যারি বিট নির্দেশ করে AB (AND অপারেশন)।",
+    stimulus: "[এখানে চিত্র ছিল]",
+    question_text: "১৬৬. ১৬৬. $\\mathrm{IC}$ এর আউটপুট কত হবে? [মা. বো. ১৯]",
+    options: ["$\\mathrm{A+B}$", "$\\mathrm{AB}$", "$\\mathrm{A\\oplus B}$", "$\\overline{AB}$"],
+    correct_answer: "$\\mathrm{AB}$",
+    explanation: "",
     time_limit: 30
   },
   {
@@ -95,15 +96,17 @@ export const ictChap3QuestionsPart4: Question[] = [
   {
     id: 168,
     topic: "৭. ডিজিটাল ডিভাইস",
-    question_text: "১৬৮. হাফ অ্যাডার চিত্রে আউটপুট যোগফল S এর সমীকরণ হবে-\n[এখানে চিত্র ছিল]",
-    options: ["S = M+N", "S = M ⊕ N", "S = (M ⊕ N)\u0305", "S = M ⊙ N"],
-    correct_answer: "S = M ⊕ N",
-    explanation: "হাফ অ্যাডারের যোগফল S = M ⊕ N।",
+    stimulus: "[এখানে চিত্র ছিল]",
+    question_text: "১৬৮. ১৬৮. 'ক' চিত্রের আউটপুট যোগফল $\\mathrm{S}$ এর সমীকরণ হবে-",
+    options: ["$\\mathrm{S = M+N}$", "$\\mathrm{S = M\\oplus N}$", "$\\mathrm{S = \\overline{M\\oplus N}}$", "$\\mathrm{S = M\\odot N}$"],
+    correct_answer: "$\\mathrm{S = M\\oplus N}$",
+    explanation: "",
     time_limit: 30
   },
   {
     id: 169,
     topic: "৭. ডিজিটাল ডিভাইস",
+    stimulus: "[এখানে চিত্র ছিল]",
     question_text: "১৬৯. ফুল অ্যাডারে আউটপুট ক্যারি Cₒ = 0 পেতে হলে ইনপুট M, N ও C_in এর মান হতে পারে-\ni. M=0, N=1, C_in=1\nii. M=0, N=1, C_in=0\niii. M=1, N=1, C_in=0\nনিচের কোনটি সঠিক?",
     options: ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"],
     correct_answer: "ii ও iii",
@@ -131,10 +134,11 @@ export const ictChap3QuestionsPart4: Question[] = [
   {
     id: 172,
     topic: "৭. ডিজিটাল ডিভাইস",
-    question_text: "১৭২. F = A ⊕ B থেকে প্রাপ্ত লজিক গেইট ব্যবহৃত হতে পারে- [রা. বো. ২৪]\ni. কাউন্টার তৈরির ক্ষেত্রে\nii. দুটি বিটের অবস্থা তুলনা করার জন্য\niii. হাফ অ্যাডার তৈরির ক্ষেত্রে\nনিচের কোনটি সঠিক?\n[এখানে চিত্র ছিল]",
+    stimulus: "[এখানে চিত্র ছিল]",
+    question_text: "১৭২. ১৭২. উদ্দীপকের $\\mathrm{F}$ থেকে প্রাপ্ত লজিক গেইট ব্যবহৃত হতে পারে- [রা. বো. ২৪]\ni. কাউন্টার তৈরির ক্ষেত্রে\nii. দুটি বিটের অবস্থা তুলনা করার জন্য\niii. হাফ অ্যাডার তৈরির ক্ষেত্রে\nনিচের কোনটি সঠিক?",
     options: ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"],
     correct_answer: "ii ও iii",
-    explanation: "XOR গেইট বিট তুলনা এবং হাফ অ্যাডার এর যোগফল (Sum) তৈরিতে ব্যবহৃত হয়।",
+    explanation: "$\\mathrm{F = A.B + \\overline{A}+\\overline{B} = (A.B).(\\overline{A}+\\overline{B}) = (A+B)(A+B)}$\n$= AB+\\overline{A}\\overline{B} = A\\oplus B$, যা $\\mathrm{XOR}$ গেইট।\n[$\\mathrm{XOR}$ গেইট দিয়ে শুধুমাত্র বাইনারি যোগফল $\\mathrm{Sum}$ বের করা যায়, কিন্তু অ্যাডার দিয়ে যোগের $\\mathrm{Sum}$ ও $\\mathrm{Carry}$ নির্ণয় করা যায়]",
     time_limit: 30
   },
   {

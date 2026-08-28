@@ -14,10 +14,10 @@ export const ictChap3QuestionsPart2: Question[] = [
   {
     id: 56,
     topic: "৪. বিভিন্ন প্রকার কোড",
-    question_text: "৫৬. (78)₁₀ এর BCD মান কত? [রা. বো. ১৬; য. বো. ১৬]\n[এখানে চিত্র ছিল]",
-    options: ["01111001", "01111000", "01101000", "01101100"],
-    correct_answer: "01111000",
-    explanation: "৭ = 0111 এবং ৮ = 1000 -> (78)₁₀ এর BCD মান হলো 01111000।",
+    question_text: "৫৬. ৫৬. $(78)_{10}$ এর $\\mathrm{BCD}$ মান কত? [রা. বো. ১৬; য. বো. ১৬]",
+    options: ["$01111001$", "$01111000$", "$01101000$", "$01101100$"],
+    correct_answer: "$01111001$",
+    explanation: "$\\mathrm{BCD}$ কোড দশমিক সংখ্যাকে বাইনারি সংখ্যায় রূপান্তর করে\n[এখানে চিত্র ছিল]\n$\\therefore 0111\\ 1000$",
     time_limit: 30
   },
   {
@@ -196,10 +196,10 @@ export const ictChap3QuestionsPart2: Question[] = [
   {
     id: 76,
     topic: "৫. বুলিয়ান অ্যালজেবরা",
-    question_text: "৭৬. F = A + Ā হলে F-এর মান কত?\n[এখানে চিত্র ছিল]",
-    options: ["1", "0", "A", "Ā"],
-    correct_answer: "1",
-    explanation: "বুলিয়ান অ্যালজেবরার পরিপূরক উপপাদ্য অনুযায়ী A + Ā = 1।",
+    question_text: "৭৬. ৭৬.\n[এখানে চিত্র ছিল]\n$\\mathrm{F}$-এর মান কত?",
+    options: ["$1$", "$0$", "$\\mathrm{A}$", "$\\overline{\\mathrm{A}}$"],
+    correct_answer: "$1$",
+    explanation: "$\\mathrm{F} = \\mathrm{A} + \\overline{\\mathrm{A}} = 1$ [বুলিয়ান অ্যালজেবরার মৌলিক উপপাদ্য]",
     time_limit: 30
   },
   {
