@@ -14,7 +14,7 @@ export const ictChap3QuestionsPart2: Question[] = [
   {
     id: 56,
     topic: "৪. বিভিন্ন প্রকার কোড",
-    question_text: "৫৬. ৫৬. $(78)_{10}$ এর $\\mathrm{BCD}$ মান কত? [রা. বো. ১৬; য. বো. ১৬]",
+    question_text: "৫৬. $(78)_{10}$ এর $\\mathrm{BCD}$ মান কত? [রা. বো. ১৬; য. বো. ১৬]",
     options: ["$01111001$", "$01111000$", "$01101000$", "$01101100$"],
     correct_answer: "$01111001$",
     explanation: "$\\mathrm{BCD}$ কোড দশমিক সংখ্যাকে বাইনারি সংখ্যায় রূপান্তর করে\n[এখানে চিত্র ছিল]\n$\\therefore 0111\\ 1000$",
