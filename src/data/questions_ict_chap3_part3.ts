@@ -77,7 +77,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 99,
     topic: "৬. লজিক গেইট",
-    question_text: "৯৯. সত্যক সারণিতে ইনপুটদ্বয় অসমান (0,1 বা 1,0) হলে আউটপুট 1 এবং সমান (0,0 বা 1,1) হলে আউটপুট 0 হয়- এটি কোন গেইট? [য. বো. ২৩]",
+    question_text: "৯৯. সত্যক সারণিতে ইনপুটদ্বয় অসমান (0,1 বা 1,0) হলে আউটপুট 1 এবং সমান (0,0 বা 1,1) হলে আউটপুট 0 হয়- এটি কোন গেইট? [য. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["OR", "AND", "NOT", "XOR"],
     correct_answer: "XOR",
     explanation: "XOR গেইটের বৈশিষ্ট্য হলো বিজোড় সংখ্যক 1 বা ইনপুট দুটি ভিন্ন হলে আউটপুট 1 হয়।",
@@ -95,7 +95,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 101,
     topic: "৬. লজিক গেইট",
-    question_text: "১০১. দুটি সুইচ শ্রেণিতে (Series) যুক্ত থাকলে কোন লজিক গেট নির্দেশ করে? [য. বো. ১৭]",
+    question_text: "১০১. দুটি সুইচ শ্রেণিতে (Series) যুক্ত থাকলে কোন লজিক গেট নির্দেশ করে? [য. বো. ১৭]\n[এখানে চিত্র ছিল]",
     options: ["AND", "OR", "NOT", "NOR"],
     correct_answer: "AND",
     explanation: "সুইচগুলো সিরিজে বা শ্রেণিতে থাকলে AND গেট তৈরি হয়, কারণ উভয় সুইচ অন না থাকলে বাতি জ্বলবে না।",
@@ -113,7 +113,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 103,
     topic: "৬. লজিক গেইট",
-    question_text: "১০৩. দুটি সুইচ সমান্তরালে (Parallel) যুক্ত থাকলে কখন বাতির আলো জ্বলবে না? [রা. বো. ২৫]",
+    question_text: "১০৩. দুটি সুইচ সমান্তরালে (Parallel) যুক্ত থাকলে কখন বাতির আলো জ্বলবে না? [রা. বো. ২৫]\n[এখানে চিত্র ছিল]",
     options: ["A=0, B=0", "A=0, B=1", "A=1, B=0", "A=1, B=1"],
     correct_answer: "A=0, B=0",
     explanation: "সমান্তরাল সুইচ বর্তনী OR গেইট নির্দেশ করে। উভয় সুইচ বন্ধ (A=0, B=0) থাকলে বাতি জ্বলবে না।",
@@ -131,7 +131,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 105,
     topic: "৬. লজিক গেইট",
-    question_text: "১০৫. উভয় ইনপুট 1 হলে আউটপুট 0 হয় কোন গেইটে? [য. বো. ১৯]\ni. NAND\nii. NOR\niii. XNOR\nনিচের কোনটি সঠিক?",
+    question_text: "১০৫. উভয় ইনপুট 1 হলে আউটপুট 0 হয় কোন গেইটে? [য. বো. ১৯]\ni. NAND\nii. NOR\niii. XNOR\nনিচের কোনটি সঠিক?\n[এখানে চিত্র ছিল]",
     options: ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"],
     correct_answer: "i ও iii",
     explanation: "NAND গেইটে 1.1=0 এবং NOR গেইটে 1+1=0। কিন্তু XNOR গেইটে উভয় ইনপুট 1 হলে আউটপুট 1 হয়।",
@@ -158,7 +158,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 108,
     topic: "৬. লজিক গেইট",
-    question_text: "১০৮. OR গেটের মুখে একটি বাবল (NOT) যুক্ত করলে কোন সার্বজনীন গেট পাওয়া যায়? [দি. বো. ২৩]",
+    question_text: "১০৮. OR গেটের মুখে একটি বাবল (NOT) যুক্ত করলে কোন সার্বজনীন গেট পাওয়া যায়? [দি. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["AND", "OR", "NOR", "NAND"],
     correct_answer: "NOR",
     explanation: "OR গেটের সাথে NOT গেট যুক্ত করে NOR গেট তৈরি হয়।",
@@ -176,7 +176,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 110,
     topic: "৬. লজিক গেইট",
-    question_text: "১১০. যে সত্যক সারণিতে সকল ইনপুট 1 হলে আউটপুট 0 এবং অন্যথায় 1 হয় তা কোন গেট নির্দেশ করে? [য. বো. ২৩]",
+    question_text: "১১০. যে সত্যক সারণিতে সকল ইনপুট 1 হলে আউটপুট 0 এবং অন্যথায় 1 হয় তা কোন গেট নির্দেশ করে? [য. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["NOR", "NAND", "XOR", "XNOR"],
     correct_answer: "NAND",
     explanation: "এটি NAND গেটের ট্রুথ টেবিল।",
@@ -221,7 +221,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 115,
     topic: "৬. লজিক গেইট",
-    question_text: "১১৫. সার্বজনীন গেট তৈরিতে ব্যবহৃত হয়- [রা. বো. ২৩; অনুরূপ: চ. বো. ১৬]\ni. AND\nii. OR\niii. NOT\nনিচের কোনটি সঠিক?",
+    question_text: "১১৫. সার্বজনীন গেট তৈরিতে ব্যবহৃত হয়- [রা. বো. ২৩; অনুরূপ: চ. বো. ১৬]\ni. AND\nii. OR\niii. NOT\nনিচের কোনটি সঠিক?\n[এখানে চিত্র ছিল]",
     options: ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"],
     correct_answer: "i, ii ও iii",
     explanation: "সার্বজনীন গেট তৈরিতে মৌলিক ৩টি গেটই (AND, OR, NOT) ব্যবহৃত হয়।",
@@ -230,7 +230,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 116,
     topic: "৬. লজিক গেইট",
-    question_text: "১১৬. NAND গেটের প্রতীকী রূপ কোনটি? [কু. বো. ১৭]",
+    question_text: "১১৬. NAND গেটের প্রতীকী রূপ কোনটি? [কু. বো. ১৭]\n[এখানে চিত্র ছিল]",
     options: ["AND গেটের মুখে বাবল যুক্ত প্রতীক", "OR গেটের মুখে বাবল যুক্ত প্রতীক", "NOT গেটের প্রতীক", "XOR গেটের প্রতীক"],
     correct_answer: "AND গেটের মুখে বাবল যুক্ত প্রতীক",
     explanation: "AND গেটের আউটপুটে ছোট শূন্য বা বাবল যুক্ত করে NAND গেটের প্রতীক আঁকা হয়।",
@@ -239,7 +239,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 117,
     topic: "৬. লজিক গেইট",
-    question_text: "১১৭. সত্যক সারণিতে ইনপুট (0,0) তে 1 এবং বাকি সব ক্ষেত্রে 0 হলে লজিক গেইট কোনটি?",
+    question_text: "১১৭. সত্যক সারণিতে ইনপুট (0,0) তে 1 এবং বাকি সব ক্ষেত্রে 0 হলে লজিক গেইট কোনটি?\n[এখানে চিত্র ছিল]",
     options: ["AND", "OR", "NOR", "NAND"],
     correct_answer: "NOR",
     explanation: "NOR গেইটে শুধুমাত্র (0,0) ইনপুটের জন্য আউটপুট 1 হয়, বাকি সব ক্ষেত্রে 0।",
@@ -248,7 +248,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 118,
     topic: "৬. লজিক গেইট",
-    question_text: "১১৮. NOR গেটের আউটপুট কলামে '0' স্থলে '1' এবং '1' এর স্থলে '0' বসালে প্রাপ্ত গেইটটি হবে-",
+    question_text: "১১৮. NOR গেটের আউটপুট কলামে '0' স্থলে '1' এবং '1' এর স্থলে '0' বসালে প্রাপ্ত গেইটটি হবে-\n[এখানে চিত্র ছিল]",
     options: ["AND", "NAND", "XOR", "OR"],
     correct_answer: "OR",
     explanation: "NOR এর আউটপুটকে উল্টে দিলে OR গেইটের আউটপুট পাওয়া যায়।",
@@ -257,7 +257,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 119,
     topic: "৬. লজিক গেইট",
-    question_text: "১১৯. Q = M̄ + MN + MN̄ বর্তনীটির Q-এর সরলীকৃত মান কত? [রা. বো. ১৭]",
+    question_text: "১১৯. Q = M̄ + MN + MN̄ বর্তনীটির Q-এর সরলীকৃত মান কত? [রা. বো. ১৭]\n[এখানে চিত্র ছিল]",
     options: ["0", "1", "M", "M+N"],
     correct_answer: "1",
     explanation: "Q = M̄ + M(N + N̄) = M̄ + M(1) = M̄ + M = 1।",
@@ -266,7 +266,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 120,
     topic: "৬. লজিক গেইট",
-    question_text: "১২০. A ইনপুটটি NOT গেট হয়ে AND গেটে B এর সাথে যুক্ত হলে আউটপুট X হবে- [কু. বো. ২৩, ১৬; অনুরূপ: ঢা. বো. ২৩; দি. বো. ১৫]",
+    question_text: "১২০. A ইনপুটটি NOT গেট হয়ে AND গেটে B এর সাথে যুক্ত হলে আউটপুট X হবে- [কু. বো. ২৩, ১৬; অনুরূপ: ঢা. বো. ২৩; দি. বো. ১৫]\n[এখানে চিত্র ছিল]",
     options: ["AB", "ĀB", "AB̄", "(AB)\u0305"],
     correct_answer: "(AB)\u0305",
     explanation: "NOT(A) ও B কে AND করলে ĀB হয়।",
@@ -275,7 +275,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 121,
     topic: "৬. লজিক গেইট",
-    question_text: "১২১. F = (Ā + B̄ + C̄)\u0305 এর সরলীকৃত মান কোনটি? [চ. বো. ১৬; অনুরূপ: ঢা. বো. ২৩; য. বো. ১৬]",
+    question_text: "১২১. F = (Ā + B̄ + C̄)\u0305 এর সরলীকৃত মান কোনটি? [চ. বো. ১৬; অনুরূপ: ঢা. বো. ২৩; য. বো. ১৬]\n[এখানে চিত্র ছিল]",
     options: ["A+B+C", "Ā + B̄ + C̄", "ABC", "(A + B + C)\u0305"],
     correct_answer: "ABC",
     explanation: "ডি-মরগ্যানের উপপাদ্য অনুযায়ী: (Ā + B̄ + C̄)\u0305 = (Ā)\u0305 . (B̄)\u0305 . (C̄)\u0305 = A.B.C।",
@@ -284,7 +284,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 122,
     topic: "৬. লজিক গেইট",
-    question_text: "১২২. F = ABC সমীকরণটি নিচের কোন মৌলিক গেইটকে সমর্থন করে? [চ. বো. ১৬]",
+    question_text: "১২২. F = ABC সমীকরণটি নিচের কোন মৌলিক গেইটকে সমর্থন করে? [চ. বো. ১৬]\n[এখানে চিত্র ছিল]",
     options: ["OR", "AND", "NOT", "NOR"],
     correct_answer: "OR",
     explanation: "লজিক্যাল গুণ নির্দেশ করায় এটি AND গেইটের সমতুল্য।",
@@ -293,7 +293,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 123,
     topic: "৬. লজিক গেইট",
-    question_text: "১২৩. F = (X̄ + Ȳ)\u0305 এর সরলীকৃত মান কোনটি? [য. বো. ২৫; অনুরূপ: মা. বো. ১৬]",
+    question_text: "১২৩. F = (X̄ + Ȳ)\u0305 এর সরলীকৃত মান কোনটি? [য. বো. ২৫; অনুরূপ: মা. বো. ১৬]\n[এখানে চিত্র ছিল]",
     options: ["X+Y", "XY", "X̄ + Ȳ", "X.Y"],
     correct_answer: "XY",
     explanation: "ডি-মরগ্যান সূত্র: (X̄ + Ȳ)\u0305 = X̄̄ . Ȳ̄ = XY।",
@@ -311,7 +311,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 125,
     topic: "৬. লজিক গেইট",
-    question_text: "১২৫. P = ((Ā.B̄) + (A+C))\u0305 এর সরলীকৃত মান কোনটি? [দি. বো. ২৫; অনুরূপ: ঢা. বো. ২৪, ২৩, ১৯; য. বো. ২৩; চ. বো. ২৩]",
+    question_text: "১২৫. P = ((Ā.B̄) + (A+C))\u0305 এর সরলীকৃত মান কোনটি? [দি. বো. ২৫; অনুরূপ: ঢা. বো. ২৪, ২৩, ১৯; য. বো. ২৩; চ. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["ABC", "A+B+C", "ĀB̄C̄", "(A+B+C)\u0305"],
     correct_answer: "ABC",
     explanation: "ডিমরগ্যান সূত্রের প্রয়োগে সরলীকরণ করলে ABC পাওয়া যায়।",
@@ -329,7 +329,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 127,
     topic: "৬. লজিক গেইট",
-    question_text: "১২৭. XOR গেইটের আউটপুট Y এর সমীকরণ কোনটি? [ঢা. বো. ২৫]",
+    question_text: "১২৭. XOR গেইটের আউটপুট Y এর সমীকরণ কোনটি? [ঢা. বো. ২৫]\n[এখানে চিত্র ছিল]",
     options: ["ĀB̄ + AB", "ĀB + AB̄", "A.B", "A+B"],
     correct_answer: "ĀB + AB̄",
     explanation: "XOR গেইটের সমীকরণ Y = A ⊕ B = ĀB + AB̄।",
@@ -338,7 +338,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 128,
     topic: "৬. লজিক গেইট",
-    question_text: "১২৮. XOR গেইটে Y এর মান 0 হয়, যখন- [ঢা. বো. ২৫; অনুরূপ: ব. বো. ২৩]\ni. A=1, B=0\nii. A=0, B=1\niii. A=1, B=1\nনিচের কোনটি সঠিক?",
+    question_text: "১২৮. XOR গেইটে Y এর মান 0 হয়, যখন- [ঢা. বো. ২৫; অনুরূপ: ব. বো. ২৩]\ni. A=1, B=0\nii. A=0, B=1\niii. A=1, B=1\nনিচের কোনটি সঠিক?\n[এখানে চিত্র ছিল]",
     options: ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"],
     correct_answer: "i ও ii",
     explanation: "XOR গেইটে ইনপুটদ্বয় একই হলে (0,0 বা 1,1) আউটপুট 0 হয়।",
@@ -347,7 +347,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 129,
     topic: "৬. লজিক গেইট",
-    question_text: "১২৯. P = ĀB̄ + AB সরলীকরণ মানের সমতুল্য গেইট কোনটি? [ব. বো. ২৪]",
+    question_text: "১২৯. P = ĀB̄ + AB সরলীকরণ মানের সমতুল্য গেইট কোনটি? [ব. বো. ২৪]\n[এখানে চিত্র ছিল]",
     options: ["NAND", "NOR", "XOR", "XNOR"],
     correct_answer: "XNOR",
     explanation: "ĀB̄ + AB হলো XNOR (Exclusive-NOR) গেইটের সমীকরণ।",
@@ -356,7 +356,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 130,
     topic: "৬. লজিক গেইট",
-    question_text: "১৩০. XNOR গেইটের আউটপুট Y এর মান হতে পারে- [রা. বো. ২৩]\ni. P ⊕ Q\nii. PQ + P̄Q̄\niii. (P ⊕ Q)\u0305\nনিচের কোনটি সঠিক?",
+    question_text: "১৩০. XNOR গেইটের আউটপুট Y এর মান হতে পারে- [রা. বো. ২৩]\ni. P ⊕ Q\nii. PQ + P̄Q̄\niii. (P ⊕ Q)\u0305\nনিচের কোনটি সঠিক?\n[এখানে চিত্র ছিল]",
     options: ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"],
     correct_answer: "ii ও iii",
     explanation: "XNOR সমীকরণ: Y = (P ⊕ Q)\u0305 = PQ + P̄Q̄।",
@@ -374,7 +374,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 132,
     topic: "৬. লজিক গেইট",
-    question_text: "১৩২. F = ((X̄Ȳ) + (X̄Ȳ))\u0305 হলে F এর মান কোনটি? [রা. বো. ২৫]",
+    question_text: "১৩২. F = ((X̄Ȳ) + (X̄Ȳ))\u0305 হলে F এর মান কোনটি? [রা. বো. ২৫]\n[এখানে চিত্র ছিল]",
     options: ["XY", "X.Y", "X̄Ȳ", "XȲ"],
     correct_answer: "XY",
     explanation: "বুলিয়ান উপপাদ্য প্রয়োগে সরলীকরণ করলে মান XY পাওয়া যায়।",
@@ -383,7 +383,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 133,
     topic: "৬. লজিক গেইট",
-    question_text: "১৩৩. চিত্রে ২ নং গেইটের পরিবর্তে কোন গেইট স্থাপন করলে F = 0 হয়? [রা. বো. ২৫; অনুরূপ: ঢা. বো. ১৬]",
+    question_text: "১৩৩. চিত্রে ২ নং গেইটের পরিবর্তে কোন গেইট স্থাপন করলে F = 0 হয়? [রা. বো. ২৫; অনুরূপ: ঢা. বো. ১৬]\n[এখানে চিত্র ছিল]",
     options: ["OR", "AND", "NOR", "NAND"],
     correct_answer: "AND",
     explanation: "AND গেইট বসালে F = X . (X+Y)\u0305 = X . X̄Ȳ = 0Ȳ = 0 হয়।",
@@ -392,7 +392,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 134,
     topic: "৬. লজিক গেইট",
-    question_text: "১৩৪. F = (A ⊕ A)\u0305 + B এর সরলীকৃত মান হবে- [য. বো. ২৩]",
+    question_text: "১৩৪. F = (A ⊕ A)\u0305 + B এর সরলীকৃত মান হবে- [য. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["A+B", "Ā+B", "A+B̄", "(A+B)\u0305"],
     correct_answer: "A+B",
     explanation: "A ⊕ A = 0, ফলে (0)\u0305 = 1 অথবা সমীকরণ অনুযায়ী সরলীকরণ A+B নির্দেশ করে।",
@@ -401,7 +401,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 135,
     topic: "৬. লজিক গেইট",
-    question_text: "১৩৫. XOR গেইটের স্থলে কোন গেইট বসালে আউটপুট 1 হবে? [ম. বো. ২৫]",
+    question_text: "১৩৫. XOR গেইটের স্থলে কোন গেইট বসালে আউটপুট 1 হবে? [ম. বো. ২৫]\n[এখানে চিত্র ছিল]",
     options: ["AND", "OR", "NAND", "NOR"],
     correct_answer: "NAND",
     explanation: "NAND গেইট প্রয়োগ করলে আউটপুট 1 পাওয়া যায়।",
@@ -410,7 +410,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 136,
     topic: "৬. লজিক গেইট",
-    question_text: "১৩৬. F = ((ĀB̄) + (AB)\u0305)\u0305 এর সরলীকৃত মান হচ্ছে- [ব. বো. ২৪]",
+    question_text: "১৩৬. F = ((ĀB̄) + (AB)\u0305)\u0305 এর সরলীকৃত মান হচ্ছে- [ব. বো. ২৪]\n[এখানে চিত্র ছিল]",
     options: ["AB", "ĀB", "AB̄", "(AB)\u0305"],
     correct_answer: "(AB)\u0305",
     explanation: "ডিমরগ্যান সূত্রের সাহায্যে সরলীকৃত রূপ (AB)\u0305 বা AB̄ নির্ধারিত হয়।",
@@ -428,7 +428,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 138,
     topic: "৬. লজিক গেইট",
-    question_text: "১৩৮. Y = (A+B)\u0305 + AB এর সরলীকৃত মান কোনটি? [য. বো. ২৫]",
+    question_text: "১৩৮. Y = (A+B)\u0305 + AB এর সরলীকৃত মান কোনটি? [য. বো. ২৫]\n[এখানে চিত্র ছিল]",
     options: ["A ⊕ B", "A ⊙ B", "A+B", "AB"],
     correct_answer: "A ⊕ B",
     explanation: "(A+B)\u0305 + AB = ĀB̄ + AB = A ⊙ B (XNOR)।",
@@ -446,7 +446,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 140,
     topic: "৬. লজিক গেইট",
-    question_text: "১৪০. XOR গেইট বাস্তবায়নে প্রাপ্ত সমীকরণ নিচের কোনটি? [রা. বো. ১৮; কু. বো. ১৯]",
+    question_text: "১৪০. XOR গেইট বাস্তবায়নে প্রাপ্ত সমীকরণ নিচের কোনটি? [রা. বো. ১৮; কু. বো. ১৯]\n[এখানে চিত্র ছিল]",
     options: ["ĀB + AB̄", "A ⊙ B", "A ⊕ B", "ĀB̄ + (AB)\u0305"],
     correct_answer: "ĀB + AB̄",
     explanation: "A ⊕ B = ĀB + AB̄। এটি ৫টি মৌলিক গেইট (২টি NOT, ২টি AND, ১টি OR) দিয়ে তৈরি করা যায়।",
@@ -455,7 +455,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 141,
     topic: "৬. লজিক গেইট",
-    question_text: "১৪১. F = (A + B̄)\u0305 + (A + B)\u0305 আউটপুটের সরলীকরণ মান কোন গেইটের সাথে সাদৃশ্যপূর্ণ? [য. বো. ১৯]",
+    question_text: "১৪১. F = (A + B̄)\u0305 + (A + B)\u0305 আউটপুটের সরলীকরণ মান কোন গেইটের সাথে সাদৃশ্যপূর্ণ? [য. বো. ১৯]\n[এখানে চিত্র ছিল]",
     options: ["NAND", "NOR", "XOR", "XNOR"],
     correct_answer: "XOR",
     explanation: "সরলীকরণ করে পাই ĀB + AB̄ = A ⊕ B যা XOR গেইট নির্দেশ করে।",
@@ -464,7 +464,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 142,
     topic: "৬. লজিক গেইট",
-    question_text: "১৪২. X = P ⊕ Q ⊕ R এর মান 1 হবে যখন- [কু. বো. ১৯]\ni. P=1, Q=1, R=0\nii. P=0, Q=1, R=1\niii. P=1, Q=1, R=1\nনিচের কোনটি সঠিক?",
+    question_text: "১৪২. X = P ⊕ Q ⊕ R এর মান 1 হবে যখন- [কু. বো. ১৯]\ni. P=1, Q=1, R=0\nii. P=0, Q=1, R=1\niii. P=1, Q=1, R=1\nনিচের কোনটি সঠিক?\n[এখানে চিত্র ছিল]",
     options: ["i ও ii", "i ও iii", "ii ও iii", "i, ii ও iii"],
     correct_answer: "i ও iii",
     explanation: "XOR গেইটে বিজোড় সংখ্যক 1 থাকলে আউটপুট 1 হয়। (1,1,1) এ ৩টি 1 আছে, তাই আউটপুট 1।",
@@ -482,7 +482,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 144,
     topic: "৬. লজিক গেইট",
-    question_text: "১৪৪. যে সত্যক সারণিতে ইনপুট (0,1) ও (1,0) তে আউটপুট 1 হয় তা কোন গেইট? [সি. বো. ২৩]",
+    question_text: "১৪৪. যে সত্যক সারণিতে ইনপুট (0,1) ও (1,0) তে আউটপুট 1 হয় তা কোন গেইট? [সি. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["OR", "NOR", "X-OR", "X-NOR"],
     correct_answer: "X-OR",
     explanation: "ইনপুট অসমান হলে আউটপুট 1 হওয়া XOR (Exclusive-OR) গেইটের বৈশিষ্ট্য।",
@@ -500,7 +500,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 146,
     topic: "৬. লজিক গেইট",
-    question_text: "১৪৬. F = ĀB̄ + AB সমীকরণটির সমতুল্য লজিক গেইট কোনটি? [রা. বো. ১৯]",
+    question_text: "১৪৬. F = ĀB̄ + AB সমীকরণটির সমতুল্য লজিক গেইট কোনটি? [রা. বো. ১৯]\n[এখানে চিত্র ছিল]",
     options: ["OR", "XOR", "NAND", "XNOR"],
     correct_answer: "XNOR",
     explanation: "ĀB̄ + AB = A ⊙ B যা XNOR গেট নির্দেশ করে।",
@@ -518,7 +518,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 148,
     topic: "৬. লজিক গেইট",
-    question_text: "১৪৮. সত্যক সারণির আউটপুট ক্রমানুসারে A, B, C এর মান কোনটি? [ঢা. বো. ২৫]",
+    question_text: "১৪৮. সত্যক সারণির আউটপুট ক্রমানুসারে A, B, C এর মান কোনটি? [ঢা. বো. ২৫]\n[এখানে চিত্র ছিল]",
     options: ["1, 1, 0", "0, 0, 1", "0, 1, 0", "1, 0, 1"],
     correct_answer: "0, 0, 1",
     explanation: "লজিক গেটের নির্দিষ্ট ইনপুট মানের জন্য প্রাপ্ত আউটপুট 0, 0, 1।",
@@ -536,7 +536,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 150,
     topic: "৬. লজিক গেইট",
-    question_text: "১৫০. NAND গেটের সমন্বয়ে তৈরি বিশেষ লজিক সার্কিটের আউটপুট X এর মান হবে- [বি. বো. ১৭; অনুরূপ: চ. বো. ১৯]",
+    question_text: "১৫০. NAND গেটের সমন্বয়ে তৈরি বিশেষ লজিক সার্কিটের আউটপুট X এর মান হবে- [বি. বো. ১৭; অনুরূপ: চ. বো. ১৯]\n[এখানে চিত্র ছিল]",
     options: ["A ⊕ B", "A ⊙ B", "(A ⊕ B)\u0305", "A ⊕ B̄"],
     correct_answer: "A ⊕ B",
     explanation: "৪টি NAND গেট দিয়ে XOR (A ⊕ B) বাস্তবায়ন করা যায়।",
@@ -545,7 +545,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 151,
     topic: "৬. লজিক গেইট",
-    question_text: "১৫১. X = (ĀB̄ . (AB)\u0305)\u0305 আউটপুট সমীকরণ কোন গেইটের সমতুল্য? [য. বো. ২৩]",
+    question_text: "১৫১. X = (ĀB̄ . (AB)\u0305)\u0305 আউটপুট সমীকরণ কোন গেইটের সমতুল্য? [য. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["NAND", "NOR", "X-OR", "X-NOR"],
     correct_answer: "X-OR",
     explanation: "সরলীকরণ করে পাই A ⊕ B (XOR গেট)।",
@@ -563,7 +563,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 153,
     topic: "৬. লজিক গেইট",
-    question_text: "১৫৩. F = P(P+Q)\u0305(P+Q)\u0305 এর সরলীকৃত মান কোনটি? [দি. বো. ২৩]",
+    question_text: "১৫৩. F = P(P+Q)\u0305(P+Q)\u0305 এর সরলীকৃত মান কোনটি? [দি. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["P ⊕ Q", "(P ⊕ Q)\u0305", "P+Q", "P̄ + Q̄"],
     correct_answer: "P ⊕ Q",
     explanation: "বুলিয়ান উপপাদ্যের সাহায্যে সরলীকরণ করলে মান P ⊕ Q পাওয়া যায়।",
@@ -572,7 +572,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 154,
     topic: "৬. লজিক গেইট",
-    question_text: "১৫৪. F = P ⊕ Q সরলীকৃত মানকে মোট কয়টি মৌলিক গেট দ্বারা বাস্তবায়ন সম্ভব? [দি. বো. ২৩]",
+    question_text: "১৫৪. F = P ⊕ Q সরলীকৃত মানকে মোট কয়টি মৌলিক গেট দ্বারা বাস্তবায়ন সম্ভব? [দি. বো. ২৩]\n[এখানে চিত্র ছিল]",
     options: ["2", "3", "4", "5"],
     correct_answer: "3",
     explanation: "P ⊕ Q = P̄Q + PQ̄। এতে ৩ ধরনের মৌলিক গেট (NOT, AND, OR) ব্যবহৃত হয়। মোট গেট সংখ্যা ৫টি (২টি NOT, ২টি AND, ১টি OR)।",
@@ -581,7 +581,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 155,
     topic: "৬. লজিক গেইট",
-    question_text: "১৫৫. Y = ĀB + C বুলিয়ান সমীকরণ বাস্তবায়ণ করতে মোট কয়টি মৌলিক গেইট প্রয়োজন?",
+    question_text: "১৫৫. Y = ĀB + C বুলিয়ান সমীকরণ বাস্তবায়ণ করতে মোট কয়টি মৌলিক গেইট প্রয়োজন?\n[এখানে চিত্র ছিল]",
     options: ["2", "3", "4", "5"],
     correct_answer: "3",
     explanation: "Ā এর জন্য ১টি NOT, ĀB এর জন্য ১টি AND এবং + C এর জন্য ১টি OR — মোট ৩টি মৌলিক গেট প্রয়োজন।",
@@ -590,7 +590,7 @@ export const ictChap3QuestionsPart3: Question[] = [
   {
     id: 156,
     topic: "৬. লজিক গেইট",
-    question_text: "১৫৬. Y = (A+B)\u0305 . (Ā + B̄) এর সরলীকৃত মান হলো- [কু. বো. ২৪]",
+    question_text: "১৫৬. Y = (A+B)\u0305 . (Ā + B̄) এর সরলীকৃত মান হলো- [কু. বো. ২৪]\n[এখানে চিত্র ছিল]",
     options: ["A", "Ā", "B", "B̄"],
     correct_answer: "Ā",
     explanation: "(A+B)\u0305 . (Ā + B̄) = (ĀB̄)(Ā + B̄) = ĀĀB̄ + ĀB̄B̄ = ĀB̄ + ĀB̄ = ĀB̄।",
