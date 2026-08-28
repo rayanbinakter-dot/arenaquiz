@@ -2,6 +2,7 @@ import { collection, doc, getDocs, setDoc, deleteDoc } from 'firebase/firestore'
 import { db } from '../firebase';
 import { QuestionMediaItem, QuestionMediaPlacement, QuestionItem } from '../types/questionBank';
 import { slugifyText } from '../utils/questionParser';
+import { getLocalMediaForAliases } from '../utils/localQuestionMedia';
 
 export const PLACEMENT_BANGLA_LABELS: Record<QuestionMediaPlacement, string> = {
   question: 'প্রশ্নের চিত্র',
@@ -662,6 +663,15 @@ export function resolveQuestionMediaState(
     combinedMedia = [...question.media];
   }
 
+  // Local (in-repo) media discovered by filename convention — highest priority after explicit media
+  const localMedia = getLocalMediaForAliases(aliases);
+  localMedia.forEach(lm => {
+    const p = lm.placement || 'question';
+    if (!combinedMedia.some(m => (m.placement || 'question') === p)) {
+      combinedMedia.push(lm);
+    }
+  });
+
   // If question has legacy stemImageUrl or image property, map to a question media item
   const legacyQuestionUrl = question?.stemImageUrl || question?.image || (question as any)?.imageUrl;
   if (legacyQuestionUrl && !combinedMedia.some(m => (m.placement || 'question') === 'question')) {
@@ -847,6 +857,14 @@ export async function fetchAllQuestionsNeedingImage(
     // Combine attached media with overrides
     const attachedMedia: QuestionMediaItem[] = [];
     if (item.attachedMedia) attachedMedia.push(...item.attachedMedia);
+
+    // Local (in-repo) media via filename convention
+    const localAliases = getQuestionKeyAliases({ ...(item.rawItem || {}), ...item });
+    getLocalMediaForAliases(localAliases).forEach(lm => {
+      if (!attachedMedia.some(m => (m.placement || 'question') === (lm.placement || 'question'))) {
+        attachedMedia.push(lm);
+      }
+    });
     if (override?.media) {
       override.media.forEach((ov) => {
         if (!attachedMedia.some((m) => (m.placement || 'question') === (ov.placement || 'question'))) {

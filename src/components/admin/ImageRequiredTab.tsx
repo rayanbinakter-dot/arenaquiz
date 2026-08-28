@@ -19,10 +19,9 @@ import { QuestionItem, QuestionMediaPlacement, QuestionMediaItem } from '../../t
 import {
   QuestionNeedingImage,
   fetchAllQuestionsNeedingImage,
-  getPlacementBanglaLabel,
-  saveQuestionMediaOverride
+  getPlacementBanglaLabel
 } from '../../lib/questionMediaOverrides';
-import QuestionImageUploader from './QuestionImageUploader';
+import { getSuggestedLocalFilename } from '../../utils/localQuestionMedia';
 import { MediaPlacement } from '../../utils/questionMediaRequirements';
 import {
   getRouteLabel,
@@ -734,62 +733,74 @@ export default function ImageRequiredTab({
                   )}
                 </div>
 
-                {/* 4. Per-Placement Image Upload Slots (Firebase Storage) */}
+                {/* 4. Local (in-repo) Image Slots — Option D: images live in src/assets/question-media */}
                 <div className="border-t border-slate-800/80 pt-3.5 mt-2 space-y-3">
                   <div className="text-[11px] font-bold text-cyan-400 flex items-center gap-1.5">
                     <ImageIcon className="w-3.5 h-3.5 text-cyan-400" />
-                    <span>চিত্র আপলোড করুন (প্রতিটি স্থানের জন্য আলাদা স্লট):</span>
+                    <span>চিত্র ফাইল (রিপো ফোল্ডার: src/assets/question-media/):</span>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {reqPlacements.map((placement) => (
-                      <div key={`${item.stableKey}_${placement}`}>
-                      <QuestionImageUploader
-                        placement={placement}
-                        media={item.attachedMedia || []}
-                        userEmail={userEmail}
-                        hasPlaceholderWarning={(item.missingPlacements || reqPlacements).includes(placement)}
-                        pathParams={{
-                          route: item.routeId,
-                          subject: item.subjectId,
-                          paper: item.paperId,
-                          chapterId: item.chapterId || 'unknown',
-                          sourceSet: item.sourceSetId || 'default',
-                          topicId: item.topicId || 'general',
-                          questionId: String(item.stableKey),
-                          placement,
-                          filename: 'image.png'
-                        }}
-                        onChange={async (updatedMedia: QuestionMediaItem[]) => {
-                          try {
-                            await saveQuestionMediaOverride(
-                              item.stableKey,
-                              updatedMedia,
-                              {
-                                questionKey: item.stableKey,
-                                stableKey: item.stableKey,
-                                questionId: item.questionId,
-                                route: item.routeId,
-                                subject: item.subjectId,
-                                paper: item.paperId,
-                                chapterId: item.chapterId,
-                                chapterName: item.chapterName,
-                                topicId: item.topicId,
-                                topicName: item.topicName,
-                                teacher: item.teacher,
-                                sourceQuestionNumber: item.sourceQuestionNumber,
-                                requiredPlacements: reqPlacements
-                              } as Partial<QuestionNeedingImage>,
-                              userEmail
-                            );
-                            await loadAll();
-                          } catch (err) {
-                            console.error('চিত্র সংরক্ষণে সমস্যা হয়েছে:', err);
-                            alert('চিত্র সংরক্ষণে সমস্যা হয়েছে। আবার চেষ্টা করুন।');
-                          }
-                        }}
-                      />
-                      </div>
-                    ))}
+                    {reqPlacements.map((placement) => {
+                      const attached = (item.attachedMedia || []).find(
+                        (m) => (m.placement || 'question') === placement && Boolean(m.url)
+                      );
+                      const expectedName = getSuggestedLocalFilename(item.stableKey, placement);
+                      return (
+                        <div
+                          key={`${item.stableKey}_${placement}`}
+                          className={`rounded-2xl border p-3.5 space-y-2 ${
+                            attached
+                              ? 'bg-emerald-950/20 border-emerald-500/30'
+                              : 'bg-slate-950/60 border-amber-500/30'
+                          }`}
+                        >
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-xs font-bold text-slate-200">
+                              {getPlacementBanglaLabel(placement)}
+                            </span>
+                            {attached ? (
+                              <span className="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                                ✓ চিত্র পাওয়া গেছে
+                              </span>
+                            ) : (
+                              <span className="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                                ফাইল নেই
+                              </span>
+                            )}
+                          </div>
+
+                          {attached ? (
+                            <div className="space-y-1.5">
+                              <img
+                                src={attached.url}
+                                alt={attached.altText || 'Question diagram'}
+                                className="max-h-36 rounded-xl border border-slate-800 object-contain bg-white/5"
+                              />
+                              <div className="text-[10px] font-mono text-slate-500 truncate">{attached.fileName}</div>
+                            </div>
+                          ) : (
+                            <div className="space-y-1.5">
+                              <p className="text-[11px] text-slate-400 leading-relaxed">
+                                এই নামে ফাইল রাখুন (PNG/JPG/WEBP):
+                              </p>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  navigator.clipboard?.writeText(expectedName);
+                                }}
+                                title="ক্লিক করলে ফাইলের নাম কপি হবে"
+                                className="w-full text-left px-2.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-[11px] font-mono text-cyan-300 hover:border-cyan-500/50 transition-colors cursor-pointer break-all"
+                              >
+                                {expectedName}
+                              </button>
+                              <p className="text-[10px] text-slate-500">
+                                ক্লিক করলে নাম কপি হবে · ফাইলটি src/assets/question-media/ ফোল্ডারে রেখে কমিট করুন
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
