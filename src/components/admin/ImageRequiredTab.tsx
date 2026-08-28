@@ -15,12 +15,14 @@ import {
   AlertCircle,
   RotateCcw
 } from 'lucide-react';
-import { QuestionItem, QuestionMediaPlacement } from '../../types/questionBank';
+import { QuestionItem, QuestionMediaPlacement, QuestionMediaItem } from '../../types/questionBank';
 import {
   QuestionNeedingImage,
   fetchAllQuestionsNeedingImage,
-  getPlacementBanglaLabel
+  getPlacementBanglaLabel,
+  saveQuestionMediaOverride
 } from '../../lib/questionMediaOverrides';
+import QuestionImageUploader from './QuestionImageUploader';
 import { MediaPlacement } from '../../utils/questionMediaRequirements';
 import {
   getRouteLabel,
@@ -91,7 +93,7 @@ function normalizeRequirementItem(item: QuestionNeedingImage): NormalizedMediaRe
 
 export default function ImageRequiredTab({
   questions,
-  userEmail: _userEmail,
+  userEmail,
   onRefreshQuestions
 }: ImageRequiredTabProps) {
   // Single canonical normalized media-requirement array
@@ -732,26 +734,62 @@ export default function ImageRequiredTab({
                   )}
                 </div>
 
-                {/* 4. Phase Notice: Disabled Upload Placeholder */}
-                <div className="border-t border-slate-800/80 pt-3.5 mt-2">
-                  <div className="bg-slate-950/50 border border-dashed border-slate-800 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 shrink-0">
-                        <ImageIcon className="w-4 h-4 text-slate-500" />
+                {/* 4. Per-Placement Image Upload Slots (Firebase Storage) */}
+                <div className="border-t border-slate-800/80 pt-3.5 mt-2 space-y-3">
+                  <div className="text-[11px] font-bold text-cyan-400 flex items-center gap-1.5">
+                    <ImageIcon className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>চিত্র আপলোড করুন (প্রতিটি স্থানের জন্য আলাদা স্লট):</span>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {reqPlacements.map((placement) => (
+                      <div key={`${item.stableKey}_${placement}`}>
+                      <QuestionImageUploader
+                        placement={placement}
+                        media={item.attachedMedia || []}
+                        userEmail={userEmail}
+                        hasPlaceholderWarning={(item.missingPlacements || reqPlacements).includes(placement)}
+                        pathParams={{
+                          route: item.routeId,
+                          subject: item.subjectId,
+                          paper: item.paperId,
+                          chapterId: item.chapterId || 'unknown',
+                          sourceSet: item.sourceSetId || 'default',
+                          topicId: item.topicId || 'general',
+                          questionId: String(item.stableKey),
+                          placement,
+                          filename: 'image.png'
+                        }}
+                        onChange={async (updatedMedia: QuestionMediaItem[]) => {
+                          try {
+                            await saveQuestionMediaOverride(
+                              item.stableKey,
+                              updatedMedia,
+                              {
+                                questionKey: item.stableKey,
+                                stableKey: item.stableKey,
+                                questionId: item.questionId,
+                                route: item.routeId,
+                                subject: item.subjectId,
+                                paper: item.paperId,
+                                chapterId: item.chapterId,
+                                chapterName: item.chapterName,
+                                topicId: item.topicId,
+                                topicName: item.topicName,
+                                teacher: item.teacher,
+                                sourceQuestionNumber: item.sourceQuestionNumber,
+                                requiredPlacements: reqPlacements
+                              } as Partial<QuestionNeedingImage>,
+                              userEmail
+                            );
+                            await loadAll();
+                          } catch (err) {
+                            console.error('চিত্র সংরক্ষণে সমস্যা হয়েছে:', err);
+                            alert('চিত্র সংরক্ষণে সমস্যা হয়েছে। আবার চেষ্টা করুন।');
+                          }
+                        }}
+                      />
                       </div>
-                      <div>
-                        <span className="text-xs font-bold text-slate-300 block">
-                          চিত্র আপলোড ব্যবস্থা পরবর্তী ধাপে যুক্ত হবে
-                        </span>
-                        <span className="text-[11px] text-slate-500">
-                          Phase 2: ডাইনামিক সনাক্তকরণ তালিকা সফলভাবে প্রস্তুত হয়েছে। পরবর্তী ধাপে সরাসরি ড্রপজোন ও ক্লাউড সিঙ্ক চালু করা হবে।
-                        </span>
-                      </div>
-                    </div>
-
-                    <span className="px-3 py-1 rounded-xl text-[11px] font-bold bg-slate-900 text-slate-400 border border-slate-800 shrink-0">
-                      আপলোড পরবর্তী ধাপে প্রস্তুত
-                    </span>
+                    ))}
                   </div>
                 </div>
               </div>
