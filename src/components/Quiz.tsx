@@ -547,7 +547,34 @@ export default function Quiz({
               <div className="font-bold text-purple-400 text-xs uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                 <FileText className="w-3.5 h-3.5" /> উদ্দীপক
               </div>
-              <MathText text={(currentQuestion as any).stimulus} />
+              {Boolean(mediaState.cleanStimulus && mediaState.cleanStimulus.trim()) && (
+                <MathText text={mediaState.cleanStimulus || ''} />
+              )}
+              {Boolean(mediaState.stimulusImageUrl) ? (
+                <div className="mt-2 space-y-1.5">
+                  <img
+                    src={mediaState.stimulusImageUrl}
+                    alt="উদ্দীপকের চিত্র"
+                    className="max-h-64 rounded-xl border border-purple-800/40 object-contain bg-white/95 mx-auto cursor-zoom-in"
+                    onClick={() => setZoomImage(mediaState.stimulusImageUrl || null)}
+                  />
+                  <div className="text-center">
+                    <button
+                      type="button"
+                      onClick={() => setZoomImage(mediaState.stimulusImageUrl || null)}
+                      className="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-semibold rounded-lg border border-slate-700 transition-colors cursor-pointer"
+                    >
+                      <ZoomIn className="w-3.5 h-3.5" />
+                      <span>চিত্র বড় করে দেখুন</span>
+                    </button>
+                  </div>
+                </div>
+              ) : (String((currentQuestion as any).stimulus).includes('[এখানে চিত্র ছিল]') ? (
+                <div className="mt-2 bg-amber-500/10 border border-amber-500/20 text-amber-300 px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+                  <ImageIcon className="w-4 h-4 text-amber-400 shrink-0" />
+                  <span>এই উদ্দীপকের চিত্র যুক্ত করা হচ্ছে।</span>
+                </div>
+              ) : null)}
             </div>
           )}
 
