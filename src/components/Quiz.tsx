@@ -631,7 +631,7 @@ export default function Quiz({
                 </button>
               </div>
             </div>
-          ) : (mediaState.needsImage || mediaState.hasPlaceholder) ? (
+          ) : mediaState.missingPlacements.includes('question') ? (
             /* Student View Placeholder Rule: Display clean notice when question requires an image but no image is uploaded */
             <div className="mb-4 bg-amber-500/10 border border-amber-500/20 text-amber-300 px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2 max-w-md mx-auto">
               <ImageIcon className="w-4 h-4 text-amber-400 shrink-0" />
