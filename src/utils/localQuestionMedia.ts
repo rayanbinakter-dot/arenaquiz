@@ -63,12 +63,19 @@ const registry: Record<string, Partial<Record<string, LocalMediaEntry>>> = {};
 
 function registerFile(path: string, url: string) {
   const fileName = path.split('/').pop() || '';
-  const base = fileName.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+  // Tolerate double extensions from Windows renaming (e.g. name.png.png)
+  const base = fileName.replace(/(\.(png|jpg|jpeg|webp))+$/i, '');
   const sepIdx = base.lastIndexOf('__');
   if (sepIdx <= 0) return; // must follow key__placement convention
 
   const key = base.slice(0, sepIdx).trim().toLowerCase();
-  const placementRaw = base.slice(sepIdx + 2).trim().toLowerCase();
+  // Tolerate stray extension remnants and spaces in placement (e.g. "explanation.png", "question (1)")
+  const placementRaw = base
+    .slice(sepIdx + 2)
+    .trim()
+    .toLowerCase()
+    .replace(/\.(png|jpg|jpeg|webp)$/i, '')
+    .replace(/\s*\(\d+\)$/, '');
 
   if (!VALID_PLACEMENTS.includes(placementRaw as QuestionMediaPlacement)) return;
 
