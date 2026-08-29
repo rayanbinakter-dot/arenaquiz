@@ -2378,4 +2378,990 @@ export const chem2OrganicQuestions: Question[] = [
     explanation: "",
     time_limit: 60
   },
+  // --- T-08: কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন ---
+  {
+    id: 82810,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১০. নিচের কোন জৈব যৌগটি আয়োডোফর্ম পরীক্ষায় অংশ গ্রহণ করে না? [DU'25-26]",
+    options: ["$\\mathrm{CH_{3}CH(OH)CH_{3}}$", "$\\mathrm{CH_{3}CH_{2}COCH_{2}CH_{3}}$", "$\\mathrm{CH_{3}CH_{2}OH}$", "$\\mathrm{CH_{3}COCH_{2}CH_{3}}$"],
+    correct_answer: "$\\mathrm{CH_{3}CH_{2}COCH_{2}CH_{3}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82811,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১১. অ্যালডিহাইড মূলক শনাক্তকরণে কোনটি ব্যবহৃত হয়? [JnU'25-26]",
+    options: ["$\\mathrm{AgNO_{3} + NH_{4}OH}$", "10% $\\mathrm{NaHCO_{3}}$", "$\\mathrm{Br_{2} + CCl_{4}}$", "2,4-DNPH"],
+    correct_answer: "$\\mathrm{AgNO_{3} + NH_{4}OH}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82812,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১২. কোন যৌগটি ক্যানিজারো বিক্রিয়া প্রদর্শন করে না? [JnU'25-26; RU'25-26; HSTU'25-26]",
+    options: ["HCHO", "$\\mathrm{CH_{3}CHO}$", "$\\mathrm{C_{6}H_{5}CHO}$", "$\\mathrm{(CH_{3})_{3}CHO}$"],
+    correct_answer: "$\\mathrm{CH_{3}CHO}$",
+    explanation: "$\\mathrm{CH_{3}-CHO}$ (অ্যাসিটালডিহাইড) যৌগটিতে $\\alpha$-H উপস্থিত। তাই এটি অ্যালডল বিক্রিয়া প্রদর্শন করে কিন্তু ক্যানিজারো বিক্রিয়া প্রদর্শন করে না।",
+    time_limit: 60
+  },
+  {
+    id: 82813,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১৩. রোজেনমুন্ড বিজারণ পদ্ধতিতে কোনটি প্রস্তুত করা যায় না? [JU'25-26]",
+    options: ["ফরম্যালডিহাইড", "বেনজালডিহাইড", "ইথান্যাল", "A এবং B উভয়েই"],
+    correct_answer: "ফরম্যালডিহাইড",
+    explanation: "রোজেনমুন্ড বিজারণ বিক্রিয়া:\n$\\mathrm{R-CO-Cl + H_{2} \\xrightarrow[\\text{ফুটন্ত জাইলিন}]{\\mathrm{Pb/BaSO_{4}}} R-CHO + HCl}$\nউক্ত বিক্রিয়ায় বিক্রিয়ক $\\mathrm{R-CO-Cl}$ এ অ্যালকাইল মূলক উপস্থিত থাকায় HCHO বা ফরম্যালডিহাইড তৈরি হয় না।",
+    time_limit: 60
+  },
+  {
+    id: 82814,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১৪. হ্যালোফর্ম (Haloform) বিক্রিয়া হলো- [CU'25-26]",
+    options: ["অ্যালকেন ও অ্যালকিনের সাথে হ্যালোজেনের বিক্রিয়া", "অ্যালকোহল ও ইথারের সাথে হ্যালোজেনের বিক্রিয়া", "এস্টার ও অ্যালকাইনের সাথে হ্যালোজেনের বিক্রিয়া", "অ্যালডিহাইড ও কিটোনের সাথে হ্যালোজেনের বিক্রিয়া"],
+    correct_answer: "অ্যালডিহাইড ও কিটোনের সাথে হ্যালোজেনের বিক্রিয়া",
+    explanation: "$\\mathrm{CH_{3}-CHO + 3I_{2} + 4NaOH \\rightarrow CHI_{3} \\downarrow + HCOONa + 3NaI + 3H_{2}O}$\n$\\mathrm{R-CO-CH_{3} + 3I_{2} + 4NaOH \\rightarrow R-COONa + CHI_{3} \\downarrow + 3NaI + 3H_{2}O}$\n$\\therefore$ অ্যালডিহাইড ও কিটোনের সাথে হ্যালোজেনের বিক্রিয়ায় হ্যালোফর্ম বিক্রিয়া ঘটে।",
+    time_limit: 60
+  },
+  {
+    id: 82815,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১৫. কোন যৌগটি নিউক্লিওফিলিক সংযোজন বিক্রিয়ায় সবচেয়ে বেশি ক্রিয়াশীল? [SUST'25-26]",
+    options: ["$\\mathrm{CH_{3}CHO}$", "$\\mathrm{C_{6}H_{5}CHO}$", "HCHO", "$\\mathrm{CH_{3}COCH_{3}}$"],
+    correct_answer: "HCHO",
+    explanation: "স্টেরিক বাধা HCHO এ সবচেয়ে কম।",
+    time_limit: 60
+  },
+  {
+    id: 82816,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১৬. নিচের কোন যৌগটি ক্যানিজারো বিক্রিয়া দেয়? [CoU'25-26]",
+    options: ["$\\mathrm{CH_{3}-CHO}$", "[এখানে চিত্র ছিল] (খ)", "[এখানে চিত্র ছিল] (গ)", "$\\mathrm{CH_{3}-CO-CH_{3}}$"],
+    correct_answer: "[এখানে চিত্র ছিল] (গ)",
+    explanation: "$\\alpha$-H বিহীন যৌগ ক্যানিজারো বিক্রিয়া দেয়।",
+    time_limit: 60
+  },
+  {
+    id: 82817,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১৭. কোন যৌগটি হ্যালোফর্ম বিক্রিয়া দেয়? [RU'24-25; GST'23-24]",
+    options: ["$\\mathrm{CH_{3}COCl}$", "$\\mathrm{CH_{3}CONH_{2}}$", "$\\mathrm{CH_{3}COOH}$", "$\\mathrm{CH_{3}COCH_{3}}$"],
+    correct_answer: "$\\mathrm{CH_{3}COCH_{3}}$",
+    explanation: "হ্যালোফর্ম বিক্রিয়ার শর্ত:\n(i) $\\mathrm{(CH_{3}CO-)}$ মূলকযুক্ত কার্বনিল যৌগ হতে হবে।\n(ii) $\\mathrm{(CH_{3}CO-)}$ মূলকটি H পরমাণু বা অ্যালকাইল মূলক ($\\mathrm{-CH_{3}}$) বা অ্যারাইল মূলক (যেমন- $\\mathrm{C_{6}H_{5}}$) এর সাথে যুক্ত থাকবে।\n$\\mathrm{CH_{3}CO-Cl, CH_{3}CO-NH_{2}}$ হ্যালোফর্ম বিক্রিয়া দেয় না।",
+    time_limit: 60
+  },
+  {
+    id: 82818,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১৮. $\\mathrm{CH \\equiv CH + H_{2}O \\xrightarrow[20\\% H_{2}SO_{4}]{2\\% HgSO_{4}, 60^{\\circ}C} A \\xrightarrow[Mn^{2+}]{O_{2}, 60^{\\circ}C} CH_{3}COOH}$\nবিক্রিয়ায় A যৌগটি কোনটি? [RU'24-25]",
+    options: ["HCHO", "$\\mathrm{CH_{3}COCH_{3}}$", "$\\mathrm{CH_{3}CHO}$", "HCOOH"],
+    correct_answer: "$\\mathrm{CH_{3}CHO}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82819,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১১৯. ফেহলিং দ্রবণে $\\mathrm{Cu_{2}O}$ এর লাল অধঃক্ষেপ দেয়\n(i) অ্যালডিহাইড (ii) ফরমিক এসিড (iii) ফ্রুক্টোজ\nনিচের কোনটি সঠিক? [JU'24-25, 21-22]",
+    options: ["i, ii", "ii, iii", "i, iii", "i, ii, iii"],
+    correct_answer: "i, ii, iii",
+    explanation: "$\\mathrm{(-CHO)}$ গ্রুপ থাকার কারণে অ্যালডিহাইড ফরমিক এসিড ও ফ্রুক্টোজ ফেহলিং দ্রবণে অধঃক্ষেপ দেয়।\nঅ্যালডিহাইড: $\\mathrm{(R-CHO)}$,\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82820,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২০. অ্যালডিহাইড ও কিটোনের মাঝে পার্থক্যকরণে ব্যবহৃত হয়- [JU'24-25; Agri'24-25]",
+    options: ["টলেন বিকারক", "2,4-DNPH", "$\\mathrm{FeCl_{3}}$", "$\\mathrm{AgNO_{3}}$"],
+    correct_answer: "টলেন বিকারক",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82821,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২১. $\\mathrm{2CH_{3}-CH_{2}OH(g) + O_{2}(g) \\xrightarrow{Ag, 250^{\\circ}C} ?}$ [KU'24-25]",
+    options: ["বেনজাইল অ্যালকোহল", "ইথান্যাল", "মিথান্যাল", "প্রোপানোন"],
+    correct_answer: "ইথান্যাল",
+    explanation: "$\\mathrm{Ag, 250^{\\circ}C}$; হাইড্রোজেন অপসারণে ব্যবহৃত হয়।",
+    time_limit: 60
+  },
+  {
+    id: 82822,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২২. ক্যানিজারো বিক্রিয়া দেখায়- [CU'24-25]\n(i) HCHO\n(ii) $\\mathrm{C_{6}H_{5}CHO}$\n(iii) $\\mathrm{CH_{3}CHO}$\nনিচের কোনটি সঠিক?",
+    options: ["ii, iii", "i, ii", "i, iii", "সবগুলো"],
+    correct_answer: "i, ii",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82823,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২৩. কোন যৌগটি আয়োডোফর্ম বিক্রিয়া দেয়? [GST'24-25]",
+    options: ["$\\mathrm{CH_{3}COOH}$", "$\\mathrm{CH_{3}CH(OH)CH_{3}}$", "$\\mathrm{CH_{3}CONH_{2}}$", "$\\mathrm{CH_{3}CH_{2}CHO}$"],
+    correct_answer: "$\\mathrm{CH_{3}CH(OH)CH_{3}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82824,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২৪. অ্যালডিহাইড + ফেহলিং দ্রবণ $\\rightarrow$ লাল অধঃক্ষেপ; বিক্রিয়াটি হলো- [GST'24-25]",
+    options: ["যুত বিক্রিয়া", "রেডক্স বিক্রিয়া", "বিযুক্তকরণ বিক্রিয়া", "প্রতিস্থাপন বিক্রিয়া"],
+    correct_answer: "রেডক্স বিক্রিয়া",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82825,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২৫. কার্বনাইল মূলক এর ক্ষেত্রে কোনটি প্রযোজ্য নয়? [SUST'24-25]",
+    options: ["বন্ধনকোণ $120^{\\circ}$", "সমতলীয় গঠন", "$\\mathrm{sp^{3}}$ সংকরিত C পরমাণু", "$\\sigma$ ও $\\pi$ বন্ধন আছে"],
+    correct_answer: "$\\mathrm{sp^{3}}$ সংকরিত C পরমাণু",
+    explanation: "কার্বনাইল মূলকের কার্বন পরমাণু $\\mathrm{sp^{2}}$ সংকরিত।",
+    time_limit: 60
+  },
+  {
+    id: 82826,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২৬. কোন যৌগটি ক্যানিজারো বিক্রিয়া দিবে না? [SUST'24-25]",
+    options: ["$\\mathrm{CCl_{3}-CHO}$", "$\\mathrm{H-CHO}$", "$\\mathrm{C_{6}H_{5}-CHO}$", "$\\mathrm{C_{6}H_{5}-CH_{2}-CHO}$"],
+    correct_answer: "$\\mathrm{C_{6}H_{5}-CH_{2}-CHO}$",
+    explanation: "যেসব কার্বনিল মূলক যুক্ত যৌগে $\\alpha$ কার্বনে H নেই শুধুমাত্র তারাই ক্যানিজারো বিক্রিয়া দেয়। $\\mathrm{C_{6}H_{5}-CH_{2}-CHO}$ যৌগের $\\alpha$-কার্বন পরমাণুতে H রয়েছে। তাই এটি ক্যানিজারো বিক্রিয়া দেয় না।",
+    time_limit: 60
+  },
+  {
+    id: 82827,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২৭. কোন যৌগটি হ্যালোফর্ম বিক্রিয়া দেয় না? [SUST'24-25]",
+    options: ["$\\mathrm{CH_{3}CH_{2}OH}$", "$\\mathrm{CH_{3}COCH_{3}}$", "$\\mathrm{CH_{3}CH(OH)CH_{3}}$", "$\\mathrm{CH_{3}CONH_{2}}$"],
+    correct_answer: "$\\mathrm{CH_{3}CONH_{2}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82828,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২৮. অ্যামোনিয়াযুক্ত $\\mathrm{AgNO_{3}}$ দ্রবণ দ্বারা নিচের কোনটি শনাক্ত করা যায়? [RU'23-24; JU'20-21]",
+    options: ["অ্যালকোহল", "অ্যালডিহাইড", "কিটোন", "অ্যালকিন"],
+    correct_answer: "অ্যালডিহাইড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82829,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১২৯. কোনটি হ্যালোফর্ম বিক্রিয়া দেয় না? [RU'23-24]",
+    options: ["$\\mathrm{CH_{3}CHO}$", "$\\mathrm{CH_{3}CH(OH)CH_{3}}$", "$\\mathrm{CH_{3}COCl}$", "$\\mathrm{CH_{3}COCH_{3}}$"],
+    correct_answer: "$\\mathrm{CH_{3}COCl}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82830,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩০. $\\mathrm{2C_{6}H_{5}CHO + 50\\%\\, NaOH \\rightarrow A + B;}$ দুটি উৎপাদের একটি হবে- [JU'23-24]",
+    options: ["$\\mathrm{C_{6}H_{5}CH_{3}}$", "$\\mathrm{C_{6}H_{5}COOH}$", "$\\mathrm{C_{6}H_{5}CH_{2}OH}$", "$\\mathrm{C_{6}H_{5}OH}$"],
+    correct_answer: "$\\mathrm{C_{6}H_{5}CH_{2}OH}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82831,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩১. কোন যৌগটি সিলভার দর্পণ পরীক্ষা দেয়? [JU'22-23; DU'20-21]",
+    options: ["প্রোপানোন", "প্রোপান্যাল", "প্রোপানল", "প্রোপাইন"],
+    correct_answer: "প্রোপান্যাল",
+    explanation: "অ্যালডিহাইডসমূহ টলেন বিকারক পরীক্ষা/সিলভার দর্পণ পরীক্ষা দেয়।",
+    time_limit: 60
+  },
+  {
+    id: 82832,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩২. জৈব যৌগে কার্বনিল মূলকের উপস্থিতি শনাক্তকরণের জন্য নমুনার সাথে যে যৌগটি যোগ করা হয়- [RU'22-23]",
+    options: ["[এখানে চিত্র ছিল] (ক)", "[এখানে চিত্র ছিল] (খ)", "[এখানে চিত্র ছিল] (গ)", "[এখানে চিত্র ছিল] (ঘ)"],
+    correct_answer: "[এখানে চিত্র ছিল] (ক)",
+    explanation: "কার্বনিল মূলক শনাক্তকরণের জন্য 2, 4-DNPH ব্যবহার করা হয়।",
+    time_limit: 60
+  },
+  {
+    id: 82833,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩৩. কোন যৌগটি অ্যালডল ঘনীভবন বিক্রিয়া দেয় না? [RU'22-23, 19-20, 14-15, 09-10; JnU'15-16, 14-15; CU'05-06]",
+    options: ["$\\mathrm{C(CH_{3})_{3}-CHO}$", "$\\mathrm{CH_{3}CH_{2}-CHO}$", "$\\mathrm{CH_{3}-CO-CH_{3}}$", "$\\mathrm{CH_{3}-CHO}$"],
+    correct_answer: "$\\mathrm{C(CH_{3})_{3}-CHO}$",
+    explanation: "$\\alpha$-H যুক্ত অ্যালডিহাইড ও কিটোনসমূহ অ্যালডল ঘনীভবন বিক্রিয়া দেয়। $\\mathrm{C(CH_{3})_{3}-CHO}$ যৌগে কোনো $\\alpha$-H নেই।",
+    time_limit: 60
+  },
+  {
+    id: 82834,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩৪. কোনটির সাথে বিক্রিয়ায় প্রোপানোন ও প্রোপান্যাল ভিন্ন পর্যবেক্ষণ দেয়? [RU'21-22]",
+    options: ["$\\mathrm{I_{2}(aq) + NaOH(aq)}$", "$\\mathrm{PCl_{5}}$", "bromine water", "2,4-DNPH"],
+    correct_answer: "$\\mathrm{I_{2}(aq) + NaOH(aq)}$",
+    explanation: "প্রোপানোন এ মিথাইল কার্বনিল মূলক থাকায় আয়োডোফর্ম বিক্রিয়া দেয় কিন্তু প্রোপান্যাল এ মূলক না থাকায় আয়োডোফর্ম বিক্রিয়া দেয় না।",
+    time_limit: 60
+  },
+  {
+    id: 82835,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩৫. অ্যামোনিয়াকাল সিলভার নাইট্রেট দ্রবণকে বলা হয়- [CU'22-23]",
+    options: ["Fehling reagent", "Lucas reagent", "Tollens' reagent", "Grignard reagent"],
+    correct_answer: "Tollens' reagent",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82836,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩৬. নিচের কোনটি সঠিক নয়? [RU'21-22]",
+    options: ["অ্যালডিহাইড টলেন বিকারক পরীক্ষা দেয়", "অ্যালডিহাইড ও কিটোন আয়োডোফর্ম পরীক্ষা দেয়", "কিটোন ফেলিং দ্রবণ পরীক্ষা দেয়", "অ্যালডিহাইড ও কিটোন ফিনাইল হাইড্রাজিনের সাথে বিক্রিয়া করে"],
+    correct_answer: "কিটোন ফেলিং দ্রবণ পরীক্ষা দেয়",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82837,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    stimulus: "[এখানে চিত্র ছিল]",
+    question_text: "১৩৭. [M] যৌগটি হলো- [JU'21-22]",
+    options: ["বিউটিন-2", "বিউটিন-1", "2-মিথাইল প্রোপিন", "1-মিথাইল বিউটিন"],
+    correct_answer: "2-মিথাইল প্রোপিন",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82838,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    stimulus: "[এখানে চিত্র ছিল]",
+    question_text: "১৩৮. [P] যৌগটি হলো- [JU'21-22]",
+    options: ["ইথান্যাল", "মিথান্যাল", "প্রোপান্যাল", "প্রোপানোন"],
+    correct_answer: "প্রোপানোন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82839,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৩৯. $\\mathrm{CH_{3}CHO}$ এবং $\\mathrm{CH_{3}COCH_{3}}$ এর মধ্যে পার্থক্যসূচক পরীক্ষায় ব্যবহৃত হয়- [RU'20-21; JU'17-18]",
+    options: ["$\\mathrm{K_{2}Cr_{2}O_{7}/H^{+}}$", "2,4-DNP", "$\\mathrm{[Ag(NH_{3})_{2}]^{+}}$", "$\\mathrm{PCl_{5}}$"],
+    correct_answer: "$\\mathrm{[Ag(NH_{3})_{2}]^{+}}$",
+    explanation: "টলেন বিকারক এর সাথে বিক্রিয়ায় অ্যালডিহাইড অধঃক্ষেপ দেয় কিন্তু কিটোন অধঃক্ষেপ দেয় না।",
+    time_limit: 60
+  },
+  {
+    id: 82840,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪০. কোনটি হ্যালোফর্ম বিক্রিয়ায় অংশগ্রহণ করে না? [KU'19-20; RU'14-15; CU'14-15; DU'13-14]",
+    options: ["$\\mathrm{CH_{3}OH}$", "$\\mathrm{CH_{3}-CHO}$", "$\\mathrm{CH_{3}CH_{2}OH}$", "$\\mathrm{CH_{3}-CO-CH_{3}}$"],
+    correct_answer: "$\\mathrm{CH_{3}OH}$",
+    explanation: "$\\mathrm{CH_{3}CO-}$ মূলক থাকলে হ্যালোফর্ম বিক্রিয়া দেয়। $\\mathrm{CH_{3}OH}$ কে জারণ করলে HCHO পাব, যার মিথাইল কার্বনিল মূলক নেই।",
+    time_limit: 60
+  },
+  {
+    id: 82841,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪১. $\\mathrm{CH_{3}CH(OH)CH_{2}CHO}$ এবং $\\mathrm{CH_{3}COCH_{2}CH_{2}OH}$ এর মধ্যে পার্থক্য করার জন্য কোন বিকারক ব্যবহার করা যেতে পারে? [DU'18-19]",
+    options: ["অম্লীয় $\\mathrm{K_{2}Cr_{2}O_{7}}$ দ্রবণ", "লঘু $\\mathrm{H_{2}SO_{4}}$", "2, 4 – ডাইনাইট্রোফিনাইলহাইড্রাজিন", "ফেহলিং এর দ্রবণ"],
+    correct_answer: "ফেহলিং এর দ্রবণ",
+    explanation: "অ্যালডিহাইড মূলক ফেহলিং দ্রবণের সাথে বিক্রিয়া করলেও কিটো মূলক করে না।",
+    time_limit: 60
+  },
+  {
+    id: 82842,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪২. নিচের কোনটি ফেহলিং দ্রবণ (Fehling's solution) এর সাথে বিক্রিয়া করে না? [CU'18-19]",
+    options: ["ফরমিক এসিড", "অ্যাসিটিক এসিড", "ফরমালডিহাইড", "এসিটালডিহাইড"],
+    correct_answer: "অ্যাসিটিক এসিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82843,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪৩. 'ফরমালিন' নিম্নের কোনটির 40% জলীয় দ্রবণ? [CU'18-19]",
+    options: ["ইথানয়িক এসিড", "মিথান্যাল", "কার্বোলিক এসিড", "গ্লিসারল"],
+    correct_answer: "মিথান্যাল",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82844,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪৪. ফেহলিং দ্রবণ ও টলেন বিকারক দ্বারা নিচের কোন গ্রুপ এর মধ্যে পার্থক্য করা যায়? [DU'17-18]",
+    options: ["অ্যালকেন ও অ্যালকাইন", "মিথানল ও ইথানল", "অ্যালডিহাইড ও কিটোন", "$\\mathrm{1^{\\circ}}$ ও $\\mathrm{2^{\\circ}}$ অ্যালকোহল"],
+    correct_answer: "অ্যালডিহাইড ও কিটোন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82845,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪৫. $\\mathrm{C_{6}H_{5}-CHO + CH_{3}NH_{2} \\rightarrow q + H_{2}O}$ বিক্রিয়ায় q এর আণবিক সংকেত কোনটি? [DU'17-18]",
+    options: ["$\\mathrm{C_{6}H_{5}-CH=N-CH_{3}}$", "$\\mathrm{C_{6}H_{5}-CH=N-C_{6}H_{5}}$", "$\\mathrm{C_{6}H_{5}-CH_{3}-COOH}$", "$\\mathrm{C_{6}H_{5}-COOH}$"],
+    correct_answer: "$\\mathrm{C_{6}H_{5}-CH=N-CH_{3}}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82846,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪৬. নিচের বিক্রিয়ার উৎপাদ/উৎপাদসমূহ কী?\n$\\mathrm{HCHO \\xrightarrow{(\\text{গাঢ় } NaOH \\text{ দ্রবণ})} Product(s)}$ [DU'17-18]",
+    options: ["$\\mathrm{CH_{3}OH + CH_{4}}$", "$\\mathrm{CH_{4}}$", "$\\mathrm{CH_{3}OH + HCOOH}$", "HCOOH"],
+    correct_answer: "$\\mathrm{CH_{3}OH + HCOOH}$",
+    explanation: "HCHO তে $\\alpha$-H নেই। তাই এটি ক্যানিজারো বিক্রিয়া দেয়।\n$\\mathrm{HCHO + HCHO \\xrightarrow{\\text{গাঢ় } NaOH} HCOONa + H_{2}O + CH_{3}OH}$",
+    time_limit: 60
+  },
+  {
+    id: 82847,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪৭. তিন কার্বন বিশিষ্ট একটি জৈব যৌগ X জারিত হয়ে Y উৎপন্ন করে। Y যৌগটি 2,4-DNP এর সাথে হলুদ অধঃক্ষেপ উৎপন্ন করে কিন্তু ফেহলিং দ্রবণের সাথে বিক্রিয়া করে না। X যৌগটির সংকেত- [JU'17-18]",
+    options: ["$\\mathrm{CH_{3}-CH_{2}-CH_{2}-OH}$", "$\\mathrm{CH_{3}-CH_{2}-CHO}$", "$\\mathrm{CH_{3}-CO-CH_{3}}$", "$\\mathrm{CH_{3}-CH(OH)-CH_{3}}$"],
+    correct_answer: "$\\mathrm{CH_{3}-CH(OH)-CH_{3}}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82848,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪৮. অ্যাসিটোন বিজারিত হয়ে কী উৎপন্ন করে? [CU'17-18]",
+    options: ["প্রোপাইল অ্যালকোহল", "আইসোপ্রোপাইল অ্যালকোহল", "অ্যারাইল অ্যালকোহল", "বিউটাইল অ্যালকোহল"],
+    correct_answer: "আইসোপ্রোপাইল অ্যালকোহল",
+    explanation: "$\\mathrm{CH_{3}-CO-CH_{3} + 2[H] \\rightarrow CH_{3}-CH(OH)-CH_{3}}$",
+    time_limit: 60
+  },
+  {
+    id: 82849,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৪৯. $\\mathrm{2C_{6}H_{5}CHO + NaOH \\rightarrow C_{6}H_{5}CH_{2}OH + C_{6}H_{5}COONa}$ -এ বিক্রিয়ার নাম কী? [CU'17-18]",
+    options: ["ক্যানিজারো বিক্রিয়া", "হফম্যান বিক্রিয়া", "অ্যালডল ঘনীভবন", "উরটজ বিক্রিয়া"],
+    correct_answer: "ক্যানিজারো বিক্রিয়া",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82850,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫০. HCHO ও $\\mathrm{CH_{3}CHO}$ এর মধ্যে পার্থক্য করার জন্য প্রয়োজন- [DU'16-17]",
+    options: ["আয়োডোফর্ম পরীক্ষা", "কার্বিল অ্যামাইন পরীক্ষা", "নিনহাইড্রিন পরীক্ষা", "টলেন বিকারক"],
+    correct_answer: "আয়োডোফর্ম পরীক্ষা",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82851,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫১. $\\mathrm{CH_{3}CHO + 2,4-DNPH \\rightarrow A + H_{2}O}$\nA যৌগটি হচ্ছে- [JU'16-17]",
+    options: ["[এখানে চিত্র ছিল] (ক)", "[এখানে চিত্র ছিল] (খ)", "[এখানে চিত্র ছিল] (গ)", "[এখানে চিত্র ছিল] (ঘ)"],
+    correct_answer: "[এখানে চিত্র ছিল] (ক)",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82852,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫২. একটি জৈব যৌগ টলেন বিকারক পরীক্ষায় চকচকে সিলভার দর্পণ সৃষ্টি করে। যৌগটি কী প্রকারের হবে? [RU'15-16]",
+    options: ["অ্যালডিহাইড", "কিটোন", "অ্যালকোহল", "ইথার"],
+    correct_answer: "অ্যালডিহাইড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82853,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫৩. নিম্নোক্ত যৌগগুলির মধ্যে কোনটি সবচেয়ে বেশি সক্রিয়? [RU'15-16, 14-15]",
+    options: ["$\\mathrm{CH_{3}COCH_{3}}$", "$\\mathrm{CH_{3}CHO}$", "HCHO", "$\\mathrm{CH_{3}CH_{2}CHO}$"],
+    correct_answer: "HCHO",
+    explanation: "R বৃদ্ধি পেলে সক্রিয়তা কমে;\n$\\mathrm{CH_{3}-CO-CH_{3} < CH_{3}-CH_{2}CHO < CH_{3}CHO < HCHO}$",
+    time_limit: 60
+  },
+  {
+    id: 82854,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫৪. 2, 4-ডাইনাইট্রোফিনাইল হাইড্রাজিন দ্বারা কোনটি শনাক্ত করা হয়? [JU'15-16]",
+    options: ["অ্যালকোহল", "অ্যামিন", "কিটোন", "এস্টার"],
+    correct_answer: "কিটোন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82855,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫৫. $\\mathrm{Ar-CHO \\xrightarrow[H_{2}O]{\\text{বিকারক (Reagent)/}H^{+}} ArCH(OH)COOH}$\nবিকারকটি- [DU'14-15]",
+    options: ["RMgX", "HCN", "$\\mathrm{CH_{3}Cl}$", "$\\mathrm{H_{2}CO_{3}}$"],
+    correct_answer: "HCN",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82856,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫৬. ফরমালিন হলো ফরমালডিহাইডের নিম্নোক্ত শতকরা জলীয় দ্রবণ- [DU'14-15; CU'12-13, 11-12; JU'10-11; RU'09-10, 08-09]",
+    options: ["50% - 60%", "20% - 25%", "80% - 90%", "30% - 40%"],
+    correct_answer: "30% - 40%",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82857,
+    topic: "কার্বনিল যৌগ: অ্যালডিহাইড, কিটোন",
+    topicId: "chem2_org_t08",
+    question_text: "১৫৭. নিম্নের কোনটি ক্যানিজারো বিক্রিয়া? [DU'13-14]",
+    options: ["$\\mathrm{2HCHO(l) \\xrightarrow{50\\% NaOH, 20-30^{\\circ}C} CH_{3}OH(aq) + HCOONa}$", "$\\mathrm{2CH_{3}CHO(l) \\xrightarrow{dil\\, NaOH, 20-30^{\\circ}C} CH_{3}CH(OH)CH_{2}CHO(aq)}$", "$\\mathrm{CH_{3}CHO(l) \\xrightarrow{LiAlH_{4}, Conc. HCl} CH_{3}CH_{2}OH}$", "$\\mathrm{CH_{3}CONH_{2}(aq) + Br_{2}(aq) + 4NaOH(aq) \\rightarrow CH_{3}NH_{2}(aq) + Na_{2}CO_{3}(aq) + 2H_{2}O(l) + 2NaBr(aq)}$"],
+    correct_answer: "$\\mathrm{2HCHO(l) \\xrightarrow{50\\% NaOH, 20-30^{\\circ}C} CH_{3}OH(aq) + HCOONa}$",
+    explanation: "",
+    time_limit: 60
+  },
+  // --- T-09: জৈব এসিড ও জাতক, অ্যামিন ---
+  {
+    id: 82958,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৫৮. $\\mathrm{CH_{3}CONH_{2}}$ হতে $\\mathrm{CH_{3}CH_{2}NH_{2}}$ তৈরিতে সর্বাপেক্ষা ভাল বিকারক ও বিক্রিয়ার শর্ত কোনটি? [DU'25-26]",
+    options: ["শুষ্ক ইথারে $\\mathrm{LiAlH_{4}}$", "শুষ্ক ইথারে $\\mathrm{NaBH_{4}}$", "অ্যালকোহলে $\\mathrm{NaBH_{4}}$", "অ্যালকোহলে $\\mathrm{LiAlH_{4}}$"],
+    correct_answer: "শুষ্ক ইথারে $\\mathrm{LiAlH_{4}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82959,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৫৯. কোন এসিডটির $\\mathrm{pK_{a}}$ এর মান সবচেয়ে বেশি? [JnU'25-26]",
+    options: ["$\\mathrm{CH_{3}COOH}$", "$\\mathrm{Cl_{2}CHCOOH}$", "$\\mathrm{ClCH_{2}COOH}$", "$\\mathrm{C_{6}H_{5}COOH}$"],
+    correct_answer: "$\\mathrm{CH_{3}COOH}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82960,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬০. জৈব যৌগে $\\mathrm{-COOH}$ গ্রুপ শনাক্ত করতে কোন দ্রবণটি ব্যবহৃত হয়? [JU'25-26]",
+    options: ["$\\mathrm{NaOH}$", "$\\mathrm{NaHCO_{3}}$", "$\\mathrm{AgNO_{3}}$", "$\\mathrm{FeCl_{3}}$"],
+    correct_answer: "$\\mathrm{NaHCO_{3}}$",
+    explanation: "$\\mathrm{R-COOH + NaHCO_{3} \\rightarrow R-COONa + H_{2}O + CO_{2}}$\n$\\mathrm{Ca(OH)_{2} + CO_{2} \\rightarrow CaCO_{3} \\downarrow + H_{2}O}$ (সাদা অধঃক্ষেপ)",
+    time_limit: 60
+  },
+  {
+    id: 82961,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬১. 1-বিউটাইল বেনজিন কে $\\mathrm{KMnO_{4}}$ এর সহিত উত্তপ্ত করলে কি উৎপন্ন হয়? [CU'25-26]",
+    options: ["[এখানে চিত্র ছিল] (ক)", "[এখানে চিত্র ছিল] (খ)", "[এখানে চিত্র ছিল] (গ)", "[এখানে চিত্র ছিল] (ঘ)"],
+    correct_answer: "[এখানে চিত্র ছিল] (ক)",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82962,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬২. কার্বন ডাইঅক্সাইড ও প্রোটন এর উপস্থিতিতে গ্রিগনার্ড বিকারক এর সাথে বিক্রিয়া করে কি উৎপন্ন করে? [KU'25-26]",
+    options: ["কিটোন", "অ্যালকোহল", "কার্বক্সিলিক এসিড", "অ্যামিন"],
+    correct_answer: "কার্বক্সিলিক এসিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82963,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬৩. একটি এস্টার কোন বিক্রিয়ায় অংশগ্রহণ করে? [SUST'25-26]",
+    options: ["নিউক্লিওফিলিক প্রতিস্থাপন", "নিউক্লিওফিলিক সংযোজন", "ইলেকট্রোফিলিক সংযোজন", "ইলেকট্রোফিলিক প্রতিস্থাপন"],
+    correct_answer: "নিউক্লিওফিলিক প্রতিস্থাপন",
+    explanation: "এস্টার এর বিক্রিয়া:\n$\\mathrm{R-COOR + NH_{3} \\rightarrow R-CONH_{2} + R-OH}$\nসুতরাং নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া ঘটে।",
+    time_limit: 60
+  },
+  {
+    id: 82964,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬৪. কত ডিগ্রির অ্যামিন কোয়াটারনারি লবণ উৎপন্ন করে? [HSTU'25-26]",
+    options: ["$1^{\\circ}$", "$2^{\\circ}$", "$3^{\\circ}$", "কোনোটিই নয়"],
+    correct_answer: "$3^{\\circ}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82965,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬৫. নিচের কোনটি সবচেয়ে মৃদু ক্ষার? [CoU'25-26]",
+    options: ["$\\mathrm{NH_{3}}$", "$\\mathrm{N_{2}H_{4}}$", "$\\mathrm{NH_{2}-OH}$", "$\\mathrm{C_{6}H_{5}NH_{2}}$"],
+    correct_answer: "$\\mathrm{C_{6}H_{5}NH_{2}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82966,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬৬. নিচের বিক্রিয়াটির নাম কী? [DU'24-25]\n$\\mathrm{CH_{3}CONH_{2} + Br_{2} + 4KOH \\xrightarrow{\\Delta} CH_{3}NH_{2} + 2KBr + K_{2}CO_{3} + 2H_{2}O}$",
+    options: ["হফম্যান ক্ষুদ্রাংশকরণ", "স্যান্ডমেয়ার বিক্রিয়া", "উরটজ-ফিটিগ বিক্রিয়া", "ক্লিমেনসন বিজারণ"],
+    correct_answer: "হফম্যান ক্ষুদ্রাংশকরণ",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82967,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬৭. নিচের কোনটি সবচেয়ে শক্তিশালী ক্ষারক? [JnU'24-25; JU'14-15]",
+    options: ["$\\mathrm{(CH_{3})_{2}NH}$", "$\\mathrm{CH_{3}NH_{2}}$", "$\\mathrm{C_{6}H_{5}NH_{2}}$", "$\\mathrm{(CH_{3})_{3}N}$"],
+    correct_answer: "$\\mathrm{(CH_{3})_{2}NH}$",
+    explanation: "সাধারণত অ্যামিনের ক্ষেত্রে ক্ষারকত্বের ক্রম হয়:\n$\\mathrm{2^{\\circ} > 1^{\\circ} > 3^{\\circ} > NH_{3}}$ > অ্যানিলিন\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82968,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬৮. পাকা ফলের সুগন্ধের মূল কারণ হলো- [JnU'24-25; KU'16-17; JU'14-15; RU'08-09; Agri'21-22]",
+    options: ["অ্যালকোহল", "এস্টার", "ভিটামিন", "মিনারেল"],
+    correct_answer: "এস্টার",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82969,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৬৯. নিচের কোনটি সবচেয়ে তীব্র এসিড? [JnU'24-25]",
+    options: ["$\\mathrm{CF_{3}COOH}$", "$\\mathrm{CCl_{3}COOH}$", "$\\mathrm{CBr_{3}COOH}$", "$\\mathrm{CI_{3}COOH}$"],
+    correct_answer: "$\\mathrm{CF_{3}COOH}$",
+    explanation: "দুর্বল এসিডের ক্ষেত্রে হ্যালোজেনের তড়িৎ ঋণাত্মকতা যত বৃদ্ধি পায় এসিডের শক্তিমাত্রা তত বৃদ্ধি পায়।",
+    time_limit: 60
+  },
+  {
+    id: 82970,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭০. কোনটি সবচেয়ে দুর্বল এসিড? [GST'24-25]",
+    options: ["HCOOH", "$\\mathrm{CH_{3}COOH}$", "$\\mathrm{ClCH_{2}COOH}$", "$\\mathrm{Cl_{2}CHCOOH}$"],
+    correct_answer: "$\\mathrm{CH_{3}COOH}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82971,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭১. কোন যৌগটি কার্বিল অ্যামিন বিক্রিয়া দেয়? [GST'24-25]",
+    options: ["$\\mathrm{C_{2}H_{5}NH_{2}}$", "$\\mathrm{(CH_{3})_{2}NH}$", "$\\mathrm{(CH_{3})_{3}N}$", "$\\mathrm{C_{6}H_{5}NH(CH_{3})}$"],
+    correct_answer: "$\\mathrm{C_{2}H_{5}NH_{2}}$",
+    explanation: "$\\mathrm{1^{\\circ}}$ অ্যামিনসমূহ কার্বিল অ্যামিন পরীক্ষা দেয়। $\\mathrm{C_{2}H_{5}NH_{2}}$, $\\mathrm{1^{\\circ}}$ অ্যামিন হওয়ায় কার্বিল অ্যামিন পরীক্ষা দিবে।",
+    time_limit: 60
+  },
+  {
+    id: 82972,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭২. কোনটি ফেলিং দ্রবণের সাথে বিক্রিয়া করে? [DU'23-24]",
+    options: ["HCOOH", "$\\mathrm{CH_{3}COOH}$", "$\\mathrm{CH_{3}CH(OH)CH_{3}}$", "$\\mathrm{CH_{3}COCH_{3}}$"],
+    correct_answer: "HCOOH",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82973,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭৩. $\\mathrm{NH_{3}, RNH_{2}, R_{2}NH}$ যৌগগুলির ক্ষার-ধর্ম প্রদর্শনের ক্রম হচ্ছে- [DU'23-24; GST'21-22; SUST'19-20]",
+    options: ["$\\mathrm{NH_{3} > RNH_{2} > R_{2}NH}$", "$\\mathrm{R_{2}NH > RNH_{2} > NH_{3}}$", "$\\mathrm{NH_{3} > R_{2}NH > RNH_{2}}$", "$\\mathrm{RNH_{2} > NH_{3} > R_{2}NH}$"],
+    correct_answer: "$\\mathrm{R_{2}NH > RNH_{2} > NH_{3}}$",
+    explanation: "অ্যামিনের ক্ষেত্রে ক্ষারকত্বের ক্রম,\n$\\mathrm{2^{\\circ} > 1^{\\circ} > 3^{\\circ} > NH_{3}}$ > অ্যানিলিন\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82974,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭৪. $\\mathrm{CO_{2}(s) + CH_{3}MgX \\xrightarrow[ether]{dry} Y \\xrightarrow{H^{+}/H_{2}O} CH_{3}COOH}$;\nবিক্রিয়ায় Y কোনটি? [RU'23-24]",
+    options: ["$\\mathrm{CH_{3}CHO}$", "$\\mathrm{CH_{3}COOMgX}$", "$\\mathrm{CH_{3}COOX}$", "$\\mathrm{(CH_{3}COO)_{2}Mg}$"],
+    correct_answer: "$\\mathrm{CH_{3}COOMgX}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82975,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭৫. $\\mathrm{1^{\\circ}, 2^{\\circ}, 3^{\\circ}}$ -অ্যামিনের মধ্যে পার্থক্য নির্ণয়ে ব্যবহৃত হয় কোনটি? [JU'23-24]",
+    options: ["$\\mathrm{HNO_{3}}$", "Zn, HCl", "$\\mathrm{HNO_{2}}$", "$\\mathrm{CHCl_{3}}$"],
+    correct_answer: "$\\mathrm{HNO_{2}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82976,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭৬. কোনটি বেশি তীব্র এসিড? [JU'23-24]",
+    options: ["$\\mathrm{CH_{3}COOH}$", "$\\mathrm{CH_{3}CH_{2}COOH}$", "$\\mathrm{CH_{3}CH_{2}CH_{2}COOH}$", "HCOOH"],
+    correct_answer: "HCOOH",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82977,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭৭. কোন যৌগকে NaOH সহযোগে উত্তপ্ত করার পর তাতে HCl যোগ করলে সাদা ধোঁয়া উৎপন্ন হয়? [GST'22-23]",
+    options: ["$\\mathrm{C_{6}H_{5}CONH_{2}}$", "$\\mathrm{C_{6}H_{5}N_{2}Cl}$", "$\\mathrm{C_{6}H_{5}NH_{2}}$", "$\\mathrm{C_{6}H_{5}NO_{2}}$"],
+    correct_answer: "$\\mathrm{C_{6}H_{5}CONH_{2}}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82978,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭৮. কোন এসিডটির অনুবন্ধী ক্ষারক সবচেয়ে দুর্বল? [GST'22-23]",
+    options: ["$\\mathrm{CH_{3}COOH}$", "$\\mathrm{ClCH_{2}COOH}$", "$\\mathrm{Cl_{2}CHCOOH}$", "$\\mathrm{Cl_{3}CCOOH}$"],
+    correct_answer: "$\\mathrm{Cl_{3}CCOOH}$",
+    explanation: "শক্তিশালী এসিডের অনুবন্ধী ক্ষারক দুর্বল। $\\mathrm{Cl_{3}CCOOH}$ এ সবচেয়ে বেশি সংখ্যক Cl থাকায় এটি সবচেয়ে শক্তিশালী এসিড একারণে $\\mathrm{Cl_{3}CCOOH}$ এর অনুবন্ধী ক্ষারক সবচেয়ে দুর্বল।",
+    time_limit: 60
+  },
+  {
+    id: 82979,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৭৯. $\\mathrm{CH_{3}COOR + H_{2}O \\xrightarrow{HCl} X + ROH}$\nX যৌগটি শনাক্তকরণে ব্যবহৃত হয়- [JU'22-23]",
+    options: ["$\\mathrm{NaHCO_{3}}$", "$\\mathrm{AgNO_{3}}$", "$\\mathrm{FeCl_{3}}$", "$\\mathrm{ZnCl_{2}}$"],
+    correct_answer: "$\\mathrm{NaHCO_{3}}$",
+    explanation: "X হলো ইথানয়িক এসিড $\\mathrm{(CH_{3}COOH)}$। কার্বক্সিলিক এসিড শনাক্তকরণে 5% $\\mathrm{NaHCO_{3}}$ ব্যবহৃত হয়।",
+    time_limit: 60
+  },
+  {
+    id: 82980,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮০. কোনটির $\\mathrm{pK_{b}}$ এর মান সবচেয়ে কম? [RU'22-23]",
+    options: ["$\\mathrm{CH_{3}NH_{2}}$", "$\\mathrm{NH_{3}}$", "$\\mathrm{(CH_{3})_{2}NH}$", "$\\mathrm{(CH_{3})_{3}N}$"],
+    correct_answer: "$\\mathrm{(CH_{3})_{2}NH}$",
+    explanation: "অ্যামিনের ক্ষারধর্মীতা:\n$\\mathrm{(CH_{3})_{2}NH > CH_{3}NH_{2} > (CH_{3})_{3}N > NH_{3}}$\nক্ষারধর্মীতা বেশি হলে $\\mathrm{K_{b}}$ বেশি, $\\mathrm{pK_{b}}$ কম।",
+    time_limit: 60
+  },
+  {
+    id: 82981,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮১. তেঁতুলে কোন এসিড বিদ্যমান থাকে? [CU'22-23]",
+    options: ["এসকরবিক এসিড", "টারটারিক এসিড", "অ্যামাইনো এসিড", "নাইট্রিক এসিড"],
+    correct_answer: "টারটারিক এসিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82982,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮২. কোন এসিডটি লেবুতে পাওয়া যায়? [CU'22-23]",
+    options: ["মিথানয়িক এসিড", "ইথানয়িক এসিড", "সাইট্রিক এসিড", "টারটারিক এসিড"],
+    correct_answer: "সাইট্রিক এসিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82983,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮৩. $\\mathrm{C_{2}H_{5}OH}$ জারিত হয়ে তৈরি হয় Z, যা $\\mathrm{C_{2}H_{5}OH}$-এর সাথে এস্টার প্রস্তুত করে। Z কী? [DU'21-22]",
+    options: ["HCOOH", "$\\mathrm{CH_{3}COOH}$", "$\\mathrm{CH_{3}CHO}$", "$\\mathrm{CH_{3}CH_{2}CH_{2}COOH}$"],
+    correct_answer: "$\\mathrm{CH_{3}COOH}$",
+    explanation: "$\\mathrm{C_{2}H_{5}OH \\xrightarrow{[O]} CH_{3}COOH}$",
+    time_limit: 60
+  },
+  {
+    id: 82984,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮৪. $\\mathrm{CH_{3}CH_{2}-CO-CH_{2}-CO-OCH_{2}CH_{3}}$ এস্টারটিতে কোন হাইড্রোজেনগুলো বেশি অম্লীয়? (1=প্রথম CH3, 2=দ্বিতীয় CH2, 3=মাঝের CH2, 4=শেষ CH2) [GST'21-22]",
+    options: ["1", "2", "3", "4"],
+    correct_answer: "3",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82985,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮৫. $\\mathrm{CH_{3}-COOH + NH_{3} \\xrightarrow{\\Delta} }$ [RU'21-22]",
+    options: ["অ্যামোনিয়াম অ্যাসিটেট", "অ্যাসিটামাইড", "ইথাইল অ্যামিন", "মিথাইল অ্যামিন"],
+    correct_answer: "অ্যাসিটামাইড",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82986,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    stimulus: "$\\mathrm{C_{4}H_{8}O_{2}}$ [M] সংকেতের এস্টারকে জলীয় NaOH সহ আর্দ্রবিশ্লেষণ করলে [P] ও [Q] দুটি যৌগ উৎপন্ন হয়। পাতন প্রক্রিয়ায় [P] কে প্রথমে $\\mathrm{78^{\\circ}C}$ এ পৃথক করে আয়োডিন ও লঘু NaOH দ্রবণ সহ উত্তপ্ত করলে হলুদ বর্ণের অধঃক্ষেপ পড়ে।",
+    question_text: "১৮৬. [P] যৌগটি হলো- [JU'21-22]",
+    options: ["বিউটানল", "প্রোপানল", "ইথান্যাল", "ইথানল"],
+    correct_answer: "ইথানল",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82987,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    stimulus: "$\\mathrm{C_{4}H_{8}O_{2}}$ [M] সংকেতের এস্টারকে জলীয় NaOH সহ আর্দ্রবিশ্লেষণ করলে [P] ও [Q] দুটি যৌগ উৎপন্ন হয়। পাতন প্রক্রিয়ায় [P] কে প্রথমে $\\mathrm{78^{\\circ}C}$ এ পৃথক করে আয়োডিন ও লঘু NaOH দ্রবণ সহ উত্তপ্ত করলে হলুদ বর্ণের অধঃক্ষেপ পড়ে।",
+    question_text: "১৮৭. [Q] যৌগটি হলো- [JU'21-22]",
+    options: ["সোডিয়াম বিউটানোয়েট", "সোডিয়াম ইথানোয়েট", "অ্যাসিটিক এসিড", "ইথানয়িক এসিড"],
+    correct_answer: "সোডিয়াম ইথানোয়েট",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82988,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮৮. এসিড ক্লোরাইডের সাথে অ্যামোনিয়া বা প্রাইমারি অ্যামিন বিক্রিয়া করলে কী উৎপন্ন হয়? [Agri.'20-21]",
+    options: ["এসিড অ্যামাইড", "জৈব এসিড", "অ্যালকোহল", "অ্যালডিহাইড"],
+    correct_answer: "এসিড অ্যামাইড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82989,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৮৯. হফম্যান ক্ষুদ্রাংশকরণ বিক্রিয়ায় কী উৎপন্ন হয়? [Agri.'19-20]",
+    options: ["প্রাইমারি অ্যামিন", "সেকেন্ডারি অ্যামিন", "এসিড অ্যামিন", "কোনটিই নয়"],
+    correct_answer: "প্রাইমারি অ্যামিন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82990,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯০. এস্টারের অম্লীয় আর্দ্র বিশ্লেষণে কী উৎপন্ন হয়? [JU'19-20]",
+    options: ["জৈব এসিড", "অ্যালডিহাইড", "আনহাইড্রাইড", "অ্যামাইড"],
+    correct_answer: "জৈব এসিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82991,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯১. কোনটি সম্পৃক্ত ফ্যাটি এসিডের উদাহরণ? [JU'19-20]",
+    options: ["অলিক এসিড", "এক্রিলিক", "লিনোলিক", "পামিটিক"],
+    correct_answer: "পামিটিক",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82992,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯২. কোনটি সর্বাপেক্ষা অম্লীয়? [DU'18-19]",
+    options: ["$\\mathrm{CH_{3}CH_{2}COOH}$", "$\\mathrm{ClCH_{2}CH_{2}COOH}$", "$\\mathrm{Cl_{2}CHCOOH}$", "$\\mathrm{CH_{3}COOH}$"],
+    correct_answer: "$\\mathrm{Cl_{2}CHCOOH}$",
+    explanation: "$\\alpha$-C এ Cl এর সংখ্যা বেশি থাকলে ঋণাত্মক আবেশীয় প্রভাবের ফলে এসিডটি বেশি অম্লীয় হয়।",
+    time_limit: 60
+  },
+  {
+    id: 82993,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯৩. যৌগ X, $\\mathrm{C_{4}H_{10}O}$, অম্লীয় $\\mathrm{Na_{2}Cr_{2}O_{7}}$ দ্বারা জারিত হয়ে Y যৌগ হয়। Y যৌগটি অল্প পরিমাণ ঘন $\\mathrm{H_{2}SO_{4}}$ এর উপস্থিতিতে ইথানলের সঙ্গে বিক্রিয়া করে Z যৌগ তৈরি করে। Z এর সংকেত কী? [DU'18-19]",
+    options: ["$\\mathrm{CH_{3}(CH_{2})_{2}CH=CHCO_{2}H}$", "$\\mathrm{CH_{3}(CH_{2})_{4}CH_{2}COCH_{2}CH_{3}}$", "$\\mathrm{CH_{3}(CH_{2})_{2}CO_{2}CH_{2}CH_{3}}$", "$\\mathrm{CH_{3}CH_{2}CO_{2}(CH_{2})_{4}CH_{3}}$"],
+    correct_answer: "$\\mathrm{CH_{3}(CH_{2})_{2}CO_{2}CH_{2}CH_{3}}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82994,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯৪. নিচের বিক্রিয়া স্কিমে X ও Y কী? [DU'18-19]\n$\\mathrm{CH_{3}CH_{2}CH_{2}Br \\xrightarrow{X} CH_{3}CH_{2}CH_{2}CN \\xrightarrow{Y} CH_{3}CH_{2}CH_{2}COOH}$",
+    options: ["$\\mathrm{X = NH_{3}, Y = HCl(aq)}$", "$\\mathrm{X = KCN\\text{ in }C_{2}H_{5}OH, Y = NaOH(aq)}$", "$\\mathrm{X = KCN\\text{ in }C_{2}H_{5}OH, Y = HCl(aq)}$", "$\\mathrm{X = HCN, Y = NaOH(aq)}$"],
+    correct_answer: "$\\mathrm{X = KCN\\text{ in }C_{2}H_{5}OH, Y = HCl(aq)}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82995,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯৫. আনারসে কোন এস্টার বিদ্যমান? [JU'18-19]",
+    options: ["Amyl acetate", "Ethyl butanoate", "Pentyl ethanoate", "Ethyl acetate"],
+    correct_answer: "Ethyl butanoate",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82996,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯৬. নিচের কোনটির আর্দ্রবিশ্লেষণে অ্যাসিটিক এসিড তৈরি হয়? [CU'18-19]",
+    options: ["$\\mathrm{CH_{3}CN}$", "$\\mathrm{C_{2}H_{5}OH}$", "$\\mathrm{C_{2}H_{5}NH_{2}}$", "$\\mathrm{CH_{3}OH}$"],
+    correct_answer: "$\\mathrm{CH_{3}CN}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82997,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯৭. নিচের চারটি কার্বক্সিলিক এসিড জাতকের মধ্যে কোনটি কম সক্রিয়? [KU'17-18]",
+    options: ["$\\mathrm{R-CONH_{2}}$", "$\\mathrm{RCOOR'}$", "$\\mathrm{(R-CO)_{2}O}$", "$\\mathrm{RCOCl}$"],
+    correct_answer: "$\\mathrm{R-CONH_{2}}$",
+    explanation: "সক্রিয়তার ক্রম:\n$\\mathrm{RCOCl > (RCO)_{2}O > RCOOR' > RCONH_{2}}$",
+    time_limit: 60
+  },
+  {
+    id: 82998,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯৮. কার্বিলঅ্যামিন পরীক্ষার মাধ্যমে কোন ধরনের জৈব যৌগ শনাক্ত করা যায়? [DU'16-17]",
+    options: ["প্রাইমারি অ্যামিন", "অ্যালডিহাইড", "অ্যামাইড", "প্রাইমারি অ্যালকোহল"],
+    correct_answer: "প্রাইমারি অ্যামিন",
+    explanation: "$\\mathrm{Ar/R-NH_{2} + CHCl_{3} + 3KOH(alc) \\xrightarrow{70^{\\circ}C} Ar/R-N \\equiv C + 3KCl + 3H_{2}O}$",
+    time_limit: 60
+  },
+  {
+    id: 82999,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "১৯৯. মুক্ত শিকল জৈব-যৌগের শিকল দৈর্ঘ্য হ্রাস করার জন্য কোন বিক্রিয়ার সাহায্য নেয়া যেতে পারে? [RU'16-17]",
+    options: ["হফম্যান", "উরটজ", "ডাইলস এলডার", "পারকিন"],
+    correct_answer: "হফম্যান",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82900,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০০. কোন বিকারক দ্বারা প্রাইমারি অ্যামিন শনাক্ত করা যায়? [JU'16-17]",
+    options: ["HCl", "$\\mathrm{CHCl_{3}}$", "NaOH", "$\\mathrm{CHCl_{3} + KOH}$"],
+    correct_answer: "$\\mathrm{CHCl_{3} + KOH}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82901,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০১. ভিনেগার হলো- [JU'16-17]",
+    options: ["$6-10\\% \\, \\mathrm{CH_{3}COOH}$", "$6-10\\% \\, \\mathrm{C_{2}H_{5}OH}$", "$6-10\\% \\, \\mathrm{CH_{3}COCH_{3}}$", "$6-10\\% \\, \\mathrm{CH_{3}CHO}$"],
+    correct_answer: "$6-10\\% \\, \\mathrm{CH_{3}COOH}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82902,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০২. $\\mathrm{RCOOH + ROH \\xrightarrow{H_{2}SO_{4}} A + H_{2}O}$; A যৌগটি হচ্ছে- [JU'16-17]",
+    options: ["অ্যামিন", "অ্যামাইড", "এস্টার", "অ্যানহাইড্রাইড"],
+    correct_answer: "এস্টার",
+    explanation: "$\\mathrm{RCOOH + ROH \\rightarrow RCOOR + H_{2}O}$",
+    time_limit: 60
+  },
+  {
+    id: 82903,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০৩. নিচের অ্যামাইডগুলোর মধ্যে কোনটি হফম্যান ক্ষুদ্রাংশকরণ বিক্রিয়ায় অংশগ্রহণ করে না? [JnU'16-17]",
+    options: ["$\\mathrm{CH_{3}-CONH_{2}}$", "$\\mathrm{(CH_{3})_{2}CH-CONH_{2}}$", "$\\mathrm{CH_{3}-CONH-CH_{3}}$", "$\\mathrm{CH_{3}-CH_{2}-CONH_{2}}$"],
+    correct_answer: "$\\mathrm{CH_{3}-CONH-CH_{3}}$",
+    explanation: "হফম্যান ক্ষুদ্রাংশকরণে শুধুমাত্র $\\mathrm{1^{\\circ}}$ অ্যামাইড অংশগ্রহণ করে।",
+    time_limit: 60
+  },
+  {
+    id: 82904,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০৪. অ্যাসিটিক অ্যাসিডের স্ফুটনাঙ্ক কোনটি? [JU'15-16]",
+    options: ["$118^{\\circ}C$", "$128^{\\circ}C$", "$138^{\\circ}C$", "$178^{\\circ}C$"],
+    correct_answer: "$118^{\\circ}C$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82905,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০৫. $\\mathrm{RCONH_{2} + Br_{2} + KOH \\xrightarrow{\\Delta} R-NH_{2} + KBr + K_{2}CO_{3} + H_{2}O}$\nবিক্রিয়াটির নাম- [CU'15-16]",
+    options: ["হফম্যান বিক্রিয়া", "ক্যানিজারো বিক্রিয়া", "কার্বিল অ্যামিন বিক্রিয়া", "কোব বিক্রিয়া"],
+    correct_answer: "হফম্যান বিক্রিয়া",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82906,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০৬. ইথাইল অ্যাসিটেটকে ক্ষারীয় আর্দ্র-বিশ্লেষণ করলে কোন উৎপাদগুলো তৈরি হয়? [DU'14-15]",
+    options: ["$\\mathrm{CH_{3}COOH + C_{2}H_{5}OH}$", "$\\mathrm{CH_{3}CH_{2}COOH + CH_{3}OH}$", "$\\mathrm{CH_{3}COONa + CH_{3}OH}$", "$\\mathrm{CH_{3}COONa + C_{2}H_{5}OH}$"],
+    correct_answer: "$\\mathrm{CH_{3}COONa + C_{2}H_{5}OH}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82907,
+    topic: "জৈব এসিড ও জাতক, অ্যামিন",
+    topicId: "chem2_org_t09",
+    question_text: "২০৭. নাইট্রাস এসিডের সাথে বিক্রিয়ায় নিচের কোন যৌগ $\\mathrm{N_{2}}$ গ্যাস উৎপন্ন করে? [JU'14-15]",
+    options: ["$\\mathrm{C_{6}H_{5}NH_{2}}$", "$\\mathrm{(CH_{3})_{2}NH}$", "$\\mathrm{CH_{3}NH_{2}}$", "$\\mathrm{(CH_{3})_{3}N}$"],
+    correct_answer: "$\\mathrm{CH_{3}NH_{2}}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
 ];
