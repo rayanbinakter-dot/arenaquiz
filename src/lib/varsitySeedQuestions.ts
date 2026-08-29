@@ -61,8 +61,7 @@ export function getLocalVarsityQuestions(): Question[] {
   addQuestions(dcuPhysicsThermodynamicsData, 'physics', 'second', 'তাপগতিবিদ্যা', 'du_ka');
 
   // Chemistry
-  addQuestions(dcuChemQualitativeData, 'chemistry', 'first', 'গুণগত রসায়ন', 'du_ka');
-  addQuestions(dcuChemPeriodicPropertiesData, 'chemistry', 'first', 'মৌলের পর্যাবৃত্ত ধর্ম ও রাসায়নিক বন্ধন', 'du_ka');
+  // Chemistry 1st paper: removed from Module 3 by owner request (2026-08-29); new sets will be re-added.
   addQuestions(dcuChemEnvironmentalData, 'chemistry', 'second', 'পরিবেশ রসায়ন', 'du_ka');
 
   // Math DU
