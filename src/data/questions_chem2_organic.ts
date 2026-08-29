@@ -1836,4 +1836,546 @@ export const chem2OrganicQuestions: Question[] = [
     explanation: "$\\mathrm{C_{2}H_{4}}$ দহনে $\\mathrm{CO_{2}}$ ও $\\mathrm{H_{2}O}$ উৎপন্ন হয়। $\\mathrm{CO_{2}}$ চুনের পানি ঘোলাটে করে এবং $\\mathrm{H_{2}O}$ সাদা কপার সালফেটকে নীল করে।",
     time_limit: 60
   },
+  // --- T-06: অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম ---
+  {
+    id: 82656,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৫৬. সোয়ার্টস বিক্রিয়ার মাধ্যমে প্রস্তুত করা যায় কোনটি? [JU'15-16]",
+    options: ["$\\mathrm{R-Cl}$", "$\\mathrm{R-Br}$", "$\\mathrm{R-F}$", "$\\mathrm{R-I}$"],
+    correct_answer: "$\\mathrm{R-F}$",
+    explanation: "সোয়ার্টস বিক্রিয়া,\n$\\mathrm{R-X} + \\mathrm{AgF} \\xrightarrow{Pd} \\mathrm{R-F} + \\mathrm{AgX}$ (এখানে, X=Cl, Br)",
+    time_limit: 60
+  },
+  {
+    id: 82657,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৫৭. গ্রিগনার্ড বিকারক কী? [Agri.'25-16; CU'22-23]",
+    options: ["$\\mathrm{RMgX}$", "$\\mathrm{AlCl_{3}}$", "$\\mathrm{Zn/Hg\\,(conc.\\,HCl)}$", "$\\mathrm{ZnCl_{2} + HCl}$"],
+    correct_answer: "$\\mathrm{RMgX}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82658,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৫৮. $\\mathrm{S_{N}2}$ বিক্রিয়ার ক্ষেত্রে কোন তথ্যটি সঠিক নয়? [RU'24-25]",
+    options: ["জ্যামিতিক কাঠামো অপরিবর্তিত থাকে", "বিক্রিয়াটি এক ধাপেই সম্পন্ন হয়", "বিক্রিয়াটি দ্বিতীয় ক্রম অনুসরণ করে", "শক্তিশালী নিউক্লিওফাইলের প্রভাবে সম্পন্ন হয়"],
+    correct_answer: "জ্যামিতিক কাঠামো অপরিবর্তিত থাকে",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82659,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৫৯. $\\mathrm{CH_{3}-CH(Cl)-CH_{2}-CH_{3} \\xrightarrow[\\Delta]{\\text{অ্যালকোহলীয় } KOH} CH_{3}CH=CHCH_{3} (\\text{প্রধান উৎপাদ})}$\nবিক্রিয়াটি কোন নিয়ম অনুসারে ঘটে? [RU'24-25]",
+    options: ["মারকনিকভ", "বিপরীত মারকনিকভ", "প্রতিস্থাপন", "সাইজেফ"],
+    correct_answer: "সাইজেফ",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82660,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬০. $\\mathrm{CH_{3}CH_{2}CH(Br)CH_{3} + KOH(alc) \\rightarrow}$\nবিক্রিয়ায় উৎপাদ কোনটি? [RU'24-25]",
+    options: ["$\\mathrm{CH_{2}=CHCH_{2}CH_{3}}$", "$\\mathrm{CH_{3}CH_{2}CH(OH)CH_{3}}$", "$\\mathrm{CH_{3}CH=CHCH_{3}}$", "$\\mathrm{H_{3}CC\\equiv CCH_{3}}$"],
+    correct_answer: "$\\mathrm{CH_{3}CH=CHCH_{3}}$",
+    explanation: "যেহেতু বিক্রিয়াটি অ্যালকোহলীয় দ্রবণে হয় ফলে সাইজেফ নীতি অনুসারে অপসারণ বিক্রিয়া সম্পন্ন হবে।\n$\\mathrm{CH_{3}CH_{2}CH(Br)CH_{3} + KOH(alc) \\rightarrow CH_{3}-CH=CH-CH_{3}}$",
+    time_limit: 60
+  },
+  {
+    id: 82661,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬১. কোন যৌগটি কেন্দ্রাকর্ষী প্রতিস্থাপন বিক্রিয়া দেয়? [GST'24-25]",
+    options: ["ইথাইল ফ্লোরাইড", "ক্লোরোবেনজিন", "ইথিন", "ইথান্যাল"],
+    correct_answer: "ইথাইল ফ্লোরাইড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82662,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬২. $\\mathrm{S_{N}2}$ বিক্রিয়ার ক্ষেত্রে কোন তথ্যটি সঠিক নয়? [SUST'24-25]",
+    options: ["$\\mathrm{RX}$ এর সক্রিয়তার ক্রম $\\mathrm{1^{\\circ}>2^{\\circ}>3^{\\circ} RX}$", "অস্থায়ী জটিল গঠন করে", "$2^{\\circ} \\mathrm{RX}$ এর বেলায় $\\mathrm{S_{N}1}$ ও $\\mathrm{S_{N}2}$ সমভাবে ঘটে", "দুর্বল নিউক্লিওফাইল গতি নিয়ন্ত্রণ করে"],
+    correct_answer: "দুর্বল নিউক্লিওফাইল গতি নিয়ন্ত্রণ করে",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82663,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬৩. ক্লোরোপিক্রিনের সংকেত কোনটি? [Agri'24-25]",
+    options: ["$\\mathrm{CCl_{3}-NO_{2}}$", "$\\mathrm{CCl_{2}-F_{2}}$", "$\\mathrm{(CH_{3})_{3}C-Cl}$", "$\\mathrm{CHCl_{3}}$"],
+    correct_answer: "$\\mathrm{CCl_{3}-NO_{2}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82664,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬৪. নিচের কোনটি সঠিক নয়? [RU'23-24]",
+    options: ["$\\mathrm{S_{N}1}$ বিক্রিয়া দুই ধাপে ঘটে", "পোলার দ্রাবকে $\\mathrm{S_{N}1}$ বিক্রিয়া ঘটে", "$\\mathrm{S_{N}1}$ বিক্রিয়া ১ম ক্রম অনুসরণ করে", "স্টেরিক হিন্ড্রেন্সের প্রভাব বেশি হলে $\\mathrm{S_{N}1}$ অনুসৃত হয়"],
+    correct_answer: "স্টেরিক হিন্ড্রেন্সের প্রভাব বেশি হলে $\\mathrm{S_{N}1}$ অনুসৃত হয়",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82665,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬৫. $\\mathrm{S_{N}1}$ বিক্রিয়ার জন্য প্রযোজ্য- [JU'23-24]\n(i) এক ধাপে ঘটে\n(ii) $\\mathrm{RX}$ এর সক্রিয়তার ক্রম $\\mathrm{3^{\\circ} > 2^{\\circ} > 1^{\\circ} > CH_{3}X}$\n(iii) বিক্রিয়ার হার শুধুমাত্র $\\mathrm{RX}$ এর ঘনমাত্রার উপর নির্ভরশীল\nনিচের কোনটি সঠিক?",
+    options: ["i, ii", "ii, iii", "i, iii", "i, ii, iii"],
+    correct_answer: "ii, iii",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82666,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬৬. অ্যালকোহল ও থায়োনিল ক্লোরাইডের বিক্রিয়ায় সৃষ্ট অতি বিশুদ্ধ অ্যালকাইল ক্লোরাইড তৈরি করার পদ্ধতির নাম কী? [JU'23-24]",
+    options: ["ডারজেন অ্যালকোহল", "ডারজেন ক্লোরাইড", "নিবরণ অ্যালকোহল", "ডারজেন পদ্ধতি"],
+    correct_answer: "ডারজেন পদ্ধতি",
+    explanation: "$\\mathrm{C_{2}H_{5}OH + SOCl_{2} \\rightarrow C_{2}H_{5}Cl + HCl + SO_{2}}$",
+    time_limit: 60
+  },
+  {
+    id: 82667,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬৭. $\\mathrm{(CH_{3})_{3}CCl + H_{2}O \\rightarrow (CH_{3})_{3}COH}$ বিক্রিয়াটি কোন কৌশল সংঘটিত হয়? [CST'22-23]",
+    options: ["$\\mathrm{S_{N}1}$", "$\\mathrm{S_{N}2}$", "$\\mathrm{E_{2}}$", "$\\mathrm{E_{1}}$"],
+    correct_answer: "$\\mathrm{S_{N}1}$",
+    explanation: "$\\mathrm{3^{\\circ}}$ হ্যালাইডে $\\mathrm{S_{N}1}$ বিক্রিয়া ঘটে।",
+    time_limit: 60
+  },
+  {
+    id: 82668,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬৮. $\\mathrm{CH_{3}CHO + 2C_{6}H_{5}Cl \\xrightarrow{conc\\ H_{2}SO_{4}} A + H_{2}O}$ বিক্রিয়ায় A কী? [RU'22-23]",
+    options: ["TNT", "DDT", "THT", "2, 4-DNPH"],
+    correct_answer: "DDT",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82669,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৬৯. নিচের কোনটি সঠিক? [JU'22-23]\n(i) $\\mathrm{S_{N}1}$ বিক্রিয়ার ১ম ধাপে $\\mathrm{RX}$ ধীর গতিতে বিযোজিত হয়\n(ii) $\\mathrm{S_{N}1}$ বিক্রিয়াটিতে কার্বোক্যাটায়ন মধ্যক ধাপ গঠন করে\n(iii) নিউক্লিওফাইল এ কার্বোক্যাটায়ন এর সাথে দ্রুত গতিতে যুক্ত হয়",
+    options: ["i, ii", "i, iii", "সবকটি", "কোনটিই নয়"],
+    correct_answer: "সবকটি",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82670,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭০. $\\mathrm{S_{N}2}$ বিক্রিয়ার ক্ষেত্রে কোনটি সঠিক? [JU'22-23]\n(i) $1^{\\circ}$ হ্যালাইড বেশি হয় এবং এর রেট অফ রিয়েকশন বেশি\n(ii) বিক্রিয়াটি দুই ধাপে সম্পন্ন হয়\n(iii) উৎপাদে জ্যামিতিক কাঠামো উল্টে গিয়ে সম্পূর্ণ বিপরীত হয়",
+    options: ["i, ii", "i, iii", "ii, iii", "সবকটি"],
+    correct_answer: "i, iii",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82671,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭১. নিউক্লিওফিলিক প্রতিস্থাপন ($\\mathrm{S_{N}}$) বিক্রিয়ার ক্ষেত্রে নিচের কোন তথ্যটি সঠিক নয়? [DU'22-23]",
+    options: ["$\\mathrm{C(CH_{3})_{3}-Cl}$ যৌগটি $\\mathrm{S_{N}1}$ বিক্রিয়া বেশি দেয়", "$\\mathrm{CH_{3}CH_{2}-Cl}$ যৌগটি $\\mathrm{S_{N}2}$ বিক্রিয়া বেশি দেয়", "$\\mathrm{S_{N}1}$ বিক্রিয়া এক ধাপে ঘটে", "$\\mathrm{S_{N}1}$ বিক্রিয়া লঘু ক্ষার দ্রবণে ঘটে"],
+    correct_answer: "$\\mathrm{S_{N}1}$ বিক্রিয়া এক ধাপে ঘটে",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82672,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭২. অ্যালকাইল হ্যালাইডে $\\mathrm{S_{N}1}$ বিক্রিয়ার সক্রিয়তার ক্রম কোনটি? [GST'21-22]",
+    options: ["$\\mathrm{(CH_{3})_{3}CX > (CH_{3})_{2}CHX > CH_{3}CH_{2}X}$", "$\\mathrm{CH_{3}CH_{2}X > (CH_{3})_{2}CHX > (CH_{3})_{3}CX}$", "$\\mathrm{(CH_{3})_{3}CX > CH_{3}CH_{2}X > (CH_{3})_{2}CHX}$", "$\\mathrm{(CH_{3})_{2}CHX > (CH_{3})_{3}CX > CH_{3}CH_{2}X}$"],
+    correct_answer: "$\\mathrm{(CH_{3})_{3}CX > (CH_{3})_{2}CHX > CH_{3}CH_{2}X}$",
+    explanation: "$\\mathrm{(CH_{3})_{3}CX > (CH_{3})_{2}CHX > CH_{3}CH_{2}X}$",
+    time_limit: 60
+  },
+  {
+    id: 82673,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭৩. হানসডিকার বিক্রিয়ার প্রধান উৎপাদ কোনটি? [RU'21-22; DU'15-16; Agri'15-16]",
+    options: ["$\\mathrm{C_{2}H_{5}Br}$", "$\\mathrm{C_{6}H_{5}Br}$", "$\\mathrm{C_{2}H_{5}OH}$", "$\\mathrm{C_{6}H_{5}Cl}$"],
+    correct_answer: "$\\mathrm{C_{2}H_{5}Br}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82674,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭৪. ফ্রেয়ন গ্যাস উৎপাদনে কোনটি ব্যবহৃত হয়? [JU'21-22]",
+    options: ["$\\mathrm{CHCl_{3}}$", "$\\mathrm{CCl_{4}}$", "$\\mathrm{CF_{2}Cl_{2}}$", "$\\mathrm{CBr_{2}ClF}$"],
+    correct_answer: "$\\mathrm{CCl_{4}}$",
+    explanation: "ফ্রেয়ন গ্যাসসমূহ:\n$\\mathrm{CF_{2}Cl_{2}, C_{2}F_{4}Cl_{2}, CHCl_{2}F, CF_{4}}$",
+    time_limit: 60
+  },
+  {
+    id: 82675,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭৫. $\\mathrm{R-CH_{2}-Br + NaOH(aq) \\rightarrow}$ উৎপাদ। বিক্রিয়াটির ধরণ কী? [JU'21-22]",
+    options: ["ইলেকট্রনাকর্ষী প্রতিস্থাপন", "নিউক্লিওফিলিক প্রতিস্থাপন", "অপসারণ বিক্রিয়া", "সংযোজন বিক্রিয়া"],
+    correct_answer: "নিউক্লিওফিলিক প্রতিস্থাপন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82676,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭৬. নিচের কোন অ্যালকাইল হ্যালাইডটি $\\mathrm{S_{N}2}$ বিক্রিয়ার ক্ষেত্রে সর্বাধিক সক্রিয় হবে? [GST'20-21]",
+    options: ["$\\mathrm{CH_{3}CH_{2}CH_{2}Br}$", "$\\mathrm{CH_{3}CH(CH_{3})Br}$", "$\\mathrm{CH_{3}C(CH_{3})_{2}Br}$", "$\\mathrm{CH_{3}CH_{2}CH(CH_{3})Br}$"],
+    correct_answer: "$\\mathrm{CH_{3}CH_{2}CH_{2}Br}$",
+    explanation: "$\\mathrm{1^{\\circ}}$ RX সর্বাধিক সক্রিয়। $\\mathrm{S_{N}2}$ সক্রিয়তার ক্রম:\n$\\mathrm{1^{\\circ}RX > 2^{\\circ}RX > 3^{\\circ}RX}$",
+    time_limit: 60
+  },
+  {
+    id: 82677,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭৭. কোন বন্ধনযুক্ত কার্যকরী মূলকের ক্ষেত্রে অপসারণ বিক্রিয়া ঘটে? [JU'19-20]",
+    options: ["একক বন্ধন", "দ্বি-বন্ধন", "ত্রি-বন্ধন", "a ও b উভয়েই"],
+    correct_answer: "একক বন্ধন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82678,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭৮. গ্রিগনার্ড বিকারক তৈরিতে মিথাইল হ্যালাইড-এর সক্রিয়তার ক্রম কোনটি? [RU'18-19]",
+    options: ["$\\mathrm{CH_{3}Cl > CH_{3}Br > CH_{3}I}$", "$\\mathrm{CH_{3}I > CH_{3}Br > CH_{3}Cl}$", "$\\mathrm{CH_{3}Br > CH_{3}I > CH_{3}Cl}$", "$\\mathrm{CH_{3}Br > CH_{3}Cl > CH_{3}I}$"],
+    correct_answer: "$\\mathrm{CH_{3}I > CH_{3}Br > CH_{3}Cl}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82679,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৭৯. $\\mathrm{(CH_{3})_{3}CBr}$ ও জলীয় NaOH -এর বিক্রিয়ার শ্রেণি- [RU'17-18]",
+    options: ["$\\mathrm{S_{N}1}$", "$\\mathrm{S_{N}2}$", "$\\mathrm{E_{1}}$", "$\\mathrm{E_{2}}$"],
+    correct_answer: "$\\mathrm{S_{N}1}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82680,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৮০. ইথাইল আয়োডাইড জলীয় KOH এর সাথে বিক্রিয়ায় উৎপন্ন হয়- [DU'16-17]",
+    options: ["Ethyne", "Ethene", "Ethanol", "Ethane"],
+    correct_answer: "Ethanol",
+    explanation: "$\\mathrm{C_{2}H_{5}I + KOH(aq) \\rightarrow C_{2}H_{5}OH + KI}$",
+    time_limit: 60
+  },
+  {
+    id: 82681,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৮১. পোড়াক্ষতের জ্বালা নিবারণে ব্যবহৃত 'বার্ণল' হলো---। [CU'16-17]",
+    options: ["পিকারিক এসিড", "ডাই ইথাইল ইথার", "মেনথল", "ডাইক্লোরোইথেন"],
+    correct_answer: "পিকারিক এসিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82682,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৮২. $\\mathrm{S_{N}2}$ বিক্রিয়ায় অ্যালকাইল হ্যালাইডসমূহের সক্রিয়তার ক্রম হলো- [DU'15-16]",
+    options: ["$\\mathrm{CH_{3}X > RCH_{2}X > R_{2}CHX > R_{3}CX}$", "$\\mathrm{RCH_{2}X > CH_{3}X > R_{2}CHX > R_{3}CX}$", "$\\mathrm{CH_{3}X > RCH_{2}X > R_{3}CX > R_{2}CHX}$", "$\\mathrm{R_{3}CX > R_{2}CHX > RCH_{2}X > CH_{3}X}$"],
+    correct_answer: "$\\mathrm{CH_{3}X > RCH_{2}X > R_{2}CHX > R_{3}CX}$",
+    explanation: "$\\mathrm{S_{N}2}$ বিক্রিয়ায় সক্রিয়তার ক্রম:\n$\\mathrm{-CH_{3} > 1^{\\circ} > 2^{\\circ} > 3^{\\circ}}$",
+    time_limit: 60
+  },
+  {
+    id: 82683,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৮৩. আলো ও বায়ুর উপস্থিতিতে ক্লোরোফর্ম উৎপন্ন করে- [KU'14-15]",
+    options: ["ক্লোরাল", "কার্বনিল ক্লোরাইড", "ব্লিচিং পাউডার", "কার্বন-টেট্রা-ক্লোরাইড"],
+    correct_answer: "কার্বনিল ক্লোরাইড",
+    explanation: "$\\mathrm{2CHCl_{3} + O_{2} \\xrightarrow{\\text{সূর্যালোক}} 2COCl_{2} + 2HCl}$\nকার্বনিল ক্লোরাইড (ফসজিন গ্যাস)",
+    time_limit: 60
+  },
+  {
+    id: 82684,
+    topic: "অ্যালকাইল হ্যালাইড, অ্যারাইল হ্যালাইড, নিউক্লিওফিলিক প্রতিস্থাপন বিক্রিয়া, অপসারণ বিক্রিয়া, হ্যালোফর্ম",
+    topicId: "chem2_org_t06",
+    question_text: "৮৪. CFC এর বেলায় কোনটি সঠিক নয়? [KU'13-14]",
+    options: ["ওজোন স্তর নষ্ট করে", "পচন রোধ করে", "হিমায়ক যন্ত্রে ব্যবহৃত হয়", "এরোসল-স্প্রে দ্রাবক"],
+    correct_answer: "পচন রোধ করে",
+    explanation: "",
+    time_limit: 60
+  },
+  // --- T-07: অ্যালকোহল ও ইথার ---
+  {
+    id: 82785,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৮৫. $\\mathrm{RMgX + R-CHO \\xrightarrow[H_{2}O, H^{+}]{শুষ্ক ইথার} A}$; এই বিক্রিয়ায় A হল- [RU'25-26]",
+    options: ["$1^{\\circ}$ অ্যালকোহল", "$3^{\\circ}$ অ্যালকোহল", "$2^{\\circ}$ অ্যালকোহল", "জৈব এসিড"],
+    correct_answer: "$2^{\\circ}$ অ্যালকোহল",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82786,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৮৬. কোন যৌগটি শনাক্তকরণে লুকাস বিকারক ব্যবহৃত হয়? [HSTU'25-26]",
+    options: ["ফেনল", "অ্যালকোহল", "$\\mathrm{-NH_{2}}$", "ফ্যাটি এসিড"],
+    correct_answer: "অ্যালকোহল",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82787,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৮৭. জৈব যৌগে $\\mathrm{-OH}$ মূলক শনাক্তকরণে কোন বিকারক ব্যবহৃত হয়? [HSTU'25-26]",
+    options: ["HCl", "NaOH", "$\\mathrm{Na_{2}CO_{3}}$ দ্রবণ", "Na ধাতু"],
+    correct_answer: "Na ধাতু",
+    explanation: "$\\mathrm{2R-OH + 2Na \\rightarrow R-ONa + H_{2} \\uparrow}$\n(বুদবুদ)",
+    time_limit: 60
+  },
+  {
+    id: 82788,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৮৮. $\\mathrm{CH_{3}CH_{2}ONa\\, (alc) + CH_{3}CH_{2}X\\, (alc) \\xrightarrow{\\Delta} \\text{উৎপাদ}}$; এ বিক্রিয়ায় উৎপাদ কোনটি? [JU'24-25]",
+    options: ["$\\mathrm{CH_{3}CH_{2}-O-CH_{2}CH_{3}}$", "$\\mathrm{CH_{3}CH_{2}-CH_{2}CH_{3}}$", "$\\mathrm{CH_{3}CH=CHCH_{3}}$", "$\\mathrm{CH_{3}CH_{2}CH=CH_{2}}$"],
+    correct_answer: "$\\mathrm{CH_{3}CH_{2}-O-CH_{2}CH_{3}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82789,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৮৯. একটি তরল জৈব যৌগ $\\mathrm{78.3^{\\circ}C}$ তাপমাত্রায় ফোটে। এর সাথে অল্প ইথানল যোগ করলে মিশ্র তরলটির স্ফুটনাঙ্ক $\\mathrm{78.3^{\\circ}C}$ হয়। মূল তরলটি কী ছিল? [KU'24-25]",
+    options: ["ইথার", "বিশুদ্ধ ইথানল", "অবিশুদ্ধ ইথানল", "মিথানল"],
+    correct_answer: "বিশুদ্ধ ইথানল",
+    explanation: "বিশুদ্ধ পদার্থ যোগ $\\rightarrow$ গলনাঙ্ক ও স্ফুটনাঙ্ক স্থির\nঅবিশুদ্ধ পদার্থ যোগ $\\rightarrow$ গলনাঙ্ক ও স্ফুটনাঙ্ক পরিবর্তন হয়",
+    time_limit: 60
+  },
+  {
+    id: 82790,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯০. গ্রিগনার্ড বিকারক + $\\mathrm{RCHO \\rightarrow X}$; X কি ধরনের যৌগ? [CU'24-25]",
+    options: ["$1^{\\circ}$ অ্যালকোহল", "জৈব এসিড", "$3^{\\circ}$ অ্যালকোহল", "$2^{\\circ}$-অ্যালকোহল"],
+    correct_answer: "$2^{\\circ}$-অ্যালকোহল",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82791,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯১. কোন যৌগটির স্ফুটনাঙ্ক সবচেয়ে বেশি? [GST'24-25]",
+    options: ["$\\mathrm{C_{6}H_{6}}$", "$\\mathrm{C_{2}H_{5}OH}$", "$\\mathrm{CH_{3}-O-CH_{3}}$", "$\\mathrm{CH_{3}OH}$"],
+    correct_answer: "$\\mathrm{C_{2}H_{5}OH}$",
+    explanation: "পোলার যৌগসমূহের স্ফুটনাঙ্ক বেশি হয়। তাই $\\mathrm{C_{2}H_{5}OH}$ এবং $\\mathrm{CH_{3}OH}$ এর স্ফুটনাঙ্ক বেশি হবে। আবার, $\\mathrm{CH_{3}-OH}$ ও $\\mathrm{C_{2}H_{5}OH}$ এর মধ্যে $\\mathrm{C_{2}H_{5}OH}$ এর আণবিক ভর বেশি। তাই $\\mathrm{C_{2}H_{5}OH}$ এর স্ফুটনাঙ্ক বেশি।",
+    time_limit: 60
+  },
+  {
+    id: 82792,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯২. $3^{\\circ}$ অ্যালকোহল তৈরি করতে গ্রিগনার্ড বিকারকের সাথে কোন যৌগের বিক্রিয়া ঘটাতে হবে? [SUST'24-25]",
+    options: ["অ্যাসিটোন", "অ্যাসিটালডিহাইড", "ফরমালডিহাইড", "প্রোপান্যাল"],
+    correct_answer: "অ্যাসিটোন",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82793,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯৩. এন্টিফ্রিজ বা হিমরোধক রূপে ব্যবহৃত হয় কোনটি? [Agri'24-25]",
+    options: ["70% ইথানল ও 30% পানির মিশ্রণ", "40% গ্লাইকল ও 60% পানির মিশ্রণ", "70% মিথানল ও 30% পানির মিশ্রণ", "70% গ্লাইকল ও 30% পানির মিশ্রণ"],
+    correct_answer: "40% গ্লাইকল ও 60% পানির মিশ্রণ",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82794,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯৪. নিচের কোন যৌগটির স্ফুটনাঙ্ক সবচেয়ে বেশি? [Agri'24-25]",
+    options: ["$\\mathrm{C_{2}H_{5}OH}$", "$\\mathrm{CH_{3}COCH_{3}}$", "$\\mathrm{CH_{3}CHO}$", "$\\mathrm{C_{2}H_{6}}$"],
+    correct_answer: "$\\mathrm{C_{2}H_{5}OH}$",
+    explanation: "ইথানলে H-বন্ধন বিদ্যমান।",
+    time_limit: 60
+  },
+  {
+    id: 82795,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯৫. $\\mathrm{2CH_{3}-CH_{2}-OH \\xrightarrow[140^{\\circ}C]{H_{2}SO_{4}} product}$; উৎপাদটি কী হবে? [Agri'24-15; RU'13-14]",
+    options: ["অ্যালকিন", "অ্যালডিহাইড", "ইথার", "জৈব এসিড"],
+    correct_answer: "ইথার",
+    explanation: "অ্যালকোহল বেশি আর তাপমাত্রা কম হলে ইথার। অ্যালকোহল কম আর তাপমাত্রা বেশি হলে অ্যালকিন।",
+    time_limit: 60
+  },
+  {
+    id: 82796,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯৬. মিথিলেটেড স্পিরিট-এর সংযুক্তি কত? [CU'23-24]",
+    options: ["50% $\\mathrm{CH_{3}OH}$", "100% $\\mathrm{CH_{3}OH}$", "95% $\\mathrm{CH_{3}CH_{2}OH}$ + 5% $\\mathrm{CH_{3}OH}$", "95% Rectified spirit + 5% $\\mathrm{CH_{3}OH}$"],
+    correct_answer: "95% Rectified spirit + 5% $\\mathrm{CH_{3}OH}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82797,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯৭. $\\mathrm{CH_{3}MgX}$-এর সাথে নিচের কোন যৌগটির বিক্রিয়ায় আইসোপ্রোপানল উৎপন্ন হয়? [DU'21-22]",
+    options: ["HCHO", "$\\mathrm{CH_{3}CHO}$", "$\\mathrm{CH_{3}COCH_{3}}$", "$\\mathrm{CH_{3}OH}$"],
+    correct_answer: "$\\mathrm{CH_{3}CHO}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82798,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯৮. মনোহাইড্রিক অ্যালকোহল শনাক্তকরণে- [JU'21-22]\n(i) Na ধাতু ব্যবহৃত হয়\n(ii) $\\mathrm{PCl_{5}}$ প্রয়োজন হয়\n(iii) স্যালিসাইলিক এসিড ব্যবহৃত হয়\nনিচের কোনটি সঠিক?",
+    options: ["i, ii", "ii, iii", "i, iii", "i, ii, iii"],
+    correct_answer: "i, ii, iii",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82799,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "৯৯. 2-প্রোপানল, $\\mathrm{(CH_{3})_{2}CHOH}$ এর স্বাভাবিক স্ফুটনাঙ্ক হলো $83^{\\circ}C$ এবং অ্যাসিটোন, $\\mathrm{(CH_{3})_{2}C=O}$ এর $56^{\\circ}C$। 2-প্রোপানল এর স্ফুটনাঙ্ক বেশি হওয়ার মূল কারণ কী? [RU'20-21]",
+    options: ["2-প্রোপানলের $\\mathrm{O-H}$ বন্ধনী অ্যাসিটোনের $\\mathrm{C-H}$ বন্ধনী অপেক্ষা শক্তিশালী", "2-প্রোপানলে অ্যাসিটোনের চেয়ে বেশি ভ্যানডার ওয়ালস বল অনুভূত হয়", "2-প্রোপানলে অ্যাসিটোনের চেয়ে বেশি হাইড্রোজেন বন্ধন রয়েছে", "2-প্রোপানলে অ্যাসিটোনের চেয়ে বেশি পাই ($\\pi$) বন্ধন রয়েছে"],
+    correct_answer: "2-প্রোপানলে অ্যাসিটোনের চেয়ে বেশি হাইড্রোজেন বন্ধন রয়েছে",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82700,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০০. $\\mathrm{C_{2}H_{5}ONa + C_{2}H_{5}I \\rightarrow C_{2}H_{5}OC_{2}H_{5} + NaI}$\nবিক্রিয়াটি হচ্ছে- [CU'20-21]",
+    options: ["উরটজ বিক্রিয়া", "গ্রিগনার্ড বিক্রিয়া", "উইলিয়ামসন সংশ্লেষণ", "উরটজ-ফিটিগ বিক্রিয়া"],
+    correct_answer: "উইলিয়ামসন সংশ্লেষণ",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82701,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০১. (গাঢ় HCl + অনাদ্র $\\mathrm{ZnCl_{2}}$) এর দ্রবণ- [CU'20-21, 13-14]",
+    options: ["টলেন বিকারক", "গ্রিগনার্ড বিকারক", "শিফস বিকারক", "লুকাস বিকারক"],
+    correct_answer: "লুকাস বিকারক",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82702,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০২. কোন যৌগটির স্ফুটনাঙ্ক সবচেয়ে কম? [GST'20-21]",
+    options: ["$\\mathrm{C_{2}H_{5}OH}$", "$\\mathrm{(C_{2}H_{5})_{2}O}$", "$\\mathrm{C_{2}H_{5}OOCCH_{3}}$", "$\\mathrm{C_{2}H_{5}CHO}$"],
+    correct_answer: "$\\mathrm{(C_{2}H_{5})_{2}O}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82703,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০৩. ইথানলের স্ফুটনাঙ্ক কত? [Agri.'19-20]",
+    options: ["$56^{\\circ}C$", "$78^{\\circ}C$", "$101^{\\circ}C$", "$118^{\\circ}C$"],
+    correct_answer: "$78^{\\circ}C$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82704,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০৪. কোন যৌগটি জলীয় NaOH এর সঙ্গে বিক্রিয়া করবে না? [DU'18-19]",
+    options: ["$\\mathrm{C_{2}H_{5}OH}$", "$\\mathrm{C_{6}H_{5}OH}$", "$\\mathrm{C_{6}H_{5}COOH}$", "$\\mathrm{C_{2}H_{5}COOH}$"],
+    correct_answer: "$\\mathrm{C_{2}H_{5}OH}$",
+    explanation: "NaOH এর সাথে ফেনল/কার্বক্সিলিক এসিড বিক্রিয়া করলেও অ্যালকোহলের সাথে বিক্রিয়া হয় না।",
+    time_limit: 60
+  },
+  {
+    id: 82705,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০৫. বিশুদ্ধ পানিতে ইথানল যোগ করলে দ্রবণের pH কত হবে? [KU'18-19]",
+    options: ["$<7$", "7", "$>7$ এবং $<14$", "14"],
+    correct_answer: "7",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82706,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০৬. লুকাস বিকারকের সাথে তাৎক্ষণিক বিক্রিয়া করে কোনটি? [DU'15-16]",
+    options: ["Butan-1-ol", "Butan-2-ol", "2-methylpropan-1-ol", "2-methylpropan-2-ol"],
+    correct_answer: "2-methylpropan-2-ol",
+    explanation: "$\\mathrm{3^{\\circ}}$ অ্যালকোহল লুকাস বিকারকের সাথে তাৎক্ষণিক বিক্রিয়া করে।\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 82707,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০৭. মিথানলের শিল্প উৎপাদনে ব্যবহৃত প্রভাবক- [JU'14-15]",
+    options: ["$\\mathrm{ZnO + Cr_{2}O_{3}}$", "$\\mathrm{TiCl_{3} + Al(C_{2}H_{5})_{3}}$", "$\\mathrm{Co-Fe-Ni}$", "$\\mathrm{Pt-Ir}$"],
+    correct_answer: "$\\mathrm{ZnO + Cr_{2}O_{3}}$",
+    explanation: "$\\mathrm{[CO + H_{2}] + H_{2} \\xrightarrow[300^{\\circ}C, 200\\ atm]{ZnO, Cr_{2}O_{3}} CH_{3}OH}$ (water gas)",
+    time_limit: 60
+  },
+  {
+    id: 82708,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০৮. মিঠা গুড় ও স্টার্চ থেকে ইথানল উৎপাদন প্রক্রিয়া হলো- [JU'14-15]",
+    options: ["আদ্রবিশ্লেষণ", "জারণ", "গাজন প্রক্রিয়া", "বিযোজন"],
+    correct_answer: "গাজন প্রক্রিয়া",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 82709,
+    topic: "অ্যালকোহল ও ইথার",
+    topicId: "chem2_org_t07",
+    question_text: "১০৯. ডাক্তারি যন্ত্রপাতির জীবাণুনাশকরূপে ব্যবহৃত হয়- [JU'14-15]",
+    options: ["70% ইথানল ও 30% পানির মিশ্রণ", "ডেটল", "মেনথল", "রেকটিফাইড স্পিরিট"],
+    correct_answer: "70% ইথানল ও 30% পানির মিশ্রণ",
+    explanation: "",
+    time_limit: 60
+  },
 ];
