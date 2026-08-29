@@ -90,6 +90,20 @@ function registerFile(path: string, url: string) {
 
 Object.entries(discovered).forEach(([path, url]) => registerFile(path, url));
 
+// Secondary index: question NUMBER -> key, only when unambiguous across all files.
+// Lets the student Quiz (which may lack route/chapter metadata) still find images by plain id.
+const numIndex: Record<string, string | 'AMBIGUOUS'> = {};
+Object.keys(registry).forEach((key) => {
+  const m = key.match(/q?0*(\d+)$/);
+  if (!m) return;
+  const num = String(parseInt(m[1], 10));
+  if (numIndex[num] && numIndex[num] !== key) {
+    numIndex[num] = 'AMBIGUOUS';
+  } else {
+    numIndex[num] = key;
+  }
+});
+
 /**
  * Returns local (in-repo) media items for a question, looked up via all its alias keys.
  * First alias that has files wins per placement.
@@ -97,10 +111,23 @@ Object.entries(discovered).forEach(([path, url]) => registerFile(path, url));
 export function getLocalMediaForAliases(aliases: string[]): QuestionMediaItem[] {
   const found: Partial<Record<string, LocalMediaEntry>> = {};
 
+  const resolveAlias = (alias: string): string | undefined => {
+    if (registry[alias]) return alias;
+    // numeric fallback: "19" or "q19" or "q019"
+    const nm = alias.match(/^q?0*(\d+)$/);
+    if (nm) {
+      const hit = numIndex[String(parseInt(nm[1], 10))];
+      if (hit && hit !== 'AMBIGUOUS') return hit;
+    }
+    return undefined;
+  };
+
   for (const rawAlias of aliases || []) {
     const alias = String(rawAlias || '').trim().toLowerCase();
-    if (!alias || !registry[alias]) continue;
-    for (const [placement, entry] of Object.entries(registry[alias])) {
+    if (!alias) continue;
+    const key = resolveAlias(alias);
+    if (!key) continue;
+    for (const [placement, entry] of Object.entries(registry[key])) {
       if (!entry) continue;
       if (!found[placement]) found[placement] = entry;
     }
