@@ -17,6 +17,7 @@ import { ictChap3Data } from '../data/questions_ict_chap3';
 import { bio1Chap1Data } from '../data/questions_bio1_chap1';
 import { bio1Chap7Data } from '../data/questions_bio1_chap7';
 import { bio1Chap8Data, tissueQuestions } from '../data/questions_bio1_chap8';
+import { chem2OrganicQuestions } from '../data/questions_chem2_organic';
 
 export function getLocalVarsityQuestions(): Question[] {
   const result: Question[] = [];
@@ -94,6 +95,22 @@ export function getLocalVarsityQuestions(): Question[] {
       unit: 'du_ka',
       paper: 'first',
       time_limit: q.time_limit || 45
+    } as unknown as Question);
+  });
+
+  // Chemistry 2nd paper: জৈব রসায়ন (Module 3 topic-wise)
+  (chem2OrganicQuestions || []).forEach((q: any) => {
+    result.push({
+      ...q,
+      id: typeof q.id === 'number' ? q.id : ++nextNumericId,
+      subject: 'chemistry',
+      chapter: 'জৈব রসায়ন',
+      chapterId: 'var_chem2_ch2',
+      topic: q.topic || 'জৈব রসায়ন',
+      route: 'varsity',
+      unit: 'du_ka',
+      paper: 'second',
+      time_limit: q.time_limit || 60
     } as unknown as Question);
   });
 
