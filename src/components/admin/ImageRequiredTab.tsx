@@ -733,75 +733,116 @@ export default function ImageRequiredTab({
                   )}
                 </div>
 
-                {/* 4. Local (in-repo) Image Slots — Option D: images live in src/assets/question-media */}
+                {/* 4. Universal Image Slot Groups — question / options / explanation (+stimulus) for EVERY question */}
                 <div className="border-t border-slate-800/80 pt-3.5 mt-2 space-y-3">
                   <div className="text-[11px] font-bold text-cyan-400 flex items-center gap-1.5">
                     <ImageIcon className="w-3.5 h-3.5 text-cyan-400" />
                     <span>চিত্র ফাইল (রিপো ফোল্ডার: src/assets/question-media/):</span>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {reqPlacements.map((placement) => {
-                      const attached = (item.attachedMedia || []).find(
-                        (m) => (m.placement || 'question') === placement && Boolean(m.url)
-                      );
-                      const expectedName = getSuggestedLocalFilename(item.stableKey, placement);
-                      return (
-                        <div
-                          key={`${item.stableKey}_${placement}`}
-                          className={`rounded-2xl border p-3.5 space-y-2 ${
-                            attached
-                              ? 'bg-emerald-950/20 border-emerald-500/30'
-                              : 'bg-slate-950/60 border-amber-500/30'
-                          }`}
-                        >
-                          <div className="flex items-center justify-between gap-2">
-                            <span className="text-xs font-bold text-slate-200">
-                              {getPlacementBanglaLabel(placement)}
-                            </span>
-                            {attached ? (
-                              <span className="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                                ✓ চিত্র পাওয়া গেছে
+
+                  {(() => {
+                    const optionCount = Math.max(item.options?.length || 0, 4);
+                    const optionPlacements = (['option_a', 'option_b', 'option_c', 'option_d', 'option_e'] as QuestionMediaPlacement[]).slice(0, Math.min(optionCount, 5));
+                    const groups: { title: string; placements: QuestionMediaPlacement[] }[] = [
+                      { title: '১. প্রশ্নের চিত্র', placements: (item.stimulus ? ['question', 'stimulus'] : ['question']) as QuestionMediaPlacement[] },
+                      { title: '২. অপশনের চিত্র (MCQ)', placements: optionPlacements },
+                      { title: '৩. ব্যাখ্যার চিত্র', placements: ['explanation'] as QuestionMediaPlacement[] }
+                    ];
+                    const requiredSet = new Set(reqPlacements as string[]);
+
+                    return groups.map((group) => (
+                      <details
+                        key={`${item.stableKey}_grp_${group.title}`}
+                        open={group.placements.some(p => requiredSet.has(p))}
+                        className="rounded-2xl border border-slate-800 bg-slate-950/40"
+                      >
+                        <summary className="cursor-pointer select-none px-3.5 py-2.5 flex items-center justify-between gap-2 text-xs font-bold text-slate-200">
+                          <span>{group.title}</span>
+                          <span className="flex items-center gap-1.5">
+                            {group.placements.some(p => requiredSet.has(p)) ? (
+                              <span className="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                                প্রয়োজন
                               </span>
                             ) : (
-                              <span className="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                                ফাইল নেই
+                              <span className="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-slate-900 text-slate-500 border border-slate-800">
+                                ঐচ্ছিক
                               </span>
                             )}
-                          </div>
-
-                          {attached ? (
-                            <div className="space-y-1.5">
-                              <img
-                                src={attached.url}
-                                alt={attached.altText || 'Question diagram'}
-                                className="max-h-36 rounded-xl border border-slate-800 object-contain bg-white/5"
-                              />
-                              <div className="text-[10px] font-mono text-slate-500 truncate">{attached.fileName}</div>
-                            </div>
-                          ) : (
-                            <div className="space-y-1.5">
-                              <p className="text-[11px] text-slate-400 leading-relaxed">
-                                এই নামে ফাইল রাখুন (PNG/JPG/WEBP):
-                              </p>
-                              <button
-                                type="button"
-                                onClick={() => {
-                                  navigator.clipboard?.writeText(expectedName);
-                                }}
-                                title="ক্লিক করলে ফাইলের নাম কপি হবে"
-                                className="w-full text-left px-2.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-[11px] font-mono text-cyan-300 hover:border-cyan-500/50 transition-colors cursor-pointer break-all"
+                          </span>
+                        </summary>
+                        <div className="px-3.5 pb-3.5 grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {group.placements.map((placement) => {
+                            const attached = (item.attachedMedia || []).find(
+                              (m) => (m.placement || 'question') === placement && Boolean(m.url)
+                            );
+                            const isRequired = requiredSet.has(placement);
+                            const expectedName = getSuggestedLocalFilename(item.stableKey, placement);
+                            return (
+                              <div
+                                key={`${item.stableKey}_${placement}`}
+                                className={`rounded-2xl border p-3.5 space-y-2 ${
+                                  attached
+                                    ? 'bg-emerald-950/20 border-emerald-500/30'
+                                    : isRequired
+                                      ? 'bg-slate-950/60 border-amber-500/30'
+                                      : 'bg-slate-950/40 border-slate-800'
+                                }`}
                               >
-                                {expectedName}
-                              </button>
-                              <p className="text-[10px] text-slate-500">
-                                ক্লিক করলে নাম কপি হবে · ফাইলটি src/assets/question-media/ ফোল্ডারে রেখে কমিট করুন
-                              </p>
-                            </div>
-                          )}
+                                <div className="flex items-center justify-between gap-2">
+                                  <span className="text-xs font-bold text-slate-200">
+                                    {getPlacementBanglaLabel(placement)}
+                                  </span>
+                                  {attached ? (
+                                    <span className="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                                      ✓ চিত্র পাওয়া গেছে
+                                    </span>
+                                  ) : isRequired ? (
+                                    <span className="px-2 py-0.5 rounded-lg text-[10px] font-extrabold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                                      ফাইল নেই
+                                    </span>
+                                  ) : (
+                                    <span className="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-slate-900 text-slate-500 border border-slate-800">
+                                      ঐচ্ছিক
+                                    </span>
+                                  )}
+                                </div>
+
+                                {attached ? (
+                                  <div className="space-y-1.5">
+                                    <img
+                                      src={attached.url}
+                                      alt={attached.altText || 'Question diagram'}
+                                      className="max-h-36 rounded-xl border border-slate-800 object-contain bg-white/5"
+                                    />
+                                    <div className="text-[10px] font-mono text-slate-500 truncate">{attached.fileName}</div>
+                                  </div>
+                                ) : (
+                                  <div className="space-y-1.5">
+                                    <p className="text-[11px] text-slate-400 leading-relaxed">
+                                      এই নামে ফাইল রাখুন (PNG/JPG/WEBP):
+                                    </p>
+                                    <button
+                                      type="button"
+                                      onClick={() => {
+                                        navigator.clipboard?.writeText(expectedName);
+                                      }}
+                                      title="ক্লিক করলে ফাইলের নাম কপি হবে"
+                                      className="w-full text-left px-2.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-[11px] font-mono text-cyan-300 hover:border-cyan-500/50 transition-colors cursor-pointer break-all"
+                                    >
+                                      {expectedName}
+                                    </button>
+                                    <p className="text-[10px] text-slate-500">
+                                      ক্লিক করলে নাম কপি হবে · ফাইলটি src/assets/question-media/ ফোল্ডারে রেখে কমিট করুন
+                                    </p>
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
                         </div>
-                      );
-                    })}
-                  </div>
+                      </details>
+                    ));
+                  })()}
                 </div>
               </div>
             );
