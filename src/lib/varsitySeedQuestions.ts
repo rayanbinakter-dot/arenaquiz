@@ -18,6 +18,7 @@ import { bio1Chap1Data } from '../data/questions_bio1_chap1';
 import { bio1Chap7Data } from '../data/questions_bio1_chap7';
 import { bio1Chap8Data, tissueQuestions } from '../data/questions_bio1_chap8';
 import { chem2OrganicQuestions } from '../data/questions_chem2_organic';
+import { chem1PeriodicQuestions } from '../data/questions_chem1_periodic';
 
 export function getLocalVarsityQuestions(): Question[] {
   const result: Question[] = [];
@@ -94,6 +95,22 @@ export function getLocalVarsityQuestions(): Question[] {
       unit: 'du_ka',
       paper: 'first',
       time_limit: q.time_limit || 45
+    } as unknown as Question);
+  });
+
+  // Chemistry 1st paper: মৌলের পর্যায়বৃত্ত ধর্ম ও রাসায়নিক বন্ধন (Module 3 topic-wise)
+  (chem1PeriodicQuestions || []).forEach((q: any) => {
+    result.push({
+      ...q,
+      id: typeof q.id === 'number' ? q.id : ++nextNumericId,
+      subject: 'chemistry',
+      chapter: 'মৌলের পর্যায়বৃত্ত ধর্ম ও রাসায়নিক বন্ধন',
+      chapterId: 'var_chem1_ch3',
+      topic: q.topic || 'সাধারণ',
+      route: 'varsity',
+      unit: 'du_ka',
+      paper: 'first',
+      time_limit: q.time_limit || 60
     } as unknown as Question);
   });
 

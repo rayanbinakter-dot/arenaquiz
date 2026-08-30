@@ -371,6 +371,8 @@ export default function Quiz({
 
   // Clean Question Title & Extract Source
   let cleanQuestionText = mediaState.cleanStem || currentQuestion.question_text || '';
+  // Strip typed source question number (e.g. "১৯. " / "05. ") — students see only the app's own counter
+  cleanQuestionText = cleanQuestionText.replace(/^\s*[০-৯0-9]+\s*[.।)]\s*/, '');
   let extractedSource = (currentQuestion as any).source || (currentQuestion as any).ref || (currentQuestion as any).author || '';
   if (!extractedSource) {
     const sourceMatch = cleanQuestionText.match(/[\(\[]\s*(?:সূত্র|Source):\s*([^\]\)]+)[\)\]]/i);
