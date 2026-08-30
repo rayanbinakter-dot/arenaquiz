@@ -21,6 +21,7 @@ import { chem2OrganicQuestions } from '../data/questions_chem2_organic';
 import { chem1PeriodicQuestions } from '../data/questions_chem1_periodic';
 import { chem1ChemicalChangeQuestions } from '../data/questions_chem1_change';
 import { chem1LabSafetyQuestions } from '../data/questions_chem1_lab';
+import { chem1AppliedQuestions } from '../data/questions_chem1_applied';
 import { chem1QualitativeQuestions } from '../data/questions_chem1_qualitative_new';
 
 export function getLocalVarsityQuestions(): Question[] {
@@ -109,6 +110,22 @@ export function getLocalVarsityQuestions(): Question[] {
       subject: 'chemistry',
       chapter: 'গুণগত রসায়ন',
       chapterId: 'var_chem1_ch2',
+      topic: q.topic || 'সাধারণ',
+      route: 'varsity',
+      unit: 'du_ka',
+      paper: 'first',
+      time_limit: q.time_limit || 60
+    } as unknown as Question);
+  });
+
+  // Chemistry 1st paper: কর্মমুখী রসায়ন (Module 3 topic-wise)
+  (chem1AppliedQuestions || []).forEach((q: any) => {
+    result.push({
+      ...q,
+      id: typeof q.id === 'number' ? q.id : ++nextNumericId,
+      subject: 'chemistry',
+      chapter: 'কর্মমুখী রসায়ন',
+      chapterId: 'var_chem1_ch5',
       topic: q.topic || 'সাধারণ',
       route: 'varsity',
       unit: 'du_ka',
