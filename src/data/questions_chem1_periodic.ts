@@ -1788,4 +1788,1139 @@ export const chem1PeriodicQuestions: Question[] = [
     explanation: "",
     time_limit: 60
   },
+  // --- T-07: অরবিটাল অধিক্রমণ ---
+  {
+    id: 83779,
+    topic: "অরবিটাল অধিক্রমণ",
+    topicId: "chem1_per_t07",
+    question_text: "১৭৯. কোন ধরনের অরবিটাল অধিক্রমণের ফলে সিগমা ($\\sigma$) ও পাই ($\\pi$) – দুই ধরনের বন্ধন গঠন হতে পারে? [JU'25-26]",
+    options: ["$s-s$", "$sp-s$", "$p-p$", "$sp^2 - s$"],
+    correct_answer: "$p-p$",
+    explanation: "সাধারণত $\\pi$ বন্ধন $\\sigma$ বন্ধন গঠনের পর হয় এবং পাশাপাশি দুটি p-অরবিটালের অধিক্রমণের পর $\\pi$ বন্ধন হয়।",
+    time_limit: 60
+  },
+  {
+    id: 83780,
+    topic: "অরবিটাল অধিক্রমণ",
+    topicId: "chem1_per_t07",
+    question_text: "১৮০. $\\mathrm{CH_3CN}$ অণুতে যথাক্রমে সিগমা ($\\sigma$) ও পাই ($\\pi$) বন্ধন সংখ্যা কত? [JU'23-24]",
+    options: ["$5$ ও $2$", "$4$ ও $3$", "$5$ ও $3$", "$4$ ও $2$"],
+    correct_answer: "$5$ ও $2$",
+    explanation: "$\\mathrm{H-C-C\\equiv N}$ ; $\\sigma$ বন্ধন $5$টি ও $\\pi$ বন্ধন $2$টি\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83781,
+    topic: "অরবিটাল অধিক্রমণ",
+    topicId: "chem1_per_t07",
+    question_text: "১৮১. $\\pi$ বন্ধন গঠিত হয়: [JU'22-23]\n(i) p-p অরবিটালের অধিক্রমণে\n(ii) সংকরিত অরবিটালের অধিক্রমণে\n(iii) অসংকরিত অরবিটালের অধিক্রমণে\nনিচের কোনটি সঠিক?",
+    options: ["i, ii", "ii, iii", "i, iii", "i, ii, iii"],
+    correct_answer: "i, iii",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83782,
+    topic: "অরবিটাল অধিক্রমণ",
+    topicId: "chem1_per_t07",
+    question_text: "১৮২. $1$-বিউটিন-$3$-আইন এ $\\sigma$ এবং $\\pi$ বন্ধনের সংখ্যা যথাক্রমে- [GST'21-22; RU'21-22]",
+    options: ["$5$ ও $5$", "$7$ ও $3$", "$8$ ও $2$", "$6$ ও $4$"],
+    correct_answer: "$7$ ও $3$",
+    explanation: "$\\mathrm{H_2C=CH-C\\equiv CH} ; \\sigma = 7, \\pi = 3$\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83783,
+    topic: "অরবিটাল অধিক্রমণ",
+    topicId: "chem1_per_t07",
+    question_text: "১৮৩. সিগমা ও পাই বন্ধন মূলত কি ধরনের বন্ধন? [JU'17-18]",
+    options: ["সমযোজী বন্ধন", "আয়নিক বন্ধন", "অধাতব বন্ধন", "হাইড্রোজেন বন্ধন"],
+    correct_answer: "সমযোজী বন্ধন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83784,
+    topic: "অরবিটাল অধিক্রমণ",
+    topicId: "chem1_per_t07",
+    question_text: "১৮৪. $\\mathrm{CH_2=CH-CH_2CHO}$ যৌগটিতে যথাক্রমে $\\sigma$ এবং $\\pi$ বন্ধনের সংখ্যা হলো- [DU'15-16]",
+    options: ["$9, 2$", "$8, 4$", "$10, 1$", "$10, 2$"],
+    correct_answer: "$10, 2$",
+    explanation: "[এখানে চিত্র ছিল]\n$\\sigma \\rightarrow 10, \\pi \\rightarrow 2$",
+    time_limit: 60
+  },
+  // --- T-08: হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব ---
+  {
+    id: 83885,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৮৫. $\\mathrm{BCl_3}$ অণুতে $\\mathrm{B}$ পরমাণুর সংকরায়ন অবস্থা কী? [JU'25-26]",
+    options: ["$sp^2$", "$sp^3d$", "$sp^3d^2$", "$sp^3$"],
+    correct_answer: "$sp^2$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83886,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৮৬. কোন যৌগটি সরলরৈখিক নয়? [JU'25-26]",
+    options: ["$\\mathrm{CO_2}$", "$\\mathrm{BeCl_2}$", "$\\mathrm{O_2}$", "$\\mathrm{H_2S}$"],
+    correct_answer: "$\\mathrm{H_2S}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83887,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৮৭. কোন অণুটির জ্যামিতিক আকৃতি সমতলীয় ত্রিকোণাকার? [JU'25-26]",
+    options: ["$\\mathrm{CCl_4}$", "$\\mathrm{PH_3}$", "$\\mathrm{PCl_3}$", "$\\mathrm{BF_3}$"],
+    correct_answer: "$\\mathrm{BF_3}$",
+    explanation: "$\\mathrm{BF_3} = \\frac{1}{2}(3+3-0+0) = 3$\nঅর্থাৎ, $sp^2$ সংকরায়ন সুতরাং $\\mathrm{BF_3}$ অণুর আকৃতি সমতলীয় ত্রিকোণাকার।",
+    time_limit: 60
+  },
+  {
+    id: 83888,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৮৮. নিচের কোনটিতে বন্ধন দৈর্ঘ্য কম? [JU'25-26]",
+    options: ["$\\mathrm{H-H}$", "$\\mathrm{H_3C-H}$", "$\\mathrm{F-F}$", "$\\mathrm{H-F}$"],
+    correct_answer: "$\\mathrm{H-H}$",
+    explanation: "যে পরমাণুর আকার যত বড়, বন্ধনে তার দূরত্ব তত বেশি।",
+    time_limit: 60
+  },
+  {
+    id: 83889,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৮৯. $sp^3$ সংকর অরবিটালের আকৃতি কোনটি? [CU'25-26]",
+    options: ["লিনিয়ার", "ট্রাইঅ্যাঙ্গুলার", "স্কয়ার প্লেনার", "টেট্রাহেড্রাল"],
+    correct_answer: "টেট্রাহেড্রাল",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83890,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯০. পানিতে $\\mathrm{H-O-H}$ বন্ধন কোণের মান যদি $180^{\\circ}$ হতো, তাহলে কোনটি সত্য? [SUST'25-26]",
+    options: ["পানির পোলারিটি বেড়ে যেত", "পানি গ্যাসীয় হতো ফলে জীবনধারণ অসম্ভব হতো", "হাইড্রোজেন বন্ধন শক্তি বেড়ে যেত", "পানিতে লবণের দ্রাব্যতা বেড়ে যেত"],
+    correct_answer: "পানি গ্যাসীয় হতো ফলে জীবনধারণ অসম্ভব হতো",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83891,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯১. $\\mathrm{NH_3}$ অণুর আকৃতি কী? [Agri.'25-26]",
+    options: ["টেট্রাহেড্রাল", "ট্রাইগোনাল প্ল্যানার", "ট্রাইগোনাল পিরামিডাল", "বাইপিরামিডাল"],
+    correct_answer: "ট্রাইগোনাল পিরামিডাল",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83892,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯২. নিচের কোন আয়নটিতে শুধুমাত্র একটি নিঃসঙ্গ ইলেকট্রন জোড় আছে? [DU'24-25]",
+    options: ["$\\mathrm{CH_3^+}$", "$\\mathrm{CH_3^-}$", "$\\mathrm{NH_2^-}$", "$\\mathrm{NH_4^+}$"],
+    correct_answer: "$\\mathrm{CH_3^-}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83893,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯৩. হাইড্রাজিন $\\mathrm{(N_2H_4)}$ অণুতে $\\angle\\mathrm{HNH}$ বন্ধন কোণ কত? [DU'24-25]",
+    options: ["$105^{\\circ}$", "$107^{\\circ}$", "$109.5^{\\circ}$", "$120^{\\circ}$"],
+    correct_answer: "$107^{\\circ}$",
+    explanation: "হাইড্রাজিন এর ক্ষেত্রে নাইট্রোজেনের $\\mathrm{(N)}$ সংকরায়ন হচ্ছে $sp^3$। এক্ষেত্রে বন্ধন কোণ হওয়ার কথা $109.5^{\\circ}$। কিন্তু হাইড্রাজিনে একটি মুক্তজোড় ইলেকট্রন থাকায় মুক্তজোড় ও বন্ধনজোড় বিকর্ষণ এর কারণে বন্ধন কোণ কমে $107^{\\circ}$ হয়।\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83894,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯৪. কোন অণুর বন্ধন কোণের মান সবচেয়ে কম? [RU'24-25]",
+    options: ["$\\mathrm{CH_4}$", "$\\mathrm{H_2O}$", "$\\mathrm{NH_3}$", "$\\mathrm{BCl_3}$"],
+    correct_answer: "$\\mathrm{H_2O}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83895,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯৫. কোন যৌগের গঠন চতুস্তলকীয় নয়? [RU'24-25; JU'23-24]",
+    options: ["$\\mathrm{CCl_4}$", "$\\mathrm{NH_4^+}$", "$\\mathrm{BH_4^-}$", "$\\mathrm{SF_4}$"],
+    correct_answer: "$\\mathrm{SF_4}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83896,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯৬. কোন অণুর কেন্দ্রীয় পরমাণুতে $sp^3d$ সংকরন ঘটে? [RU'24-25]",
+    options: ["$\\mathrm{SiCl_4}$", "$\\mathrm{PCl_3}$", "$\\mathrm{PCl_5}$", "$\\mathrm{SF_6}$"],
+    correct_answer: "$\\mathrm{PCl_5}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83897,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯৭. $sp^3$ সংকরিত যৌগ নয় কোনটি? [JU'24-25; CU'20-21]",
+    options: ["$\\mathrm{BF_3}$", "$\\mathrm{NH_3}$", "$\\mathrm{H_2O}$", "$\\mathrm{NH_4^+}$"],
+    correct_answer: "$\\mathrm{BF_3}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83898,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯৮. $\\mathrm{XeF_4}$ যৌগে কতটি মুক্তজোড় ইলেকট্রন রয়েছে? [KU'24-25]",
+    options: ["$2$", "$3$", "$1$", "$0$"],
+    correct_answer: "$2$",
+    explanation: "এখানে, $\\mathrm{Xe}$ পরমাণুর মুক্তজোড় ইলেকট্রন সংখ্যা বিবেচনা করা হয়েছে। $\\mathrm{Xe}$ এর বহিঃস্থ শেলে $8$ টি $e^-$ থাকে। এর মধ্যে $4$ টি $e^-$ $\\mathrm{F}$ এর সাথে বন্ধন গঠন করে।",
+    time_limit: 60
+  },
+  {
+    id: 83899,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "১৯৯. $sp^2$, $sp^3$ ও $sp^3d$ সংকরনের সাথে যথাক্রমে কোন জ্যামিতিক গঠনের অণু পাওয়া যায়? [SUST'24-25]",
+    options: ["সমতলীয় ত্রিভুজাকার, চতুস্তলকীয় ও ত্রিকোণাকার দ্বিপিরামিড", "চতুস্তলকীয়, ত্রিভুজাকার ও পঞ্চভুজীয়", "ত্রিকোণাকার, চতুস্তলকীয় ও অষ্টতলকীয়", "ত্রিকোণাকার, ত্রিভুজাকার ও পঞ্চভুজীয়"],
+    correct_answer: "সমতলীয় ত্রিভুজাকার, চতুস্তলকীয় ও ত্রিকোণাকার দ্বিপিরামিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83800,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০০. $\\mathrm{NH_3}$ ও $\\mathrm{PCl_3}$ এর বন্ধন কোণ যথাক্রমে কত? [SUST'24-25]",
+    options: ["$109.5^{\\circ}$ ও $120^{\\circ}$", "$107^{\\circ}$ ও $100^{\\circ}$", "$109.5^{\\circ}$ ও $100^{\\circ}$", "$107^{\\circ}$ ও $120^{\\circ}$"],
+    correct_answer: "$107^{\\circ}$ ও $100^{\\circ}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83801,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০১. $\\mathrm{NH_4^+}$ এর আকৃতি কোনটি? [GST'24-25]",
+    options: ["পিরামিড", "টেট্রাহেড্রাল", "ট্রাইগোনাল বাইপিরামিড", "স্কয়ার প্ল্যানার"],
+    correct_answer: "টেট্রাহেড্রাল",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83802,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০২. কোন যৌগের কার্বনে একাধিক ধরনের সংকরন আছে? [DU'23-24]",
+    options: ["1, 3-butadiene (1, 3-বিউটাডাইন)", "Cyclohexane (সাইক্লোহেক্সেন)", "Vinylbenzene (ভিনাইলবেনজিন)", "1, 2-butadiene (1, 2-বিউটাডাইন)"],
+    correct_answer: "1, 2-butadiene (1, 2-বিউটাডাইন)",
+    explanation: "$\\mathrm{H_2C=C=CH_2}$\n$sp^2 \\quad sp \\quad sp^2$",
+    time_limit: 60
+  },
+  {
+    id: 83803,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০৩. $\\mathrm{ACl_5}$ এর জ্যামিতিক আকৃতি কোনটি? ('A' এর পারমাণবিক সংখ্যা 15) [GST'23-24]",
+    options: ["অষ্টতলকীয়", "চতুস্তলকীয়", "ত্রিকোণীয় দ্বি পিরামিড", "বর্গাকার পিরামিড"],
+    correct_answer: "ত্রিকোণীয় দ্বি পিরামিড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83804,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০৪. কোন যৌগটির বন্ধন কোণ সবচেয়ে কম? [GST'23-24]",
+    options: ["$\\mathrm{H_2O}$", "$\\mathrm{NCl_3}$", "$\\mathrm{H_2S}$", "$\\mathrm{PH_3}$"],
+    correct_answer: "$\\mathrm{H_2S}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83805,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০৫. $sp^3d$ সংকরিত যৌগ নিচের কোনটি? [RU'23-24]",
+    options: ["$\\mathrm{SF_6}$", "$\\mathrm{PCl_5}$", "$\\mathrm{ClF_3}$", "সবগুলো"],
+    correct_answer: "$\\mathrm{PCl_5}$",
+    explanation: "নোট: $\\mathrm{ClF_3}$-ও $sp^3d$ সংকরিত; $\\mathrm{SF_6}$ হলো $sp^3d^2$; যাচাই প্রয়োজন।",
+    time_limit: 60
+  },
+  {
+    id: 83806,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০৬. নিচের যৌগগুলোর মধ্যে কোনটিতে সর্বোচ্চ সংখ্যক নিঃসঙ্গ জোড় ইলেকট্রন বিদ্যমান? [RU'23-24]",
+    options: ["$\\mathrm{SF_4}$", "$\\mathrm{H_2O}$", "$\\mathrm{NH_3}$", "$\\mathrm{XeF_2}$"],
+    correct_answer: "$\\mathrm{XeF_2}$",
+    explanation: "কেন্দ্রীয় পরমাণু বিবেচনায় সবচেয়ে বেশি মুক্ত জোড় ইলেকট্রন $\\mathrm{XeF_2}$ এ এবং পুরো যৌগ বিবেচনায় সবচেয়ে বেশি মুক্তজোড় ইলেকট্রন $\\mathrm{SF_4}$।",
+    time_limit: 60
+  },
+  {
+    id: 83807,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০৭. $\\mathrm{PCl_5}$ এ $\\mathrm{P}$ এর সংকরায়ন কীরূপ? [JU'23-24]",
+    options: ["$sp^3$", "$sp^3d$", "$sp^3d^2$", "$sp^3d^3$"],
+    correct_answer: "$sp^3d$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83808,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০৮. $\\mathrm{H_2O}$ অণুতে $\\mathrm{O}$-পরমাণুটি কোন ধরনের সংকরায়িত? [JU'23-24]",
+    options: ["$sp$", "$sp^2$", "$sp^3$", "$sp^4$"],
+    correct_answer: "$sp^3$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83809,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২০৯. $\\mathrm{COCl_2}$ অণুতে $\\mathrm{C}$-পরমাণুটি কোন ধরনের সংকরায়িত? [JU'23-24]",
+    options: ["$sp$", "$sp^2$", "$sp^3$", "$sp^4$"],
+    correct_answer: "$sp^2$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83810,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১০. $\\mathrm{AlCl_4^-}$ এর আকার কেমন হবে? [GST'22-23]",
+    options: ["সমতলীয় বর্গাকার", "ত্রিভুজীয় পিরামিড", "চতুস্তলকীয়", "বর্গাকার পিরামিড"],
+    correct_answer: "চতুস্তলকীয়",
+    explanation: "$H = \\frac{1}{2}(V + M - C + A)$\n$= \\frac{1}{2}(3 + 4 - 0 + 1) = 4$ ; $\\mathrm{AlCl_4^-}$ যৌগটি $sp^3$ সংকরিত হওয়ায় এর আকার চতুস্তলকীয়।",
+    time_limit: 60
+  },
+  {
+    id: 83811,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১১. $\\mathrm{PF_5}$ এর জ্যামিতিক গঠন কোনটি? [JU'22-23]",
+    options: ["ত্রিকোণাকার দ্বিপিরামিডীয়", "পঞ্চকোণীয় দ্বিপিরামিডীয়", "অষ্টতলকীয়", "ত্রিকোণাকার সমতলীয়"],
+    correct_answer: "ত্রিকোণাকার দ্বিপিরামিডীয়",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83812,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১২. $\\mathrm{IO_3^-}$ আয়নে কয়টি নিঃসঙ্গ ইলেকট্রন জোড় আছে? [JU'22-23]",
+    options: ["$1$ টি", "$2$ টি", "$3$ টি", "$4$ টি"],
+    correct_answer: "$1$ টি",
+    explanation: "নোট: বইয়ে \"(সঠিক উত্তর নেই)\" উল্লেখ; কেন্দ্রীয় মৌল আয়োডিনের মুক্তজোড় $1$ টি; পুরো আয়নে মোট $= 1 + (2 \\times 2) + 3 = 8$ টি। যাচাই প্রয়োজন।\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83813,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১৩. কার্বন-কার্বন বন্ধন দূরত্ব সবচেয়ে কম কোন সংকরণের ক্ষেত্রে? [RU'22-23]",
+    options: ["সংকরনের প্রভাব নেই", "$sp$", "$sp^2$", "$sp^3$"],
+    correct_answer: "$sp$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83814,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১৪. $sp^2$ সংকরন দ্বারা একটি কার্বন যে বন্ধন গঠন করে- [RU'22-23]",
+    options: ["$4$ টি $\\pi$", "$2$ টি $\\pi$ ও $2$ টি $\\sigma$", "$1$ টি $\\pi$ ও $3$ টি $\\sigma$", "$4$ টি $\\sigma$"],
+    correct_answer: "$1$ টি $\\pi$ ও $3$ টি $\\sigma$",
+    explanation: "$3$টি $sp^2$ অরবিটাল $\\sigma$ বন্ধন গঠন করে এবং অবশিষ্ট p অরবিটাল $\\pi$ বন্ধন গঠন করে।\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83815,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১৫. গ্রাফাইটে কোন ধরনের সংকরন বিদ্যমান? [DU'21-22]",
+    options: ["$sp^3$", "$sp^2$", "$sp$", "$sp^2d$"],
+    correct_answer: "$sp^2$",
+    explanation: "হীরকে $sp^3$ সংকরন এবং গ্রাফাইটে $sp^2$ সংকরন থাকে।",
+    time_limit: 60
+  },
+  {
+    id: 83816,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১৬. $\\mathrm{NH_4^+}$ ও $\\mathrm{PH_4^+}$ আয়নের সংকরায়ন কোনটি? [JU'21-22]",
+    options: ["$sp$", "$sp^2$", "$sp^3$", "$sp^3d$"],
+    correct_answer: "$sp^3$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83817,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১৭. $\\mathrm{CH_3OH}$ অণুতে কার্বনের কোন ধরনের হাইব্রিডাইজেশন বিদ্যমান? [GST'21-22]",
+    options: ["$sp$", "$sp^2$", "$sp^3d^2$", "$sp^3$"],
+    correct_answer: "$sp^3$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83818,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১৮. $\\mathrm{BCl_3}$ এর বন্ধন কোণ কত? [GST'21-22]",
+    options: ["$104.5^{\\circ}$", "$107^{\\circ}$", "$120^{\\circ}$", "$180^{\\circ}$"],
+    correct_answer: "$120^{\\circ}$",
+    explanation: "[এখানে চিত্র ছিল]\nযৌগটিতে $sp^2$ সংকরায়ন ঘটে। তাই বন্ধন কোণ $120^{\\circ}$।",
+    time_limit: 60
+  },
+  {
+    id: 83819,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২১৯. কোনটির $sp^3$ হাইব্রিডাইজেশন বিদ্যমান? [Agri.'21-22]",
+    options: ["$\\mathrm{HCN}$", "$\\mathrm{C_2H_2}$", "$\\mathrm{BF_3}$", "$\\mathrm{NH_4^+}$"],
+    correct_answer: "$\\mathrm{NH_4^+}$",
+    explanation: "$\\mathrm{HCN}$ বা $\\mathrm{H-C\\equiv N}$ সংকরায়ন $sp$\n$\\mathrm{C_2H_2}$ বা $\\mathrm{H-C\\equiv C-H}$ সংকরায়ন $sp$\n$\\mathrm{BF_3}$ বা [এখানে চিত্র ছিল] সংকরায়ন $sp^2$\n$\\mathrm{NH_4^+}$ বা [এখানে চিত্র ছিল] সংকরায়ন $sp^3$",
+    time_limit: 60
+  },
+  {
+    id: 83820,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২০. $sp^3d^2$ সংকরন বিশিষ্ট যৌগ কোনটি? [RU'21-22]",
+    options: ["$\\mathrm{XeF_4}$", "$\\mathrm{SF_6}$", "$\\mathrm{IF_7}$", "সবগুলো"],
+    correct_answer: "$\\mathrm{XeF_4}$",
+    explanation: "নোট: বইয়ে (ক) $\\mathrm{XeF_4}$ ও (খ) $\\mathrm{SF_6}$ দুটোই সঠিক উল্লেখ; যাচাই প্রয়োজন।\n$H = \\frac{1}{2}[V + M - C + A]$\n$\\mathrm{SF_6} = \\frac{1}{2}[6 + 6 - 0 + 0] = 6~(sp^3d^2)$\n$\\mathrm{XeF_4} = \\frac{1}{2}[8 + 4 - 0 + 0] = 6~(sp^3d^2)$\n$\\mathrm{IF_7} = \\frac{1}{2}[7 + 7 - 0 + 0] = 7~(sp^3d^3)$",
+    time_limit: 60
+  },
+  {
+    id: 83821,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২১. $\\mathrm{CH_2=CH_2}$ এ কার্বন পরমাণুর $sp^2$ সংকরিত এবং অসংকরিত অরবিটালদ্বয়ের মধ্যবর্তী কোণের মান কত ডিগ্রি? [GST'20-21]",
+    options: ["$90$", "$120$", "$109.5$", "$180$"],
+    correct_answer: "$90$",
+    explanation: "সংকরিত $sp^2$ ও অসংকরিত $p_z$ একে অপরের সাপেক্ষে লম্বভাবে অবস্থান করে।\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83822,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২২. $\\mathrm{H_2S}$ এর $\\mathrm{H-S-H}$ বন্ধনের কোণ কত? [GST'20-21]",
+    options: ["$180^{\\circ}$", "$104.5^{\\circ}$", "$92.1^{\\circ}$", "$109.5^{\\circ}$"],
+    correct_answer: "$92.1^{\\circ}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83823,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২৩. কোন যৌগটি $sp^3d$ সংকরনবিশিষ্ট? [Agri.'20-21]",
+    options: ["$\\mathrm{PCl_3}$", "$\\mathrm{PCl_5}$", "$\\mathrm{CCl_4}$", "$\\mathrm{XeF_6}$"],
+    correct_answer: "$\\mathrm{PCl_5}$",
+    explanation: "$\\mathrm{PCl_3 \\rightarrow sp^3}$, $\\mathrm{PCl_5 \\rightarrow sp^3d}$, $\\mathrm{CCl_4 \\rightarrow sp^3}$, $\\mathrm{XeF_6 \\rightarrow sp^3d^3}$",
+    time_limit: 60
+  },
+  {
+    id: 83824,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২৪. ক্লোরেট $\\mathrm{(ClO_3^-)}$ আয়নের লুইস কাঠামোর ক্লোরিন পরমাণুতে কত জোড়া নিঃসঙ্গ ইলেকট্রন যুগল রয়েছে? [RU'20-21]",
+    options: ["$0$", "$1$", "$2$", "$3$"],
+    correct_answer: "$1$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83825,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২৫. মিথেন $\\mathrm{(CH_4)}$ এর পূর্ণ দহনের সময় কার্বন পরমাণুর সংকরায়নের কী পরিবর্তন ঘটে? [RU'19-20]",
+    options: ["$sp^3$ থেকে $sp$", "$sp^3$ থেকে $sp^2$", "$sp^2$ থেকে $sp$", "$sp^2$ থেকে $sp^3$"],
+    correct_answer: "$sp^3$ থেকে $sp$",
+    explanation: "$\\mathrm{CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O}$ [$\\mathrm{CH_4}$ এ $\\mathrm{C}$ পরমাণু $sp^3$ সংকরিত এবং $\\mathrm{CO_2}$ এ $\\mathrm{C}$ পরমাণু $sp$ সংকরিত]",
+    time_limit: 60
+  },
+  {
+    id: 83826,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২৬. $sp^3$ হাইব্রিডাইজেশনে কয়টি $sp^3$ হাইব্রিড অরবিটাল তৈরি হয়? [DU'18-19; JU'15-16]",
+    options: ["$2$", "$3$", "$4$", "$5$"],
+    correct_answer: "$4$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83827,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২৭. কোনটিতে $sp^2$ হাইব্রিডাইজেশন বিদ্যমান? [RU'18-19; CU'18-19]",
+    options: ["ডায়মন্ড", "গ্রাফাইট", "অ্যামোনিয়া", "পানি"],
+    correct_answer: "গ্রাফাইট",
+    explanation: "ডায়মন্ড $\\rightarrow sp^3$, গ্রাফাইট $\\rightarrow sp^2$, অ্যামোনিয়া $\\rightarrow sp^3$, পানি $\\rightarrow sp^3$",
+    time_limit: 60
+  },
+  {
+    id: 83828,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২৮. $\\mathrm{CH_3-CH=CH_2}$ যৌগে কার্বনগুলোর সংকরন কীরূপ? [DU'17-18]",
+    options: ["$sp, sp^2$", "$sp, sp^3$", "$sp^2, sp^3$", "$sp, sp^2, sp^3$"],
+    correct_answer: "$sp^2, sp^3$",
+    explanation: "দ্বিবন্ধন যুক্ত কার্বনে $\\rightarrow sp^2$ ; একক বন্ধন যুক্ত কার্বনে $\\rightarrow sp^3$ ; ত্রিবন্ধন যুক্ত কার্বনে $\\rightarrow sp$ সংকরায়ন।",
+    time_limit: 60
+  },
+  {
+    id: 83829,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২২৯. $\\mathrm{PCl_3}$ অণুর ফসফরাসে কোন সংকর অরবিটাল বিদ্যমান? [RU'17-18]",
+    options: ["$dsp^3$", "$sp^3$", "$dsp^2$", "$d^2sp$"],
+    correct_answer: "$sp^3$",
+    explanation: "$\\mathrm{PCl_3}$ এর সংকরায়ন $= \\frac{1}{2}(5 + 3 + 0 - 0) = 4 = sp^3$",
+    time_limit: 60
+  },
+  {
+    id: 83830,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩০. $\\mathrm{H_2SO_4}$ এর কেন্দ্রীয় পরমাণুর কোন প্রকার সংকরন ঘটে? [JnU'17-18]",
+    options: ["$sp^2$", "$sp^3$", "$sp^3d$", "$sp^3d^2$"],
+    correct_answer: "$sp^3$",
+    explanation: "$x = \\frac{1}{2}(6 + 0 + 2) = 4$\n$\\therefore sp^3$ সংকরায়ন।",
+    time_limit: 60
+  },
+  {
+    id: 83831,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩১. $sp^2$ হাইব্রিডাইজেশনে বন্ধন কোণ হয়- [JU'16-17]",
+    options: ["$180^{\\circ}$", "$120^{\\circ}$", "$107^{\\circ}$", "$109.5^{\\circ}$"],
+    correct_answer: "$120^{\\circ}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83832,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩২. $sp^2$ হাইব্রিডাইজেশনের মাধ্যমে গঠিত যৌগ- [JU'16-17]",
+    options: ["সরলরৈখিক", "ত্রিকোণাকার", "চতুস্তলকীয়", "ত্রিকোণাকার দ্বি-পিরামিডীয়"],
+    correct_answer: "ত্রিকোণাকার",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83833,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩৩. নিম্নের কোন অণুটি সরলরৈখিক? [DU'15-16]",
+    options: ["$\\mathrm{CO_2}$", "$\\mathrm{SO_2}$", "$\\mathrm{H_2O}$", "$\\mathrm{CH_2O}$"],
+    correct_answer: "$\\mathrm{CO_2}$",
+    explanation: "$sp$ সংকরন বিশিষ্ট যৌগে বন্ধন কোণ $180^{\\circ}$ হয় এবং সরলরৈখিক হয়। $\\mathrm{CO_2}$ সরলরৈখিক অণু।\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83834,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩৪. $\\mathrm{CH_3CN}$ যৌগের কার্বনসমূহে কী ধরনের সংকরন (Hybridization) বিদ্যমান? [JnU'15-16]",
+    options: ["$sp^2, sp^2$", "$sp^3, sp$", "$sp^2, sp$", "$sp^3, sp^3$"],
+    correct_answer: "$sp^3, sp$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83835,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩৫. একটি s অরবিটাল এবং একটি p অরবিটালের হাইব্রিডাইজেশন হলে আমরা পাই- [DU'14-15]",
+    options: ["Two mutually perpendicular orbitals", "Two orbitals at $180^{\\circ}$", "Four orbitals directed tetrahedrally", "Three orbitals in a plane"],
+    correct_answer: "Two orbitals at $180^{\\circ}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83836,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩৬. $\\mathrm{CH_3OH}$ যৌগ $\\mathrm{C}$ এর হাইব্রিডাইজেশন (hybridization) সাধারণত- [JnU'14-15]",
+    options: ["$sp$", "$sp^2$", "$sp^3$", "$sp^3d$"],
+    correct_answer: "$sp^3$",
+    explanation: "[এখানে চিত্র ছিল]\nবন্ধন ও $2$ মুক্তজোড় ইলেকট্রন রয়েছে তাই এর সংকরায়ন $sp^3$",
+    time_limit: 60
+  },
+  {
+    id: 83837,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩৭. $\\mathrm{HCHO}$ অণুতে কার্বনের হাইব্রিডাইজেশন হল- [DU'13-14]",
+    options: ["$sp$", "$sp^2$", "$sp^3$", "None"],
+    correct_answer: "$sp^2$",
+    explanation: "[এখানে চিত্র ছিল]\nপরমাণুতে দ্বিবন্ধন রয়েছে। তাই $sp^2$ সংকরায়ন।",
+    time_limit: 60
+  },
+  {
+    id: 83838,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩৮. $\\mathrm{XeF_4}$ এর সংকরায়ন হল- [RU'13-14]",
+    options: ["$sp^3$", "$sp^3d^1$", "$sp^3d^2$", "$dsp^2$"],
+    correct_answer: "$sp^3d^2$",
+    explanation: "$X = \\frac{1}{2}[8 + 4 - 0 + 0] = 6~(sp^3d^2)$",
+    time_limit: 60
+  },
+  {
+    id: 83839,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৩৯. নিচের কোনটিতে সবচেয়ে বড় বন্ধন কোণ (Bond angle) আছে? [JnU'13-14]",
+    options: ["$\\mathrm{CH_4}$", "$\\mathrm{BCl_3}$", "$\\mathrm{NH_3}$", "$\\mathrm{H_2O}$"],
+    correct_answer: "$\\mathrm{BCl_3}$",
+    explanation: "$\\mathrm{BCl_3}$ তে $sp^2$ হাইব্রিডাইজেশন বাকিগুলো $sp^3$ হাইব্রিডাইজেশন।\n$\\mathrm{BCl_3} - 120^{\\circ}, \\mathrm{CH_4} - 109.5^{\\circ},$\n$\\mathrm{NH_3} - 107^{\\circ}, \\mathrm{H_2O} - 104.5^{\\circ}$",
+    time_limit: 60
+  },
+  {
+    id: 83840,
+    topic: "হাইব্রিডাইজেশন, যৌগের আকৃতি, বন্ধন কোণ, মুক্তজোড় ইলেকট্রন, বন্ধনজোড় ইলেকট্রন, VSEPR তত্ত্ব",
+    topicId: "chem1_per_t08",
+    question_text: "২৪০. নিচের কোনটি $sp^3$ সংকরন (hybridization) প্রক্রিয়ায় গঠিত নয়? [JnU'13-14]",
+    options: ["$\\mathrm{NH_3}$", "$\\mathrm{NH_4^+}$", "$\\mathrm{BCl_3}$", "$\\mathrm{BH_4^-}$"],
+    correct_answer: "$\\mathrm{BCl_3}$",
+    explanation: "",
+    time_limit: 60
+  },
+  // --- T-09: পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য ---
+  {
+    id: 83941,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪১. নিচের কোন অণুতে স্থায়ী ডাইপোল আছে? [DU'25-26]",
+    options: ["$\\mathrm{SF_4}$", "$\\mathrm{BF_3}$", "$\\mathrm{SiF_4}$", "$\\mathrm{XeF_4}$"],
+    correct_answer: "$\\mathrm{SF_4}$",
+    explanation: "[এখানে চিত্র ছিল]\nচতুস্তলকীয় সমতলীয় বর্গাকার\nশুধু $\\mathrm{SF_4}$ অণুতেই স্থায়ী ডাইপোল মোমেন্ট আছে।",
+    time_limit: 60
+  },
+  {
+    id: 83942,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪২. কোন যৌগটি সবচেয়ে কম পোলার? [JnU'25-26]",
+    options: ["$\\mathrm{H_2O}$", "$\\mathrm{NH_3}$", "$\\mathrm{CO_2}$", "$\\mathrm{HF}$"],
+    correct_answer: "$\\mathrm{CO_2}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83943,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪৩. কোন যৌগটি অধিক সমযোজী বৈশিষ্ট্য সম্পন্ন? [JU'25-26]",
+    options: ["$\\mathrm{MgCl_2}$", "$\\mathrm{FeCl_2}$", "$\\mathrm{FeCl_3}$", "$\\mathrm{CaCl_2}$"],
+    correct_answer: "$\\mathrm{FeCl_3}$",
+    explanation: "ফাজানের নীতি অনুসারে, ক্যাটায়নের চার্জ যত বেশি হবে যৌগটি তত বেশি সমযোজী হবে। এইখানে $\\mathrm{FeCl_3}$ যৌগে ক্যাটায়নের চার্জ $+3$ কিন্তু বাকী যৌগগুলোতে $+2$। তাই $\\mathrm{FeCl_3}$ অধিক সমযোজী।",
+    time_limit: 60
+  },
+  {
+    id: 83944,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪৪. একটি দ্বি-পরমাণুক যৌগের অণুতে দুটি পরমাণুর মধ্যবর্তী আধান দূরত্ব $1.27\\mathrm{\\AA}$ এবং উভয়ের আধান $1.602 \\times 10^{-19}\\mathrm{C}$ হলে, যৌগটির ডাইপোল মোমেন্ট $\\mathrm{Cm}$ এককে কত? [RU'25-26]",
+    options: ["$2.0345 \\times 10^{-19}$", "$2.0345 \\times 10^{-29}$", "$3.0345 \\times 10^{-19}$", "$3.0345 \\times 10^{-29}$"],
+    correct_answer: "$2.0345 \\times 10^{-29}$",
+    explanation: "ডাইপোল মোমেন্ট\n$= 1.27 \\times 10^{-10} \\times 1.602 \\times 10^{-19}$\n$= 2.0345 \\times 10^{-29}\\mathrm{Cm}$",
+    time_limit: 60
+  },
+  {
+    id: 83945,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪৫. অণুর পোলারাইজেশন বলতে বোঝায়- [RU'25-26]",
+    options: ["অণুর আকার পরিবর্তন", "অণুর ইলেকট্রনের অসম বণ্টন", "পরমাণুর নিউট্রন সংখ্যা বৃদ্ধি", "অণুর বন্ধনের শক্তি বৃদ্ধি"],
+    correct_answer: "অণুর ইলেকট্রনের অসম বণ্টন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83946,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪৬. আয়নিক পটেনশিয়ালের মান অনুসারে কোন সিরিজটি সঠিক? [SUST'25-26]",
+    options: ["$\\mathrm{Cu^{2+} > Mn^{2+} > Sc^{2+}}$", "$\\mathrm{Cu^{2+} < Mn^{2+} < Sc^{2+}}$", "$\\mathrm{Cu^{2+} = Mn^{2+} = Sc^{2+}}$", "$\\mathrm{Cu^{2+} = Mn^{2+} > Sc^{2+}}$"],
+    correct_answer: "$\\mathrm{Cu^{2+} > Mn^{2+} > Sc^{2+}}$",
+    explanation: "আয়নিক পটেনশিয়াল $= \\frac{\\text{ক্যাটায়নের চার্জ}}{\\text{আকার}}$\n$\\mathrm{Cu^{2+}}$ এর পারমাণবিক ব্যাসার্ধ $= 0.53\\mathrm{\\AA}$\n$\\mathrm{Mn^{2+}}$ এর পারমাণবিক ব্যাসার্ধ $= 0.83\\mathrm{\\AA}$\n$\\mathrm{Sc^{2+}}$ এর পারমাণবিক ব্যাসার্ধ $= 0.87\\mathrm{\\AA}$\nসুতরাং, $\\mathrm{Cu^{2+} > Mn^{2+} > Sc^{2+}}$",
+    time_limit: 60
+  },
+  {
+    id: 83947,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪৭. পোলারাইজিং ক্ষমতা কোনটির বেশি? [HSTU'25-26]",
+    options: ["$\\mathrm{Li^+}$", "$\\mathrm{Mg^{2+}}$", "$\\mathrm{Al^{3+}}$", "$\\mathrm{Be^{2+}}$"],
+    correct_answer: "$\\mathrm{Al^{3+}}$",
+    explanation: "ফাজানের নীতি অনুসারে, অধিক চার্জযুক্ত আয়ন সর্বোচ্চ পোলারাইজিং ক্ষমতা প্রদর্শন করে।",
+    time_limit: 60
+  },
+  {
+    id: 83948,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪৮. নিচের কোন অণুটির সামগ্রিক ডাইপোল সর্বাধিক? [DU'24-25]",
+    options: ["$\\mathrm{Br_2C=CBr_2}$", "$\\mathrm{COCl_2}$", "$\\mathrm{HCHO}$", "$\\mathrm{BF_3}$"],
+    correct_answer: "$\\mathrm{HCHO}$",
+    explanation: "a ও d এর ডাইপোল $0$। $\\mathrm{HCHO}$ অণুতে সর্বাধিক ডাইপোল প্রদর্শিত হয়।\n[এখানে চিত্র ছিল]\n$\\mathrm{Br_2C=CBr_2, BF_3}$ এর ক্ষেত্রে ডাইপোল এর লব্ধি শূন্য হয় এবং $\\mathrm{COCl_2}$ এর ক্ষেত্রে ডাইপোল এর লব্ধি অনেক কম থাকে (বিপরীত মুখী মোমেন্ট এর কারণে)। $\\mathrm{HCHO}$ এর ক্ষেত্রে ডাইপোল সর্বাধিক হয়।",
+    time_limit: 60
+  },
+  {
+    id: 83949,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৪৯. কোন যৌগের গলনাঙ্ক সবচেয়ে বেশি? [RU'24-25]",
+    options: ["$\\mathrm{CaCl_2}$", "$\\mathrm{SrCl_2}$", "$\\mathrm{BaCl_2}$", "$\\mathrm{MgCl_2}$"],
+    correct_answer: "$\\mathrm{BaCl_2}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83950,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫০. আয়নিক বন্ধনে ক্যাটায়নের পোলারায়ন ক্ষমতার ক্রম নিচের কোনটি সঠিক? [JU'24-25]",
+    options: ["$\\mathrm{H^+ > Na^+ > K^+}$", "$\\mathrm{H^+ > K^+ > Na^+}$", "$\\mathrm{K^+ > Na^+ > H^+}$", "$\\mathrm{Na^+ > K^+ > H^+}$"],
+    correct_answer: "$\\mathrm{H^+ > Na^+ > K^+}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83951,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫১. নিচের কোন আয়নে পোলারায়ন কম ঘটে? [JU'24-25]",
+    options: ["$\\mathrm{Cl^-}$", "$\\mathrm{F^-}$", "$\\mathrm{Br^-}$", "$\\mathrm{I^-}$"],
+    correct_answer: "$\\mathrm{F^-}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83952,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫২. কোনটি পোলার অণু? [GST'24-25]",
+    options: ["$\\mathrm{CO_2}$", "$\\mathrm{BF_3}$", "$\\mathrm{NH_3}$", "$\\mathrm{CCl_4}$"],
+    correct_answer: "$\\mathrm{NH_3}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83953,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫৩. নিচের কোনটির ডাইপোল মোমেন্ট শূন্য? [CU'23-24]",
+    options: ["$\\mathrm{ClF}$", "$\\mathrm{PCl_3}$", "$\\mathrm{SiF_4}$", "$\\mathrm{CFCl_3}$"],
+    correct_answer: "$\\mathrm{SiF_4}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83954,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫৪. কোন যৌগটি সবচেয়ে বেশি পোলার? [GST'22-23]",
+    options: ["$\\mathrm{CH_4}$", "$\\mathrm{CCl_4}$", "$\\mathrm{CH_2Cl_2}$", "$\\mathrm{CHCl_3}$"],
+    correct_answer: "$\\mathrm{CH_2Cl_2}$",
+    explanation: "প্রদত্ত option গুলোতে $\\mathrm{CH_2Cl_2}$ এর নিট ডাইপোল মোমেন্ট সর্বোচ্চ।\n[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 83955,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫৫. কোন যৌগটি অধিক সমযোজী? [JU'22-23]",
+    options: ["$\\mathrm{AlCl_3}$", "$\\mathrm{NaCl}$", "$\\mathrm{CCl_4}$", "$\\mathrm{MgCl_2}$"],
+    correct_answer: "$\\mathrm{CCl_4}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83956,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫৬. ডাইপোল মোমেন্ট আছে যে যৌগে? [RU'22-23]",
+    options: ["$\\mathrm{CCl_4}$", "$\\mathrm{CH_2Cl_2}$", "$\\mathrm{C_2Cl_2}$", "$\\mathrm{C_2Cl_4}$"],
+    correct_answer: "$\\mathrm{CH_2Cl_2}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83957,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫৭. কোন যৌগটি সবচেয়ে কম তাপমাত্রায় বিযোজিত হবে? [Agri.'20-21]",
+    options: ["$\\mathrm{Na_2CO_3}$", "$\\mathrm{K_2CO_3}$", "$\\mathrm{MgCO_3}$", "$\\mathrm{BaCO_3}$"],
+    correct_answer: "$\\mathrm{MgCO_3}$",
+    explanation: "$\\mathrm{Mg^{2+}}$ আয়নের আকার সবচেয়ে ছোট এবং চার্জ বেশি। তাই পোলারায়ন ক্ষমতা বেশি এবং যৌগটি অধিক সমযোজী।\n$\\therefore \\mathrm{MgCO_3}$ কম তাপমাত্রায় বিযোজিত হবে।",
+    time_limit: 60
+  },
+  {
+    id: 83958,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫৮. কোনটি পানিতে অদ্রবণীয়? [Agri.'19-20]",
+    options: ["$\\mathrm{CaCl_2}$", "$\\mathrm{CaBr_2}$", "$\\mathrm{CaI_2}$", "$\\mathrm{CaF_2}$"],
+    correct_answer: "$\\mathrm{CaF_2}$",
+    explanation: "নোট: বইয়ে ব্যাখ্যায় \"$\\mathrm{CaI_2}$ পানিতে অদ্রবণীয়\" লেখা থাকলেও উত্তর (ঘ) $\\mathrm{CaF_2}$ দেওয়া; যাচাই প্রয়োজন।",
+    time_limit: 60
+  },
+  {
+    id: 83959,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৫৯. নিচের কোনটি পানিতে দ্রবণীয়? [JU'19-20]",
+    options: ["$\\mathrm{AgF}$", "$\\mathrm{AgCl}$", "$\\mathrm{AgBr}$", "$\\mathrm{AgI}$"],
+    correct_answer: "$\\mathrm{AgF}$",
+    explanation: "আয়নিক বৈশিষ্ট্যের ক্রম:\n$\\mathrm{AgF > AgCl > AgBr > AgI}$\nএখানে, $\\mathrm{AgF}$ শুধু পানিতে দ্রবীভূত হয়।",
+    time_limit: 60
+  },
+  {
+    id: 83960,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৬০. পানিতে দ্রাব্যতা বৃদ্ধির সঠিক ক্রম কোনটি? [JU'19-20]",
+    options: ["$\\mathrm{CsCl < KCl < RbCl}$", "$\\mathrm{NaCl < KCl < CsCl}$", "$\\mathrm{NaCl < LiCl < RbCl}$", "$\\mathrm{KCl < NaCl < LiCl}$"],
+    correct_answer: "$\\mathrm{NaCl < KCl < CsCl}$",
+    explanation: "পোলারায়ন যত বেশি হবে দ্রাব্যতা তত হ্রাস পাবে।",
+    time_limit: 60
+  },
+  {
+    id: 83961,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৬১. নিম্নের কোন যৌগটি পানিতে দ্রবণীয়? [CU'18-19]",
+    options: ["$\\mathrm{BaSO_4}$", "$\\mathrm{PbSO_4}$", "$\\mathrm{PbSO_3}$", "$\\mathrm{Na_2SO_4}$"],
+    correct_answer: "$\\mathrm{Na_2SO_4}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83962,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৬২. সর্বাধিক আয়নিক প্রকৃতির যৌগ- [RU'17-18]",
+    options: ["$\\mathrm{AlCl_3}$", "$\\mathrm{FeCl_3}$", "$\\mathrm{CaCl_2}$", "$\\mathrm{MgI_2}$"],
+    correct_answer: "$\\mathrm{CaCl_2}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83963,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৬৩. ধনাত্মক আয়নের পোলারায়ন ক্ষমতার ক্ষেত্রে নিচের কোনটি সঠিক নয়? [RU'16-17]",
+    options: ["$\\mathrm{Be^{2+} > Mg^{2+}}$", "$\\mathrm{Al^{3+} > Mg^{2+}}$", "$\\mathrm{Fe^{3+} > Fe^{2+}}$", "$\\mathrm{Ba^{2+} > Be^{2+}}$"],
+    correct_answer: "$\\mathrm{Ba^{2+} > Be^{2+}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 83964,
+    topic: "পোলারায়ন, আয়নিক যৌগে সমযোজী বৈশিষ্ট্য, ফাজানের নীতি, পোলারিটি ও সমযোজী যৌগে আয়নিক বৈশিষ্ট্য",
+    topicId: "chem1_per_t09",
+    question_text: "২৬৪. নিম্নের 2% (W/V) জলীয় দ্রবণগুলোর কোনটির স্ফুটনাঙ্ক সবচেয়ে বেশি? [DU'14-15]",
+    options: ["$\\mathrm{NaCl}$", "$\\mathrm{KCl}$", "$\\mathrm{RbCl}$", "$\\mathrm{NaBr}$"],
+    correct_answer: "$\\mathrm{RbCl}$",
+    explanation: "$\\mathrm{Rb}$ এর পোলারায়ন ক্ষমতা কম বিধায় $\\mathrm{RbCl}$ এর আয়নিক ধর্ম বেশি ও স্ফুটনাঙ্ক বেশি।",
+    time_limit: 60
+  },
+  // --- T-10: হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন ---
+  {
+    id: 84065,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৬৫. কোন যৌগটির H-বন্ধন বেশি শক্তিশালী? [RU'25-26]",
+    options: ["$\\mathrm{CH_3CH_2OH}$", "$\\mathrm{CH_3COOH}$", "$\\mathrm{H_2O}$", "$\\mathrm{NH_3}$"],
+    correct_answer: "$\\mathrm{CH_3COOH}$",
+    explanation: "$\\mathrm{CH_3COOH}$ শক্তিশালী ডাইমার গঠন ফলে এই যৌগটির H-বন্ধন সবচেয়ে বেশি শক্তিশালী।",
+    time_limit: 60
+  },
+  {
+    id: 84066,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৬৬. নিচের কোন হাইড্ৰাইডগুলোর গলনাঙ্ক ও স্ফুটনাঙ্ক একই গ্রুপের অন্য সব হাইড্রাইডদের তুলনায় বেশি থাকে? [KU'25-26]",
+    options: ["$\\mathrm{LiH, BeH_2}$", "$\\mathrm{LiH, HF}$", "$\\mathrm{NH_3, HF}$", "$\\mathrm{BeH_2, NH_3}$"],
+    correct_answer: "$\\mathrm{NH_3, HF}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84067,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৬৭. কোন যৌগের স্ফুটনাঙ্ক (boiling point) সবচেয়ে বেশি? [SUST'25-26]",
+    options: ["$\\mathrm{CH_3CH_2OH}$", "$\\mathrm{CH_3COOH}$", "$\\mathrm{CH_3CH_2SH}$", "$\\mathrm{CH_3OCH_3}$"],
+    correct_answer: "$\\mathrm{CH_3COOH}$",
+    explanation: "$\\mathrm{CH_3COOH}$ যৌগ H-বন্ধন এর মাধ্যমে ডাইমার গঠন করায় এর স্ফুটনাঙ্ক সবচেয়ে বেশি।",
+    time_limit: 60
+  },
+  {
+    id: 84068,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৬৮. নিম্নের কোন যৌগটি হাইড্রোজেন বন্ধন গঠন করতে পারে? [Agri.'25-26]",
+    options: ["$\\mathrm{HCl}$", "$\\mathrm{CH_4}$", "$\\mathrm{CCl_4}$", "$\\mathrm{NH_3}$"],
+    correct_answer: "$\\mathrm{NH_3}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84069,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৬৯. কোন যৌগে সবচেয়ে শক্তিশালী H-বন্ধন ঘটে? [RU'24-25; DU'22-23]",
+    options: ["$\\mathrm{H_2O}$", "$\\mathrm{H_2S}$", "$\\mathrm{HF}$", "$\\mathrm{NH_3}$"],
+    correct_answer: "$\\mathrm{HF}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84070,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭০. বরফে যে বন্ধন আছে তা হলো- [JU'23-24; GST'21-22]\n(i) হাইড্রোজেন বন্ধন\n(ii) সন্নিবেশ বন্ধন\n(iii) সমযোজী বন্ধন\nনিচের কোনটি সঠিক?",
+    options: ["i, ii", "ii, iii", "i, iii", "i, ii, iii"],
+    correct_answer: "i, iii",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84071,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭১. নিচের কোনটিতে হাইড্রোজেন বন্ধন আছে? [Agri.'21-22; JU'17-18, 16-17]",
+    options: ["$\\mathrm{NH_3}$", "$\\mathrm{CH_4}$", "$\\mathrm{H_2S}$", "$\\mathrm{HI}$"],
+    correct_answer: "$\\mathrm{NH_3}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84072,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭২. কোনটিতে অন্তঃআণবিক হাইড্রোজেন বন্ধন তৈরি হয় না? [GST'20-21]",
+    options: ["স্যালিসাইলিক এসিড", "2-নাইট্রোফেনল", "4-নাইট্রোফেনল", "2-ক্লোরোফেনল"],
+    correct_answer: "4-নাইট্রোফেনল",
+    explanation: "[এখানে চিত্র ছিল]\nদূরত্ব বেশি, তাই অন্তঃআণবিক H-বন্ধন হয় না।",
+    time_limit: 60
+  },
+  {
+    id: 84073,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭৩. পানির উচ্চ স্ফুটনাঙ্কের কারণ- [CU'20-21]",
+    options: ["পোলারিটি", "উচ্চ ডাইইলেকট্রিক ধ্রুবক", "দুর্বল বিভাজন", "হাইড্রোজেন বন্ধন"],
+    correct_answer: "হাইড্রোজেন বন্ধন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84074,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭৪. ইথানোয়িক এসিডের ডাইমারে কতটি হাইড্রোজেন বন্ধন বিদ্যমান? [RU'19-20]",
+    options: ["$1$", "$2$", "$3$", "$4$"],
+    correct_answer: "$2$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 84075,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭৫. নিম্নের কোন যৌগের স্ফুটনাঙ্ক সবচেয়ে বেশি? [DU'18-19]",
+    options: ["$\\mathrm{CH_4}$", "$\\mathrm{NH_3}$", "$\\mathrm{PH_3}$", "$\\mathrm{H_2S}$"],
+    correct_answer: "$\\mathrm{NH_3}$",
+    explanation: "কারণ $\\mathrm{NH_3}$ তে H-বন্ধন উপস্থিত।",
+    time_limit: 60
+  },
+  {
+    id: 84076,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭৬. হাইড্রোজেন বন্ধনের সঠিক শক্তিক্রম কোনটি? [RU'18-19]",
+    options: ["$\\mathrm{CH_4 < NH_3 < H_2O < HF}$", "$\\mathrm{CH_4 < H_2O < NH_3 < HF}$", "$\\mathrm{NH_3 < CH_4 < H_2O < HF}$", "$\\mathrm{CH_4 < NH_3 < HF < H_2O}$"],
+    correct_answer: "$\\mathrm{CH_4 < NH_3 < H_2O < HF}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84077,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭৭. কোন যৌগটিতে হাইড্রোজেন বন্ধন নেই? [CU'17-18]",
+    options: ["$\\mathrm{CH_3-CH_2-OH}$", "$\\mathrm{CH_3-CHO}$", "$\\mathrm{H-COOH}$", "$\\mathrm{CH_3-NH_2}$"],
+    correct_answer: "$\\mathrm{CH_3-CHO}$",
+    explanation: "[এখানে চিত্র ছিল]\n$\\mathrm{C-H}$ এর মধ্যে তড়িৎ ঋণাত্মকতার পার্থক্য কম হওয়ায় পোলারিটি ও H বন্ধন গঠিত হয় না।",
+    time_limit: 60
+  },
+  {
+    id: 84078,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭৮. DNA শিকলে বিদ্যমান ক্ষারকগুলো পরস্পর কী বন্ধনে আবদ্ধ থাকে? [KU'16-17]",
+    options: ["আয়নিক", "সমযোজী", "হাইড্রোজেন", "ভ্যানডার ওয়ালস"],
+    correct_answer: "হাইড্রোজেন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84079,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৭৯. নিম্নের কোন যৌগটি সবচেয়ে শক্তিশালী হাইড্রোজেন বন্ধন গঠন করে? [DU'15-16]",
+    options: ["ইথানল", "ইথানোয়িক এসিড", "পানি", "অ্যামোনিয়া"],
+    correct_answer: "ইথানোয়িক এসিড",
+    explanation: "[এখানে চিত্র ছিল]\nঅংশের পোলারিটি ইথানল কিংবা পানির $-O^{\\delta-} - H^{\\delta+}$ অংশের তুলনায় অনেক বেশি বলে $\\mathrm{CH_3COOH}$ শক্তিশালী H-bond গঠন করে।",
+    time_limit: 60
+  },
+  {
+    id: 84080,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৮০. নিম্নের কোনটির স্ফুটনাঙ্ক সবচেয়ে বেশি? [CU'15-16]",
+    options: ["$\\mathrm{HF}$", "$\\mathrm{HCl}$", "$\\mathrm{HBr}$", "$\\mathrm{HI}$", "$\\mathrm{H_2}$"],
+    correct_answer: "$\\mathrm{HF}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84081,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৮১. এক অণু পানিতে সর্বোচ্চ কয়টি H-bond থাকতে পারে? [JU'14-15]",
+    options: ["$1$", "$2$", "$3$", "$4$"],
+    correct_answer: "$4$",
+    explanation: "[এখানে চিত্র ছিল]\nসর্বোচ্চ 4 টি H-bond থাকতে পারে।",
+    time_limit: 60
+  },
+  {
+    id: 84082,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৮২. পর্যায় সারণির গ্রুপ VIIA মৌলসমূহের ভ্যানডার ওয়ালস আকর্ষণ বলের বৃদ্ধির ক্রম কোনটি? [RU'13-14]",
+    options: ["$\\mathrm{F_2 > Cl_2 > Br_2 > I_2}$", "$\\mathrm{Cl_2 > F_2 > Br_2 > I_2}$", "$\\mathrm{Br_2 > F_2 > Cl_2 > I_2}$", "$\\mathrm{I_2 > Br_2 > Cl_2 > F_2}$"],
+    correct_answer: "$\\mathrm{I_2 > Br_2 > Cl_2 > F_2}$",
+    explanation: "আকার বৃদ্ধির সাথে ভ্যানডার ওয়ালস আকর্ষণ বল বৃদ্ধি পায়।",
+    time_limit: 60
+  },
+  {
+    id: 84083,
+    topic: "হাইড্রোজেন বন্ধন, ভ্যানডার ওয়ালস্ বন্ধন",
+    topicId: "chem1_per_t10",
+    question_text: "২৮৩. কোনটি বরফের সঠিক সংকেত? [RU'08-09]",
+    options: ["$\\mathrm{H_2O}$", "$\\mathrm{(H_2O_2)}$", "$\\mathrm{(H_2O_2)_4}$", "$\\mathrm{(H_2O)_n}$"],
+    correct_answer: "$\\mathrm{(H_2O)_n}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  // --- T-11: আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ ---
+  {
+    id: 84184,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৮৪. $\\mathrm{CuSO_4}$ এর জলীয় দ্রবণে অতিরিক্ত $\\mathrm{NH_4OH}$ যোগ করলে কোনটি উৎপন্ন হয়? [CU'25-26]",
+    options: ["$\\mathrm{Cu(NH_3)_4SO_4}$", "$\\mathrm{CuO}$", "$\\mathrm{Cu(NH_3)_2SO_4}$", "$\\mathrm{Cu_2(SO_4)_2}$"],
+    correct_answer: "$\\mathrm{Cu(NH_3)_4SO_4}$",
+    explanation: "$2\\mathrm{CuSO_4(aq)} + 2\\mathrm{NH_4OH(aq)} \\rightarrow \\mathrm{CuSO_4 \\cdot Cu(OH)_2(s)} + \\mathrm{(NH_4)_2SO_4(aq)}$\n$\\mathrm{CuSO_4 \\cdot Cu(OH)_2(s)} + \\mathrm{(NH_4)_2SO_4(aq)} + 6\\mathrm{NH_4OH(aq)}$ (অতিরিক্ত) $\\rightarrow 2[\\mathrm{Cu(NH_3)_4}]\\mathrm{SO_4(aq)} + 8\\mathrm{H_2O(l)}$",
+    time_limit: 60
+  },
+  {
+    id: 84185,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৮৫. গাঢ় সালফিউরিক এসিডের সাথে সোডিয়াম আয়োডাইডকে উত্তপ্ত করলে কোনটি তৈরি হয় না? [Agri.'25-26]",
+    options: ["$\\mathrm{S}$", "$\\mathrm{SO_2}$", "$\\mathrm{SO_3}$", "$\\mathrm{H_2S}$"],
+    correct_answer: "$\\mathrm{SO_3}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84186,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৮৬. ব্লিস্টার কপারে অপদ্রব্য হিসেবে কোন ধাতুটি থাকে? [JU'24-25]",
+    options: ["$\\mathrm{Ni}$", "$\\mathrm{Pt}$", "$\\mathrm{Mg}$", "$\\mathrm{Cr}$"],
+    correct_answer: "$\\mathrm{Ni}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84187,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৮৭. জার্মান সিলভার কোন কোন ধাতুর সংকর? [Agri'24-25]",
+    options: ["$\\mathrm{Cu}$ ও $\\mathrm{Zn}$", "$\\mathrm{Cu, Zn}$ ও $\\mathrm{Ni}$", "$\\mathrm{Cu, Zn}$ ও $\\mathrm{Ag}$", "$\\mathrm{Cu}$ ও $\\mathrm{Sn}$"],
+    correct_answer: "$\\mathrm{Cu, Zn}$ ও $\\mathrm{Ni}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84188,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৮৮. ব্লিচিং পাউডারের রাসায়নিক নাম কী? [JU'22-23]",
+    options: ["ক্যালসিয়াম হাইপোক্লোরাইট", "ক্যালসিয়াম ক্লোরাইট", "ক্যালসিয়াম ক্লোরোহাইপোক্লোরাইট", "ক্যালসিয়াম ক্লোরোহাইপোব্রোমাইট"],
+    correct_answer: "ক্যালসিয়াম ক্লোরোহাইপোক্লোরাইট",
+    explanation: "$\\mathrm{Ca(OCl)Cl}$ (ক্যালসিয়াম ক্লোরোহাইপোক্লোরাইট)",
+    time_limit: 60
+  },
+  {
+    id: 84189,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৮৯. কোনটি স্ট্যানিক ক্লোরাইড এর সংকেত? [JU'21-22]",
+    options: ["$\\mathrm{CCl_4}$", "$\\mathrm{SnCl_2}$", "$\\mathrm{SnCl_4}$", "$\\mathrm{FeCl_2}$"],
+    correct_answer: "$\\mathrm{SnCl_4}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 84190,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৯০. কোন আকরিকটি অ্যালুমিনিয়াম এর আকরিক নয়? [RU'14-15]",
+    options: ["কোরাল্ডাম", "ইলমেনাইট", "ক্রায়োলাইট", "ডায়াস্পোর"],
+    correct_answer: "ইলমেনাইট",
+    explanation: "ইলমেনাইট এর সংকেত $\\mathrm{FeTiO_3}$।",
+    time_limit: 60
+  },
+  {
+    id: 84191,
+    topic: "আকরিক, গুরুত্বপূর্ণ যৌগ, গুরুত্বপূর্ণ যৌগের গাঠনিক ও রাসায়নিক সংকেত, রাসায়নিক বিক্রিয়া, বিবিধ",
+    topicId: "chem1_per_t11",
+    question_text: "২৯১. 'গ্যালেনা' (Galena) কোন ধাতুর আকরিক (Ore)? [JnU'14-15]",
+    options: ["$\\mathrm{Pb}$", "$\\mathrm{Fe}$", "$\\mathrm{Mg}$", "$\\mathrm{Mn}$"],
+    correct_answer: "$\\mathrm{Pb}$",
+    explanation: "",
+    time_limit: 60
+  },
 ];
