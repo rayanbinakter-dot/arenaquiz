@@ -20,6 +20,7 @@ import { bio1Chap8Data, tissueQuestions } from '../data/questions_bio1_chap8';
 import { chem2OrganicQuestions } from '../data/questions_chem2_organic';
 import { chem1PeriodicQuestions } from '../data/questions_chem1_periodic';
 import { chem1ChemicalChangeQuestions } from '../data/questions_chem1_change';
+import { chem1LabSafetyQuestions } from '../data/questions_chem1_lab';
 import { chem1QualitativeQuestions } from '../data/questions_chem1_qualitative_new';
 
 export function getLocalVarsityQuestions(): Question[] {
@@ -108,6 +109,22 @@ export function getLocalVarsityQuestions(): Question[] {
       subject: 'chemistry',
       chapter: 'গুণগত রসায়ন',
       chapterId: 'var_chem1_ch2',
+      topic: q.topic || 'সাধারণ',
+      route: 'varsity',
+      unit: 'du_ka',
+      paper: 'first',
+      time_limit: q.time_limit || 60
+    } as unknown as Question);
+  });
+
+  // Chemistry 1st paper: ল্যাবরেটরির নিরাপদ ব্যবহার (Module 3 topic-wise)
+  (chem1LabSafetyQuestions || []).forEach((q: any) => {
+    result.push({
+      ...q,
+      id: typeof q.id === 'number' ? q.id : ++nextNumericId,
+      subject: 'chemistry',
+      chapter: 'ল্যাবরেটরির নিরাপদ ব্যবহার',
+      chapterId: 'var_chem1_ch1',
       topic: q.topic || 'সাধারণ',
       route: 'varsity',
       unit: 'du_ka',
