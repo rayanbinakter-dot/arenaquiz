@@ -1205,4 +1205,1049 @@ export const chem2QuantitativeQuestions: Question[] = [
     explanation: "গ্লুকোজের পরিমাণ $= 10\\,\\mathrm{mmol/L}$\n$= \\frac{10 \\times 10^{-3}\\,\\mathrm{mol}}{1\\,\\mathrm{L}} = \\frac{10^{-2} \\times 180\\,\\mathrm{g}}{1\\,\\mathrm{L}}$\n$= \\frac{1.8 \\times 1000\\,\\mathrm{mg}}{10\\,\\mathrm{dL}} = 180\\,\\mathrm{mg/dL}$",
     time_limit: 60
   },
+  // --- T-04: এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা ---
+  {
+    id: 90421,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২১. কোনটি Self-indicator নয়? [JnU'25-26]",
+    options: ["$\\mathrm{K_{2}CO_{3}}$", "$\\mathrm{KMnO_{4}}$", "Iodine", "সবগুলো"],
+    correct_answer: "সবগুলো",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90422,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২২. দুর্বল এসিড ও সবল ক্ষারের প্রশমন বিন্দুতে $\\mathrm{pH}$ কত? [JU'25-26]",
+    options: ["$5.27$", "$8.80$", "$10.80$", "$7.00$"],
+    correct_answer: "$8.80$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90423,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২৩. মিথাইল অরেঞ্জ এর বর্ণ পরিবর্তনের $\\mathrm{pH}$ পরিসর কত? [JU'25-26, 23-24]",
+    options: ["$8.2 - 9.8$", "$6.8 - 8.4$", "$6.0 - 8.0$", "$3.1 - 4.4$"],
+    correct_answer: "$3.1 - 4.4$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90424,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২৪. কোনটি পানিতে ক্ষারীয় দ্রবণ তৈরি করে? [JU'25-26; CU'22-23]",
+    options: ["$\\mathrm{NaCl}$", "$\\mathrm{Na_{2}CO_{3}}$", "$\\mathrm{Na_{2}SO_{4}}$", "$\\mathrm{KCl}$"],
+    correct_answer: "$\\mathrm{Na_{2}CO_{3}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90425,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২৫. $2\\mathrm{mL}$ $100\\mathrm{mM}$ $\\mathrm{H_{2}SO_{4}}$ কে প্রশমিত করতে $1\\mathrm{M}$ $\\mathrm{NaOH}$ এর কত $\\mathrm{mL}$ প্রয়োজন? [RU'25-26]",
+    options: ["$0.1$", "$0.2$", "$0.4$", "$0.8$"],
+    correct_answer: "$0.4$",
+    explanation: "$V_{1}S_{1}e_{1} = V_{2}S_{2}e_{2}$\n$\\Rightarrow V_{2} = \\frac{2 \\times 100 \\times 10^{-3} \\times 2}{1 \\times 1} = 0.4\\mathrm{mL}$",
+    time_limit: 60
+  },
+  {
+    id: 90426,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২৬. $10\\%$ $\\mathrm{NaOH}$ এর জলীয় দ্রবণের $50\\mathrm{mL}$ প্রশমিত করতে $100\\mathrm{mL}$ $\\mathrm{HCl}$ দ্রবণের প্রয়োজন। $\\mathrm{HCl}$ দ্রবণের মোলার ঘনমাত্রা কত? [RU'25-26]",
+    options: ["$1.00$", "$1.25$", "$1.50$", "$2.00$"],
+    correct_answer: "$1.25$",
+    explanation: "$10\\%$ $\\mathrm{NaOH} = \\frac{100}{40}\\mathrm{molL^{-1}}$ $\\mathrm{NaOH}$\n$= 2.5\\mathrm{M}$ $\\mathrm{NaOH}$\nএখানে, $e_{\\mathrm{NaOH}} = e_{\\mathrm{HCl}} = 1$\n$\\Rightarrow (eSV)_{\\mathrm{NaOH}} = (eSV)_{\\mathrm{HCl}}$\n$\\Rightarrow 1 \\times 2.5 \\times 50 = 1 \\times S_{\\mathrm{HCl}} \\times 100$\n$\\Rightarrow S_{\\mathrm{HCl}} = \\frac{2.5 \\times 50}{100} = 1.25\\mathrm{M}$",
+    time_limit: 60
+  },
+  {
+    id: 90427,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২৭. নিচের কোন যৌগের অম্লত্ব $3$? [JU'24-25]",
+    options: ["$\\mathrm{NaOH}$", "$\\mathrm{CaO}$", "$\\mathrm{Al(OH)_{3}}$", "$\\mathrm{Fe_{2}O_{3}}$"],
+    correct_answer: "$\\mathrm{Al(OH)_{3}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90428,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২৮. কোনটি প্রাইমারি স্ট্যান্ডার্ড পদার্থের দ্রবণ নয়? [JU'24-25]",
+    options: ["$0.1\\mathrm{M}$ $\\mathrm{Na_{2}CO_{3}}$", "$0.1\\mathrm{M}$ $\\mathrm{K_{2}Cr_{2}O_{7}}$", "$0.1\\mathrm{M}$ $\\mathrm{HCl}$", "$0.1\\mathrm{M}$ $\\mathrm{C_{2}H_{2}O_{4}\\cdot 2H_{2}O}$"],
+    correct_answer: "$0.1\\mathrm{M}$ $\\mathrm{HCl}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90429,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১২৯. নিচের কোনটি প্রাইমারি স্ট্যান্ডার্ড পদার্থ? [JnU'24-25; CU'24-25]",
+    options: ["$\\mathrm{NaOH}$", "$\\mathrm{HCl}$", "$\\mathrm{KMnO_{4}}$", "$\\mathrm{K_{2}Cr_{2}O_{7}}$"],
+    correct_answer: "$\\mathrm{K_{2}Cr_{2}O_{7}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90430,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩০. $10\\mathrm{mL}$ $0.1\\mathrm{M}$ $\\mathrm{HCl}$ দ্রবণকে পূর্ণ প্রশমিত করতে $0.1\\mathrm{M}$ $\\mathrm{Na_{2}CO_{3}}$ এর কত $\\mathrm{mL}$ প্রয়োজন? [KU'24-25]",
+    options: ["$5\\mathrm{mL}$", "$10\\mathrm{mL}$", "$15\\mathrm{mL}$", "$20\\mathrm{mL}$"],
+    correct_answer: "$5\\mathrm{mL}$",
+    explanation: "$(SVe)_{\\mathrm{base}} = (SVe)_{\\mathrm{acid}}$\n$\\Rightarrow 0.1 \\times V \\times 2 = 10 \\times 0.1 \\Rightarrow V = 5\\mathrm{mL}$",
+    time_limit: 60
+  },
+  {
+    id: 90431,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩১. $0.25\\mathrm{M}$ ঘনমাত্রার $480\\mathrm{mL}$ $\\mathrm{NaOH}$ দ্রবণকে প্রশমিত করতে $36.5\\%(\\mathrm{w/w})$ ভরের $1.20\\mathrm{g/mL}$ ঘনত্বের $\\mathrm{HCl}$ দ্রবণ কত $\\mathrm{mL}$ প্রয়োজন? [SUST'24-25]",
+    options: ["$100$", "$50$", "$20$", "$10$"],
+    correct_answer: "$10$",
+    explanation: "$[\\mathrm{HCl}] = \\frac{\\rho \\times x \\times 10}{M} = \\frac{1.2 \\times 36.5 \\times 10}{36.5} = 12\\mathrm{M}$\nএখানে, $e_{\\mathrm{HCl}} = 1; e_{\\mathrm{NaOH}} = 1$\n$(S \\times V \\times e)_{\\mathrm{HCl}} = (S \\times V \\times e)_{\\mathrm{NaOH}}$\n$\\Rightarrow V_{\\mathrm{HCl}} = \\frac{S_{\\mathrm{NaOH}} \\times V_{\\mathrm{NaOH}}}{S_{\\mathrm{HCl}}} = \\frac{0.25 \\times 480}{12} = 10\\mathrm{mL}$",
+    time_limit: 60
+  },
+  {
+    id: 90432,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩২. মিথাইল রেড নির্দেশকের বর্ণ পরিবর্তনের $\\mathrm{pH}$ এর পরিসর কত? [Agri'24-25]",
+    options: ["$3.1 - 4.0$", "$3.0 - 4.6$", "$2.9 - 4.0$", "$4.2 - 6.3$"],
+    correct_answer: "$4.2 - 6.3$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90433,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩৩. মৃদু এসিড ও তীব্র ক্ষারকের টাইট্রেশনে উপযুক্ত নির্দেশক কোনটি? [HSTU'24-25; Agri.'19-20]",
+    options: ["ফেনলফথ্যালিন", "মিথাইল রেড", "মিথাইল অরেঞ্জ", "ব্রোমোথাইমোল ব্লু"],
+    correct_answer: "ফেনলফথ্যালিন",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90434,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩৪. জলীয় দ্রবণে $\\mathrm{HCl}$ এবং $\\mathrm{NH_{3}}$ এর প্রশমন বিক্রিয়ায় উপযুক্ত নির্দেশক কোনটি? [JU'23-24; JU'19-20]",
+    options: ["ফেনলফথ্যালিন", "ফেনল রেড", "ক্রিসল রেড", "মিথাইল রেড"],
+    correct_answer: "মিথাইল রেড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90435,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩৫. জলীয় দ্রবণে $\\mathrm{HCl}$ এবং $\\mathrm{NaOH}$ এর প্রশমন বিক্রিয়ায় প্রশমন বিন্দুর $\\mathrm{pH}$ কোনটি? [JU'23-24]",
+    options: ["$7.0$", "$8.8$", "$5.27$", "$3.21$"],
+    correct_answer: "$7.0$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90436,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩৬. $100\\mathrm{mL}$ $0.2\\mathrm{M}$ $\\mathrm{Na_{2}CO_{3}}$ জলীয় দ্রবণকে প্রশমিত করতে কত আয়তনের $0.4\\mathrm{M}$ $\\mathrm{HCl}$ প্রয়োজন হবে? [DU'22-23]",
+    options: ["$50.0\\mathrm{mL}$", "$25.0\\mathrm{mL}$", "$100.0\\mathrm{mL}$", "$10.0\\mathrm{mL}$"],
+    correct_answer: "$100.0\\mathrm{mL}$",
+    explanation: "$\\mathrm{2HCl + Na_{2}CO_{3} \\rightarrow 2NaCl + CO_{2} + H_{2}O}$\n$(eSV)_{\\mathrm{Na_{2}CO_{3}}} = (eSV)_{\\mathrm{HCl}}$\n$\\Rightarrow 2 \\times 100 \\times 0.2 = 1 \\times 0.4 \\times V_{\\mathrm{HCl}}$\n$\\Rightarrow V_{\\mathrm{HCl}} = 100\\mathrm{mL}$",
+    time_limit: 60
+  },
+  {
+    id: 90437,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩৭. $50\\mathrm{mL}$ $1.0\\mathrm{M}$ $\\mathrm{NaOH}$ এবং $50\\mathrm{mL}$ $0.8\\mathrm{M}$ $\\mathrm{HCl}$ এর মিশ্রণের $\\mathrm{pH}$ কত? [RU'22-23]",
+    options: ["$1.0$", "$2.0$", "$12.0$", "$13.0$"],
+    correct_answer: "$13.0$",
+    explanation: "$e_{1}V_{1}S_{1} = e_{a}V_{a}S_{a} - e_{b}V_{b}S_{b}$\n$S_{1} = \\frac{50 \\times 0.8 - 50 \\times 1}{100} = -0.1$ এখানে, $(-)$ve মান $[\\mathrm{OH^{-}}]$ এর ঘনমাত্রা নির্দেশ করে।\n$\\therefore [\\mathrm{OH^{-}}] = 0.1\\mathrm{M}$\n$\\mathrm{pOH} = -\\log[\\mathrm{OH^{-}}] = -\\log(0.1) = 1$\n$\\therefore \\mathrm{pH} = 14 - 1 = 13$",
+    time_limit: 60
+  },
+  {
+    id: 90438,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩৮. $500\\mathrm{mL}$ দ্রবণে $49\\mathrm{g}$ $\\mathrm{H_{2}SO_{4}}$ দ্রবীভূত আছে। উক্ত দ্রবণের $50\\mathrm{mL}$ কে $10\\%$ $\\mathrm{NaOH}$ দ্বারা প্রশমিত করতে কত $\\mathrm{mL}$ $\\mathrm{NaOH}$ প্রয়োজন? [RU'22-23]",
+    options: ["$20$", "$30$", "$40$", "$50$"],
+    correct_answer: "$40$",
+    explanation: "$\\mathrm{NaOH}$ এর ঘনমাত্রা $= \\frac{1000 \\times 10}{40 \\times 100} = 2.5\\mathrm{M}$\n$\\mathrm{H_{2}SO_{4}}$ এর ঘনমাত্রা $= \\frac{1000 \\times 49}{98 \\times 500} = 1\\mathrm{M}$\n$(eSV)_{\\mathrm{NaOH}} = (eSV)_{\\mathrm{H_{2}SO_{4}}}$\nবা, $2.5 \\times V_{\\mathrm{NaOH}} = 2 \\times 50 \\times 1$\nবা, $V_{\\mathrm{NaOH}} = \\frac{2 \\times 50}{2.5}$ বা, $V_{\\mathrm{NaOH}} = 40\\mathrm{mL}$",
+    time_limit: 60
+  },
+  {
+    id: 90439,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৩৯. যদি $40\\mathrm{mL}$ $5\\%$ $\\mathrm{NaOH}$ দ্রবণ $50\\mathrm{mL}$ $\\mathrm{HCl}$ কে পূর্ণ প্রশমিত করে, তবে $\\mathrm{HCl}$ এর মোলারিটি কত? [RU'22-23]",
+    options: ["$0.01$", "$0.10$", "$1.00$", "$10.00$"],
+    correct_answer: "$1.00$",
+    explanation: "$40 \\times S_{\\mathrm{NaOH}} = 50 \\times S_{\\mathrm{HCl}}$\nবা, $\\frac{40 \\times 5 \\times 1000}{40 \\times 100} = 50 \\times S_{\\mathrm{HCl}}$\n$\\Rightarrow 40 \\times \\frac{50}{40} = 50 \\times S_{\\mathrm{HCl}} \\Rightarrow S_{\\mathrm{HCl}} = 1\\mathrm{M}$",
+    time_limit: 60
+  },
+  {
+    id: 90440,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪০. নিম্নের কোনটি প্রাথমিক প্রমাণ দ্রব্য? [CU'22-23, 20-21]",
+    options: ["$\\mathrm{HCl}$", "$\\mathrm{NaOH}$", "$\\mathrm{Na_{2}CO_{3}}$", "$\\mathrm{NaCl}$"],
+    correct_answer: "$\\mathrm{Na_{2}CO_{3}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90441,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪১. নিচের কোনটি প্রাইমারি স্ট্যান্ডার্ড পদার্থ? [CU'22-23, CU'13-14]",
+    options: ["$\\mathrm{HOOC-CH_{2}-COOH}$", "$\\mathrm{CH_{2}OH-CHOH-CH_{2}OH}$", "$\\mathrm{KMnO_{4}}$", "$\\mathrm{Na_{2}S_{2}O_{3}}$"],
+    correct_answer: "$\\mathrm{HOOC-CH_{2}-COOH}$",
+    explanation: "ত্রিমাত্রিক জারিত হয়ে গ্লুটারিক এসিডে পরিণত হয়। কিন্তু সাক্সিনিক এসিড পুনরায় জারিত হয় না।",
+    time_limit: 60
+  },
+  {
+    id: 90442,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪২. মিথাইল অরেঞ্জ এসিডীয় মাধ্যমে কোন বর্ণ ধারণ করে? [JU'22-23]",
+    options: ["হলুদ", "বর্ণহীন", "সবুজ", "লাল গোলাপী"],
+    correct_answer: "লাল গোলাপী",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90443,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪৩. $\\mathrm{pH}$ এর মান $9-10$ হলে ফেনলফথ্যালিন নির্দেশক কোন বর্ণ ধারণ করে? [GST'22-23]",
+    options: ["হলুদ", "বেগুনি", "নীল", "গোলাপি"],
+    correct_answer: "গোলাপি",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 90444,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪৪. $0.1\\mathrm{M}$ $\\mathrm{HCl}$, $0.25\\mathrm{M}$ $\\mathrm{H_{2}SO_{4}}$ এবং $0.35\\mathrm{M}$ $\\mathrm{Mg(OH)_{2}}$ সমপরিমাণে মিশ্রিত করলে মিশ্রণের $\\mathrm{pH}$ কত হবে? [RU'21-22]",
+    options: ["$0$", "$13$", "$14$", "$7$"],
+    correct_answer: "$13$",
+    explanation: "$[\\mathrm{OH^{-}}] = \\frac{\\sum (eSV)_{\\mathrm{base}} - \\sum (eSV)_{\\mathrm{acid}}}{\\sum V}$\n$= \\frac{(2 \\times 0.35 \\times V) - (1 \\times 0.1 \\times V + 2 \\times 0.25 \\times V)}{V + V + V} = 0.03\\mathrm{M}$\n$\\mathrm{pH} = 14 - \\mathrm{pOH} = 14 - (-\\log[\\mathrm{OH^{-}}])$\n$= 14 + \\log(0.03) = 12.477$\nনোট: বইয়ের গণনায় 12.477 আসে, নিকটতম অপশন খ) 13 — যাচাই প্রয়োজন।",
+    time_limit: 60
+  },
+  {
+    id: 90445,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪৫. হাইড্রোজেন আয়নের পরিবর্তনের পরিসর অর্থাৎ $[\\mathrm{H_{3}O^{+}}] = K_{\\mathrm{in}} \\times \\frac{10}{1}$ থেকে $K_{\\mathrm{in}} \\times \\frac{1}{10}$ হলে লিটমাসের বর্ণ পরিবর্তনের ক্ষেত্রে কোনটি সঠিক? [RU'21-22]",
+    options: ["লিটমাসের বর্ণ নীল থেকে লাল হবে", "লিটমাসের বর্ণ লাল থেকে নীল হবে", "লিটমাসের বর্ণ অপরিবর্তিত থাকবে", "কোনটিই সঠিক নয়"],
+    correct_answer: "লিটমাসের বর্ণ লাল থেকে নীল হবে",
+    explanation: "$\\mathrm{H^{+}}$ ঘনমাত্রা কমছে, অতএব দ্রবণ ক্ষারীয় হবে। অর্থাৎ লিটমাস লাল থেকে নীল হবে।",
+    time_limit: 60
+  },
+  {
+    id: 90446,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪৬. একটি অম্লীয় দ্রবণে ক্রমাগত ক্ষার যোগ করার সময় কোন নির্দেশকের উপস্থিতিতে $\\mathrm{pH}$ $5.0$ এ দ্রবণটি হলুদ বর্ণ ধারণ করবে? [JU'21-22; RU'17-18]",
+    options: ["ক্রিসল রেড", "মিথাইল রেড", "ফেনল রেড", "ফেনলফথ্যালিন"],
+    correct_answer: "মিথাইল রেড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90447,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪৭. ক্ষারীয় একটি দ্রবণে ক্রমাগত এসিড যোগ করার সময় কোন নির্দেশকের উপস্থিতিতে $\\mathrm{pH}$ $7.5$ এ দ্রবণটি হলুদ বর্ণ ধারণ করবে? [JU'21-22]",
+    options: ["ক্রিসল রেড", "থাইমল ব্লু", "লিটমাস", "মিথাইল অরেঞ্জ"],
+    correct_answer: "ক্রিসল রেড",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90448,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪৮. কস্টিক সোডার $20\\mathrm{mL}$ দ্রবণকে সম্পূর্ণরূপে প্রশমিত করতে $25\\mathrm{mL}$ $0.5\\mathrm{M}$ $\\mathrm{H_{2}SO_{4}}$ এর প্রয়োজন হলে ক্ষার দ্রবণের মোলারিটি হবে- [RU'19-20]",
+    options: ["$1.25$", "$1.20$", "$0.80$", "$1.05$"],
+    correct_answer: "$1.25$",
+    explanation: "$\\sum (ne)_{\\mathrm{acid}} = \\sum (ne)_{\\mathrm{base}}$\n$\\Rightarrow S \\times 20 \\times 1 = 25 \\times 0.5 \\times 2 \\therefore S = 1.25\\mathrm{M}$",
+    time_limit: 60
+  },
+  {
+    id: 90449,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৪৯. $\\mathrm{pH} = 3.0$ এবং $\\mathrm{pH} = 6.0$ মাত্রার দুটি দ্রবণ আছে। দ্বিতীয় দ্রবণের তুলনায় প্রথম দ্রবণটি কতগুণ বেশি অম্লীয়? [JU'19-20]",
+    options: ["$10$", "$1000$", "$100$", "$10000$"],
+    correct_answer: "$1000$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90450,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৫০. তীব্র এসিড ও তীব্র ক্ষারের প্রশমন বিন্দুর $\\mathrm{pH}$ কত? [JU'19-20]",
+    options: ["$7.0$", "$8.8$", "$5.27$", "$6.11$"],
+    correct_answer: "$7.0$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90451,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৫১. $10\\mathrm{mL}$ কস্টিক পটাশ ($\\mathrm{KOH}$) প্রশমিত করতে $20\\mathrm{mL}$ $1\\mathrm{M}$ $\\mathrm{H_{2}SO_{4}}$ দ্রবণের প্রয়োজন হয়। $\\mathrm{KOH}$ দ্রবণের মোলার ঘনমাত্রা কত? [RU'17-18]",
+    options: ["$2\\mathrm{M}$", "$1\\mathrm{M}$", "$4\\mathrm{M}$", "$0.5\\mathrm{M}$"],
+    correct_answer: "$4\\mathrm{M}$",
+    explanation: "$(SVe)_{\\mathrm{base}} = (SVe)_{\\mathrm{acid}}$\n$\\Rightarrow 10 \\times S_{\\mathrm{KOH}} \\times 1 = 20 \\times 1 \\times 2 \\therefore S_{\\mathrm{KOH}} = 4\\mathrm{M}$",
+    time_limit: 60
+  },
+  {
+    id: 90452,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৫২. $14.5\\mathrm{g}$ $\\mathrm{Na_{2}CO_{3}}$ কে সম্পূর্ণরূপে প্রশমিত করতে কত গ্রাম $\\mathrm{HCl}$ প্রয়োজন হবে? [CU'16-17]",
+    options: ["$9.98\\mathrm{g}$", "$36.5\\mathrm{g}$", "$12.5\\mathrm{g}$", "$53.0\\mathrm{g}$"],
+    correct_answer: "$9.98\\mathrm{g}$",
+    explanation: "$(ne)_{\\mathrm{HCl}} = (ne)_{\\mathrm{Na_{2}CO_{3}}}$\n$\\Rightarrow 1 \\times \\frac{W}{36.5} = 2 \\times \\frac{14.5}{106} \\Rightarrow W = 9.98\\mathrm{g}$",
+    time_limit: 60
+  },
+  {
+    id: 90453,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৫৩. $10\\mathrm{ml}$ $1\\mathrm{M}$ $\\mathrm{H_{2}SO_{4}}$ দ্রবণে $50\\mathrm{ml}$ $0.25\\mathrm{N}$ $\\mathrm{NaOH}$ দ্রবণ যোগ করলে মিশ্রণটি কোন প্রকৃতির হবে? [RU'15-16]",
+    options: ["ক্ষারীয়", "অম্লীয়", "উভয়ধর্মী", "নিরপেক্ষ"],
+    correct_answer: "অম্লীয়",
+    explanation: "$\\frac{aV_{a}S_{a}}{bS_{b}V_{b}} = \\frac{2 \\times 1 \\times 10}{1 \\times 0.25 \\times 50} = 1.6$\nযা $1$ থেকে বড় তাই অম্লীয়।",
+    time_limit: 60
+  },
+  {
+    id: 90454,
+    topic: "এসিড-ক্ষার টাইট্রেশন সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t04",
+    question_text: "১৫৪. $0.1$ লিটার পরিমাণ $0.1$ মোলার $\\mathrm{HCl}$ দ্রবণকে প্রশমিত করতে কত গ্রাম $\\mathrm{NaOH}$ প্রয়োজন হবে? [$\\mathrm{gm}$ একক] [RU'14-15]",
+    options: ["$80$", "$40$", "$4$", "$0.4$"],
+    correct_answer: "$0.4$",
+    explanation: "$n_{\\mathrm{HCl}} = n_{\\mathrm{NaOH}} \\Rightarrow 0.1 \\times 0.1 = \\frac{W}{M}$\n$\\Rightarrow 40 \\times 0.01 = W = 0.4\\mathrm{gm}$",
+    time_limit: 60
+  },
+  // --- T-05: জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা ---
+  {
+    id: 90555,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৫৫. কোনটি জারণ-বিজারণ বিক্রিয়া? [JnU'25-26; CU'22-23]",
+    options: ["$\\mathrm{CaCO_{3} + Heat \\rightarrow CaO + CO_{2}}$", "$\\mathrm{NaOH + HCl \\rightarrow NaCl + H_{2}O}$", "$\\mathrm{CaF_{2} + 2AgNO_{3} \\rightarrow 2AgF + Ca(NO_{3})_{2}}$", "$\\mathrm{2H_{2}S + SO_{2} \\rightarrow 2H_{2}O + 3S}$"],
+    correct_answer: "$\\mathrm{2H_{2}S + SO_{2} \\rightarrow 2H_{2}O + 3S}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90556,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৫৬. কোন বিক্রিয়ায় জারণ সংখ্যা পরিবর্তন হয় না? [JnU'25-26; JU'24-25; RU'15-16]",
+    options: ["$\\mathrm{Zn + CuSO_{4} \\rightarrow ZnSO_{4} + Cu}$", "$\\mathrm{HCl + NaOH \\rightarrow NaCl + H_{2}O}$", "$\\mathrm{2Fe^{3+} + 2I^{-} \\rightarrow 2Fe^{2+} + I_{2}}$", "$\\mathrm{2H_{2}O_{2} \\rightarrow 2H_{2}O + O_{2}}$"],
+    correct_answer: "$\\mathrm{HCl + NaOH \\rightarrow NaCl + H_{2}O}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90557,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৫৭. $\\mathrm{HClO_{4}}$ এ $\\mathrm{Cl}$ এর জারণ সংখ্যা কত? [JU'25-26, 24-25; RU'15-16]",
+    options: ["$+6$", "$+4$", "$+5$", "$+7$"],
+    correct_answer: "$+7$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90558,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৫৮. $\\mathrm{H_{2}SO_{4}}$ এ $\\mathrm{S}$ এর জারণ সংখ্যা কত? [JU'25-26]",
+    options: ["$+4$", "$+6$", "$+5$", "$+7$"],
+    correct_answer: "$+6$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90559,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৫৯. নিম্নোক্ত বিক্রিয়া অনুসারে $2\\mathrm{g}$ $\\mathrm{KMnO_{4}}$ কে পুরোপুরি প্রশমিত করতে কত গ্রাম $\\mathrm{FeSO_{4}}$ প্রয়োজন? [KU'25-26]\n$\\mathrm{2KMnO_{4} + 10FeSO_{4} + 8H_{2}SO_{4} \\rightarrow 5Fe_{2}(SO_{4})_{3} + 2MnSO_{4}}$",
+    options: ["$10.0\\mathrm{g}$", "$10.4\\mathrm{g}$", "$9.62\\mathrm{g}$", "$20.0\\mathrm{g}$"],
+    correct_answer: "$9.62\\mathrm{g}$",
+    explanation: "$2\\mathrm{mol}$ $\\mathrm{KMnO_{4}} \\equiv 10\\mathrm{mol}$ $\\mathrm{FeSO_{4}}$\n$2 \\times 158\\mathrm{g}$ $\\mathrm{KMnO_{4}} \\equiv 10 \\times 152\\mathrm{g}$ $\\mathrm{FeSO_{4}}$\n$2\\mathrm{g}$ $\\mathrm{KMnO_{4}} \\equiv \\frac{10 \\times 152 \\times 2}{2 \\times 158} = 9.62\\mathrm{g}$",
+    time_limit: 60
+  },
+  {
+    id: 90560,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬০. জারক ও বিজারক উভয়রূপে ক্রিয়া করে নিচের কোনটি? [HSTU'25-26; JU'23-24]",
+    options: ["$\\mathrm{Hg^{+}}$", "$\\mathrm{Fe^{2+}}$", "$\\mathrm{Sn^{4+}}$", "$\\mathrm{Fe^{3+}}$"],
+    correct_answer: "$\\mathrm{Fe^{2+}}$",
+    explanation: "বিজারক হিসেবে: $\\mathrm{Fe^{2+} - e^{-} \\rightarrow Fe^{3+}}$\nজারক হিসেবে: $\\mathrm{Fe^{2+} + 2e^{-} \\rightarrow Fe}$",
+    time_limit: 60
+  },
+  {
+    id: 90561,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬১. কোনটি জারক নয়? [HSTU'25-26; RU'24-25]",
+    options: ["$\\mathrm{MnO_{2}}$", "$\\mathrm{CO}$", "$\\mathrm{I_{2}}$", "$\\mathrm{H_{2}O_{2}}$"],
+    correct_answer: "$\\mathrm{CO}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90562,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬২. $\\mathrm{BrO_{3}^{-} + 5Br^{-} + 6H^{+} \\rightarrow 3Br_{2} + 3H_{2}O}$ বিক্রিয়ায় বিজারক কোনটি? [HSTU'25-26; JU'24-25]",
+    options: ["$\\mathrm{BrO_{3}^{-}}$", "$\\mathrm{Br^{-}}$", "$\\mathrm{H^{+}}$", "$\\mathrm{Br_{2}}$"],
+    correct_answer: "$\\mathrm{Br^{-}}$",
+    explanation: "$\\mathrm{Br^{-}}$ আয়নের জারণ ঘটে, তাই $\\mathrm{Br^{-}}$ বিজারক।",
+    time_limit: 60
+  },
+  {
+    id: 90563,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬৩. নিচের কোনটি জারক ও বিজারক উভয় রূপে ক্রিয়া করে? [CU'25-26]",
+    options: ["$\\mathrm{HNO_{3}}$", "$\\mathrm{HNO_{2}}$", "$\\mathrm{H_{2}S}$", "$\\mathrm{KMnO_{4}}$"],
+    correct_answer: "$\\mathrm{HNO_{2}}$",
+    explanation: "$\\mathrm{HNO_{2}}$ তে $\\mathrm{N}$ এর জারণ সংখ্যা $+3$। উক্ত যৌগে $\\mathrm{N}$ একটি $\\mathrm{e^{-}}$ গ্রহণ করে $+2$ এবং দুটি $\\mathrm{e^{-}}$ ত্যাগ করে $+5$ এ পরিণত হতে পারে। অর্থাৎ, $\\mathrm{HNO_{2}}$ একটি জারক ও বিজারক উভয় হিসেবে কাজ করে।",
+    time_limit: 60
+  },
+  {
+    id: 90564,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬৪. $\\mathrm{K_{3}[Fe(CN)_{6}]}$ এ $\\mathrm{Fe}$ এর জারণ মান- [JUP'24-25; CU'20-21]",
+    options: ["$+3$", "$+4$", "$+2$", "$-6$"],
+    correct_answer: "$+3$",
+    explanation: "$\\mathrm{K_{3}[Fe(CN)_{6}]}$, $\\mathrm{K}$ এর জারণ মান $+1$ এবং $\\mathrm{CN}$ এর জারণ মান $-1$\nধরি, $\\mathrm{Fe}$ এর জারণ মান $x$\n$3(+1) + x + 6(-1) = 0 \\Rightarrow x = +3$",
+    time_limit: 60
+  },
+  {
+    id: 90565,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬৫. $\\mathrm{PbO(s) + CO(g) \\rightarrow Pb(s) + CO_{2}(g)}$; এই বিক্রিয়ায় জারক পদার্থ কোনটি? [JU'24-25]",
+    options: ["$\\mathrm{CO}$", "$\\mathrm{Pb}$", "$\\mathrm{PbO}$", "$\\mathrm{CO_{2}}$"],
+    correct_answer: "$\\mathrm{PbO}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90566,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬৬. বিজারণ অর্ধ বিক্রিয়ায় জারণের সংশ্লিষ্ট পরমাণুর অক্সিজেন ও নাইট্রোজেন এর কিরূপ পরিবর্তন হয়? [JU'24-25]",
+    options: ["হ্রাস পায়", "বৃদ্ধি পায়", "অপরিবর্তিত থাকে", "হ্রাস বৃদ্ধি পায়"],
+    correct_answer: "হ্রাস পায়",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90567,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬৭. $\\mathrm{KMnO_{4}}$ দ্বারা টাইট্রেশনের সময় ব্যবহৃত নির্দেশক কোনটি? [JU'24-25, Agri'20-21]",
+    options: ["ফেনল রেড", "নির্দেশক বিহীন", "ক্রিসল রেড", "মিথাইল রেড"],
+    correct_answer: "নির্দেশক বিহীন",
+    explanation: "$\\mathrm{KMnO_{4}}$ স্বনির্দেশক হওয়ায়।",
+    time_limit: 60
+  },
+  {
+    id: 90568,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬৮. $\\mathrm{H_{2}SO_{5}}$ যৌগের $\\mathrm{S}$ এর জারণ মান কত? [CU'14-15]",
+    options: ["$+6$", "$+5$", "$+2$", "zero"],
+    correct_answer: "$+6$",
+    explanation: "$+2 + x + (-2) + (-1) \\times 6 = 0 \\Rightarrow x = +6$\n$\\mathrm{S}$ এর জারণ মান $+6$ হওয়ার কথা তবে $\\mathrm{S}$ এর যোজনী ৬। জারণমান যোজনীর থেকে বেশি হতে পারে না। তাই $\\mathrm{S}$ জারণমান $+6$।",
+    time_limit: 60
+  },
+  {
+    id: 90569,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৬৯. $1.117$ গ্রাম $50\\%$ বিশুদ্ধ লোহার আকরিককে লঘু $\\mathrm{H_{2}SO_{4}}$ এসিডে দ্রবীভূত করে প্রাপ্ত দ্রবণকে সম্পূর্ণ জারিত করতে $100\\mathrm{mL}$ $\\mathrm{KMnO_{4}}$ দ্রবণের প্রয়োজন হয়। $\\mathrm{KMnO_{4}}$ দ্রবণের ঘনমাত্রা কত? [SUST'14-15]",
+    options: ["$0.20\\mathrm{M}$", "$0.02\\mathrm{M}$", "$0.01\\mathrm{M}$", "$0.03\\mathrm{M}$"],
+    correct_answer: "$0.02\\mathrm{M}$",
+    explanation: "$1.117$ এর $50\\% = \\frac{1.117 \\times 50}{100} = 0.5585$\nএখন, $e_{1}V_{1}S_{1} = e_{2}V_{2}S_{2}$\n$\\Rightarrow e_{1}V_{1} \\times \\frac{W}{M \\times V_{1}} = e_{2}V_{2}S_{2}$\n$\\Rightarrow \\frac{e_{1}W \\times 1000}{M} = e_{2}V_{2}S_{2}$\n$\\Rightarrow \\frac{1 \\times 0.5585 \\times 1000}{55.85} = 5 \\times 100 \\times S_{2} \\therefore S_{2} = 0.02\\mathrm{M}$",
+    time_limit: 60
+  },
+  {
+    id: 90570,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭০. $40\\mathrm{mL}$ $0.1\\mathrm{M}$ $\\mathrm{Fe^{2+}}$ এর অম্লীয় দ্রবণ টাইট্রেশনের জন্য কত $\\mathrm{mL}$ $0.1\\mathrm{M}$ $\\mathrm{KMnO_{4}}$ প্রয়োজন? [SUST'24-25]",
+    options: ["$4$", "$5$", "$8$", "$20$"],
+    correct_answer: "$8$",
+    explanation: "$(eSV)_{\\mathrm{Fe^{2+}}} = (eSV)_{\\mathrm{KMnO_{4}}}$\n$\\Rightarrow 1 \\times 0.1 \\times 40 = 5 \\times V_{\\mathrm{KMnO_{4}}} \\times 0.1$\n$\\therefore V_{\\mathrm{KMnO_{4}}} = \\frac{40}{5} = 8\\mathrm{mL}$",
+    time_limit: 60
+  },
+  {
+    id: 90571,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭১. $10\\mathrm{g}$ ভরের এক টুকরা লোহাকে লঘু $\\mathrm{H_{2}SO_{4}}$ এ দ্রবীভূত করে প্রাপ্ত দ্রবণকে জারিত করতে $30\\mathrm{mL}$ $0.5\\mathrm{M}$ $\\mathrm{K_{2}Cr_{2}O_{7}}$ প্রয়োজন। লোহাতে ভেজালের হার কত? [Agri'24-25]",
+    options: ["$50.27$", "$57$", "$49.73$", "$43$"],
+    correct_answer: "$49.73$",
+    explanation: "$(ne)_{\\mathrm{Fe^{2+}}} = (ne)_{\\mathrm{K_{2}Cr_{2}O_{7}}} \\Rightarrow \\frac{W}{M} = VS \\times 6$\n$\\Rightarrow W = 30 \\times 0.5 \\times 10^{-3} \\times 6 \\times 56 = 5.04$\n$\\therefore \\text{ভেজাল} = \\frac{10 - 5.04}{10} \\times 100 = 49.6 \\approx 49.73$",
+    time_limit: 60
+  },
+  {
+    id: 90572,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭২. নিচের কোনটি অসামঞ্জস্য বিক্রিয়া? [CU'24-25]",
+    options: ["$\\mathrm{2MnO_{4}^{-} + 10I^{-} + 16H^{+} \\rightarrow 2Mn^{2+} + 5I_{2} + 8H_{2}O}$", "$\\mathrm{2NaBr + Cl_{2} \\rightarrow 2NaCl + Br_{2}}$", "$\\mathrm{KMnO_{4} \\rightarrow K_{2}MnO_{4} + MnO_{2} + O_{2}}$", "$\\mathrm{2CuBr \\rightarrow CuBr_{2} + Cu}$"],
+    correct_answer: "$\\mathrm{2CuBr \\rightarrow CuBr_{2} + Cu}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 90573,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭৩. $\\mathrm{3H_{2}S + 2HNO_{3} \\rightarrow 2NO + 3S + 4H_{2}O}$ বিক্রিয়াটিতে $\\mathrm{H_{2}S}$ এর ভূমিকা কি? [HSTU'24-25]",
+    options: ["জারক", "বিজারক", "টাইট্রান্ট", "টাইট্রেট"],
+    correct_answer: "বিজারক",
+    explanation: "$\\mathrm{3H_{2}S + 2HNO_{3} \\rightarrow 2NO + 3S + 4H_{2}O}$\nযেহেতু বিক্রিয়াটিতে $\\mathrm{H_{2}S}$ এর $\\mathrm{S}$ পরমাণুর জারণ ঘটে তাই $\\mathrm{H_{2}S}$ বিজারক হিসেবে কাজ করে।",
+    time_limit: 60
+  },
+  {
+    id: 90574,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭৪. $\\mathrm{(NH_{4})_{2}[Fe(CN)_{6}]}$ যৌগে আয়রনের জারণ মান কত? [DU'23-24]",
+    options: ["$+5$", "$+4$", "$+3$", "$+2$"],
+    correct_answer: "$+4$",
+    explanation: "$(+1) \\times 3 + x + (-1) \\times 6 = 0$\n$\\Rightarrow +3 + x - 6 = 0 \\Rightarrow x = 6 - 3 \\Rightarrow x = +3$\nনোট: বইয়ের মুদ্রিত উত্তর খ) +4, কিন্তু বইয়ের ব্যাখ্যার গণনায় +3 আসে — যাচাই প্রয়োজন।",
+    time_limit: 60
+  },
+  {
+    id: 90575,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭৫. কোন নদীর $1\\mathrm{L}$ পানিতে ক্লোরাইড ($\\mathrm{Cl^{-}}$) আয়নের পরিমাণ নির্ণয়ের টাইট্রেশনের সমাপ্তি বিন্দুতে $3.0\\mathrm{mL}$ $0.01\\mathrm{M}$ $\\mathrm{Ag^{+}}$ আয়ন প্রয়োজন হয়। নদীর পানিতে ক্লোরাইড ($\\mathrm{Cl^{-}}$) আয়নের ঘনমাত্রা কত $\\mathrm{ppm}$? [GST'23-24]",
+    options: ["$1.065$", "$10.65$", "$3.55$", "$1.185$"],
+    correct_answer: "$10.65$",
+    explanation: "$e_{1}V_{1}S_{1} = e_{2}V_{2}S_{2}$ [$e_{1} = e_{2} = 1$]\n$\\Rightarrow M_{2} = \\frac{3 \\times 0.01}{1000} = 3 \\times 10^{-5}\\mathrm{molL^{-1}}$\n$= 3 \\times 10^{-5} \\times 35.5 \\times 10^{3}\\mathrm{mgL^{-1}}$\n$= 1.065\\mathrm{ppm}$\nনোট: বইয়ের গণনায় 1.065 ppm আসে (অপশন ক), কিন্তু মুদ্রিত উত্তর খ) 10.65 — যাচাই প্রয়োজন।",
+    time_limit: 60
+  },
+  {
+    id: 90576,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭৬. $\\mathrm{MnO_{4}^{-} + H^{+} + e^{-} \\rightarrow Mn^{2+} + H_{2}O}$ অর্ধ-জারণ বিক্রিয়ায় কত মোল ইলেকট্রন জড়িত হয়? [RU'23-24]",
+    options: ["$2$", "$5$", "$10$", "$3$"],
+    correct_answer: "$5$",
+    explanation: "$\\mathrm{MnO_{4}^{-} + 8H^{+} + 5e^{-} \\rightarrow Mn^{2+} + 4H_{2}O}$",
+    time_limit: 60
+  },
+  {
+    id: 90577,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭৭. $\\mathrm{CaCl_{2}}$ এ ক্লোরিন এর জারণ সংখ্যা---- [CU'23-24]",
+    options: ["$+1$", "$-1$", "$+2$", "$-2$"],
+    correct_answer: "$-1$",
+    explanation: "ধরি, $\\mathrm{Cl}$ এর জারণ সংখ্যা $= x$\nতাহলে, $+2 + 2x = 0 \\Rightarrow 2x = -2 \\therefore x = -1$",
+    time_limit: 60
+  },
+  {
+    id: 90578,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭৮. $\\mathrm{[Co(NH_{3})_{6}]^{3+}}$ আয়নটিতে কেন্দ্রীয় পরমাণুর জারণ মান কত? [JU'22-23]",
+    options: ["$+15$", "$+3$", "$+5$", "$+9$"],
+    correct_answer: "$+3$",
+    explanation: "$x + 0 \\times 6 = +3 \\therefore x = +3$",
+    time_limit: 60
+  },
+  {
+    id: 90579,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৭৯. কোনটি জারক পদার্থ নয়? [JU'22-23]",
+    options: ["$\\mathrm{Cl_{2}}$", "$\\mathrm{H_{2}}$", "$\\mathrm{F_{2}}$", "$\\mathrm{H_{2}O_{2}}$"],
+    correct_answer: "$\\mathrm{H_{2}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90580,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮০. $\\mathrm{[Cr(CN)_{6}]^{3-}}$ আয়নে $\\mathrm{Cr}$ এর জারণ সংখ্যা কত? [JU'22-23]",
+    options: ["$+1$", "$+3$", "$+5$", "$+7$"],
+    correct_answer: "$+3$",
+    explanation: "ধরি, $\\mathrm{Cr}$ এর জারণ সংখ্যা $= x$\n$\\therefore x + (-1) \\times 6 = -3$\n$\\Rightarrow x - 6 = -3 \\therefore x = +3$",
+    time_limit: 60
+  },
+  {
+    id: 90581,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮১. বর্ণ দূরীকরণে কোনটি ব্যবহৃত হয়? [JU'22-23]",
+    options: ["$\\mathrm{NaOCl}$", "$\\mathrm{NaOH}$", "$\\mathrm{Na_{2}CO_{3}}$", "$\\mathrm{Na_{2}CO_{3}\\cdot 10H_{2}O}$"],
+    correct_answer: "$\\mathrm{NaOCl}$",
+    explanation: "$\\mathrm{NaOCl}$ বিজারক হিসেবে কাজ করে।",
+    time_limit: 60
+  },
+  {
+    id: 90582,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮২. বিক্রিয়াকালে $\\mathrm{K_{2}Cr_{2}O_{7}}$ কয়টি ইলেকট্রন গ্রহণ করে? [JU'22-23; RU'14-15]",
+    options: ["$4$", "$5$", "$6$", "$7$"],
+    correct_answer: "$6$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90583,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮৩. অম্লীয় মাধ্যমে $6\\mathrm{g}$ $\\mathrm{FeSO_{4}}$ কে জারিত করতে কত $\\mathrm{g}$ $\\mathrm{K_{2}Cr_{2}O_{7}}$ প্রয়োজন? [RU'22-23; CU'21-22]",
+    options: ["$0.97$", "$3.80$", "$5.45$", "$1.94$"],
+    correct_answer: "$0.97$",
+    explanation: "$n_{1} \\times e_{1} = n_{2} \\times e_{2}$\n$\\Rightarrow 1 \\times \\frac{6}{55.85 + 32 + 16 \\times 4} = 6 \\times n_{K_{2}Cr_{2}O_{7}}$\n$\\Rightarrow n_{K_{2}Cr_{2}O_{7}} = 6.585 \\times 10^{-3} \\text{ মোল} = 1.94\\mathrm{g}$\nনোট: বইয়ের মুদ্রিত উত্তর ক) 0.97, কিন্তু বইয়ের ব্যাখ্যার শেষ ধাপে 1.94 g লেখা — যাচাই প্রয়োজন।",
+    time_limit: 60
+  },
+  {
+    id: 90584,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮৪. কোনটি জারণ-বিজারণ বিক্রিয়া? [RU'22-23]",
+    options: ["$\\mathrm{Cu^{2+} + 4NH_{3} \\rightarrow [Cu(NH_{3})_{4}]^{2+}}$", "$\\mathrm{NH_{3} + H^{+} \\rightarrow NH_{4}^{+}}$", "$\\mathrm{Cl_{2} + 2OH^{-} \\rightarrow Cl^{-} + ClO^{-} + H_{2}O}$", "$\\mathrm{Ca^{2+} + 2F^{-} \\rightarrow CaF_{2}}$"],
+    correct_answer: "$\\mathrm{Cl_{2} + 2OH^{-} \\rightarrow Cl^{-} + ClO^{-} + H_{2}O}$",
+    explanation: "বিক্রিয়াটিতে ক্লোরিনের জারণ মান $0$ থেকে $-1$ এবং $+1$ হয়।",
+    time_limit: 60
+  },
+  {
+    id: 90585,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮৫. কোন আয়নে $+3$ জারণ সংখ্যার পরমাণু আছে? [RU'22-23; JU'19-20]",
+    options: ["$\\mathrm{ClO_{3}^{-}}$", "$\\mathrm{PO_{4}^{3-}}$", "$\\mathrm{S_{2}O_{3}^{2-}}$", "$\\mathrm{NO_{2}^{-}}$"],
+    correct_answer: "$\\mathrm{NO_{2}^{-}}$",
+    explanation: "ধরি, $\\mathrm{ClO_{3}^{-}}$ এর $\\mathrm{Cl}$ এর জারণ সংখ্যা $x$;\n$x + 2 \\times (-2) = -1 \\Rightarrow x = +3$",
+    time_limit: 60
+  },
+  {
+    id: 90586,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮৬. $\\mathrm{K_{2}Cr_{2}O_{7}}$ যৌগটিতে $\\mathrm{Cr}$ এর জারণ সংখ্যা হচ্ছে- [CU'22-23, 13-14; JU'21-22; RU'08-09]",
+    options: ["$+6$", "$+12$", "$+3$", "$+2$"],
+    correct_answer: "$+6$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90587,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮৭. $\\mathrm{KMnO_{4}}$-এ $\\mathrm{Mn}$ এর জারণ সংখ্যা হচ্ছে--- [CU'22-23]",
+    options: ["$+6$", "$+7$", "$+12$", "$+14$"],
+    correct_answer: "$+7$",
+    explanation: "$+1 + (x) + (-2) \\times 4 = 0$\n$\\Rightarrow x = +8 - 1 = +7$",
+    time_limit: 60
+  },
+  {
+    id: 90588,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮৮. নিচের কোনটি অসামঞ্জস্যকরণ বিক্রিয়া? [DU'21-22]",
+    options: ["$\\mathrm{2Na + Cl_{2} \\rightarrow 2NaCl}$", "$\\mathrm{AgNO_{3} + NaCl \\rightarrow NaNO_{3} + AgCl}$", "$\\mathrm{Cl_{2} + H_{2}O \\rightarrow HCl + HOCl}$", "$\\mathrm{FeCl_{3} + SnCl_{2} \\rightarrow SnCl_{4} + FeCl_{2}}$"],
+    correct_answer: "$\\mathrm{Cl_{2} + H_{2}O \\rightarrow HCl + HOCl}$",
+    explanation: "যেই বিক্রিয়ায় একই পদার্থের জারণ ও বিজারণ হয় তাকে অসামঞ্জস্য বিক্রিয়া বলে।\n$\\mathrm{\\overset{0}{Cl_{2}} + H_{2}O \\rightarrow H\\overset{-1}{Cl} + HO\\overset{+1}{Cl}}$",
+    time_limit: 60
+  },
+  {
+    id: 90589,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৮৯. অক্সিজেনের জারণ সংখ্যা $-\\frac{1}{2}$ হবে কোনটিতে? [GST'21-22]",
+    options: ["$\\mathrm{Na_{2}O_{2}}$", "$\\mathrm{H_{2}O_{2}}$", "$\\mathrm{K_{2}O}$", "$\\mathrm{KO_{2}}$"],
+    correct_answer: "$\\mathrm{KO_{2}}$",
+    explanation: "সুপার অক্সাইডে অক্সিজেনের জারণ সংখ্যা $-\\frac{1}{2}$",
+    time_limit: 60
+  },
+  {
+    id: 90590,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯০. $\\mathrm{SnCl_{2} + 2FeCl_{3} \\rightarrow SnCl_{4} + 2FeCl_{2}}$ বিক্রিয়ার ক্ষেত্রে কোনটি সঠিক? [RU'21-22; DU'15-16]",
+    options: ["$\\mathrm{SnCl_{2}}$ বিজারক", "$\\mathrm{Sn}$ এর জারণ সংখ্যা হ্রাস পেয়েছে", "$\\mathrm{FeCl_{3}}$ বিজারক", "$\\mathrm{Fe}$ এর জারণ সংখ্যা বৃদ্ধি পেয়েছে"],
+    correct_answer: "$\\mathrm{SnCl_{2}}$ বিজারক",
+    explanation: "$\\mathrm{Sn^{2+} \\rightarrow Sn^{4+} + 2e^{-}}$; $\\mathrm{Sn^{2+}}$ $2$ টি ইলেকট্রন দান করে $\\mathrm{Sn^{4+}}$ এ পরিণত হয়েছে বলে এটি জারণ বিক্রিয়া। তাই, $\\mathrm{SnCl_{2}}$ বিজারক।",
+    time_limit: 60
+  },
+  {
+    id: 90591,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯১. $\\mathrm{2MnO_{4}^{-} + 16H^{+} + ne^{-} \\rightarrow 2Mn^{2+} + 8H_{2}O}$ বিক্রিয়ায়- [RU'21-22]\n(i) $\\mathrm{Mn}$ এর জারণ সংখ্যা $+7$ হতে $+2$ হয়\n(ii) $\\mathrm{Mn^{2+}}$ দুটি ইলেকট্রন গ্রহণ করে\n(iii) $n$ এর মান $10$\nনিচের কোনটি সঠিক?",
+    options: ["i, ii", "ii, iii", "i, iii", "i, ii, iii"],
+    correct_answer: "i, iii",
+    explanation: "$\\mathrm{2Mn^{7+} + 10e^{-} \\rightarrow 2Mn^{2+}}$\n$\\therefore$ প্রতিটি $\\mathrm{Mn^{2+}}$ $5$ টি করে ইলেকট্রন গ্রহণ করে।",
+    time_limit: 60
+  },
+  {
+    id: 90592,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯২. $\\mathrm{BaMnF_{4}}$ এবং $\\mathrm{Li_{4}MgFeF_{6}}$ যৌগদ্বয়ে $\\mathrm{Mn}$ ও $\\mathrm{Fe}$ এর জারণ সংখ্যা যথাক্রমে_ [DU'19-20]",
+    options: ["$+2, +2$", "$+5, +2$", "$+4, +3$", "$+5, +3$"],
+    correct_answer: "$+2, +2$",
+    explanation: "$\\mathrm{BaMnF_{4}}: +2 + x + 4 \\times (-1) = 0 \\Rightarrow x = +2$\n$\\mathrm{Li_{4}MgFeF_{6}}: 2 \\times (+1) + 2 + x + 6 \\times (-1) = 0 \\Rightarrow x = +2$",
+    time_limit: 60
+  },
+  {
+    id: 90593,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯৩. কোনটি বিজারক? [Agri.'19-20]",
+    options: ["$\\mathrm{KMnO_{4}}$", "$\\mathrm{MnSO_{4}}$", "$\\mathrm{Na_{2}S_{2}O_{3}}$", "$\\mathrm{CuSO_{4}}$"],
+    correct_answer: "$\\mathrm{Na_{2}S_{2}O_{3}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90594,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯৪. $10\\mathrm{g}$ ফেরাস সালফেটকে সম্পূর্ণরূপে জারিত করতে $\\mathrm{K_{2}Cr_{2}O_{7}}$ এর পরিমাণ কত? [Agri.'19-20; SUST'19-20]",
+    options: ["$2.04\\mathrm{g}$", "$3.23\\mathrm{g}$", "$4.01\\mathrm{g}$", "$4.08\\mathrm{g}$"],
+    correct_answer: "$3.23\\mathrm{g}$",
+    explanation: "$\\left(\\frac{W}{M} \\times e\\right)_{\\mathrm{FeSO_{4}}} = \\left(\\frac{W}{M} \\times e\\right)_{\\mathrm{K_{2}Cr_{2}O_{7}}}$\n$\\Rightarrow \\frac{10}{152} \\times 1 = \\frac{W}{294} \\times 6 \\therefore W = 3.23\\mathrm{g}$",
+    time_limit: 60
+  },
+  {
+    id: 90595,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯৫. [এখানে চিত্র ছিল]\nএ $\\mathrm{Cr}$ এর জারণ সংখ্যা কত? [RU'19-20]",
+    options: ["$10$", "$5$", "$6$", "$3$"],
+    correct_answer: "$6$",
+    explanation: "ধরি, $\\mathrm{Cr}$ এর জারণ সংখ্যা $= x$\n$\\therefore x + (-2) \\times 1 + (-1) \\times 4 = 0 \\therefore x = +6$\n$-O-O-$ বন্ধনে যুক্ত চারটি অক্সিজেন পরমাণুর জন্য।",
+    time_limit: 60
+  },
+  {
+    id: 90596,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯৬. $\\mathrm{Ca(OCl)Cl}$ যৌগে $\\mathrm{Cl}$ এর জারণ সংখ্যা- [RU'19-20]",
+    options: ["$-1, -1$", "$+1, -1$", "$+1, -2$", "$-1, +2$"],
+    correct_answer: "$+1, -1$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 90597,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯৭. $\\mathrm{2KNO_{3} \\rightarrow 2KNO_{2} + O_{2}}$ বিক্রিয়াটিতে জারিত ও বিজারিত মৌল যথাক্রমে কী কী? [DU'18-19]",
+    options: ["নাইট্রোজেন ও অক্সিজেন", "অক্সিজেন ও নাইট্রোজেন", "পটাশিয়াম ও অক্সিজেন", "নাইট্রোজেন ও পটাশিয়াম"],
+    correct_answer: "অক্সিজেন ও নাইট্রোজেন",
+    explanation: "$\\mathrm{O^{2-} \\rightarrow O_{2}}$ [জারিত]; $\\mathrm{N^{5+} \\rightarrow N^{3+}}$ [বিজারিত]",
+    time_limit: 60
+  },
+  {
+    id: 90598,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯৮. নিম্নলিখিত জারণ-বিজারণ বিক্রিয়ার উৎপাদসমূহ কী? $\\mathrm{K_{2}Cr_{2}O_{7}(aq) + H_{2}SO_{4}(aq) + FeSO_{4}(aq) \\rightarrow Products}$ (উৎপাদসমূহ) [DU'18-19]",
+    options: ["$\\mathrm{K_{2}SO_{4}, Fe_{2}(SO_{4})_{3}, H_{2}O}$", "$\\mathrm{K_{2}SO_{4}, Cr_{2}(SO_{4})_{3}, H_{2}O}$", "$\\mathrm{Cr_{2}(SO_{4})_{3}, Fe_{2}(SO_{4})_{3}, H_{2}O}$", "$\\mathrm{K_{2}SO_{4}, Cr_{2}(SO_{4})_{3}, Fe_{2}(SO_{4})_{3}, H_{2}O}$"],
+    correct_answer: "$\\mathrm{K_{2}SO_{4}, Cr_{2}(SO_{4})_{3}, Fe_{2}(SO_{4})_{3}, H_{2}O}$",
+    explanation: "$\\mathrm{K_{2}Cr_{2}O_{7} + 7H_{2}SO_{4} + 6FeSO_{4} \\rightarrow K_{2}SO_{4} + Cr_{2}(SO_{4})_{3} + 3Fe_{2}(SO_{4})_{3} + 7H_{2}O}$",
+    time_limit: 60
+  },
+  {
+    id: 90599,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "১৯৯. $\\mathrm{H_{3}PO_{4}}$ এ $\\mathrm{P}$ এর জারণ সংখ্যা কত? [JU'18-19]",
+    options: ["$+4$", "$+5$", "$+6$", "$+7$"],
+    correct_answer: "$+5$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90500,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০০. নিম্নের কোনটি জারণ-বিজারণ বিক্রিয়া? [CU'18-19]",
+    options: ["$\\mathrm{4LiNO_{3} \\xrightarrow{heat} 2Li_{2}O + 4NO_{2} + O_{2}}$", "$\\mathrm{Li_{2}CO_{3} \\xrightarrow{heat} Li_{2}O + CO_{2}}$", "$\\mathrm{Li_{2}CO_{3} + 2HCl \\xrightarrow{heat} 2LiCl + CO_{2} + H_{2}O}$", "$\\mathrm{2NaHCO_{3} \\xrightarrow{heat} Na_{2}CO_{3} + CO_{2} + H_{2}O}$"],
+    correct_answer: "$\\mathrm{4LiNO_{3} \\xrightarrow{heat} 2Li_{2}O + 4NO_{2} + O_{2}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90501,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০১. $\\mathrm{MnO_{4}^{-}}$ আয়নকে ethanedioate ion দিয়ে বিজারিত করলে $\\mathrm{Mn}$ এর জারণ মান হলো- [DU'17-18]",
+    options: ["$+7$", "$+4$", "$+2$", "$+3$"],
+    correct_answer: "$+2$",
+    explanation: "$\\mathrm{MnO_{4}^{-} + C_{2}O_{4}^{2-} + H^{+} \\rightarrow Mn^{2+} + H_{2}O + CO_{2}}$",
+    time_limit: 60
+  },
+  {
+    id: 90502,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০২. $\\mathrm{KMnO_{4} + H_{2}SO_{3} \\rightarrow MnSO_{4} + K_{2}SO_{4} + H_{2}SO_{4}}$ এই বিক্রিয়ায় কোন অণুর কোন পরমাণু বিজারক? [RU'17-18]",
+    options: ["$\\mathrm{KMnO_{4}}$ এর $\\mathrm{Mn}$", "$\\mathrm{H_{2}O}$ এর $\\mathrm{O}$", "$\\mathrm{H_{2}SO_{3}}$ এর $\\mathrm{S}$", "$\\mathrm{MnSO_{4}}$ এর $\\mathrm{S}$"],
+    correct_answer: "$\\mathrm{H_{2}SO_{3}}$ এর $\\mathrm{S}$",
+    explanation: "বিজারকের জারণ মান বৃদ্ধি পায়।\n$\\mathrm{2KMnO_{4} + 5H_{2}SO_{3} \\rightarrow 2H_{2}SO_{4} + 2MnSO_{4} + K_{2}SO_{4} + 3H_{2}O}$",
+    time_limit: 60
+  },
+  {
+    id: 90503,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০৩. অবস্থাবেদে জারক ও বিজারক হতে পারে না কোনটি? [RU'17-18]",
+    options: ["$\\mathrm{O_{3}}$", "$\\mathrm{O_{2}}$", "$\\mathrm{SO_{2}}$", "$\\mathrm{H_{2}O_{2}}$"],
+    correct_answer: "$\\mathrm{O_{2}}$",
+    explanation: "$\\mathrm{O_{2} + 4e^{-} \\rightarrow 2O^{2-}}$ ; অক্সিজেন সর্বদা ইলেকট্রন গ্রহণ করে বিজারণ বিক্রিয়া দেয়, তাই তা শুধু জারক হিসেবে কাজ করে।",
+    time_limit: 60
+  },
+  {
+    id: 90504,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০৪. কোন যৌগে $\\mathrm{P}$ এর জারণ মান ঋণাত্মক হয়? [RU'17-18, 14-15]",
+    options: ["$\\mathrm{P_{2}O_{4}}$", "$\\mathrm{P_{2}O_{5}}$", "$\\mathrm{H_{3}PO_{2}}$", "$\\mathrm{Ca_{3}P_{2}}$"],
+    correct_answer: "$\\mathrm{Ca_{3}P_{2}}$",
+    explanation: "$(+2) \\times 3 + x \\times 2 = 0 \\Rightarrow x = -3$",
+    time_limit: 60
+  },
+  {
+    id: 90505,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০৫. $\\mathrm{VO^{2+}}$ এবং $\\mathrm{VO_{3}^{-}}$ এ ভ্যানাডিয়াম এর জারণ সংখ্যা যথাক্রমে- [JnU'17-18]",
+    options: ["$+4, +5$", "$+2, +1$", "$+5, +5$", "কোনটিই নয়"],
+    correct_answer: "$+4, +5$",
+    explanation: "$\\mathrm{VO^{2+}}$ এ, $x - 2 = 2 \\therefore x = +4$;\n$\\mathrm{VO_{3}^{-}}$ এ, $x - 2 \\times 2 = +1 \\therefore x = +5$",
+    time_limit: 60
+  },
+  {
+    id: 90506,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০৬. যৌগের আধানবিহীন অণুতে উপস্থিত পরমাণুর জারণ সংখ্যার যোগফল কত? [KU'17-18]",
+    options: ["$0$", "$1$", "$-1$", "আয়নের চার্জের সমান"],
+    correct_answer: "$0$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90507,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০৭. কোন বিক্রিয়াটি জারণ-বিজারণ নয়? [RU'16-17; DU'14-15]",
+    options: ["$\\mathrm{2H_{2}O_{2} \\rightarrow 2H_{2}O + O_{2}}$", "$\\mathrm{CO_{2} + C \\rightarrow 2CO}$", "$\\mathrm{CaCO_{3} \\rightarrow CaO + CO_{2}}$", "$\\mathrm{Fe_{2}O_{3} + 3CO \\rightarrow 2Fe + 3CO_{2}}$"],
+    correct_answer: "$\\mathrm{CaCO_{3} \\rightarrow CaO + CO_{2}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90508,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০৮. $\\mathrm{MnO_{4}^{-} + nH^{+} + me^{-} \\rightarrow Mn^{2+} + 4H_{2}O}$ অর্ধ বিক্রিয়ায়- [JU'16-17]\n(i) $n = 8$\n(ii) $m = 6$\n(iii) এটি বিজারণ অর্ধ-বিক্রিয়া\nনিচের কোনটি সঠিক?",
+    options: ["i, ii", "i, iii", "ii, iii", "i, ii, iii"],
+    correct_answer: "i, iii",
+    explanation: "$\\mathrm{MnO_{4}^{-} + 8H^{+} + 5e^{-} \\rightarrow Mn^{2+} + 4H_{2}O}$ (বিজারণ); তাই, $m = 5, n = 8$",
+    time_limit: 60
+  },
+  {
+    id: 90509,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২০৯. $\\mathrm{Na_{2}S_{2}O_{3}}$ জারিত হয়ে $\\mathrm{Na_{2}S_{4}O_{6}}$ এ রূপান্তরিত হয়। প্রথমটির $1$ টি সালফার কতটি ইলেকট্রন ত্যাগ করবে? [RU'15-16]",
+    options: ["$0.5$ টি", "$0.25$ টি", "$1$ টি", "$2$ টি"],
+    correct_answer: "$0.5$ টি",
+    explanation: "$2$ টি $\\mathrm{S}$ এর প্রথমটি $1$ টি ইলেকট্রন ত্যাগ করে। অর্থাৎ কোন ইলেকট্রন ত্যাগ বা গ্রহণ করে না।",
+    time_limit: 60
+  },
+  {
+    id: 90510,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১০. বিজারক-এর বৈশিষ্ট্য কোনটি? [JU'15-16]",
+    options: ["জারণ ঘটায়", "নিজে বিজারিত হয়", "নিজে জারিত হয়", "ইলেকট্রন লাভ করে"],
+    correct_answer: "নিজে জারিত হয়",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90511,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১১. $\\mathrm{K_{4}[Fe(CN)_{6}]}$ জটিল যৌগে $\\mathrm{Fe}$ এর জারণ সংখ্যা (oxidation number) কত? [JnU'15-16]",
+    options: ["$+4$", "$+3$", "$+2$", "None"],
+    correct_answer: "$+2$",
+    explanation: "জারণ মান:\n$4 \\times 1 + 1 \\times x + 6 \\times (-1) = 0 \\Rightarrow x = 2$",
+    time_limit: 60
+  },
+  {
+    id: 90512,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১২. নিম্নের সমতাকৃত বিক্রিয়ায় সহগগুলোর মান হলো- $\\mathrm{aNH_{3} + bO_{2} \\rightarrow cNO + dH_{2}O}$ [DU'14-15]",
+    options: ["$a = 2, b = 3, c = 3 \\text{ and } d = 3$", "$a = 4, b = 7, c = 4 \\text{ and } d = 4$", "$a = 4, b = 5, c = 4 \\text{ and } d = 6$", "$a = 6, b = 7, c = 6 \\text{ and } d = 9$"],
+    correct_answer: "$a = 4, b = 5, c = 4 \\text{ and } d = 6$",
+    explanation: "$\\mathrm{4NH_{3} + 5O_{2} \\rightarrow 4NO + 6H_{2}O}$\n[Tricks $\\rightarrow$ option test]",
+    time_limit: 60
+  },
+  {
+    id: 90513,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১৩. বেরিয়াম ক্লোরাইডের জলীয় দ্রবণে পাতলা জলীয় সালফিউরিক এসিড দ্রবণে যোগ করলে সাদা অধঃক্ষেপ তৈরি হয় এ বিক্রিয়ার আয়নিত সমীকরণটি (অবস্থার সংকেতসহ) হলো- [DU'14-15]",
+    options: ["$\\mathrm{BaCl_{2}(aq) + H_{2}SO_{4}(aq) \\rightarrow BaSO_{4} + HCl(aq)}$", "$\\mathrm{Ba^{2+}(aq) + SO_{4}^{2-}(aq) \\rightarrow BaSO_{4}(s)}$ (খ)", "$\\mathrm{Ba^{2+}(aq) + 2SO_{4}^{-}(aq) \\rightarrow Ba(SO_{4})_{2}(s)}$", "$\\mathrm{Ba^{2+}(aq) + SO_{4}^{2-}(aq) \\rightarrow BaSO_{4}(s)}$ (ঘ)"],
+    correct_answer: "$\\mathrm{Ba^{2+}(aq) + SO_{4}^{2-}(aq) \\rightarrow BaSO_{4}(s)}$ (খ)",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90514,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১৪. $\\mathrm{MnO_{4}^{-}}$ থেকে $\\mathrm{MnO_{4}^{2-}}$ আয়নে রূপান্তরের ক্ষেত্রে $\\mathrm{Mn}$ পরমাণুর জারণ অবস্থার পরিবর্তন কোনটি? [CU'14-15]",
+    options: ["$0$ থেকে $-1$", "$0$ থেকে $+7$", "$+2$ থেকে $+7$", "$+4$ থেকে $+7$"],
+    correct_answer: "$+4$ থেকে $+7$",
+    explanation: "$\\mathrm{MnO_{4}^{2-} \\rightarrow Mn = +4}$ $\\mathrm{MnO_{4}^{-} \\rightarrow Mn = +7}$\n(বি. দ্র.: প্রশ্নে ভুল রয়েছে, জারণ মান $+6$ থেকে $+7$ হবে)",
+    time_limit: 60
+  },
+  {
+    id: 90515,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১৫. $\\mathrm{N}$ এর সর্বোচ্চ জারণ অবস্থা নিম্নের কোনটিতে? [JU'14-15]",
+    options: ["$\\mathrm{N_{2}O_{5}}$", "$\\mathrm{NH_{4}^{+}}$", "$\\mathrm{NO_{2}}$", "$\\mathrm{NO_{3}^{-}}$"],
+    correct_answer: "$\\mathrm{N_{2}O_{5}}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90516,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১৬. কোনটিতে সালফারের জারণ সংখ্যা সর্বাধিক? [JU'14-15]",
+    options: ["$\\mathrm{H_{2}S}$", "$\\mathrm{H_{2}SO_{3}}$", "$\\mathrm{H_{2}SO_{4}}$", "$\\mathrm{H_{2}S_{2}O_{8}}$"],
+    correct_answer: "$\\mathrm{H_{2}SO_{4}}$",
+    explanation: "[এখানে চিত্র ছিল]",
+    time_limit: 60
+  },
+  {
+    id: 90517,
+    topic: "জারণ-বিজারণ, সমীকরণ সমতাকরণ, জারণ-বিজারণ টাইট্রেশন ভিত্তিক গাণিতিক সমস্যা",
+    topicId: "chem2_quant_t05",
+    question_text: "২১৭. $\\mathrm{S_{2}O_{3}^{2-}}$ এবং $\\mathrm{S_{4}O_{6}^{2-}}$ এ সালফারের জারণ সংখ্যা হল- [DU'13-14]",
+    options: ["$-2$ and $-2.5$", "$+2$ and $+2.5$", "$+4$ and $+6$", "$+2$ and $-2$"],
+    correct_answer: "$+2$ and $+2.5$",
+    explanation: "$\\mathrm{S_{2}O_{3}^{2-}}$ এ $2x + (-2) \\times 3 = -2 \\therefore x = \\frac{4}{2} = 2$\n$\\mathrm{S_{4}O_{6}^{2-}}$ এ $4x + (-2) \\times 6 = -2 \\therefore x = \\frac{10}{4} = +2.5$",
+    time_limit: 60
+  },
+  // --- T-06: আয়োডিমিতি ও আয়োডোমিতি সংক্রান্ত সমস্যা ---
+  {
+    id: 90618,
+    topic: "আয়োডিমিতি ও আয়োডোমিতি সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t06",
+    question_text: "২১৮. $\\mathrm{CuSO_{4} + KI \\rightarrow Cu_{2}I_{2} + I_{2} + K_{2}SO_{4}}$ -এই বিক্রিয়ায় বিজারক কোনটি? [GST'24-25]",
+    options: ["$\\mathrm{Cu^{2+}}$", "$\\mathrm{I_{2}}$", "$\\mathrm{I^{-}}$", "$\\mathrm{K^{+}}$"],
+    correct_answer: "$\\mathrm{I^{-}}$",
+    explanation: "[এখানে চিত্র ছিল]\nযেহেতু $\\mathrm{I^{-}}$ এর জারণ ঘটে তাই এটি বিজারক।",
+    time_limit: 60
+  },
+  {
+    id: 90619,
+    topic: "আয়োডিমিতি ও আয়োডোমিতি সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t06",
+    question_text: "২১৯. $\\mathrm{Na_{2}S_{2}O_{3} + I_{2} \\rightarrow Na_{2}S_{4}O_{6} + NaI}$ বিক্রিয়ায়- [JU'17-18]\n(i) $\\mathrm{I_{2}}$ জারক\n(ii) $\\mathrm{I_{2}}$ এর জারণ ঘটেছে\n(iii) $\\mathrm{Na_{2}S_{2}O_{3}}$ জারক\nনিচের কোনটি সঠিক?",
+    options: ["i", "ii, iii", "iii", "i, ii"],
+    correct_answer: "i",
+    explanation: "$\\mathrm{2Na_{2}S_{2}O_{3} + I_{2} \\rightarrow Na_{2}S_{4}O_{6} + 2NaI}$",
+    time_limit: 60
+  },
+  {
+    id: 90620,
+    topic: "আয়োডিমিতি ও আয়োডোমিতি সংক্রান্ত সমস্যা",
+    topicId: "chem2_quant_t06",
+    question_text: "২২০. $\\mathrm{2CuSO_{4} + 4KI = Cu_{2}I_{2} + I_{2} + 2K_{2}SO_{4}}$ বিক্রিয়াটির জন্য কোনটি সঠিক? [CU'16-17]",
+    options: ["$\\mathrm{Cu^{2+}}$ জারিত হয়েছে", "$\\mathrm{Cu^{2+}}$ একটি বিজারক", "$\\mathrm{I^{-}}$ বিজারিত হয়েছে", "$\\mathrm{I^{-}}$ জারিত হয়েছে"],
+    correct_answer: "$\\mathrm{I^{-}}$ জারিত হয়েছে",
+    explanation: "$\\mathrm{2Cu^{2+} + 2e^{-} \\rightarrow 2Cu^{+}}$ (বিজারণ)\n$\\mathrm{2I^{-} - 2e^{-} \\rightarrow I_{2}}$ (জারণ); $\\mathrm{SO_{4}^{2-}}$ (দর্শক আয়ন)",
+    time_limit: 60
+  },
+  // --- T-07: বিয়ার-ল্যাম্বার্ট সূত্র ---
+  {
+    id: 90721,
+    topic: "বিয়ার-ল্যাম্বার্ট সূত্র",
+    topicId: "chem2_quant_t07",
+    question_text: "২২১. স্পেকট্রোফটোমিটারের $1\\mathrm{cm}$ দৈর্ঘ্যের একটি সেলে রাখা দ্রবণের শোষণ সহগ ($\\epsilon$) $1.0 \\times 10^{5}\\mathrm{L.mol^{-1}.cm^{-1}}$ এবং বিশোষণ বা absorbance মাত্রা হল $1.0$। এই দ্রবণটির ঘনমাত্রা কত? [RU'17-18]",
+    options: ["$1.0 \\times 10^{-5}\\mathrm{mol.L^{-1}}$", "$1.0 \\times 10^{-4}\\mathrm{mol.L^{-1}}$", "$1.3 \\times 10^{-5}\\mathrm{mol.L^{-1}}$", "$1.3 \\times 10^{-4}\\mathrm{mol.L^{-1}}$"],
+    correct_answer: "$1.0 \\times 10^{-5}\\mathrm{mol.L^{-1}}$",
+    explanation: "$A = \\epsilon Cl \\therefore C = \\frac{1}{10^{5} \\times 1} = 1 \\times 10^{-5}\\mathrm{M}$",
+    time_limit: 60
+  },
+  {
+    id: 90722,
+    topic: "বিয়ার-ল্যাম্বার্ট সূত্র",
+    topicId: "chem2_quant_t07",
+    question_text: "২২২. বিয়ার ল্যাম্বার্ট সূত্রের সাহায্যে- [CU'15-16]",
+    options: ["কঠিন পদার্থের আয়তন নির্ণয় করা হয়", "গ্যাসের উদ্বায়িতা নির্ণয় করা হয়", "তরলের আয়তন নির্ণয় করা হয়", "তরল পদার্থের স্ফুটনাংক নির্ণয় করা হয়", "কোনটিই নয়"],
+    correct_answer: "কোনটিই নয়",
+    explanation: "",
+    time_limit: 60
+  },
+  // --- T-08: পদার্থের পরিমাণগত বিশ্লেষণ ও বিবিধ ---
+  {
+    id: 90823,
+    topic: "পদার্থের পরিমাণগত বিশ্লেষণ ও বিবিধ",
+    topicId: "chem2_quant_t08",
+    question_text: "২২৩. কোন ক্রোমাটোগ্রাফীতে হিলিয়াম গ্যাস সচল মাধ্যমে হিসেবে ব্যবহৃত হয়? [KU'17-18]",
+    options: ["$\\mathrm{TLC}$", "$\\mathrm{HPLC}$", "$\\mathrm{GLPC}$", "$\\mathrm{GC}$"],
+    correct_answer: "$\\mathrm{GC}$",
+    explanation: "",
+    time_limit: 60
+  },
+  {
+    id: 90824,
+    topic: "পদার্থের পরিমাণগত বিশ্লেষণ ও বিবিধ",
+    topicId: "chem2_quant_t08",
+    question_text: "২২৪. গ্যাস ক্রোমাটোগ্রাফিতে সচল মাধ্যম হিসাবে কি ব্যবহৃত হয়? [KU'16-17]",
+    options: ["নিষ্ক্রিয় হিলিয়াম", "কার্বন ডাই অক্সাইড", "নিষ্ক্রিয় লিথিয়াম", "মিথানল"],
+    correct_answer: "নিষ্ক্রিয় হিলিয়াম",
+    explanation: "",
+    time_limit: 60
+  },
 ];
