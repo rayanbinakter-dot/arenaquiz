@@ -27,6 +27,14 @@ import {
   getRouteLabel,
   getSubjectLabel
 } from '../../utils/getAllNormalizedQuestions';
+import {
+  resolveItemToTaxonomy,
+  buildRouteOptions,
+  buildSubjectOptions,
+  buildPaperOptions,
+  buildChapterOptions,
+  buildTopicOptions
+} from '../../utils/imageManagerTaxonomy';
 import { MathText } from '../MathText';
 
 interface ImageRequiredTabProps {
@@ -79,13 +87,26 @@ function normalizeRequirementItem(item: QuestionNeedingImage): NormalizedMediaRe
   const topicId = (item.topicId || item.topicName || 'general').trim();
   const sourceSetId = (anyItem.sourceSetId || item.sourceSetLabel || item.sourceType || 'default').trim();
 
-  return {
-    ...item,
+  // Canonicalize against the app's single source of truth (ROUTE_TAXONOMY)
+  // so legacy chapter ids (e.g. "ch3") resolve to canonical taxonomy ids ("ict_ch3")
+  // and filters line up with the app's real structure.
+  const resolved = resolveItemToTaxonomy({
     routeId,
     subjectId,
     paperId,
     chapterId,
+    chapterName: item.chapterName,
     topicId,
+    topicName: item.topicName
+  });
+
+  return {
+    ...item,
+    routeId: resolved.routeId,
+    subjectId: resolved.subjectId,
+    paperId: resolved.paperId,
+    chapterId: resolved.chapterId,
+    topicId: resolved.topicId,
     sourceSetId
   };
 }
@@ -130,94 +151,29 @@ export default function ImageRequiredTab({
   }, [rawItems]);
 
   // 2. Dynamic Route Options (Derived ONLY from normalized items)
-  const availableRoutes = useMemo(() => {
-    const map = new Map<string, { id: string; label: string; count: number }>();
-    items.forEach(it => {
-      const id = it.routeId;
-      const label = id === 'unknown' ? 'মেটাডেটা যাচাই প্রয়োজন' : getRouteLabel(id);
-      const curr = map.get(id) || { id, label, count: 0 };
-      curr.count++;
-      map.set(id, curr);
-    });
-    return Array.from(map.values());
-  }, [items]);
+  // Filter options = FULL app taxonomy (ROUTE_TAXONOMY: every pathway, subject,
+  // paper, chapter, topic that exists in the app) UNION detected items, with live counts.
+  const availableRoutes = useMemo(() => buildRouteOptions(items), [items]);
 
-  // 3. Dynamic Subject Options (Derived ONLY from normalized items)
-  const availableSubjects = useMemo(() => {
-    const map = new Map<string, { id: string; label: string; count: number }>();
-    const source = routeFilter === 'all' ? items : items.filter(it => it.routeId === routeFilter);
-    source.forEach(it => {
-      const id = it.subjectId;
-      const label = id === 'unknown' ? 'মেটাডেটা যাচাই প্রয়োজন' : (it.subjectLabel || getSubjectLabel(id));
-      const curr = map.get(id) || { id, label, count: 0 };
-      curr.count++;
-      map.set(id, curr);
-    });
-    return Array.from(map.values());
-  }, [items, routeFilter]);
+  const availableSubjects = useMemo(
+    () => buildSubjectOptions(items, { routeFilter }),
+    [items, routeFilter]
+  );
 
-  // 4. Dynamic Paper Options (Derived ONLY from normalized items)
-  const availablePapers = useMemo(() => {
-    const map = new Map<string, { id: string; label: string; count: number }>();
-    const source = items.filter(it => {
-      const matchesRoute = routeFilter === 'all' || it.routeId === routeFilter;
-      const matchesSubject = subjectFilter === 'all' || it.subjectId === subjectFilter;
-      return matchesRoute && matchesSubject;
-    });
-    source.forEach(it => {
-      const id = it.paperId;
-      let label = it.paperLabel || id;
-      if (id === 'first') label = '১ম পত্র';
-      else if (id === 'second') label = '২য় পত্র';
-      else if (id === 'not_applicable') label = 'প্রযোজ্য নয়';
-      else if (id === 'unknown') label = 'মেটাডেটা যাচাই প্রয়োজন';
-      const curr = map.get(id) || { id, label, count: 0 };
-      curr.count++;
-      map.set(id, curr);
-    });
-    return Array.from(map.values());
-  }, [items, routeFilter, subjectFilter]);
+  const availablePapers = useMemo(
+    () => buildPaperOptions(items, { routeFilter, subjectFilter }),
+    [items, routeFilter, subjectFilter]
+  );
 
-  // 5. Dynamic Chapter Options (Derived ONLY from normalized items)
-  const availableChapters = useMemo(() => {
-    const map = new Map<string, { id: string; label: string; count: number }>();
-    const source = items.filter(it => {
-      const matchesRoute = routeFilter === 'all' || it.routeId === routeFilter;
-      const matchesSubject = subjectFilter === 'all' || it.subjectId === subjectFilter;
-      const matchesPaper = paperFilter === 'all' || it.paperId === paperFilter;
-      return matchesRoute && matchesSubject && matchesPaper;
-    });
-    source.forEach(it => {
-      const id = it.chapterId;
-      const label = id === 'unknown' ? 'মেটাডেটা যাচাই প্রয়োজন' : (it.chapterName || id);
-      const curr = map.get(id) || { id, label, count: 0 };
-      curr.count++;
-      map.set(id, curr);
-    });
-    return Array.from(map.values());
-  }, [items, routeFilter, subjectFilter, paperFilter]);
+  const availableChapters = useMemo(
+    () => buildChapterOptions(items, { routeFilter, subjectFilter, paperFilter, chapterFilter: 'all' }),
+    [items, routeFilter, subjectFilter, paperFilter]
+  );
 
-  // 6. Dynamic Topic Options (Derived ONLY from normalized items)
-  const availableTopics = useMemo(() => {
-    const map = new Map<string, { id: string; label: string; count: number }>();
-    const source = items.filter(it => {
-      const matchesRoute = routeFilter === 'all' || it.routeId === routeFilter;
-      const matchesSubject = subjectFilter === 'all' || it.subjectId === subjectFilter;
-      const matchesPaper = paperFilter === 'all' || it.paperId === paperFilter;
-      const matchesChapter = chapterFilter === 'all' || it.chapterId === chapterFilter;
-      return matchesRoute && matchesSubject && matchesPaper && matchesChapter;
-    });
-    source.forEach(it => {
-      const id = it.topicId;
-      let label = it.topicName || id;
-      if (id === 'unknown') label = 'মেটাডেটা যাচাই প্রয়োজন';
-      else if (id === 'general' && !it.topicName) label = 'সাধারণ / বিবিধ';
-      const curr = map.get(id) || { id, label, count: 0 };
-      curr.count++;
-      map.set(id, curr);
-    });
-    return Array.from(map.values());
-  }, [items, routeFilter, subjectFilter, paperFilter, chapterFilter]);
+  const availableTopics = useMemo(
+    () => buildTopicOptions(items, { routeFilter, subjectFilter, paperFilter, chapterFilter }),
+    [items, routeFilter, subjectFilter, paperFilter, chapterFilter]
+  );
 
   // 7. Filtered Question List (Filtered using stable IDs only)
   const filteredItems = useMemo(() => {
@@ -413,14 +369,15 @@ export default function ImageRequiredTab({
                 onChange={(e) => {
                   setRouteFilter(e.target.value);
                   setSubjectFilter('all');
+                  setPaperFilter('all');
                   setChapterFilter('all');
                   setTopicFilter('all');
                 }}
                 className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white font-medium focus:outline-none focus:border-amber-500/50"
               >
                 <option value="all">সকল রুট ({items.length})</option>
-                {availableRoutes.map(r => (
-                  <option key={r.id} value={r.id}>{r.label} ({r.count})</option>
+                {[...availableRoutes].sort((a, b) => b.count - a.count).map(r => (
+                  <option key={r.id} value={r.id}>{r.label} ({r.count > 0 ? r.count : '—'})</option>
                 ))}
               </select>
             </div>
@@ -432,14 +389,15 @@ export default function ImageRequiredTab({
                 value={subjectFilter}
                 onChange={(e) => {
                   setSubjectFilter(e.target.value);
+                  setPaperFilter('all');
                   setChapterFilter('all');
                   setTopicFilter('all');
                 }}
                 className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white font-medium focus:outline-none focus:border-amber-500/50"
               >
                 <option value="all">সকল বিষয়</option>
-                {availableSubjects.map(s => (
-                  <option key={s.id} value={s.id}>{s.label} ({s.count})</option>
+                {[...availableSubjects].sort((a, b) => b.count - a.count).map(s => (
+                  <option key={s.id} value={s.id}>{s.label} ({s.count > 0 ? s.count : '—'})</option>
                 ))}
               </select>
             </div>
@@ -449,7 +407,11 @@ export default function ImageRequiredTab({
               <label className="text-[10px] font-bold text-slate-400 block uppercase">পত্র</label>
               <select
                 value={paperFilter}
-                onChange={(e) => setPaperFilter(e.target.value)}
+                onChange={(e) => {
+                  setPaperFilter(e.target.value);
+                  setChapterFilter('all');
+                  setTopicFilter('all');
+                }}
                 className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white font-medium focus:outline-none focus:border-amber-500/50"
               >
                 <option value="all">সকল পত্র</option>
@@ -471,8 +433,8 @@ export default function ImageRequiredTab({
                 className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white font-medium focus:outline-none focus:border-amber-500/50 truncate"
               >
                 <option value="all">সকল অধ্যায়</option>
-                {availableChapters.map(ch => (
-                  <option key={ch.id} value={ch.id}>{ch.label} ({ch.count})</option>
+                {[...availableChapters].sort((a, b) => b.count - a.count).map(ch => (
+                  <option key={ch.id} value={ch.id}>{ch.label} ({ch.count > 0 ? ch.count : '—'})</option>
                 ))}
               </select>
             </div>
@@ -486,8 +448,8 @@ export default function ImageRequiredTab({
                 className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-2 text-xs text-white font-medium focus:outline-none focus:border-amber-500/50 truncate"
               >
                 <option value="all">সকল টপিক</option>
-                {availableTopics.map(t => (
-                  <option key={t.id} value={t.id}>{t.label} ({t.count})</option>
+                {[...availableTopics].sort((a, b) => b.count - a.count).map(t => (
+                  <option key={t.id} value={t.id}>{t.label} ({t.count > 0 ? t.count : '—'})</option>
                 ))}
               </select>
             </div>
