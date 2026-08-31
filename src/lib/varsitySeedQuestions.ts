@@ -23,6 +23,7 @@ import { chem1ChemicalChangeQuestions } from '../data/questions_chem1_change';
 import { chem1LabSafetyQuestions } from '../data/questions_chem1_lab';
 import { chem1AppliedQuestions } from '../data/questions_chem1_applied';
 import { chem2QuantitativeQuestions } from '../data/questions_chem2_quantitative';
+import { chem2ElectroQuestions } from '../data/questions_chem2_electro';
 import { chem1QualitativeQuestions } from '../data/questions_chem1_qualitative_new';
 
 export function getLocalVarsityQuestions(): Question[] {
@@ -191,6 +192,22 @@ export function getLocalVarsityQuestions(): Question[] {
       subject: 'chemistry',
       chapter: 'পরিমাণগত রসায়ন',
       chapterId: 'var_chem2_ch3',
+      topic: q.topic || 'সাধারণ',
+      route: 'varsity',
+      unit: 'du_ka',
+      paper: 'second',
+      time_limit: q.time_limit || 60
+    } as unknown as Question);
+  });
+
+  // Chemistry 2nd paper: তড়িৎ রসায়ন (Module 3 topic-wise)
+  (chem2ElectroQuestions || []).forEach((q: any) => {
+    result.push({
+      ...q,
+      id: typeof q.id === 'number' ? q.id : ++nextNumericId,
+      subject: 'chemistry',
+      chapter: 'তড়িৎ রসায়ন',
+      chapterId: 'var_chem2_ch4',
       topic: q.topic || 'সাধারণ',
       route: 'varsity',
       unit: 'du_ka',
