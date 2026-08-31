@@ -24,6 +24,7 @@ import { chem1LabSafetyQuestions } from '../data/questions_chem1_lab';
 import { chem1AppliedQuestions } from '../data/questions_chem1_applied';
 import { chem2QuantitativeQuestions } from '../data/questions_chem2_quantitative';
 import { chem2ElectroQuestions } from '../data/questions_chem2_electro';
+import { chem2EconomicQuestions } from '../data/questions_chem2_economic';
 import { chem1QualitativeQuestions } from '../data/questions_chem1_qualitative_new';
 
 export function getLocalVarsityQuestions(): Question[] {
@@ -208,6 +209,22 @@ export function getLocalVarsityQuestions(): Question[] {
       subject: 'chemistry',
       chapter: 'তড়িৎ রসায়ন',
       chapterId: 'var_chem2_ch4',
+      topic: q.topic || 'সাধারণ',
+      route: 'varsity',
+      unit: 'du_ka',
+      paper: 'second',
+      time_limit: q.time_limit || 60
+    } as unknown as Question);
+  });
+
+  // Chemistry 2nd paper: অর্থনৈতিক রসায়ন (Module 3 topic-wise)
+  (chem2EconomicQuestions || []).forEach((q: any) => {
+    result.push({
+      ...q,
+      id: typeof q.id === 'number' ? q.id : ++nextNumericId,
+      subject: 'chemistry',
+      chapter: 'অর্থনৈতিক রসায়ন',
+      chapterId: 'var_chem2_ch5',
       topic: q.topic || 'সাধারণ',
       route: 'varsity',
       unit: 'du_ka',
