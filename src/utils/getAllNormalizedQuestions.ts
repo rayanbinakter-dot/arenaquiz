@@ -772,67 +772,29 @@ export async function getAllNormalizedQuestions(
   }
 
   // ==========================================
-  // 3. VARSITY ROUTE (DCU & GST)
+  // 3. VARSITY ROUTE (Live App Loader - auto-syncs with every chapter added to the app)
   // ==========================================
+  // Uses getLocalVarsityQuestions() (the SAME loader the student app uses),
+  // so any new chapter/topic wired into the app is instantly visible here.
+  // No more hardcoded dataset lists for the Varsity route.
   try {
-    const { dcuPhysicsNewtonianData } = await import('../data/questions_dcu_physics_newtonian');
-    const { dcuPhysicsVectorData } = await import('../data/questions_dcu_physics_vector');
-    const { dcuPhysicsGravityData } = await import('../data/questions_dcu_physics_gravity');
-    const { dcuPhysicsWorkEnergyData } = await import('../data/questions_dcu_physics_work_energy');
-    const { dcuPhysicsPeriodicData } = await import('../data/questions_dcu_physics_periodic');
-    const { dcuPhysicsStructureData } = await import('../data/questions_dcu_physics_structure');
-    const { dcuPhysicsIdealGasData } = await import('../data/questions_dcu_physics_ideal_gas');
-    const { dcuPhysicsThermodynamicsData } = await import('../data/questions_dcu_physics_thermodynamics');
-    const { dcuPhysicsElectrostaticsData } = await import('../data/questions_dcu_physics_electrostatics');
-    const { dcuPhysicsCurrentElectricityData } = await import('../data/questions_dcu_physics_current_electricity');
+    const { getLocalVarsityQuestions } = await import('../lib/varsitySeedQuestions');
+    const varsityLoaderQuestions = getLocalVarsityQuestions();
 
-    const { dcuChemQualitativeData } = await import('../data/questions_dcu_chem_qualitative');
-    const { dcuChemPeriodicPropertiesData } = await import('../data/questions_dcu_chem_periodic_properties');
-    const { dcuChemEnvironmentalData } = await import('../data/questions_dcu_chem_environmental');
+    varsityLoaderQuestions.forEach((q: any) => {
+      // ICT is already registered under the Academic route above with established
+      // image keys (84 in-repo files) - skip to avoid duplicate entries/keys.
+      if ((q.subject || '').toLowerCase() === 'ict') return;
 
-    const { dcuMathExam1Data } = await import('../data/questions_dcu_math_exam1');
-    const { dcuMathExam3Data } = await import('../data/questions_dcu_math_exam3');
-    const { dcuMathStraightLineData } = await import('../data/questions_dcu_math_straight_line');
-    const { gstMathExam1Data } = await import('../data/questions_gst_math_exam1');
-    const { gstMathExam2Data } = await import('../data/questions_gst_math_exam2');
-
-    const varsitySets = [
-      { name: 'নিউটনিয়ান বলবিদ্যা', subject: 'physics', paper: 'first', data: dcuPhysicsNewtonianData },
-      { name: 'ভেক্টর', subject: 'physics', paper: 'first', data: dcuPhysicsVectorData },
-      { name: 'মহাকর্ষ ও অভিকর্ষ', subject: 'physics', paper: 'first', data: dcuPhysicsGravityData },
-      { name: 'কাজ, শক্তি ও ক্ষমতা', subject: 'physics', paper: 'first', data: dcuPhysicsWorkEnergyData },
-      { name: 'পর্যায়বৃত্ত গতি', subject: 'physics', paper: 'first', data: dcuPhysicsPeriodicData },
-      { name: 'পদার্থের গাঠনিক ধর্ম', subject: 'physics', paper: 'first', data: dcuPhysicsStructureData },
-      { name: 'আদর্শ গ্যাস ও গতিবিদ্যা', subject: 'physics', paper: 'first', data: dcuPhysicsIdealGasData },
-      { name: 'তাপগতিবিদ্যা', subject: 'physics', paper: 'second', data: dcuPhysicsThermodynamicsData },
-      { name: 'স্থির তড়িৎ', subject: 'physics', paper: 'second', data: dcuPhysicsElectrostaticsData },
-      { name: 'চল তড়িৎ', subject: 'physics', paper: 'second', data: dcuPhysicsCurrentElectricityData },
-      { name: 'গুণগত রসায়ন', subject: 'chemistry', paper: 'first', data: dcuChemQualitativeData },
-      { name: 'মৌলের পর্যায়বৃত্ত ধর্ম', subject: 'chemistry', paper: 'first', data: dcuChemPeriodicPropertiesData },
-      { name: 'পরিবেশ রসায়ন', subject: 'chemistry', paper: 'second', data: dcuChemEnvironmentalData },
-      { name: 'ম্যাট্রিক্স ও নির্ণায়ক', subject: 'math', paper: 'first', data: dcuMathExam1Data },
-      { name: 'বৃত্ত ও সরলরেখা', subject: 'math', paper: 'first', data: dcuMathExam3Data },
-      { name: 'সরলরেখা', subject: 'math', paper: 'first', data: dcuMathStraightLineData },
-      { name: 'সংযুক্ত কোণের ত্রিকোণমিতি', subject: 'math', paper: 'first', data: gstMathExam1Data },
-      { name: 'বিপরীত ত্রিকোণমিতিক ফাংশন', subject: 'math', paper: 'second', data: gstMathExam2Data }
-    ];
-
-    varsitySets.forEach(set => {
-      (set.data?.questions || []).forEach(q => {
-        registerQuestion(
-          normalizeQuestion(q, {
-            route: 'varsity',
-            subject: set.subject,
-            subjectLabel: set.subject === 'physics' ? 'পদার্থবিজ্ঞান' : set.subject === 'chemistry' ? 'রসায়ন' : 'উচ্চতর গণিত',
-            paper: set.paper,
-            chapterName: set.name,
-            sourceType: 'varsity_dcu'
-          })
-        );
-      });
+      registerQuestion(
+        normalizeQuestion(q, {
+          route: 'varsity',
+          sourceType: 'varsity_dcu'
+        })
+      );
     });
   } catch (err) {
-    console.warn('Varsity datasets import notice:', err);
+    console.warn('Varsity loader import notice:', err);
   }
 
   // ==========================================
