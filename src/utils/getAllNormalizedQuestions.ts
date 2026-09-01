@@ -644,10 +644,13 @@ export async function getAllNormalizedQuestions(
     const { medChem1Chap3PeriodicQuestions } = await import('../data/questions_med_chem1_c3_periodic');
     const { medChem1Chap4ChemicalChangeQuestions } = await import('../data/questions_med_chem1_c4_chemical_change');
 
+    const { medChem1Chap5AppliedQuestions } = await import('../data/questions_med_chem1_c5_applied');
+
     const medChemPacks = [
       { name: 'গুণগত রসায়ন', list: medChem1Chap2QualitativeQuestions },
       { name: 'মৌলের পর্যায়বৃত্ত ধর্ম', list: medChem1Chap3PeriodicQuestions },
-      { name: 'রাসায়নিক পরিবর্তন', list: medChem1Chap4ChemicalChangeQuestions }
+      { name: 'রাসায়নিক পরিবর্তন', list: medChem1Chap4ChemicalChangeQuestions },
+      { name: 'কর্মমুখী রসায়ন', list: medChem1Chap5AppliedQuestions }
     ];
 
     medChemPacks.forEach(pack => {

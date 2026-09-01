@@ -22,6 +22,7 @@ import { chem1Chap2Data } from '../data/questions_chem1_chap2';
 import { medChem1Chap2QualitativeQuestions } from '../data/questions_med_chem1_c2_qualitative';
 import { medChem1Chap3PeriodicQuestions } from '../data/questions_med_chem1_c3_periodic';
 import { medChem1Chap4ChemicalChangeQuestions } from '../data/questions_med_chem1_c4_chemical_change';
+import { medChem1Chap5AppliedQuestions } from '../data/questions_med_chem1_c5_applied';
 import {
   medBio1Chap8TissueBoardQuestions,
   medBio1Chap8TissueHasanQuestions,
@@ -629,6 +630,13 @@ function buildSeedPracticeQuestions(): QuestionItem[] {
   // 4.2 Chemistry 1st Paper - Chemical Change / রাসায়নিক পরিবর্তন (Chapter 4)
   if (Array.isArray(medChem1Chap4ChemicalChangeQuestions)) {
     medChem1Chap4ChemicalChangeQuestions.forEach((q) => {
+      items.push(q);
+    });
+  }
+
+  // 4.3 Chemistry 1st Paper - Applied Chemistry / কর্মমুখী রসায়ন (Chapter 5)
+  if (Array.isArray(medChem1Chap5AppliedQuestions)) {
+    medChem1Chap5AppliedQuestions.forEach((q) => {
       items.push(q);
     });
   }
