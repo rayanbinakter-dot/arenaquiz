@@ -640,6 +640,7 @@ export async function getAllNormalizedQuestions(
 
   // 2B. Medical Chemistry
   try {
+    const { medChem1Chap1LabQuestions } = await import('../data/questions_med_chem1_c1_lab');
     const { medChem1Chap2QualitativeQuestions } = await import('../data/questions_med_chem1_c2_qualitative');
     const { medChem1Chap3PeriodicQuestions } = await import('../data/questions_med_chem1_c3_periodic');
     const { medChem1Chap4ChemicalChangeQuestions } = await import('../data/questions_med_chem1_c4_chemical_change');
@@ -647,6 +648,7 @@ export async function getAllNormalizedQuestions(
     const { medChem1Chap5AppliedQuestions } = await import('../data/questions_med_chem1_c5_applied');
 
     const medChemPacks = [
+      { name: 'ল্যাবরেটরির নিরাপদ ব্যবহার', list: medChem1Chap1LabQuestions },
       { name: 'গুণগত রসায়ন', list: medChem1Chap2QualitativeQuestions },
       { name: 'মৌলের পর্যায়বৃত্ত ধর্ম', list: medChem1Chap3PeriodicQuestions },
       { name: 'রাসায়নিক পরিবর্তন', list: medChem1Chap4ChemicalChangeQuestions },

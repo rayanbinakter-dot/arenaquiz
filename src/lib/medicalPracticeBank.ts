@@ -19,6 +19,7 @@ import { medPhys1Chap10GasQuestions } from '../data/questions_med_phys1_c10_gas'
 import { bio1Chap1Data } from '../data/questions_bio1_chap1';
 import { bio1Chap7Data } from '../data/questions_bio1_chap7';
 import { chem1Chap2Data } from '../data/questions_chem1_chap2';
+import { medChem1Chap1LabQuestions } from '../data/questions_med_chem1_c1_lab';
 import { medChem1Chap2QualitativeQuestions } from '../data/questions_med_chem1_c2_qualitative';
 import { medChem1Chap3PeriodicQuestions } from '../data/questions_med_chem1_c3_periodic';
 import { medChem1Chap4ChemicalChangeQuestions } from '../data/questions_med_chem1_c4_chemical_change';
@@ -610,6 +611,13 @@ function buildSeedPracticeQuestions(): QuestionItem[] {
         status: 'published',
         createdBy: 'system'
       });
+    });
+  }
+
+  // 4.0 Chemistry 1st Paper - Lab Safety / ল্যাবরেটরির নিরাপদ ব্যবহার (Chapter 1)
+  if (Array.isArray(medChem1Chap1LabQuestions)) {
+    medChem1Chap1LabQuestions.forEach((q) => {
+      items.push(q);
     });
   }
 
