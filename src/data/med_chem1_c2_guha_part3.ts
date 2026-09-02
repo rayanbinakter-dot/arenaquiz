@@ -10,7 +10,7 @@ export const chem1Chap2GuhaPart3: ChemQuestionData[] = [
     options: ["লাইমেন", "বামার", "প্যাসচেন", "ফান্ড"],
     correct_answer: "লাইমেন",
     explanation: "হাইড্রোজেন পরমাণুর লাইমেন সিরিজ ($n_1=1$) অতিবেগুনি (UV) অঞ্চলে পাওয়া যায়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -20,7 +20,7 @@ export const chem1Chap2GuhaPart3: ChemQuestionData[] = [
     options: ["$535\\,\\mathrm{nm}$", "$590\\,\\mathrm{nm}$", "$635\\,\\mathrm{nm}$", "$690\\,\\mathrm{nm}$"],
     correct_answer: "$535\\,\\mathrm{nm}$",
     explanation: "সবুজ আলোর তরঙ্গদৈর্ঘ্যের পরিসীমা $500 - 575\\,\\mathrm{nm}$, যার মধ্যে $535\\,\\mathrm{nm}$ অবস্থিত।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -30,7 +30,7 @@ export const chem1Chap2GuhaPart3: ChemQuestionData[] = [
     options: ["$10\\,\\mathrm{nm} - 30\\,\\mathrm{nm}$", "$30\\,\\mathrm{nm} - 200\\,\\mathrm{nm}$", "$300\\,\\mathrm{nm} - 380\\,\\mathrm{nm}$", "$280\\,\\mathrm{nm} - 400\\,\\mathrm{nm}$"],
     correct_answer: "$10\\,\\mathrm{nm} - 30\\,\\mathrm{nm}$",
     explanation: "গ্যাস্ট্রোএন্টেরোলজি ও এন্ডোস্কোপিক থেরাপিতে চরম অতিবেগুনি বা ভ্যাকুয়াম UV ($10-30\\,\\mathrm{nm}$) ব্যবহৃত হয়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -40,7 +40,7 @@ export const chem1Chap2GuhaPart3: ChemQuestionData[] = [
     options: ["আবহাওয়ার পূর্বাভাস দিতে", "অণুজীবণ যন্ত্রের বিশ্লেষণ ক্ষমতা বৃদ্ধিতে", "আয়নায়ন ঘটানোর কাজে", "ভিটামিন- D এর উৎস হিসাবে"],
     correct_answer: "আবহাওয়ার পূর্বাভাস দিতে",
     explanation: "আবহাওয়ার পূর্বাভাসের জন্য রাডার ও মাইক্রোওয়েভ ব্যবহৃত হয়, UV রশ্মি নয়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -50,7 +50,7 @@ export const chem1Chap2GuhaPart3: ChemQuestionData[] = [
     options: ["Ba", "$\\mathrm{I_{2}}$ বাষ্প", "KCN", "BaS"],
     correct_answer: "BaS",
     explanation: "বেরিয়াম সালফাইড (BaS) এবং জিঙ্ক সালফাইড (ZnS) তীব্র অনুপ্রভা (phosphorescence) সৃষ্টি করে।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -60,7 +60,7 @@ export const chem1Chap2GuhaPart3: ChemQuestionData[] = [
     options: ["অনুপ্রভা", "স্বতঃপ্রভা", "প্রতিপ্রভা", "কোনোটিই নয়"],
     correct_answer: "স্বতঃপ্রভা",
     explanation: "রেডিয়াম থেকে স্বতঃস্ফূর্ত বিকিরণের কারণে ZnS প্রজ্বলিত থাকে, একে স্বতঃপ্রভা (Radioluminescence) বলে।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },

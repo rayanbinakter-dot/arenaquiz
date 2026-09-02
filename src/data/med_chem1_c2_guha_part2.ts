@@ -502,7 +502,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["$\\frac{36R_{H}}{5}$", "$\\frac{16}{3R_{H}}$", "$\\frac{3R_{H}}{16}$", "$\\frac{5}{36R_{H}}$"],
     correct_answer: "$\\frac{16}{3R_{H}}$",
     explanation: "সমাধান: এখানে, বামার সিরিজ হওয়ায় $n_{1} = 2$, এবং ২য় লাইন হওয়ায় $n_{2} = 4$।\n$\\frac{1}{\\lambda} = R_{H} \\left( \\frac{1}{2^2} - \\frac{1}{4^2} \\right) = R_H \\left(\\frac{1}{4} - \\frac{1}{16}\\right) = \\frac{3R_{H}}{16}$\n$\\therefore \\lambda = \\frac{16}{3R_{H}}$।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -512,7 +512,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["$10-380\\,\\mathrm{nm}$", "$230-375\\,\\mathrm{nm}$", "$10-230\\,\\mathrm{nm}$", "$200-370\\,\\mathrm{nm}$"],
     correct_answer: "$230-375\\,\\mathrm{nm}$",
     explanation: "ফসফর কর্তৃক শোষিত তরঙ্গদৈর্ঘ্য $230 - 375\\,\\mathrm{nm}$ (UV অঞ্চল)।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -522,7 +522,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["$110 - 225$", "$80 - 228$", "$380 - 365$", "$230 - 375$"],
     correct_answer: "$230 - 375$",
     explanation: "পাসপোর্ট ও সিকিউরিটি ডকুমেন্টে ফ্লুরোসেন্ট চিহ্ন শনাক্তকরণে $230 - 375\\,\\mathrm{nm}$ তরঙ্গদৈর্ঘ্যের UV রশ্মি ব্যবহৃত হয়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -532,7 +532,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["Near-IR", "Middle-IR", "Far-IR", "MRI"],
     correct_answer: "Near-IR",
     explanation: "Near-IR রশ্মি মানব মস্তিষ্কের রক্তে অক্সিজেনের মাত্রা (Pulse Oximetry ও ফোটন মাইগ্রেশন) নির্ণয়ে ব্যবহৃত হয়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -542,7 +542,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["Near-IR", "Middle-IR", "Far-IR", "UV"],
     correct_answer: "Far-IR",
     explanation: "Far-IR রশ্মি ত্বকের গভীরে তাপ সঞ্চার করে রক্ত সঞ্চালন বৃদ্ধি ও রোগ প্রতিরোধ ক্ষমতা উদ্দীপিত করে।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -552,7 +552,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["Near-IR", "Middle-IR", "Far-IR", "UV-Ray"],
     correct_answer: "Far-IR",
     explanation: "ফিজিওথেরাপিতে পেশির ব্যথা উপশম ও স্নায়ুতন্ত্র পুনর্গঠনে Far-IR রশ্মি ব্যবহৃত হয়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -562,7 +562,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["UV", "X-ray", "IR", "MW"],
     correct_answer: "IR",
     explanation: "ইনফ্রারেড (IR) স্পেকট্রোস্কোপি ক্যান্সার আক্রান্ত ও সুস্থ কোষের আণবিক পার্থক্য শনাক্তকরণে প্রয়োগ করা হয়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -572,7 +572,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["ব্যথা উপশম", "ক্যান্সার", "টিউমার শনাক্তকরণ", "কানের সমস্যা দূরীকরণ"],
     correct_answer: "ব্যথা উপশম",
     explanation: "Far-IR রশ্মি ফিজিওথেরাপিতে পেশির টান ও তীব্র ব্যথা নিরাময়ে বহুল ব্যবহৃত।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -582,7 +582,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["X-ray", "UV", "$\\gamma$-ray", "Infra-red"],
     correct_answer: "$\\gamma$-ray",
     explanation: "তড়িৎচৌম্বকীয় বর্ণালিতে গামা রশ্মির ($\\gamma$-ray) তরঙ্গদৈর্ঘ্য সবচেয়ে কম ($< 0.01\\,\\mathrm{nm}$) এবং শক্তি সবচেয়ে বেশি।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -592,7 +592,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["$500-800\\,\\mathrm{nm}$", "$380-780\\,\\mathrm{nm}$", "$480-800\\,\\mathrm{nm}$", "$10-380\\,\\mathrm{nm}$"],
     correct_answer: "$380-780\\,\\mathrm{nm}$",
     explanation: "দৃশ্যমান আলোর তরঙ্গদৈর্ঘ্য সীমা $380\\,\\mathrm{nm} - 780\\,\\mathrm{nm}$।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -602,7 +602,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["বামার", "প্যাসচেন", "ব্র্যাকেট", "লাইমেন"],
     correct_answer: "প্যাসচেন",
     explanation: "উচ্চ শক্তিস্তর থেকে $n_1 = 3$ এ স্থানান্তরিত হলে প্যাসচেন সিরিজ (Paschen series, IR অঞ্চল) সৃষ্টি হয়।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   },
@@ -612,7 +612,7 @@ export const chem1Chap2GuhaPart2: ChemQuestionData[] = [
     options: ["X-ray", "UV", "$\\gamma$-ray", "Infrared"],
     correct_answer: "Infrared",
     explanation: "তরঙ্গদৈর্ঘ্যের ক্রম: $\\gamma$-ray $< X$-ray $< UV <$ দৃশ্যমান $<$ Infrared। সুতরাং এখানে Infrared এর তরঙ্গদৈর্ঘ্য সর্বোচ্চ।",
-    topic: "তড়িৎ চৌম্বকীয় বর্ণালি ও MRI",
+    topic: "তড়িৎ চুম্বকীয় বর্ণালি ও MRI",
     author: "গুহ স্যার",
     ref: "গুহ স্যার"
   }

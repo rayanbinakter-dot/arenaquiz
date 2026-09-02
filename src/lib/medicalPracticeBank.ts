@@ -861,8 +861,9 @@ function buildSeedPracticeQuestions(): QuestionItem[] {
       route: 'medical',
       subject: 'english',
       paper: 'not_applicable',
+      chapterId: `english_c${idx + 1}`,
       chapterName: item.topic,
-      topicName: item.topic,
+      topicName: ['Noun, Pronoun, Adjective, Verb Identification', 'Appropriate Prepositions', 'Synonyms'][idx] || item.topic,
       sourceSet: item.author,
       sourceSetLabel: teacherLabel,
       questionType: 'single_choice',
@@ -925,8 +926,9 @@ function buildSeedPracticeQuestions(): QuestionItem[] {
       route: 'medical',
       subject: 'general_knowledge',
       paper: 'not_applicable',
+      chapterId: `gk_c${idx + 1}`,
       chapterName: item.topic,
-      topicName: item.topic,
+      topicName: ['বাংলাদেশের স্বাস্থ্য খাত ও গবেষণা প্রতিষ্ঠান', 'জাতিসংঘ ও বিশ্ব স্বাস্থ্য সংস্থা (WHO)', '১৯৭১-এর মহান মুক্তিযুদ্ধ ও সেক্টরসমূহ'][idx] || item.topic,
       sourceSet: item.author,
       sourceSetLabel: teacherLabel,
       questionType: 'single_choice',
@@ -1182,8 +1184,8 @@ export function filterMedicalPracticeQuestions(
 
     // 5. Chapter check
     if (filters.chapterName) {
-      const qChap = (q.chapterName || '').trim().toLowerCase().replace(/[\s\p{P}]/gu, '');
-      const fChap = filters.chapterName.trim().toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const qChap = (q.chapterName || '').normalize('NFC').trim().toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const fChap = filters.chapterName.normalize('NFC').trim().toLowerCase().replace(/[\s\p{P}]/gu, '');
       if (qChap !== fChap && !qChap.includes(fChap) && !fChap.includes(qChap)) {
         return false;
       }
@@ -1198,8 +1200,8 @@ export function filterMedicalPracticeQuestions(
 
     // 7. Topic check
     if (filters.selectedTopics && filters.selectedTopics.length > 0) {
-      const qTopic = (q.topicName || '').trim();
-      if (!filters.selectedTopics.includes(qTopic)) {
+      const qTopic = (q.topicName || '').normalize('NFC').trim();
+      if (!filters.selectedTopics.some(t => (t || '').normalize('NFC').trim() === qTopic)) {
         return false;
       }
     }
@@ -1260,7 +1262,7 @@ export function getChaptersForSelection(
       }
 
       const chapterId = `${syllabusId}_c${chapNum}`;
-      const normCleanName = cleanName.toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const normCleanName = cleanName.normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
 
       // Strict matching for this specific chapter
       const matching = publishedQuestions.filter(q => {
@@ -1273,7 +1275,7 @@ export function getChaptersForSelection(
         }
         // Match by chapterName
         if (q.chapterName) {
-          const qNorm = q.chapterName.toLowerCase().replace(/[\s\p{P}]/gu, '');
+          const qNorm = q.chapterName.normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
           if (qNorm === normCleanName) return true;
           if (normCleanName.length > 3 && (qNorm.includes(normCleanName) || normCleanName.includes(qNorm))) return true;
         }
@@ -1395,7 +1397,7 @@ export function getTopicsForSelectedSets(
   const topicCountMap = new Map<string, number>();
 
   questions.forEach(q => {
-    const topic = q.topicName?.trim() || 'সাধারণ টপিক';
+    const topic = (q.topicName?.trim() || 'সাধারণ টপিক').normalize('NFC');
     topicCountMap.set(topic, (topicCountMap.get(topic) || 0) + 1);
   });
 

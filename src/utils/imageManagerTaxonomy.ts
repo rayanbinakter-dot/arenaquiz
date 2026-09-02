@@ -37,7 +37,7 @@ export interface TaxonomyResolvableItem {
 
 /** Normalize Bangla/English names for tolerant comparison */
 export function normalizeName(name?: string): string {
-  return String(name || '')
+  return String(name || '').normalize('NFC')
     // strip "অধ্যায় ৩:" / "অধ্যায় ১২ :" style prefixes used by taxonomy display names
     .replace(/^\s*অধ্যায়\s*[০-৯0-9]+\s*[:।]\s*/u, '')
     .replace(/\s+/g, ' ')

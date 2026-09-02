@@ -299,9 +299,9 @@ export function getVarsityChaptersForSubject(
 
       if (q.chapterId && q.chapterId === ch.id) return true;
 
-      const qChap = (q.chapter || q.chapterName || '').toLowerCase().replace(/[\s\p{P}]/gu, '');
-      const normCh = ch.name.toLowerCase().replace(/[\s\p{P}]/gu, '');
-      const normClean = cleanChapterName.toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const qChap = (q.chapter || q.chapterName || '').normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const normCh = ch.name.normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const normClean = cleanChapterName.normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
 
       return (
         qChap.includes(normCh) ||

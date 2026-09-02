@@ -101,7 +101,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
   },
 
   // ==========================================
-  // টপিক ৩: পরমাণু ও পরমাণুর মূল কণিসমূহ (৮০-৮৭)
+  // টপিক ৩: পরমাণু ও পরমাণুর মূল কণিকাসমূহ (৮০-৮৭)
   // ==========================================
   {
     id: 80,
@@ -109,7 +109,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     options: ["ডিউটেরিয়াম", "ট্রিটিয়াম", "ডিউটেরন", "মেসন"],
     correct_answer: "ডিউটেরন",
     explanation: "পরমাণুর ভারী স্থায়ী কণিকাসমূহকে কম্পোজিট কণিকা বলে, যেমন: আলফা কণা ও ডিউটেরন কণা।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },
@@ -124,7 +124,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     ],
     correct_answer: "ইলেকট্রন ও প্রোটন",
     explanation: "প্রশম পরমাণুতে ধনাত্মক প্রোটন সংখ্যা ও ঋণাত্মক ইলেকট্রন সংখ্যা সমান থাকে।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },
@@ -139,7 +139,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     ],
     correct_answer: "${}_{6}^{14}\\mathrm{C}, {}_{7}^{14}\\mathrm{N}$",
     explanation: "যেসব পরমাণুর ভরসংখ্যা সমান কিন্তু পারমাণবিক সংখ্যা ভিন্ন, তাদের আইসোবার বলে (উভয়ের ভরসংখ্যা ১৪)।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },
@@ -154,7 +154,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     ],
     correct_answer: "${}_{6}^{14}\\mathrm{C}, {}_{8}^{16}\\mathrm{O}$",
     explanation: "${}_6^{14}\\mathrm{C}$ এর নিউট্রন $14-6=8$ এবং ${}_8^{16}\\mathrm{O}$ এর নিউট্রন $16-8=8$; নিউট্রন সংখ্যা সমান হওয়ায় এরা আইসোটোন।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },
@@ -169,7 +169,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     ],
     correct_answer: "${}_{15}^{31}\\mathrm{P}, {}_{16}^{32}\\mathrm{S}$",
     explanation: "${}_{15}^{31}\\mathrm{P}$ এ নিউট্রন $31-15=16$ এবং ${}_{16}^{32}\\mathrm{S}$ এ নিউট্রন $32-16=16$।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },
@@ -179,7 +179,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     options: ["ডিউটেরিয়াম", "ট্রিটিয়াম", "প্রোটিয়াম", "আইসোটোপ"],
     correct_answer: "প্রোটিয়াম",
     explanation: "হাইড্রোজেনের সবচেয়ে হালকা আইসোটোপ ${}_1^1\\mathrm{H}$ কে প্রোটিয়াম বলে।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },
@@ -194,7 +194,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     ],
     correct_answer: "electro static unit",
     explanation: "esu হলো Electrostatic Unit (আধানের সিজিএস একক)।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },
@@ -204,7 +204,7 @@ export const chem1Chap2HazariPart2: ChemQuestionData[] = [
     options: ["সোডিয়াম", "কার্বন", "হাইড্রোজেন", "অক্সিজেন"],
     correct_answer: "সোডিয়াম",
     explanation: "প্রকৃতিতে সোডিয়াম (Na), স্বর্ণ (Au), ফ্লুরিন (F) ইত্যাদির একটিমাত্র আইসোটোপ পাওয়া যায়।",
-    topic: "পরমাণু ও পরমাণুর মূল কণিসমূহ",
+    topic: "পরমাণু ও পরমাণুর মূল কণিকাসমূহ",
     author: "হাজারী স্যার",
     ref: "হাজারী স্যার"
   },

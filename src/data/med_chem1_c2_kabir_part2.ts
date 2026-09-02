@@ -189,7 +189,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 80,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'US $10 নিচের কোন বর্ণের আভা ছড়ায়? [কবীর স্যার]',
     options: ['কমলা', 'নীল', 'লাল', 'গোলাপি'],
     correct_answer: 'লাল',
@@ -198,7 +198,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 81,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'ত্বকের ক্ষত নিরাময়ে লেজার পদ্ধতিতে কোন রশ্মি ব্যবহৃত হয়? [কবীর স্যার]',
     options: ['UV রশ্মি', 'IR রশ্মি', 'Gamma রশ্মি', 'X-ray'],
     correct_answer: 'IR রশ্মি',
@@ -207,7 +207,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 82,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'দৃশ্যমান আলোর তরঙ্গদৈর্ঘ্য কত nm? [কবীর স্যার]',
     options: [
       '380 - 780',
@@ -221,7 +221,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 83,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'ইলেকট্রন ৩য় শক্তিস্তরে ফিরে আসলে কোন বর্ণালি রেখা দেখা যায়? [কবীর স্যার]',
     options: ['লিম্যান', 'ব্র্যাকেট', 'প্যাশ্চেন', 'বামার'],
     correct_answer: 'প্যাশ্চেন',
@@ -230,7 +230,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 84,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'আসমানি আলোর তরঙ্গদৈর্ঘ্যের চেয়ে ছোট তরঙ্গদৈর্ঘ্যের আলো কোনটি? [কবীর স্যার]',
     options: ['নীল', 'সবুজ', 'কমলা', 'লাল'],
     correct_answer: 'নীল',
@@ -239,7 +239,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 85,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'বামার সিরিজের ২য় লাইনের ক্ষেত্রে n এর মান কত? [কবীর স্যার]',
     options: ['2', '3', '4', '5'],
     correct_answer: '4',
@@ -248,7 +248,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 86,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'হাইড্রোজেন পরমাণুর বর্ণালিতে প্যাশ্চেন সিরিজ সৃষ্টি হয় কোন অঞ্চলে? [কবীর স্যার]',
     options: ['অতিবেগুনি', 'দৃশ্যমান', 'অবলোহিত', 'মাইক্রোওয়েভ'],
     correct_answer: 'অবলোহিত',
@@ -257,7 +257,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 87,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'হাইড্রোজেন বর্ণালিতে অতিবেগুনি অঞ্চলে কোন সিরিজ উৎপন্ন হয়? [কবীর স্যার]',
     options: ['লাইমেন', 'বামার', 'প্যাশ্চেন', 'ফুন্ড'],
     correct_answer: 'লাইমেন',
@@ -266,7 +266,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 88,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'একটি রশ্মির তরঙ্গ দৈর্ঘ্য 20 cm। এটি কোন ক্ষেত্রে ব্যবহৃত হতে পারে? [কবীর স্যার]',
     options: [
       'জাল টাকা শনাক্তকরণে',
@@ -280,7 +280,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 89,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'মোবাইল ফোন এর কার্যকারিতা কোন তড়িৎ চুম্বকীয় অঞ্চলে? [কবীর স্যার]',
     options: ['IR', 'UV', 'RW', 'MW'],
     correct_answer: 'MW',
@@ -289,7 +289,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 90,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'কারেন্সি নোট UV রশ্মিতে ধরলে আভা ছড়ানোর পিছনে কারণ কোনটি? [কবীর স্যার]',
     options: [
       'নোটের নিরাপত্তা সুতা',
@@ -303,7 +303,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 91,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'H-বর্ণালিতে ইলেকট্রনের কোন স্থানান্তরে সৃষ্ট রশ্মি জাল টাকা শনাক্তকরণে ব্যবহৃত হয়? [কবীর স্যার]',
     options: [
       'n₅ → n₁',
@@ -317,7 +317,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 92,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'রেখা বর্ণালিতে কোন মৌলের তরঙ্গ দৈর্ঘ্য 590 nm হলে মৌলটি হল- [কবীর স্যার]',
     options: ['Hg', 'H', 'Sr', 'Na'],
     correct_answer: 'Na',
@@ -326,7 +326,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 93,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'কোন শক্তিস্তরে ইলেকট্রন স্থানান্তরের জন্য হাইড্রোজেনের UV বর্ণালিরেখা পাওয়া যায়? [কবীর স্যার]',
     options: ['7 → 1', '6 → 3', '5 → 2', '4 → 3'],
     correct_answer: '7 → 1',
@@ -335,7 +335,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 94,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'অসীম দূরত্বের শক্তিস্তর হতে একটি ইলেকট্রন চতুর্থ শক্তিস্তরে স্থানান্তরিত হলে বিকিরিত রশ্মিটি কোন সিরিজভুক্ত? [কবীর স্যার]',
     options: ['লাইমেন', 'বামার', 'ফুন্ড', 'ব্র্যাকেট'],
     correct_answer: 'ব্র্যাকেট',
@@ -344,7 +344,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 95,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'কোন বিকিরিত রশ্মির তরঙ্গদৈর্ঘ্য সবচেয়ে বেশি? [কবীর স্যার]',
     options: ['মহাজাগতিক রশ্মি', 'X-ray', 'UV-রশ্মি', 'Visible ray'],
     correct_answer: 'Visible ray',
@@ -353,7 +353,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 96,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'জাল পাসপোর্ট শনাক্তকরণে কোনটি ব্যবহৃত হয়? [কবীর স্যার]',
     options: ['UV রশ্মি', 'IR রশ্মি', 'γ-রশ্মি', 'X-রশ্মি'],
     correct_answer: 'UV রশ্মি',
@@ -362,7 +362,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 97,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'বর্ণালি বিকিরণের ক্ষেত্রে কোন সিরিজ ব্যতিক্রম? [কবীর স্যার]',
     options: ['ব্র্যাকেট', 'প্যাশ্চেন', 'বামার', 'হামফ্রেস'],
     correct_answer: 'বামার',
@@ -371,7 +371,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 98,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'কোনটি দৃশ্যমান বর্ণালি? [কবীর স্যার]',
     options: ['লাইম্যান সিরিজ', 'বামার', 'প্যাশ্চেন সিরিজ', 'ব্র্যাকেট সিরিজ'],
     correct_answer: 'বামার',
@@ -380,7 +380,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 99,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'WiFi-তে কোন অঞ্চলের তড়িৎ চুম্বকীয় বিকিরণ ব্যবহৃত হয়? [কবীর স্যার]',
     options: ['মাইক্রোওয়েভ', 'রেডিও ওয়েভ', 'অবলোহিত', 'অতিবেগুনি'],
     correct_answer: 'মাইক্রোওয়েভ',
@@ -389,7 +389,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 100,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'IR রশ্মি- [কবীর স্যার]',
     options: [
       'দেহের তাপমাত্রা হ্রাস করে',
@@ -403,7 +403,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 101,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'কোন রশ্মির তরঙ্গদৈর্ঘ্য অধিক? [কবীর স্যার]',
     options: ['UV', 'X-ray', 'MW', 'IR'],
     correct_answer: 'MW',
@@ -412,7 +412,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 102,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'চিকিৎসা বিজ্ঞানে ফিজিওথেরাপিতে কোনটি ব্যবহার করা হয়? [কবীর স্যার]',
     options: ['X-ray', 'IR', 'MRI', 'UV'],
     correct_answer: 'IR',
@@ -421,7 +421,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 103,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'বেগুনি রশ্মির তরঙ্গদৈর্ঘ্য 4100 Å হলে ফ্রিকোয়েন্সি কত? [কবীর স্যার]',
     options: [
       '2.439 × 10⁶ m⁻¹',
@@ -435,7 +435,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 104,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'IR অঞ্চলে একটি যৌগের তরঙ্গদৈর্ঘ্য 2.5 × 10⁻⁵ m হলে স্পন্দন সংখ্যা কত? [কবীর স্যার]',
     options: [
       '400 cm⁻¹',
@@ -449,7 +449,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 105,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'IR অঞ্চলে কোন বন্ধনের স্পন্দন সংখ্যা 1500 cm⁻¹ হলে বন্ধনটির বিকিরিত তরঙ্গ দৈর্ঘ্য কত? [কবীর স্যার]',
     options: [
       '2.5 μm',
@@ -463,7 +463,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 106,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'H- পরমাণুর বর্ণালিতে প্যাশ্চেন সিরিজের জন্য সর্বোচ্চ তরঙ্গ সংখ্যা কত? [কবীর স্যার]',
     options: [
       'R_H / 9',
@@ -477,7 +477,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 107,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'ব্রেনের চিকিৎসায় কার্যকর থেরাপি কোনটি? [কবীর স্যার]',
     options: ['MRI থেরাপি', 'IR থেরাপি', 'X থেরাপি', 'UV থেরাপি'],
     correct_answer: 'MRI থেরাপি',
@@ -486,7 +486,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 108,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'পরমাণুর কোন ধর্মের উপর নির্ভর করে NMR? [কবীর স্যার]',
     options: ['বৈদ্যুতিক ধর্ম', 'চৌম্বক ধর্ম', 'রাসায়নিক ধর্ম', 'তেজস্ক্রিয় ধর্ম'],
     correct_answer: 'চৌম্বক ধর্ম',
@@ -495,7 +495,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 109,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'NMR বর্ণালিমিতির প্রয়োগ নিম্নের কোনটিতে ঘটে? [কবীর স্যার]',
     options: ['IR', 'MRI', 'X-ray', 'সিটিস্ক্যান'],
     correct_answer: 'MRI',
@@ -504,7 +504,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 110,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'বর্ণালিমিতিক বিশ্লেষণ কোনটি? [কবীর স্যার]',
     options: ['HPLC', 'NMR', 'GPC', 'TGA'],
     correct_answer: 'NMR',
@@ -513,7 +513,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 111,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'MRI যন্ত্রের সাহায্যে মানবদেহের রোগ নির্ণয়ে কোন মৌলটির ভূমিকা রয়েছে? [কবীর স্যার]',
     options: ['হাইড্রোজেন', 'অক্সিজেন', 'নিয়ন', 'সিলিকন'],
     correct_answer: 'হাইড্রোজেন',
@@ -522,7 +522,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 112,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'নিচের কোনটিতে ক্ষতিকর রশ্মির কোন ঝুঁকি থাকে না? [কবীর স্যার]',
     options: ['MRI', 'X-ray', 'CAT', 'CT'],
     correct_answer: 'MRI',
@@ -531,7 +531,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 113,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'হৃৎপিণ্ডের ব্লকেজ নিরাময়ে কোন ধরনের রশ্মি ব্যবহৃত হয়? [কবীর স্যার]',
     options: ['FIR', 'NIR', 'MIR', 'TIR'],
     correct_answer: 'FIR',
@@ -540,7 +540,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 114,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'কোনটির অস্তিত্ব নেই? [কবীর স্যার]',
     options: ['রমন বর্ণালি', 'NMR বর্ণালি', 'ESR বর্ণালি', 'MIR বর্ণালি'],
     correct_answer: 'MIR বর্ণালি',
@@ -549,7 +549,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 115,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'ইউরোলজিতে ব্লাডার সংকোচনে কোন রশ্মি ব্যবহৃত হয়? [কবীর স্যার]',
     options: ['IR রশ্মি', 'UV রশ্মি', 'X রশ্মি', 'γ রশ্মি'],
     correct_answer: 'IR রশ্মি',
@@ -558,7 +558,7 @@ export const chem1Chap2KabirPart2: ChemQuestionData[] = [
   },
   {
     id: 116,
-    topic: 'তড়িৎ চৌম্বকীয় বর্ণালি ও MRI',
+    topic: 'তড়িৎ চুম্বকীয় বর্ণালি ও MRI',
     question_text: 'স্ট্রোক চিকিৎসায় ব্যবহৃত রশ্মির তরঙ্গদৈর্ঘ্য কত? [কবীর স্যার]',
     options: [
       '700 - 800 nm',

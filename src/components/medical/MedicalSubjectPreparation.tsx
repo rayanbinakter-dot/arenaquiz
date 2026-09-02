@@ -136,17 +136,17 @@ export default function MedicalSubjectPreparation({
 
     const history = userData.quizHistory || userData.history || [];
     const wrongList = userData.wrongQuestions || [];
-    const normChapName = chap.chapterName.toLowerCase().replace(/[\s\p{P}]/gu, '');
+    const normChapName = chap.chapterName.normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
 
     // Check wrong questions
     const hasWrong = wrongList.some((w: any) => {
-      const wChap = (w.chapter || w.chapterName || '').toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const wChap = (w.chapter || w.chapterName || '').normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
       return wChap.includes(normChapName) || normChapName.includes(wChap);
     });
 
     // Check completed quiz history for this chapter
     const attempts = history.filter((h: any) => {
-      const hChap = (h.chapter || h.chapterName || h.quizName || '').toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const hChap = (h.chapter || h.chapterName || h.quizName || '').normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
       return hChap.includes(normChapName) || normChapName.includes(hChap);
     });
 
@@ -172,9 +172,9 @@ export default function MedicalSubjectPreparation({
   // Get real wrong questions count for a chapter if any
   const getChapterWrongQuestionCount = (chap: MedicalChapterInfo): number => {
     if (!userData?.wrongQuestions) return 0;
-    const normChapName = chap.chapterName.toLowerCase().replace(/[\s\p{P}]/gu, '');
+    const normChapName = chap.chapterName.normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
     return userData.wrongQuestions.filter((w: any) => {
-      const wChap = (w.chapter || w.chapterName || '').toLowerCase().replace(/[\s\p{P}]/gu, '');
+      const wChap = (w.chapter || w.chapterName || '').normalize('NFC').toLowerCase().replace(/[\s\p{P}]/gu, '');
       return wChap.includes(normChapName) || normChapName.includes(wChap);
     }).length;
   };

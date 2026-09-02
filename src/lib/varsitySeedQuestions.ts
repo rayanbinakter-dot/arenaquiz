@@ -37,7 +37,8 @@ export function getLocalVarsityQuestions(): Question[] {
     subjectKey: string,
     paper: 'first' | 'second',
     chapterName: string,
-    unitId: string = 'du_ka'
+    unitId: string = 'du_ka',
+    chapterId?: string
   ) => {
     if (!data || !data.questions) return;
     data.questions.forEach((q: any, idx: number) => {
@@ -50,6 +51,7 @@ export function getLocalVarsityQuestions(): Question[] {
         explanation: q.explanation || '',
         subject: subjectKey,
         chapter: chapterName,
+        ...(chapterId ? { chapterId } : {}),
         topic: q.topic || chapterName,
         route: 'varsity',
         unit: unitId,
@@ -60,29 +62,29 @@ export function getLocalVarsityQuestions(): Question[] {
   };
 
   // Physics
-  addQuestions(dcuPhysicsVectorData, 'physics', 'first', 'ভেক্টর', 'du_ka');
-  addQuestions(dcuPhysicsNewtonianData, 'physics', 'first', 'নিউটনীয় বলবিদ্যা', 'du_ka');
-  addQuestions(dcuPhysicsWorkEnergyData, 'physics', 'first', 'কাজ, শক্তি ও ক্ষমতা', 'du_ka');
-  addQuestions(dcuPhysicsGravityData, 'physics', 'first', 'মহাকর্ষ ও অভিকর্ষ', 'du_ka');
-  addQuestions(dcuPhysicsStructureData, 'physics', 'first', 'পদার্থের গাঠনিক ধর্ম', 'du_ka');
-  addQuestions(dcuPhysicsPeriodicData, 'physics', 'first', 'পর্যায়বৃত্ত গতি', 'du_ka');
-  addQuestions(dcuPhysicsThermodynamicsData, 'physics', 'second', 'তাপগতিবিদ্যা', 'du_ka');
+  addQuestions(dcuPhysicsVectorData, 'physics', 'first', 'ভেক্টর', 'du_ka', 'var_phys1_ch2');
+  addQuestions(dcuPhysicsNewtonianData, 'physics', 'first', 'নিউটনীয় বলবিদ্যা', 'du_ka', 'var_phys1_ch4');
+  addQuestions(dcuPhysicsWorkEnergyData, 'physics', 'first', 'কাজ, শক্তি ও ক্ষমতা', 'du_ka', 'var_phys1_ch5');
+  addQuestions(dcuPhysicsGravityData, 'physics', 'first', 'মহাকর্ষ ও অভিকর্ষ', 'du_ka', 'var_phys1_ch6');
+  addQuestions(dcuPhysicsStructureData, 'physics', 'first', 'পদার্থের গাঠনিক ধর্ম', 'du_ka', 'var_phys1_ch7');
+  addQuestions(dcuPhysicsPeriodicData, 'physics', 'first', 'পর্যায়বৃত্ত গতি', 'du_ka', 'var_phys1_ch8');
+  addQuestions(dcuPhysicsThermodynamicsData, 'physics', 'second', 'তাপগতিবিদ্যা', 'du_ka', 'var_phys2_ch1');
 
   // Chemistry
   // Chemistry 1st paper: removed from Module 3 by owner request (2026-08-29); new sets will be re-added.
-  addQuestions(dcuChemEnvironmentalData, 'chemistry', 'second', 'পরিবেশ রসায়ন', 'du_ka');
+  addQuestions(dcuChemEnvironmentalData, 'chemistry', 'second', 'পরিবেশ রসায়ন', 'du_ka', 'var_chem2_ch1');
 
   // Math DU
-  addQuestions(dcuMathStraightLineData, 'higher_math', 'first', 'সরলরেখা', 'du_ka');
-  addQuestions(dcuMathExam1Data, 'higher_math', 'first', 'ম্যাট্রিক্স ও নির্ণায়ক', 'du_ka');
+  addQuestions(dcuMathStraightLineData, 'higher_math', 'first', 'সরলরেখা', 'du_ka', 'var_math1_ch3');
+  addQuestions(dcuMathExam1Data, 'higher_math', 'first', 'ম্যাট্রিক্স ও নির্ণায়ক', 'du_ka', 'var_math1_ch1');
 
   // Math GST
-  addQuestions(gstMathExam1Data, 'higher_math', 'first', 'অন্তরীকরণ', 'gst_a');
-  addQuestions(gstMathExam2Data, 'higher_math', 'first', 'যোগজীকরণ', 'gst_a');
+  addQuestions(gstMathExam1Data, 'higher_math', 'first', 'অন্তরীকরণ', 'gst_a', 'var_math1_ch9');
+  addQuestions(gstMathExam2Data, 'higher_math', 'first', 'যোগজীকরণ', 'gst_a', 'var_math1_ch10');
 
   // Biology
-  addQuestions(bio1Chap1Data, 'biology', 'first', 'কোষ ও এর গঠন', 'du_ka');
-  addQuestions(bio1Chap7Data, 'biology', 'first', 'নগ্নবীজী ও আবৃতবীজী উদ্ভিদ', 'du_ka');
+  addQuestions(bio1Chap1Data, 'biology', 'first', 'কোষ ও এর গঠন', 'du_ka', 'var_bio1_ch1');
+  addQuestions(bio1Chap7Data, 'biology', 'first', 'নগ্নবীজী ও আবৃতবীজী উদ্ভিদ', 'du_ka', 'var_bio1_ch7');
   
   const rawTissueList = (tissueQuestions && tissueQuestions.length > 0) ? tissueQuestions : (bio1Chap8Data?.questions || []);
   rawTissueList.forEach((q: any, idx: number) => {
@@ -250,7 +252,7 @@ export function getLocalVarsityQuestions(): Question[] {
   });
 
   // ICT
-  addQuestions(ictChap3Data, 'ict', 'first', 'সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস', 'du_ka');
+  addQuestions(ictChap3Data, 'ict', 'first', 'সংখ্যা পদ্ধতি ও ডিজিটাল ডিভাইস', 'du_ka', 'var_ict_ch1');
 
   return result;
 }

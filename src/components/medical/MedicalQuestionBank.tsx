@@ -141,9 +141,9 @@ export default function MedicalQuestionBank({
     if (initialChapterName) {
       const chaps = getChaptersForSelection(initialSubject || selectedSubject, initialPaper || selectedPaper, allQuestions);
       const found = chaps.find(c => 
-        c.chapterName === initialChapterName || 
-        c.chapterName.includes(initialChapterName) || 
-        initialChapterName.includes(c.chapterName)
+        c.chapterName.normalize('NFC') === initialChapterName.normalize('NFC') || 
+        c.chapterName.normalize('NFC').includes(initialChapterName.normalize('NFC')) || 
+        initialChapterName.normalize('NFC').includes(c.chapterName.normalize('NFC'))
       );
       if (found) {
         setSelectedChapter(found);
