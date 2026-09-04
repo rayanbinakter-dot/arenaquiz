@@ -21,6 +21,7 @@ import { bio1Chap7Data } from '../data/questions_bio1_chap7';
 import { chem1Chap2Data } from '../data/questions_chem1_chap2';
 import { medChem1Chap1LabQuestions } from '../data/questions_med_chem1_c1_lab';
 import { medChem2Chap1EnvironmentalQuestions } from '../data/questions_med_chem2_c1_environmental';
+import { medChem2Chap2OrganicQuestions } from '../data/questions_med_chem2_c2_organic';
 import { medChem1Chap2QualitativeQuestions } from '../data/questions_med_chem1_c2_qualitative';
 import { medChem1Chap3PeriodicQuestions } from '../data/questions_med_chem1_c3_periodic';
 import { medChem1Chap4ChemicalChangeQuestions } from '../data/questions_med_chem1_c4_chemical_change';
@@ -653,6 +654,13 @@ function buildSeedPracticeQuestions(): QuestionItem[] {
   // 4.4 Chemistry 2nd Paper - Environmental / পরিবেশ রসায়ন (Chapter 1)
   if (Array.isArray(medChem2Chap1EnvironmentalQuestions)) {
     medChem2Chap1EnvironmentalQuestions.forEach((q) => {
+      items.push(q);
+    });
+  }
+
+  // 4.5 Chemistry 2nd Paper - Organic / জৈব রসায়ন (Chapter 2)
+  if (Array.isArray(medChem2Chap2OrganicQuestions)) {
+    medChem2Chap2OrganicQuestions.forEach((q) => {
       items.push(q);
     });
   }

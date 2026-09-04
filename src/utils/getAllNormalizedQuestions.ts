@@ -642,6 +642,7 @@ export async function getAllNormalizedQuestions(
   try {
     const { medChem1Chap1LabQuestions } = await import('../data/questions_med_chem1_c1_lab');
     const { medChem2Chap1EnvironmentalQuestions } = await import('../data/questions_med_chem2_c1_environmental');
+    const { medChem2Chap2OrganicQuestions } = await import('../data/questions_med_chem2_c2_organic');
     const { medChem1Chap2QualitativeQuestions } = await import('../data/questions_med_chem1_c2_qualitative');
     const { medChem1Chap3PeriodicQuestions } = await import('../data/questions_med_chem1_c3_periodic');
     const { medChem1Chap4ChemicalChangeQuestions } = await import('../data/questions_med_chem1_c4_chemical_change');
@@ -651,6 +652,7 @@ export async function getAllNormalizedQuestions(
     const medChemPacks = [
       { name: 'ল্যাবরেটরির নিরাপদ ব্যবহার', list: medChem1Chap1LabQuestions },
       { name: 'পরিবেশ রসায়ন', list: medChem2Chap1EnvironmentalQuestions },
+      { name: 'জৈব রসায়ন', list: medChem2Chap2OrganicQuestions },
       { name: 'গুণগত রসায়ন', list: medChem1Chap2QualitativeQuestions },
       { name: 'মৌলের পর্যায়বৃত্ত ধর্ম', list: medChem1Chap3PeriodicQuestions },
       { name: 'রাসায়নিক পরিবর্তন', list: medChem1Chap4ChemicalChangeQuestions },
