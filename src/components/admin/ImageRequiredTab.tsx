@@ -130,7 +130,8 @@ export default function ImageRequiredTab({
   const [paperFilter, setPaperFilter] = useState<string>('all');
   const [chapterFilter, setChapterFilter] = useState<string>('all');
   const [topicFilter, setTopicFilter] = useState<string>('all');
-  const [statusFilter, setStatusFilter] = useState<'all' | 'image_missing' | 'image_uploaded'>('all');
+  // ডিফল্ট: শুধু 'চিত্র যোগ করা বাকি' প্রশ্ন দেখানো হয় — কাজ শেষ হলে তালিকা থেকে সরে যায়
+  const [statusFilter, setStatusFilter] = useState<'all' | 'image_missing' | 'image_uploaded'>('image_missing');
 
   const loadAll = async (forceRefresh: boolean = false) => {
     setLoading(true);
@@ -333,38 +334,50 @@ export default function ImageRequiredTab({
 
         {/* Top Summary Counts - Same Normalized Array */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {/* Total Image-Required */}
-          <div className="bg-slate-950/60 border border-slate-800 rounded-2xl p-4 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => setStatusFilter('all')}
+            className={`text-left bg-slate-950/60 rounded-2xl p-4 flex items-center justify-between transition-all cursor-pointer border ${statusFilter === 'all' ? 'border-purple-500 ring-1 ring-purple-500/40' : 'border-slate-800 hover:border-slate-600'}`}
+          >
             <div>
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">মোট চিত্র-প্রয়োজনীয় প্রশ্ন</span>
+              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">মোট চিত্র-প্রয়োজনীয় প্রশ্ন</span>
               <span className="text-2xl font-extrabold text-white mt-0.5 block">{totalDetected}</span>
+              <span className="text-[10px] text-slate-500 block mt-0.5">ক্লিক করলে সব দেখাবে</span>
             </div>
             <div className="p-3 bg-purple-500/10 text-purple-400 rounded-xl border border-purple-500/20">
               <Layers className="w-5 h-5" />
             </div>
-          </div>
+          </button>
 
-          {/* Missing Uploads */}
-          <div className="bg-slate-950/60 border border-slate-800 rounded-2xl p-4 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => setStatusFilter('image_missing')}
+            className={`text-left bg-slate-950/60 rounded-2xl p-4 flex items-center justify-between transition-all cursor-pointer border ${statusFilter === 'image_missing' ? 'border-amber-500 ring-1 ring-amber-500/40' : 'border-slate-800 hover:border-slate-600'}`}
+          >
             <div>
               <span className="text-[11px] font-bold text-amber-400 uppercase tracking-wider block">চিত্র যোগ করা বাকি</span>
               <span className="text-2xl font-extrabold text-amber-300 mt-0.5 block">{missingCount}</span>
+              <span className="text-[10px] text-slate-500 block mt-0.5">এটাই আপনার কাজের তালিকা</span>
             </div>
             <div className="p-3 bg-amber-500/10 text-amber-400 rounded-xl border border-amber-500/20">
               <AlertTriangle className="w-5 h-5" />
             </div>
-          </div>
+          </button>
 
-          {/* Uploaded Completed */}
-          <div className="bg-slate-950/60 border border-slate-800 rounded-2xl p-4 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => setStatusFilter('image_uploaded')}
+            className={`text-left bg-slate-950/60 rounded-2xl p-4 flex items-center justify-between transition-all cursor-pointer border ${statusFilter === 'image_uploaded' ? 'border-emerald-500 ring-1 ring-emerald-500/40' : 'border-slate-800 hover:border-slate-600'}`}
+          >
             <div>
               <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider block">চিত্র সংযুক্ত সম্পন্ন</span>
               <span className="text-2xl font-extrabold text-emerald-300 mt-0.5 block">{uploadedCount}</span>
+              <span className="text-[10px] text-slate-500 block mt-0.5">সম্পন্নগুলো এখানে জমা হয়</span>
             </div>
             <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20">
               <CheckCircle2 className="w-5 h-5" />
             </div>
-          </div>
+          </button>
         </div>
 
         {/* Filter Controls Bar */}
