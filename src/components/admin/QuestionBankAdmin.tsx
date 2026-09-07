@@ -948,18 +948,6 @@ export default function QuestionBankAdmin({ userEmail = 'admin@example.com', onB
         </button>
 
         <button
-          onClick={() => setActiveTab('image_required')}
-          className={`px-4 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
-            activeTab === 'image_required'
-              ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30 shadow-md shadow-amber-500/10'
-              : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-          }`}
-        >
-          <ImageIcon className="w-4 h-4 text-amber-400" />
-          <span>চিত্র প্রয়োজন</span>
-        </button>
-
-        <button
           onClick={() => setActiveTab('drafts')}
           className={`px-4 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
             activeTab === 'drafts'
