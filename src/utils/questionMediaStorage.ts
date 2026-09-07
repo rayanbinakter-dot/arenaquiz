@@ -131,6 +131,50 @@ export interface UploadMediaProgressCallback {
   (progress: number): void;
 }
 
+/**
+ * Compress an image client-side (canvas) so it fits comfortably inside a
+ * Firestore document (base64). Free Spark plan has no Storage, so images are
+ * stored as compressed data-URLs in question_media_overrides instead.
+ * Target: <= ~280KB data URL.
+ */
+export async function compressImageToDataUrl(file: File): Promise<string> {
+  const loadImage = (f: File): Promise<HTMLImageElement> =>
+    new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(f);
+      const img = new Image();
+      img.onload = () => { URL.revokeObjectURL(url); resolve(img); };
+      img.onerror = reject;
+      img.src = url;
+    });
+
+  const img = await loadImage(file);
+
+  const attempt = (maxDim: number, quality: number): string => {
+    const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+    const w = Math.max(1, Math.round(img.width * scale));
+    const h = Math.max(1, Math.round(img.height * scale));
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d')!;
+    // white background so transparent PNG diagrams stay readable as JPEG
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, w, h);
+    ctx.drawImage(img, 0, 0, w, h);
+    return canvas.toDataURL('image/jpeg', quality);
+  };
+
+  const MAX_LEN = 280 * 1024; // ~280KB data URL
+  const settings: Array<[number, number]> = [
+    [1100, 0.82], [900, 0.75], [750, 0.68], [600, 0.6], [480, 0.55]
+  ];
+  let out = attempt(...settings[0]);
+  for (let i = 1; i < settings.length && out.length > MAX_LEN; i++) {
+    out = attempt(...settings[i]);
+  }
+  return out;
+}
+
 export async function uploadQuestionMediaFile(
   file: File,
   pathParams: StoragePathParams,
@@ -205,14 +249,18 @@ export async function uploadQuestionMediaFile(
     // If Firebase Storage is unconfigured in development/sandbox environment, fallback to a data/object URL for graceful testing
     console.warn('Handling fallback storage upload for development preview:', error);
     
-    // Create base64/object URL for smooth local sandbox experience if Firebase bucket is absent
-    const dataUrl = await new Promise<string>((resolve) => {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        resolve(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    });
+    // Free (Spark) plan: Firebase Storage is unavailable — compress the image
+    // and store it as a small base64 data URL inside Firestore instead.
+    let dataUrl: string;
+    try {
+      dataUrl = await compressImageToDataUrl(file);
+    } catch {
+      dataUrl = await new Promise<string>((resolve) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result as string);
+        reader.readAsDataURL(file);
+      });
+    }
 
     if (onProgress) {
       onProgress(100);
