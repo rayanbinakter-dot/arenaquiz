@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { LogIn, Loader2, AlertCircle } from 'lucide-react';
+import GoogleSignInButton from './GoogleSignInButton';
 
 interface LoginProps {
   onNavigate: (view: 'signup' | 'home') => void;
@@ -85,6 +86,15 @@ export default function Login({ onNavigate, onSuccess }: LoginProps) {
           </div>
         )}
 
+        {/* PRIMARY: Google-verified sign-in */}
+        <GoogleSignInButton onSuccess={onSuccess} onError={(msg) => setError(msg)} />
+
+        <div className="flex items-center gap-3 my-6">
+          <div className="flex-1 h-px bg-slate-700" />
+          <span className="text-[11px] text-slate-500 font-bold">অথবা ইমেইল-পাসওয়ার্ড দিয়ে</span>
+          <div className="flex-1 h-px bg-slate-700" />
+        </div>
+
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
             <label className="block text-slate-300 text-sm font-medium mb-2">ইমেইল</label>
@@ -133,9 +143,9 @@ export default function Login({ onNavigate, onSuccess }: LoginProps) {
           </button>
         </p>
 
-        <div className="mt-8 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl">
-          <p className="text-blue-300 text-xs text-center">
-            <strong>নোট:</strong> আপনার ফায়ারবেস কনসোলে (Firebase Console) Email/Password Authentication চালু (Enable) থাকতে হবে।
+        <div className="mt-8 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl">
+          <p className="text-emerald-300 text-xs text-center">
+            🔒 <strong>Google সাইন-ইন সবচেয়ে নিরাপদ:</strong> Google নিজেই আপনার আসল Gmail যাচাই করে — ভুয়া ইমেইল দিয়ে ঢোকা সম্ভব নয়।
           </p>
         </div>
       </div>

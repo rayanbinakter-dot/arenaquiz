@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { auth, db } from '../firebase';
 import { UserPlus, Loader2, AlertCircle } from 'lucide-react';
+import GoogleSignInButton from './GoogleSignInButton';
 
 interface SignUpProps {
   onNavigate: (view: 'login' | 'home') => void;
@@ -89,6 +90,15 @@ export default function SignUp({ onNavigate, onSuccess }: SignUpProps) {
             <p>{error}</p>
           </div>
         )}
+
+        {/* PRIMARY: Google-verified sign-up */}
+        <GoogleSignInButton onSuccess={onSuccess} onError={(msg) => setError(msg)} />
+
+        <div className="flex items-center gap-3 my-6">
+          <div className="flex-1 h-px bg-slate-700" />
+          <span className="text-[11px] text-slate-500 font-bold">অথবা ইমেইল-পাসওয়ার্ড দিয়ে</span>
+          <div className="flex-1 h-px bg-slate-700" />
+        </div>
 
         <form onSubmit={handleSignUp} className="space-y-4">
           <div>
