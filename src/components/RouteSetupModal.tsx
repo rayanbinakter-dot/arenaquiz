@@ -168,10 +168,15 @@ export default function RouteSetupModal({
       hscGpa: needsHscGpa ? (parseFloat(hscGpaText) || null) : (hscGpaText.trim() ? parseFloat(hscGpaText) || null : null),
     } : {};
 
+    // মেডিকেল হলে লক্ষ্য (targetExam) সবসময় নির্বাচিত ব্যাচ থেকে আসবে — আলাদা ইনপুটের সাথে অমিল হবে না
+    const resolvedTargetExam = selectedRoute === 'medical'
+      ? batchInfo.label
+      : (targetExam.trim() || 'সাধারণ প্রস্তুতি');
+
     const updatedProfile: StudentGameProfile = {
       userId: user.uid,
       selectedRoute,
-      targetExam: targetExam.trim() || 'সাধারণ প্রস্তুতি',
+      targetExam: resolvedTargetExam,
       selectedSubjects: fixedSubjects,
       ...medicalFields,
       skillDivisions: gameProfile?.skillDivisions || { [selectedRoute]: 'foundation' },
@@ -195,7 +200,8 @@ export default function RouteSetupModal({
         const userRef = doc(db, 'users', user.uid);
         await setDoc(userRef, {
           selectedRoute,
-          targetExam: updatedProfile.targetExam
+          targetExam: updatedProfile.targetExam,
+          ...(selectedRoute === 'medical' ? { hscBatch: batchInfo.label } : {})
         }, { merge: true });
       }
 

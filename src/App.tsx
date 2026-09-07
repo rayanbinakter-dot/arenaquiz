@@ -1494,9 +1494,32 @@ export default function App() {
               setExamTimeLimitMinutes(Math.max(5, Math.ceil(questions.length * 0.75)));
               setCurrentView('quiz');
             }}
-            onUserDataUpdated={(fields) => {
+            onUserDataUpdated={async (fields) => {
               // Realtime local sync — no refresh needed
               setUserData((prev: any) => ({ ...(prev || {}), ...fields }));
+
+              // hscBatch বদলালে মেডিকেল pathway-র ব্যাচ/টাইমার/লক্ষ্যও সাথে সাথে sync হবে
+              if (fields.hscBatch && user?.uid && gameProfile?.selectedRoute === 'medical') {
+                const batchId = ('hsc' + String(fields.hscBatch).replace(/\D/g, '')) as any;
+                const timerStatus = batchId === 'hsc2025' ? 'second' : 'first';
+                const syncedProfile = {
+                  ...gameProfile,
+                  medicalBatch: batchId,
+                  timerStatus: timerStatus as any,
+                  targetExam: fields.hscBatch
+                };
+                setGameProfile(syncedProfile);
+                try {
+                  await setDoc(doc(db, 'users', user.uid, 'gameProfile', 'main'), {
+                    medicalBatch: batchId,
+                    timerStatus,
+                    targetExam: fields.hscBatch,
+                    updatedAt: serverTimestamp()
+                  }, { merge: true });
+                } catch (e) {
+                  console.warn('gameProfile batch sync failed:', e);
+                }
+              }
             }}
           />
         )}
@@ -1540,9 +1563,20 @@ export default function App() {
         {/* Gamification Onboarding / Route Setup Modal */}
         {user && showRouteModal && (
           <RouteSetupModal
+            user={user}
+            gameProfile={gameProfile}
             currentRoute={gameProfile?.selectedRoute}
             currentTargetExam={gameProfile?.targetExam}
-            onSave={handleSaveRoute}
+            onSaveProfile={(profile) => {
+              // Realtime: gameProfile + userData দুই জায়গাতেই সাথে সাথে প্রতিফলিত
+              setGameProfile(profile);
+              setUserData((prev: any) => ({
+                ...(prev || {}),
+                selectedRoute: profile.selectedRoute,
+                targetExam: profile.targetExam,
+                ...(profile.selectedRoute === 'medical' && profile.targetExam ? { hscBatch: profile.targetExam } : {})
+              }));
+            }}
             onClose={() => setShowRouteModal(false)}
           />
         )}
