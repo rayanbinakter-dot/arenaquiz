@@ -402,14 +402,32 @@ export async function saveQuestionMediaOverride(
     if (approxSize > 950 * 1024) {
       throw new Error('DOC_TOO_LARGE');
     }
+    // Firestore `undefined` মান নেয় না — recursive ভাবে সেগুলো বাদ দেওয়া হয়
+    const sanitizeForFirestore = (value: any): any => {
+      if (value === undefined) return undefined;
+      if (value === null) return null;
+      if (Array.isArray(value)) {
+        return value.map(v => sanitizeForFirestore(v)).filter(v => v !== undefined);
+      }
+      if (typeof value === 'object') {
+        const out: Record<string, any> = {};
+        Object.entries(value).forEach(([k, v]) => {
+          const sv = sanitizeForFirestore(v);
+          if (sv !== undefined) out[k] = sv;
+        });
+        return out;
+      }
+      return value;
+    };
+    const cleanRecord = sanitizeForFirestore(record);
     const docRef = doc(db, OVERRIDES_COLLECTION, stableKey);
-    await setDoc(docRef, record, { merge: true });
+    await setDoc(docRef, cleanRecord, { merge: true });
   } catch (err: any) {
     console.error('Firestore setDoc failed for questionMediaOverrides:', err);
     if (err?.message === 'DOC_TOO_LARGE') {
       throw new Error('ছবিগুলোর মোট সাইজ বেশি হয়ে গেছে (Firestore সীমা ১MB)। Cloudinary সেটআপ করুন — তাহলে যেকোনো সাইজের ছবি রাখা যাবে।');
     }
-    throw new Error('Firestore-এ সেভ ব্যর্থ হয়েছে। ইন্টারনেট সংযোগ দেখে আবার চেষ্টা করুন।');
+    throw new Error('Firestore-এ সেভ ব্যর্থ: ' + (err?.message || 'অজানা ত্রুটি') + ' — আবার চেষ্টা করুন।');
   }
 }
 
