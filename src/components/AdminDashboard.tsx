@@ -7,6 +7,9 @@ import AdminQuizBuilder from './AdminQuizBuilder';
 import AdminRoutineControlCenter from './admin/AdminRoutineControlCenter';
 import QuestionBankAdmin from './admin/QuestionBankAdmin';
 import AdminBoardQuestionAdder from './admin/AdminBoardQuestionAdder';
+import AdminOverview from './admin/AdminOverview';
+import AdminStudents from './admin/AdminStudents';
+import { LayoutDashboard, Users, BookOpen, CalendarCog, ListChecks, Flag as FlagIcon, MessagesSquare, Globe2, PlusSquare } from 'lucide-react';
 import { Subject } from '../types';
 
 interface AdminDashboardProps {
@@ -52,7 +55,7 @@ interface ResultEntry {
 }
 
 export default function AdminDashboard({ user, isAdmin, syllabus = [], onBack }: AdminDashboardProps) {
-  const [activeTab, setActiveTab] = useState<'questionBank' | 'boardQuestions' | 'routineControl' | 'results' | 'addQuiz' | 'reports' | 'feedbacks' | 'moderation'>('questionBank');
+  const [activeTab, setActiveTab] = useState<'overview' | 'students' | 'questionBank' | 'boardQuestions' | 'routineControl' | 'results' | 'addQuiz' | 'reports' | 'feedbacks' | 'moderation'>('overview');
 
   
   // Results State
@@ -382,50 +385,70 @@ export default function AdminDashboard({ user, isAdmin, syllabus = [], onBack }:
         </div>
       </div>
 
-      <div className="flex gap-4 mb-8 border-b border-slate-800 pb-2 overflow-x-auto">
-        <button
-          onClick={() => setActiveTab('questionBank')}
-          className={`px-4 py-2 font-medium whitespace-nowrap rounded-t-lg transition-colors ${activeTab === 'questionBank' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-slate-400 hover:text-slate-200'}`}
-        >
-          প্রশ্নব্যাংক পরিচালনা
-        </button>
-        <button
-          onClick={() => setActiveTab('routineControl')}
-          className={`px-4 py-2 font-medium whitespace-nowrap rounded-t-lg transition-colors ${activeTab === 'routineControl' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-slate-400 hover:text-slate-200'}`}
-        >
-          রুটিন কন্ট্রোল সেন্টার
-        </button>
-        <button
-          onClick={() => setActiveTab('reports')}
-          className={`px-4 py-2 font-medium whitespace-nowrap rounded-t-lg transition-colors ${activeTab === 'reports' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-slate-400 hover:text-slate-200'}`}
-        >
-          রিপোর্টেড প্রশ্ন
-        </button>
-        <button
-          onClick={() => setActiveTab('feedbacks')}
-          className={`px-4 py-2 font-medium whitespace-nowrap rounded-t-lg transition-colors ${activeTab === 'feedbacks' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-slate-400 hover:text-slate-200'}`}
-        >
-          ইউজার ফিডব্যাক
-        </button>
-        <button
-          onClick={() => setActiveTab('moderation')}
-          className={`px-4 py-2 font-medium whitespace-nowrap rounded-t-lg transition-colors ${activeTab === 'moderation' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-slate-400 hover:text-slate-200'}`}
-        >
-          <div className="flex items-center gap-1.5"><Flame className="w-4 h-4"/>ডাউট মডারেশন</div>
-        </button>
-        <button
-          onClick={() => setActiveTab('results')}
-          className={`px-4 py-2 font-medium whitespace-nowrap rounded-t-lg transition-colors ${activeTab === 'results' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-slate-400 hover:text-slate-200'}`}
-        >
-          গ্লোবাল রেজাল্টস
-        </button>
-        <button
-          onClick={() => setActiveTab('addQuiz')}
-          className={`px-4 py-2 font-medium whitespace-nowrap rounded-t-lg transition-colors ${activeTab === 'addQuiz' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-slate-400 hover:text-slate-200'}`}
-        >
-          কুইজ যুক্ত করুন
-        </button>
-      </div>
+      {/* =============== GROUPED ADMIN NAVIGATION (industry-standard sections) =============== */}
+      <div className="flex flex-col lg:flex-row gap-6">
+        <aside className="lg:w-60 shrink-0 space-y-4">
+          {[
+            {
+              group: 'ওভারভিউ',
+              items: [
+                { id: 'overview', label: 'ড্যাশবোর্ড', icon: LayoutDashboard },
+                { id: 'students', label: 'শিক্ষার্থী', icon: Users },
+              ]
+            },
+            {
+              group: 'কনটেন্ট',
+              items: [
+                { id: 'questionBank', label: 'প্রশ্নব্যাংক', icon: BookOpen },
+                { id: 'addQuiz', label: 'কুইজ বিল্ডার', icon: PlusSquare },
+                { id: 'routineControl', label: 'রুটিন কন্ট্রোল', icon: CalendarCog },
+              ]
+            },
+            {
+              group: 'কমিউনিটি ও মান',
+              items: [
+                { id: 'reports', label: 'রিপোর্টেড প্রশ্ন', icon: FlagIcon },
+                { id: 'feedbacks', label: 'ফিডব্যাক', icon: MessagesSquare },
+                { id: 'moderation', label: 'ডাউট মডারেশন', icon: ListChecks },
+                { id: 'results', label: 'গ্লোবাল রেজাল্টস', icon: Globe2 },
+              ]
+            }
+          ].map(section => (
+            <div key={section.group} className="bg-slate-900 border border-slate-800 rounded-2xl p-3">
+              <div className="text-[10px] uppercase font-extrabold text-slate-500 px-2 pb-2">{section.group}</div>
+              <div className="space-y-1">
+                {section.items.map(item => {
+                  const Icon = item.icon;
+                  const isActive = activeTab === item.id;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => setActiveTab(item.id as any)}
+                      className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-extrabold transition-colors cursor-pointer ${
+                        isActive
+                          ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
+                          : 'text-slate-400 hover:text-white hover:bg-slate-800/60 border border-transparent'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4 shrink-0" />
+                      {item.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </aside>
+
+        <div className="flex-1 min-w-0">
+
+      {activeTab === 'overview' && (
+        <AdminOverview />
+      )}
+
+      {activeTab === 'students' && (
+        <AdminStudents />
+      )}
 
       {activeTab === 'reports' && (
         <div className="bg-slate-800 rounded-3xl border border-slate-700 overflow-hidden shadow-xl p-6">
@@ -666,6 +689,9 @@ export default function AdminDashboard({ user, isAdmin, syllabus = [], onBack }:
       {activeTab === 'addQuiz' && (
           <AdminQuizBuilder />
       )}
+
+        </div>
+      </div>
     </div>
   );
 }
