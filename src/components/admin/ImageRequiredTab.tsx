@@ -22,6 +22,9 @@ import {
   getPlacementBanglaLabel
 } from '../../lib/questionMediaOverrides';
 import { getSuggestedLocalFilename } from '../../utils/localQuestionMedia';
+import QuestionImageUploader from './QuestionImageUploader';
+import { saveQuestionMediaOverride } from '../../lib/questionMediaOverrides';
+import { QuestionMediaItem as QMItem } from '../../types/questionBank';
 import { MediaPlacement } from '../../utils/questionMediaRequirements';
 import {
   getRouteLabel,
@@ -144,6 +147,31 @@ export default function ImageRequiredTab({
   useEffect(() => {
     loadAll();
   }, [questions]);
+
+  // Direct upload: save override + update local state realtime (no manual rescan needed)
+  const handleMediaUploaded = async (
+    item: NormalizedMediaRequirement,
+    updatedMedia: QMItem[]
+  ) => {
+    try {
+      await saveQuestionMediaOverride(item.stableKey, updatedMedia, item as any, userEmail);
+    } catch (e) {
+      console.warn('Override save failed (media kept locally):', e);
+    }
+    // Realtime: recompute this item's attached media + status in the list
+    setRawItems(prev => prev.map(r => {
+      if (r.stableKey !== item.stableKey) return r;
+      const required = new Set((r.requiredPlacements || []).map(p => p || 'question'));
+      const present = new Set(updatedMedia.filter(m => Boolean(m.url)).map(m => m.placement || 'question'));
+      const missing = [...required].filter(p => !present.has(p as any));
+      return {
+        ...r,
+        attachedMedia: updatedMedia,
+        missingPlacements: missing as any,
+        status: (required.size === 0 ? (present.size > 0 ? 'image_uploaded' : r.status) : (missing.length === 0 ? 'image_uploaded' : 'image_missing')) as any
+      };
+    }));
+  };
 
   // 1. One canonical normalized media-requirement array for summary counts, filters, and list
   const items: NormalizedMediaRequirement[] = useMemo(() => {
@@ -777,25 +805,58 @@ export default function ImageRequiredTab({
                                       className="max-h-36 rounded-xl border border-slate-800 object-contain bg-white/5"
                                     />
                                     <div className="text-[10px] font-mono text-slate-500 truncate">{attached.fileName}</div>
-                                  </div>
-                                ) : (
-                                  <div className="space-y-1.5">
-                                    <p className="text-[11px] text-slate-400 leading-relaxed">
-                                      এই নামে ফাইল রাখুন (PNG/JPG/WEBP):
-                                    </p>
                                     <button
                                       type="button"
                                       onClick={() => {
-                                        navigator.clipboard?.writeText(expectedName);
+                                        if (!confirm('এই চিত্রটি সরিয়ে ফেলবেন? (নতুন চিত্র আপলোড করা যাবে)')) return;
+                                        const remaining = (item.attachedMedia || []).filter(
+                                          (m) => (m.placement || 'question') !== placement
+                                        );
+                                        handleMediaUploaded(item, remaining);
                                       }}
-                                      title="ক্লিক করলে ফাইলের নাম কপি হবে"
-                                      className="w-full text-left px-2.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-[11px] font-mono text-cyan-300 hover:border-cyan-500/50 transition-colors cursor-pointer break-all"
+                                      className="text-[10px] font-extrabold text-rose-400 hover:text-rose-300 cursor-pointer"
                                     >
-                                      {expectedName}
+                                      ✕ চিত্র সরান / পরিবর্তন করুন
                                     </button>
-                                    <p className="text-[10px] text-slate-500">
-                                      ক্লিক করলে নাম কপি হবে · ফাইলটি src/assets/question-media/ ফোল্ডারে রেখে কমিট করুন
-                                    </p>
+                                  </div>
+                                ) : (
+                                  <div className="space-y-2">
+                                    {/* সরাসরি আপলোড — ফাইল রিনেম/ফোল্ডারের ঝামেলা নেই */}
+                                    <QuestionImageUploader
+                                      placement={placement}
+                                      placementLabel={getPlacementBanglaLabel(placement)}
+                                      media={item.attachedMedia || []}
+                                      compact
+                                      userEmail={userEmail}
+                                      pathParams={{
+                                        route: item.routeId || 'medical',
+                                        subject: item.subjectId || 'physics',
+                                        paper: item.paperId,
+                                        chapterId: item.chapterId,
+                                        sourceSet: item.sourceSetId,
+                                        topicId: item.topicId,
+                                        questionId: String(item.sourceQuestionNumber || item.questionId || item.stableKey),
+                                        placement,
+                                        filename: 'upload.png'
+                                      }}
+                                      onChange={(updatedMedia) => handleMediaUploaded(item, updatedMedia)}
+                                    />
+                                    <details className="pt-1">
+                                      <summary className="text-[10px] text-slate-500 cursor-pointer hover:text-slate-300">
+                                        বিকল্প: রিপো ফোল্ডারে ফাইল রাখা (উন্নত)
+                                      </summary>
+                                      <button
+                                        type="button"
+                                        onClick={() => { navigator.clipboard?.writeText(expectedName); }}
+                                        title="ক্লিক করলে ফাইলের নাম কপি হবে"
+                                        className="w-full text-left mt-1.5 px-2.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-[11px] font-mono text-cyan-300 hover:border-cyan-500/50 transition-colors cursor-pointer break-all"
+                                      >
+                                        {expectedName}
+                                      </button>
+                                      <p className="text-[10px] text-slate-500 mt-1">
+                                        এই নামে ফাইল src/assets/question-media/ ফোল্ডারে রেখে কমিট করলেও চলবে
+                                      </p>
+                                    </details>
                                   </div>
                                 )}
                               </div>
