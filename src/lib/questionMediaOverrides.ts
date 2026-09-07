@@ -141,6 +141,11 @@ function normalizeTopicSlug(topicStr?: string): string {
  */
 function normalizeChapterSlug(chapStr?: string): string {
   if (!chapStr) return 'ch_general';
+  // Structured ids like "chem2_c2" must stay unique — digit-extraction
+  // would collapse chem2_c1 & chem2_c2 into the same "ch2".
+  if (/^[a-z0-9]+(_[a-z0-9]+)+$/i.test(chapStr.trim())) {
+    return slugifyText(chapStr) || 'ch_general';
+  }
   const chapMatch = chapStr.match(/(?:অধ্যায়|অধ্যায়|chapter|ch)\s*[:_-]?\s*0?(\d+)/i) || chapStr.match(/(\d+)/);
   if (chapMatch) {
     return `ch${chapMatch[1]}`;
@@ -192,8 +197,12 @@ export function getStableQuestionKey(q: {
   const topic = normalizeTopicSlug(q.topicId || q.topicName || q.topic || 'general');
   const qNum = normalizeQNumSlug(q.sourceQuestionNumber ?? q.id);
 
+  // টিচার-সেট প্রশ্নে টিচার key-তে যুক্ত হয় — নাহলে ভিন্ন টিচারের একই নম্বরের প্রশ্ন সংঘর্ষে পড়ে
+  const teacherRaw = (q as any).teacher || (q as any).sourceSet;
+  const teacherSeg = teacherRaw ? `_${slugifyText(String(teacherRaw)) || 'set'}` : '';
+
   // Short canonical format: academic_ict_ch3_type02_q019
-  const shortCanonical = `${route}_${subject}_${chapter}_${topic}_${qNum}`
+  const shortCanonical = `${route}_${subject}_${chapter}${teacherSeg}_${topic}_${qNum}`
     .replace(/[^a-zA-Z0-9_\u0980-\u09FF-]/g, '_')
     .replace(/_+/g, '_')
     .toLowerCase();
@@ -208,6 +217,23 @@ export function getQuestionKeyAliases(q: any): string[] {
   const aliases = new Set<string>();
   const canonical = getStableQuestionKey(q);
   aliases.add(canonical);
+
+  // Legacy canonical (আগের ফরম্যাট): teacher ছাড়া + digit-ভিত্তিক chapter slug —
+  // পুরনো আপলোড করা override এই key-তে সেভ থাকতে পারে
+  try {
+    const routeL = slugifyText(q.route || 'academic') || 'academic';
+    const subjectL = slugifyText(q.subject || 'general') || 'general';
+    const chapSrc = String(q.chapterId || q.chapterName || 'ch_general');
+    const digitMatch = chapSrc.match(/(\d+)/);
+    const legacyChap = digitMatch ? `ch${digitMatch[1]}` : (slugifyText(chapSrc) || 'ch_general');
+    const topicL = normalizeTopicSlug(q.topicId || q.topicName || q.topic || 'general');
+    const qNumL = normalizeQNumSlug(q.sourceQuestionNumber ?? q.id);
+    const legacyCanonical = `${routeL}_${subjectL}_${legacyChap}_${topicL}_${qNumL}`
+      .replace(/[^a-zA-Z0-9_\u0980-\u09FF-]/g, '_')
+      .replace(/_+/g, '_')
+      .toLowerCase();
+    aliases.add(legacyCanonical);
+  } catch { /* ignore */ }
 
   if (q.id !== undefined) aliases.add(String(q.id).toLowerCase());
   if (q.sourceQuestionNumber !== undefined) aliases.add(String(q.sourceQuestionNumber).toLowerCase());
@@ -910,7 +936,13 @@ export async function fetchAllQuestionsNeedingImage(
   const detectedList = await scanAllDatasetsForImageRequirements(firestoreQuestions);
 
   const results: QuestionNeedingImage[] = detectedList.map((item) => {
-    const override = overridesMap[item.stableKey] || (item.questionKey ? overridesMap[item.questionKey] : undefined);
+    let override = overridesMap[item.stableKey] || (item.questionKey ? overridesMap[item.questionKey] : undefined);
+    if (!override) {
+      const aliasList = getQuestionKeyAliases({ ...(item.rawItem || {}), ...item });
+      for (const a of aliasList) {
+        if (overridesMap[a]) { override = overridesMap[a]; break; }
+      }
+    }
     
     // Combine attached media with overrides
     const attachedMedia: QuestionMediaItem[] = [];
