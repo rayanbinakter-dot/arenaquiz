@@ -132,10 +132,10 @@ export default function ImageRequiredTab({
   const [topicFilter, setTopicFilter] = useState<string>('all');
   const [statusFilter, setStatusFilter] = useState<'all' | 'image_missing' | 'image_uploaded'>('all');
 
-  const loadAll = async () => {
+  const loadAll = async (forceRefresh: boolean = false) => {
     setLoading(true);
     try {
-      const data = await fetchAllQuestionsNeedingImage(questions);
+      const data = await fetchAllQuestionsNeedingImage(questions, forceRefresh);
       setRawItems(data || []);
     } catch (err) {
       console.error('Failed to scan questions needing images:', err);
@@ -155,8 +155,10 @@ export default function ImageRequiredTab({
   ) => {
     try {
       await saveQuestionMediaOverride(item.stableKey, updatedMedia, item as any, userEmail);
-    } catch (e) {
-      console.warn('Override save failed (media kept locally):', e);
+    } catch (e: any) {
+      console.error('Override save failed:', e);
+      alert(e?.message || 'সেভ ব্যর্থ হয়েছে। আবার চেষ্টা করুন।');
+      return; // সেভ ব্যর্থ — UI-তে ভুয়া সবুজ স্ট্যাটাস দেখানো হবে না
     }
     // Realtime: recompute this item's attached media + status in the list
     setRawItems(prev => prev.map(r => {
@@ -317,7 +319,7 @@ export default function ImageRequiredTab({
 
             <button
               onClick={() => {
-                loadAll();
+                loadAll(true);
                 if (onRefreshQuestions) onRefreshQuestions();
               }}
               disabled={loading}

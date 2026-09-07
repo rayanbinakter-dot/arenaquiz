@@ -243,8 +243,8 @@ export function getQuestionKeyAliases(q: any): string[] {
 /**
  * Fetch all media overrides from Firestore with local storage & memory caching
  */
-export async function fetchQuestionMediaOverrides(): Promise<Record<string, QuestionMediaOverrideRecord>> {
-  if (memoryOverridesCache) {
+export async function fetchQuestionMediaOverrides(forceRefresh: boolean = false): Promise<Record<string, QuestionMediaOverrideRecord>> {
+  if (memoryOverridesCache && !forceRefresh) {
     return memoryOverridesCache;
   }
 
@@ -254,7 +254,13 @@ export async function fetchQuestionMediaOverrides(): Promise<Record<string, Ques
     try {
       const stored = localStorage.getItem(LOCAL_STORAGE_KEY) || localStorage.getItem('question_media_overrides_v1');
       if (stored) {
-        Object.assign(localCache, JSON.parse(stored));
+        const parsed = JSON.parse(stored);
+        // __IN_FIRESTORE__ প্লেসহোল্ডারওয়ালা এন্ট্রি লোকাল থেকে ব্যবহার করা হয় না —
+        // সেগুলোর আসল URL Firestore থেকে আসবে
+        Object.entries(parsed).forEach(([k, v]: [string, any]) => {
+          const hasPlaceholderUrl = (v?.media || []).some((m: any) => m?.url === '__IN_FIRESTORE__');
+          if (!hasPlaceholderUrl) localCache[k] = v;
+        });
       }
     } catch (e) {
       console.warn('Could not read local media overrides cache', e);
@@ -278,7 +284,18 @@ export async function fetchQuestionMediaOverrides(): Promise<Record<string, Ques
 
     if (typeof window !== 'undefined') {
       try {
-        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(merged));
+        // হালকা কপি (data URL বাদে) — localStorage কোটা বাঁচাতে
+        const lightCache: Record<string, any> = {};
+        Object.entries(merged).forEach(([k, v]: [string, any]) => {
+          lightCache[k] = {
+            ...v,
+            media: (v.media || []).map((m: any) =>
+              m.url && String(m.url).startsWith('data:') ? { ...m, url: '__IN_FIRESTORE__' } : m
+            ),
+            stemImageUrl: v.stemImageUrl && String(v.stemImageUrl).startsWith('data:') ? '__IN_FIRESTORE__' : v.stemImageUrl
+          };
+        });
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(lightCache));
       } catch (err) {
         console.warn('Could not update local media overrides cache', err);
       }
@@ -359,18 +376,40 @@ export async function saveQuestionMediaOverride(
 
   if (typeof window !== 'undefined') {
     try {
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(memoryOverridesCache));
+      // base64 data URL গুলো localStorage-এ রাখলে ৫MB কোটা দ্রুত পেরিয়ে যায় —
+      // তাই লোকাল ক্যাশে সেগুলো বাদ দিয়ে হালকা কপি রাখা হয়। আসল ডেটা Firestore-এ।
+      const lightCache: Record<string, any> = {};
+      Object.entries(memoryOverridesCache).forEach(([k, v]) => {
+        lightCache[k] = {
+          ...v,
+          media: (v.media || []).map((m: any) =>
+            m.url && String(m.url).startsWith('data:')
+              ? { ...m, url: '__IN_FIRESTORE__' }
+              : m
+          ),
+          stemImageUrl: v.stemImageUrl && String(v.stemImageUrl).startsWith('data:') ? '__IN_FIRESTORE__' : v.stemImageUrl
+        };
+      });
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(lightCache));
     } catch (e) {
       console.warn('Could not persist to local storage', e);
     }
   }
 
-  // Persist to Firestore
+  // Persist to Firestore — ব্যর্থ হলে অ্যাডমিনকে জানাতে error ছুড়ে দেওয়া হয়
   try {
+    const approxSize = JSON.stringify(record).length;
+    if (approxSize > 950 * 1024) {
+      throw new Error('DOC_TOO_LARGE');
+    }
     const docRef = doc(db, OVERRIDES_COLLECTION, stableKey);
     await setDoc(docRef, record, { merge: true });
-  } catch (err) {
-    console.warn('Firestore setDoc failed for questionMediaOverrides, fallback local saved:', err);
+  } catch (err: any) {
+    console.error('Firestore setDoc failed for questionMediaOverrides:', err);
+    if (err?.message === 'DOC_TOO_LARGE') {
+      throw new Error('ছবিগুলোর মোট সাইজ বেশি হয়ে গেছে (Firestore সীমা ১MB)। Cloudinary সেটআপ করুন — তাহলে যেকোনো সাইজের ছবি রাখা যাবে।');
+    }
+    throw new Error('Firestore-এ সেভ ব্যর্থ হয়েছে। ইন্টারনেট সংযোগ দেখে আবার চেষ্টা করুন।');
   }
 }
 
@@ -845,9 +884,10 @@ export async function getKnownStaticQuestionsNeedingImage(): Promise<QuestionNee
  * cross-referenced against current overrides and specific required placements.
  */
 export async function fetchAllQuestionsNeedingImage(
-  firestoreQuestions: QuestionItem[] = []
+  firestoreQuestions: QuestionItem[] = [],
+  forceRefresh: boolean = false
 ): Promise<QuestionNeedingImage[]> {
-  const overridesMap = await fetchQuestionMediaOverrides();
+  const overridesMap = await fetchQuestionMediaOverrides(forceRefresh);
   const { scanAllDatasetsForImageRequirements } = await import('../utils/questionMediaScanner');
   const detectedList = await scanAllDatasetsForImageRequirements(firestoreQuestions);
 
