@@ -1,6 +1,7 @@
 import { ref, uploadBytesResumable, getDownloadURL, deleteObject } from 'firebase/storage';
 import { storage } from '../firebase';
 import { QuestionMediaItem, QuestionMediaPlacement } from '../types/questionBank';
+import { uploadToCloudinary, isCloudinaryConfigured } from './cloudinaryUpload';
 
 export const ACCEPTED_IMAGE_TYPES = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
 export const ACCEPTED_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.webp'];
@@ -190,6 +191,30 @@ export async function uploadQuestionMediaFile(
   const storagePath = buildQuestionMediaStoragePath(pathParams);
   const dimensions = await getImageDimensions(file);
   const mediaId = `media_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+
+  // ---------- 1) Cloudinary (free plan primary) ----------
+  if (isCloudinaryConfigured()) {
+    try {
+      const folder = `quiz-master/${sanitizePathSegment(pathParams.route, 'medical')}/${sanitizePathSegment(pathParams.subject, 'general')}/${sanitizePathSegment(pathParams.chapterId, 'chapter')}`;
+      const secureUrl = await uploadToCloudinary(file, folder, onProgress);
+      return {
+        id: mediaId,
+        placement: pathParams.placement || 'question',
+        type: 'diagram',
+        storagePath: `cloudinary:${folder}`,
+        url: secureUrl,
+        altText: altText || '',
+        fileName: file.name,
+        fileSize: file.size,
+        width: dimensions.width,
+        height: dimensions.height,
+        uploadedBy: uploadedBy || 'admin',
+        uploadedAt: new Date().toISOString()
+      };
+    } catch (cldErr) {
+      console.warn('Cloudinary upload failed, falling back:', cldErr);
+    }
+  }
 
   try {
     const storageRef = ref(storage, storagePath);

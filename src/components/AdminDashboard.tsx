@@ -11,7 +11,7 @@ import AdminOverview from './admin/AdminOverview';
 import AdminStudents from './admin/AdminStudents';
 import AdminNotices from './admin/AdminNotices';
 import AdminQuestionEditor from './admin/AdminQuestionEditor';
-import ImageRequiredTab from './admin/ImageRequiredTab';
+import AdminImageManagerLoader from './admin/AdminImageManagerLoader';
 import { LayoutDashboard, Users, BookOpen, CalendarCog, ListChecks, Flag as FlagIcon, MessagesSquare, Globe2, PlusSquare, Megaphone, PencilRuler, Image as ImageLucide } from 'lucide-react';
 import { Subject } from '../types';
 
@@ -465,7 +465,7 @@ export default function AdminDashboard({ user, isAdmin, syllabus = [], onBack }:
       )}
 
       {activeTab === 'imageManager' && (
-        <ImageRequiredTab questions={[]} userEmail={user?.email || 'admin'} />
+        <AdminImageManagerLoader userEmail={user?.email || 'admin'} />
       )}
 
       {activeTab === 'reports' && (
