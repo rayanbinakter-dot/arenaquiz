@@ -1494,6 +1494,10 @@ export default function App() {
               setExamTimeLimitMinutes(Math.max(5, Math.ceil(questions.length * 0.75)));
               setCurrentView('quiz');
             }}
+            onUserDataUpdated={(fields) => {
+              // Realtime local sync — no refresh needed
+              setUserData((prev: any) => ({ ...(prev || {}), ...fields }));
+            }}
           />
         )}
 

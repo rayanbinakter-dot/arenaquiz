@@ -12,6 +12,7 @@ import UserAvatar from './UserAvatar';
 import { StudentGameProfile, LearningRoute } from '../types/gamification';
 import { INITIAL_ACHIEVEMENTS, getLockedAchievementHint } from '../utils/gamification';
 import ProfileExamAnalytics from './ProfileExamAnalytics';
+import StudentInfoCard from './StudentInfoCard';
 
 interface ProfileProps {
   user: any;
@@ -22,6 +23,7 @@ interface ProfileProps {
   onUpgradeClick?: () => void;
   onOpenRouteSetup?: () => void;
   onRetryQuestions?: (questions: any[], title: string) => void;
+  onUserDataUpdated?: (fields: Record<string, any>) => void;
 }
 
 interface ResultEntry {
@@ -39,7 +41,7 @@ const ROUTE_LABELS: Record<LearningRoute, string> = {
   engineering: 'ইঞ্জিনিয়ারিং ভর্তি প্রস্তুতি'
 };
 
-export default function Profile({ user, userData, gameProfile, onBack, onNavigate, onOpenRouteSetup, onRetryQuestions }: ProfileProps) {
+export default function Profile({ user, userData, gameProfile, onBack, onNavigate, onOpenRouteSetup, onRetryQuestions, onUserDataUpdated }: ProfileProps) {
   const [results, setResults] = useState<ResultEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
@@ -155,10 +157,23 @@ export default function Profile({ user, userData, gameProfile, onBack, onNavigat
                 <Flame className={`w-4 h-4 text-amber-400 ${currentStreak > 0 ? 'fill-amber-400/20 animate-pulse' : ''}`} />
                 <span>{currentStreak} দিনের ধারাবাহিকতা</span>
               </div>
+              {userData?.college && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 rounded-full text-xs font-extrabold shadow-sm">
+                  <span>🏫 {userData.college}</span>
+                </div>
+              )}
+              {userData?.hscBatch && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 rounded-full text-xs font-extrabold shadow-sm">
+                  <span>🎓 {userData.hscBatch}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
+
+      {/* 1.5 STUDENT INFO: নাম, কলেজ, HSC ব্যাচ, মোবাইল */}
+      <StudentInfoCard user={user} userData={userData} onUpdated={onUserDataUpdated} />
 
       {/* 2. ROUTE & TARGET CARD */}
       <div className="bg-slate-900 border border-indigo-500/30 rounded-3xl p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
