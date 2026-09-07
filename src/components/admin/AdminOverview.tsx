@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase';
 import {
   Users, FileQuestion, ClipboardList, Flame, Loader2, TrendingUp, GraduationCap
@@ -38,6 +38,7 @@ export default function AdminOverview({ seedQuestionCount }: { seedQuestionCount
     routeCounts: {} as Record<string, number>,
   });
   const [recentUsers, setRecentUsers] = useState<RecentUser[]>([]);
+  const [weeklyActivity, setWeeklyActivity] = useState<Array<{ day: string; count: number }>>([]);
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -54,10 +55,29 @@ export default function AdminOverview({ seedQuestionCount }: { seedQuestionCount
         });
 
         let totalResults = 0;
+        const dayCounts: Record<string, number> = {};
         try {
           const resultsSnap = await getDocs(collection(db, 'results'));
           totalResults = resultsSnap.size;
+          // last 7 days activity (results per day)
+          resultsSnap.docs.forEach(d => {
+            const ts = (d.data() as any).createdAt;
+            if (ts?.toDate) {
+              const key = ts.toDate().toISOString().split('T')[0];
+              dayCounts[key] = (dayCounts[key] || 0) + 1;
+            }
+          });
         } catch { /* ignore */ }
+
+        const week: Array<{ day: string; count: number }> = [];
+        const dayNames = ['রবি', 'সোম', 'মঙ্গল', 'বুধ', 'বৃহ', 'শুক্র', 'শনি'];
+        for (let i = 6; i >= 0; i--) {
+          const dt = new Date();
+          dt.setDate(dt.getDate() - i);
+          const key = dt.toISOString().split('T')[0];
+          week.push({ day: dayNames[dt.getDay()], count: dayCounts[key] || 0 });
+        }
+        setWeeklyActivity(week);
 
         // recent signups (createdAt may be missing on old docs — sort desc, missing last)
         const sorted = [...users].sort((a, b) => {
@@ -161,6 +181,30 @@ export default function AdminOverview({ seedQuestionCount }: { seedQuestionCount
           </div>
         </div>
       </div>
+
+      {/* WEEKLY ACTIVITY GRAPH */}
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        <h3 className="text-sm font-extrabold text-white mb-4 flex items-center gap-2">
+          <TrendingUp className="w-4 h-4 text-amber-400" />
+          সাপ্তাহিক কার্যক্রম (গত ৭ দিনে সম্পন্ন কুইজ/পরীক্ষা)
+        </h3>
+        <div className="flex items-end gap-3 h-32">
+          {weeklyActivity.map((d, i) => {
+            const max = Math.max(1, ...weeklyActivity.map(x => x.count));
+            const h = Math.max(4, Math.round((d.count / max) * 100));
+            return (
+              <div key={i} className="flex-1 flex flex-col items-center gap-1.5">
+                <span className="text-[10px] font-extrabold text-slate-300">{toBn(d.count)}</span>
+                <div className="w-full bg-slate-800/60 rounded-t-lg flex items-end" style={{ height: '100%' }}>
+                  <div className="w-full rounded-t-lg bg-gradient-to-t from-amber-600 to-amber-400" style={{ height: `${h}%` }} />
+                </div>
+                <span className="text-[9px] text-slate-500 font-bold">{d.day}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
     </div>
   );
 }

@@ -39,6 +39,7 @@ import {
 } from '../../lib/medicalPracticeBank';
 import { db } from '../../firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
+import { fetchQuestionContentOverrides, applyContentOverridesToItems } from '../../lib/questionContentOverrides';
 
 interface MedicalQuestionBankProps {
   syllabus?: Subject[];
@@ -65,7 +66,13 @@ export default function MedicalQuestionBank({
 }: MedicalQuestionBankProps) {
   // Master question list (seeds + Firestore published medical practice questions)
   const [allQuestions, setAllQuestions] = useState<QuestionItem[]>(INITIAL_MEDICAL_PRACTICE_QUESTIONS);
+  const [contentOverridesRef, setContentOverridesRef] = useState<Record<string, any>>({});
   const [loadingFirestore, setLoadingFirestore] = useState(false);
+
+  // Admin content edits (stem/options/explanation) — applied realtime
+  useEffect(() => {
+    fetchQuestionContentOverrides().then(setContentOverridesRef).catch(() => {});
+  }, []);
 
   // Flow State
   const [currentStep, setCurrentStep] = useState<Step>(initialStep || (initialChapterName ? 'teacher_set' : 'subject'));
@@ -355,7 +362,7 @@ export default function MedicalQuestionBank({
       finalItems = finalItems.slice(0, selectedQuestionCount);
     }
 
-    const quizQuestions = convertToQuizQuestions(finalItems);
+    const quizQuestions = convertToQuizQuestions(applyContentOverridesToItems(finalItems, contentOverridesRef));
     const modeLabel = selectedMode === 'exam' ? 'পরীক্ষা' : 'অনুশীলন';
     const paperLabel = currentSubjectConfig.hasPapers ? (selectedPaper === 'first' ? '১ম পত্র' : '২য় পত্র') : '';
     const examTitle = `মেডিকেল ${currentSubjectConfig.name} ${paperLabel} - ${selectedChapter?.chapterName} (${modeLabel})`;

@@ -17,6 +17,8 @@ interface NavbarProps {
 
 export default function Navbar({ user, userData, isAdmin, authLoading, onLogout, onNavigate, currentView }: NavbarProps) {
   const currentStreak = userData?.currentStreak || 0;
+  // অ্যাডমিন প্যানেলে শিক্ষার্থী-ফিচার লুকানো থাকবে (রুটিন, ডাউট, মতামত, স্ট্রিক)
+  const inAdminView = currentView === 'admin';
 
   return (
     <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
@@ -43,6 +45,7 @@ export default function Navbar({ user, userData, isAdmin, authLoading, onLogout,
             ) : user ? (
               <>
                 {/* Streak Counter */}
+                {!inAdminView && (
                 <div 
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800/60 border border-slate-700/60 text-xs font-bold text-amber-400 mr-2"
                   title="ধারাবাহিকতা"
@@ -50,6 +53,7 @@ export default function Navbar({ user, userData, isAdmin, authLoading, onLogout,
                   <Flame className="w-4 h-4 text-amber-500 fill-amber-500/20" />
                   <span>{currentStreak} দিন</span>
                 </div>
+                )}
 
                 {/* Home */}
                 <button
@@ -63,6 +67,7 @@ export default function Navbar({ user, userData, isAdmin, authLoading, onLogout,
                 </button>
 
                 {/* Routine */}
+                {!inAdminView && (
                 <button
                   onClick={() => onNavigate('routine')}
                   className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
@@ -72,8 +77,10 @@ export default function Navbar({ user, userData, isAdmin, authLoading, onLogout,
                   <Calendar className="w-4 h-4 text-indigo-400" />
                   <span className="hidden sm:inline">{uiCopy.navbar.routine}</span>
                 </button>
+                )}
 
                 {/* Doubt Arena */}
+                {!inAdminView && (
                 <button
                   onClick={() => onNavigate('doubt-arena')}
                   className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
@@ -83,8 +90,10 @@ export default function Navbar({ user, userData, isAdmin, authLoading, onLogout,
                   <HelpCircle className="w-4 h-4 text-purple-400" />
                   <span className="hidden sm:inline">{uiCopy.navbar.doubtArena}</span>
                 </button>
+                )}
 
                 {/* Feedback */}
+                {!inAdminView && (
                 <button
                   onClick={() => onNavigate('feedback')}
                   className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
@@ -94,6 +103,7 @@ export default function Navbar({ user, userData, isAdmin, authLoading, onLogout,
                   <MessageSquare className="w-4 h-4" />
                   <span className="hidden md:inline">মতামত</span>
                 </button>
+                )}
 
                 {/* Admin */}
                 {isAdmin && (

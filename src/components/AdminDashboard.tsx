@@ -9,7 +9,10 @@ import QuestionBankAdmin from './admin/QuestionBankAdmin';
 import AdminBoardQuestionAdder from './admin/AdminBoardQuestionAdder';
 import AdminOverview from './admin/AdminOverview';
 import AdminStudents from './admin/AdminStudents';
-import { LayoutDashboard, Users, BookOpen, CalendarCog, ListChecks, Flag as FlagIcon, MessagesSquare, Globe2, PlusSquare } from 'lucide-react';
+import AdminNotices from './admin/AdminNotices';
+import AdminQuestionEditor from './admin/AdminQuestionEditor';
+import ImageRequiredTab from './admin/ImageRequiredTab';
+import { LayoutDashboard, Users, BookOpen, CalendarCog, ListChecks, Flag as FlagIcon, MessagesSquare, Globe2, PlusSquare, Megaphone, PencilRuler, Image as ImageLucide } from 'lucide-react';
 import { Subject } from '../types';
 
 interface AdminDashboardProps {
@@ -55,7 +58,7 @@ interface ResultEntry {
 }
 
 export default function AdminDashboard({ user, isAdmin, syllabus = [], onBack }: AdminDashboardProps) {
-  const [activeTab, setActiveTab] = useState<'overview' | 'students' | 'questionBank' | 'boardQuestions' | 'routineControl' | 'results' | 'addQuiz' | 'reports' | 'feedbacks' | 'moderation'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'students' | 'notices' | 'questionEditor' | 'imageManager' | 'questionBank' | 'boardQuestions' | 'routineControl' | 'results' | 'addQuiz' | 'reports' | 'feedbacks' | 'moderation'>('overview');
 
   
   // Results State
@@ -394,12 +397,15 @@ export default function AdminDashboard({ user, isAdmin, syllabus = [], onBack }:
               items: [
                 { id: 'overview', label: 'ড্যাশবোর্ড', icon: LayoutDashboard },
                 { id: 'students', label: 'শিক্ষার্থী', icon: Users },
+                { id: 'notices', label: 'নোটিশ / ঘোষণা', icon: Megaphone },
               ]
             },
             {
               group: 'কনটেন্ট',
               items: [
-                { id: 'questionBank', label: 'প্রশ্নব্যাংক', icon: BookOpen },
+                { id: 'questionBank', label: 'প্রশ্নব্যাংক (ইমপোর্ট)', icon: BookOpen },
+                { id: 'questionEditor', label: 'প্রশ্ন সম্পাদনা', icon: PencilRuler },
+                { id: 'imageManager', label: 'ইমেজ ম্যানেজার', icon: ImageLucide },
                 { id: 'addQuiz', label: 'কুইজ বিল্ডার', icon: PlusSquare },
                 { id: 'routineControl', label: 'রুটিন কন্ট্রোল', icon: CalendarCog },
               ]
@@ -448,6 +454,18 @@ export default function AdminDashboard({ user, isAdmin, syllabus = [], onBack }:
 
       {activeTab === 'students' && (
         <AdminStudents />
+      )}
+
+      {activeTab === 'notices' && (
+        <AdminNotices userEmail={user?.email} />
+      )}
+
+      {activeTab === 'questionEditor' && (
+        <AdminQuestionEditor userEmail={user?.email} />
+      )}
+
+      {activeTab === 'imageManager' && (
+        <ImageRequiredTab questions={[]} userEmail={user?.email || 'admin'} />
       )}
 
       {activeTab === 'reports' && (
