@@ -27,6 +27,12 @@ interface MedicalModelTestExamProps {
   questions: any[];
   onBack: () => void;
   onAddToRoutine?: (title: string, durationMinutes: number) => void;
+  /** For DGHS merit calculation (SSC/HSC GPA + timer status) */
+  gameProfile?: {
+    sscGpa?: number | null;
+    hscGpa?: number | null;
+    timerStatus?: 'first' | 'second';
+  } | null;
 }
 
 // Convert numbers to Bangla digits
@@ -39,7 +45,8 @@ export default function MedicalModelTestExam({
   blueprint,
   questions,
   onBack,
-  onAddToRoutine
+  onAddToRoutine,
+  gameProfile
 }: MedicalModelTestExamProps) {
   // Exam State
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -109,9 +116,10 @@ export default function MedicalModelTestExam({
     setFlaggedQuestions((prev) => ({ ...prev, [qId]: !prev[qId] }));
   };
 
-  // Submission calculation
+  // Submission calculation — DGHS rule: +1 correct, −0.25 wrong, skipped 0
   const calculateResult = (isAuto = false): ModelTestAttempt => {
-    let score = 0;
+    let correctCount = 0;
+    let wrongCount = 0;
     const lockedIds: string[] = [];
 
     questions.forEach((q) => {
@@ -120,10 +128,21 @@ export default function MedicalModelTestExam({
         lockedIds.push(qId);
       }
       const studentAns = answers[qId];
-      if (studentAns && studentAns.trim() === q.correct_answer?.trim()) {
-        score += 1;
+      if (studentAns) {
+        if (studentAns.trim() === q.correct_answer?.trim()) {
+          correctCount += 1;
+        } else {
+          wrongCount += 1;
+        }
       }
     });
+
+    const skippedCount = questions.length - correctCount - wrongCount;
+    const rawScore = Math.max(0, correctCount - wrongCount * 0.25);
+    const score = Math.round(rawScore * 100) / 100;
+    const percentage = questions.length > 0
+      ? Math.round((score / questions.length) * 100 * 100) / 100
+      : 0;
 
     const now = new Date().toISOString();
     return {
@@ -133,6 +152,11 @@ export default function MedicalModelTestExam({
       answers,
       lockedAnswerQuestionIds: lockedIds,
       score,
+      correctCount,
+      wrongCount,
+      skippedCount,
+      negativeMarking: true,
+      percentage,
       totalMarks: 100,
       status: isAuto ? 'auto_submitted' : 'submitted',
       timeLimitMinutes: 50,
@@ -203,10 +227,21 @@ export default function MedicalModelTestExam({
     const timeUsedMin = Math.floor(timeUsedSecs / 60);
     const timeUsedSec = timeUsedSecs % 60;
 
-    const wrongCount = Object.keys(lockedQuestions).filter(
-      (qId) => answers[qId] && answers[qId].trim() !== questions.find((q) => q.id === qId)?.correct_answer?.trim()
-    ).length;
-    const unansweredCountFinal = 100 - Object.keys(lockedQuestions).length;
+    const correctCountFinal = attemptResult.correctCount ?? 0;
+    const wrongCount = attemptResult.wrongCount ?? 0;
+    const unansweredCountFinal = attemptResult.skippedCount ?? (questions.length - correctCountFinal - wrongCount);
+
+    // DGHS merit breakdown (if GPA data available in profile)
+    const sscGpa = gameProfile?.sscGpa ?? null;
+    const hscGpa = gameProfile?.hscGpa ?? null;
+    const isSecondTimer = gameProfile?.timerStatus === 'second';
+    const sscMarks = sscGpa != null ? Math.round(sscGpa * 15 * 100) / 100 : null;
+    const hscMarks = hscGpa != null ? Math.round(hscGpa * 25 * 100) / 100 : null;
+    const timerDeduction = isSecondTimer ? 3 : 0;
+    const meritScore = sscMarks != null && hscMarks != null
+      ? Math.max(0, Math.round((attemptResult.score + sscMarks + hscMarks - timerDeduction) * 100) / 100)
+      : null;
+    const isPassed = attemptResult.score >= 40;
 
     const weakTopics = topicBreakdown.filter((t) => t.percentage < 70);
 
@@ -263,7 +298,7 @@ export default function MedicalModelTestExam({
             <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-3.5">
               <div className="text-[10px] text-slate-400 uppercase font-bold">সঠিক উত্তর</div>
               <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400 mt-1">
-                {toBanglaNum(attemptResult.score)}
+                {toBanglaNum(correctCountFinal)}
               </div>
             </div>
 
@@ -287,6 +322,56 @@ export default function MedicalModelTestExam({
                 {toBanglaNum(timeUsedMin)} মি: {toBanglaNum(timeUsedSec)} সে:
               </div>
             </div>
+          </div>
+
+          {/* Negative marking + pass status strip */}
+          <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] font-bold">
+            <span className="px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-300">
+              নেগেটিভ মার্কিং: প্রতি ভুলে −০.২৫ ({toBanglaNum(wrongCount)} ভুল = −{toBanglaNum((wrongCount * 0.25).toFixed(2))})
+            </span>
+            <span className={`px-3 py-1.5 rounded-full border ${isPassed ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-300' : 'bg-amber-500/10 border-amber-500/20 text-amber-300'}`}>
+              {isPassed ? '✓ পাস (৪০+ নম্বর)' : 'পাস মার্ক ৪০ — আরো অনুশীলন করুন'}
+            </span>
+          </div>
+
+          {/* DGHS Merit Score Breakdown */}
+          <div className="bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 border border-emerald-500/20 rounded-2xl p-5 text-left">
+            <h3 className="text-sm font-extrabold text-emerald-300 mb-3 flex items-center gap-2">
+              <Sparkles className="w-4 h-4" />
+              আনুমানিক মেরিট স্কোর (DGHS নিয়মে, ৩০০ নম্বরের ভিত্তিতে)
+            </h3>
+            {meritScore != null ? (
+              <div className="space-y-2 text-xs">
+                <div className="flex justify-between text-slate-300">
+                  <span>ভর্তি পরীক্ষার স্কোর (নেগেটিভ মার্কিং সহ)</span>
+                  <span className="font-extrabold text-white">{toBanglaNum(attemptResult.score)} / ১০০</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span>SSC GPA × ১৫ ({toBanglaNum(sscGpa!.toFixed(2))})</span>
+                  <span className="font-extrabold text-white">{toBanglaNum(sscMarks!.toFixed(2))} / ৭৫</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span>HSC GPA × ২৫ ({toBanglaNum(hscGpa!.toFixed(2))})</span>
+                  <span className="font-extrabold text-white">{toBanglaNum(hscMarks!.toFixed(2))} / ১২৫</span>
+                </div>
+                {isSecondTimer && (
+                  <div className="flex justify-between text-rose-300">
+                    <span>২য় টাইমার কর্তন</span>
+                    <span className="font-extrabold">−{toBanglaNum(timerDeduction)}</span>
+                  </div>
+                )}
+                <div className="flex justify-between pt-2 border-t border-emerald-500/20 text-sm">
+                  <span className="font-extrabold text-emerald-300">মোট মেরিট স্কোর</span>
+                  <span className="font-extrabold text-emerald-300 text-lg">{toBanglaNum(meritScore)} / ৩০০</span>
+                </div>
+              </div>
+            ) : (
+              <p className="text-xs text-slate-400 leading-relaxed">
+                আপনার প্রোফাইলে SSC ও HSC GPA যোগ করলে এখানে ৩০০ নম্বরের ভিত্তিতে
+                পূর্ণ মেরিট স্কোর দেখতে পাবেন (SSC GPA × ১৫ + HSC GPA × ২৫ + পরীক্ষার স্কোর)।
+                প্রোফাইল থেকে প্রস্তুতির পথ সম্পাদনা করে GPA যোগ করুন।
+              </p>
+            )}
           </div>
 
           {/* Action Buttons */}
@@ -377,7 +462,7 @@ export default function MedicalModelTestExam({
                   reviewFilter === 'wrong' ? 'bg-rose-500 text-white' : 'text-slate-400 hover:text-white'
                 }`}
               >
-                ভুল প্রশ্ন দেখুন ({toBanglaNum(100 - attemptResult.score)})
+                ভুল প্রশ্ন দেখুন ({toBanglaNum(wrongCount + unansweredCountFinal)})
               </button>
             </div>
           </div>

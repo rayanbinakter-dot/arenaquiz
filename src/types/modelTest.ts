@@ -27,6 +27,14 @@ export interface ModelTestAttempt {
   answers: Record<string, string>; // questionId -> selectedOption
   lockedAnswerQuestionIds: string[];
   score: number;
+  /** Raw counts for transparency */
+  correctCount?: number;
+  wrongCount?: number;
+  skippedCount?: number;
+  /** Negative marking applied (−0.25 per wrong) — DGHS rule */
+  negativeMarking?: boolean;
+  /** Score normalized to /100 basis */
+  percentage?: number;
   totalMarks: 100;
   status: 'in_progress' | 'submitted' | 'auto_submitted';
   timeLimitMinutes: 50;

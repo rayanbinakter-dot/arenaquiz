@@ -93,6 +93,8 @@ export default function App() {
   const [selectedChapterIndex, setSelectedChapterIndex] = useState<number | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [quizMode, setQuizMode] = useState<'quiz' | 'exam'>('quiz');
+  const [negativeMarkingEnabled, setNegativeMarkingEnabled] = useState<boolean>(false);
+  const [examMeta, setExamMeta] = useState<{ route: string; subjectId: string; subjectName: string; paper: string; chapterName: string } | null>(null);
   const [examTimeLimitMinutes, setExamTimeLimitMinutes] = useState<number | undefined>(undefined);
   const [examQuestionCountLimit, setExamQuestionCountLimit] = useState<number | undefined>(undefined);
   const [customExamQuestions, setCustomExamQuestions] = useState<any[] | null>(null);
@@ -647,8 +649,13 @@ export default function App() {
     const wrongCount = results.filter(r => !r.isCorrect && !r.isSkipped).length;
     const skippedCount = results.filter(r => r.isSkipped).length;
     
-    // Scoring logic: +1 for correct, -0.25 for wrong
-    const totalScore = (correctCount * 1) - (wrongCount * 0.25);
+    // Scoring logic: +1 for correct; −0.25 per wrong ONLY when negative marking is enabled
+    const applyNegative = quizMode === 'exam' && negativeMarkingEnabled;
+    const totalScore = Math.max(0, (correctCount * 1) - (applyNegative ? wrongCount * 0.25 : 0));
+    // Always normalize to a 100% basis so all exams are comparable
+    const percentage = results.length > 0
+      ? Math.round((totalScore / results.length) * 100 * 100) / 100
+      : 0;
 
     let quizNameStr = customExamQuestions ? customExamTitle : (selectedSubject?.name || 'Quiz');
     if (!customExamQuestions && selectedChapterIndex !== null && selectedSubject?.chapters[selectedChapterIndex]) {
@@ -676,11 +683,62 @@ export default function App() {
       wrongCount,
       skippedCount,
       totalScore,
+      negativeMarking: applyNegative,
+      percentage,
       results
     });
 
     if (correctCount > 0) {
       updateMissionProgress('mcq_correct', correctCount).catch(console.error);
+    }
+
+    // ===== Save structured exam attempt (TEST/EXAM mode only, not practice) =====
+    // Powers Profile analytics: wrong/skipped question bank, progress graphs (100% basis)
+    if (quizMode === 'exam' && user?.uid && db) {
+      try {
+        const attemptId = `exam_${Date.now()}`;
+        const wrongEntries = results
+          .filter(r => !r.isCorrect && !r.isSkipped)
+          .map(r => ({
+            questionText: r.questionText,
+            options: r.options,
+            selectedOption: r.selectedOption,
+            correctAnswer: r.correctAnswer,
+            explanation: r.explanation || '',
+            topic: r.topic || 'সাধারণ'
+          }));
+        const skippedEntries = results
+          .filter(r => r.isSkipped)
+          .map(r => ({
+            questionText: r.questionText,
+            options: r.options,
+            selectedOption: null,
+            correctAnswer: r.correctAnswer,
+            explanation: r.explanation || '',
+            topic: r.topic || 'সাধারণ'
+          }));
+        const attemptDocRef = doc(db, 'users', user.uid, 'examAttempts', attemptId);
+        await setDoc(attemptDocRef, {
+          title: quizNameStr,
+          route: examMeta?.route || gameProfile?.selectedRoute || 'academic',
+          subjectId: examMeta?.subjectId || selectedSubject?.id || null,
+          subjectName: examMeta?.subjectName || selectedSubject?.name || null,
+          paper: examMeta?.paper || null,
+          chapterName: examMeta?.chapterName || null,
+          totalQuestions: results.length,
+          correctCount,
+          wrongCount,
+          skippedCount,
+          totalScore,
+          negativeMarking: applyNegative,
+          percentage,
+          wrongQuestions: wrongEntries,
+          skippedQuestions: skippedEntries,
+          createdAt: new Date().toISOString()
+        });
+      } catch (attErr) {
+        console.warn('Could not save exam attempt:', attErr);
+      }
     }
 
     // Award Gamification Foundation Points, Streaks, Daily Goals & Topic Mastery
@@ -1144,10 +1202,12 @@ export default function App() {
               setExamTimeLimitMinutes(null);
               setCurrentView('quiz');
             }}
-            onStartCustomTest={(questions, title, mode, timeLimitMinutes) => {
+            onStartCustomTest={(questions, title, mode, timeLimitMinutes, options) => {
               setCustomExamQuestions(questions);
               setCustomExamTitle(title);
               setQuizMode(mode || 'quiz');
+              setNegativeMarkingEnabled(options?.negativeMarking === true);
+              setExamMeta(options?.meta || null);
               setExamTimeLimitMinutes(timeLimitMinutes ?? null);
               setCurrentView('quiz');
             }}
@@ -1228,6 +1288,7 @@ export default function App() {
         {currentView === 'medical-model-tests' && (
           <MedicalModelTests
             onBack={() => setCurrentView('medical-dashboard')}
+            gameProfile={gameProfile}
             onAddToRoutine={(title, durationMinutes) => {
               setRoutineNavOptions({ openAddTask: true, focusToday: true });
               setCurrentView('routine');
@@ -1424,6 +1485,15 @@ export default function App() {
             onNavigate={handleNavigate as any} 
             onUpgradeClick={() => setShowProModal(true)} 
             onOpenRouteSetup={() => setShowRouteModal(true)}
+            onRetryQuestions={(questions, title) => {
+              setCustomExamQuestions(questions);
+              setCustomExamTitle(title);
+              setQuizMode('exam');
+              setNegativeMarkingEnabled(false);
+              setExamMeta(null);
+              setExamTimeLimitMinutes(Math.max(5, Math.ceil(questions.length * 0.75)));
+              setCurrentView('quiz');
+            }}
           />
         )}
 

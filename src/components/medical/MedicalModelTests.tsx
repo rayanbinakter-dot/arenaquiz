@@ -26,13 +26,19 @@ import { collection, onSnapshot, query, where } from 'firebase/firestore';
 interface MedicalModelTestsProps {
   onBack: () => void;
   onAddToRoutine?: (title: string, durationMinutes: number) => void;
+  gameProfile?: {
+    sscGpa?: number | null;
+    hscGpa?: number | null;
+    timerStatus?: 'first' | 'second';
+  } | null;
 }
 
 type MainSubjectKey = 'physics' | 'chemistry' | 'biology' | 'english' | 'general_knowledge';
 
 export default function MedicalModelTests({
   onBack,
-  onAddToRoutine
+  onAddToRoutine,
+  gameProfile,
 }: MedicalModelTestsProps) {
   const [selectedSubject, setSelectedSubject] = useState<MainSubjectKey>('physics');
   const [blueprints, setBlueprints] = useState<MedicalModelTestBlueprint[]>(INITIAL_MODEL_TEST_BLUEPRINTS);
@@ -132,6 +138,7 @@ export default function MedicalModelTests({
           setSelectedBlueprint(null);
         }}
         onAddToRoutine={onAddToRoutine}
+        gameProfile={gameProfile}
       />
     );
   }

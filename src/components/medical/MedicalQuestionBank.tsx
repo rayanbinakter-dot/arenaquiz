@@ -48,7 +48,7 @@ interface MedicalQuestionBankProps {
   initialChapterName?: string;
   initialStep?: Step;
   onStartQuiz?: (subject: Subject, chapterIndex: number, mode?: 'quiz' | 'exam') => void;
-  onStartCustomTest?: (questions: Question[], title: string, mode?: 'quiz' | 'exam', timeLimitMinutes?: number | null) => void;
+  onStartCustomTest?: (questions: Question[], title: string, mode?: 'quiz' | 'exam', timeLimitMinutes?: number | null, options?: { negativeMarking?: boolean; meta?: { route: string; subjectId: string; subjectName: string; paper: string; chapterName: string } }) => void;
 }
 
 type Step = 'subject' | 'paper' | 'chapter' | 'teacher_set' | 'topic' | 'setup';
@@ -79,6 +79,7 @@ export default function MedicalQuestionBank({
   
   // Setup State
   const [selectedMode, setSelectedMode] = useState<'quiz' | 'exam'>('quiz');
+  const [negativeMarking, setNegativeMarking] = useState<boolean>(false);
   const [selectedQuestionCount, setSelectedQuestionCount] = useState<number | 'all'>('all');
   const [practiceTimeOption, setPracticeTimeOption] = useState<'no_limit' | 'custom'>('no_limit');
   const [customTimeMinutes, setCustomTimeMinutes] = useState<string>(''); // No default time!
@@ -360,7 +361,16 @@ export default function MedicalQuestionBank({
     const examTitle = `মেডিকেল ${currentSubjectConfig.name} ${paperLabel} - ${selectedChapter?.chapterName} (${modeLabel})`;
 
     if (onStartCustomTest) {
-      onStartCustomTest(quizQuestions, examTitle, selectedMode, timeLimitMinutes);
+      onStartCustomTest(quizQuestions, examTitle, selectedMode, timeLimitMinutes, {
+        negativeMarking: selectedMode === 'exam' ? negativeMarking : false,
+        meta: {
+          route: 'medical',
+          subjectId: currentSubjectConfig.id,
+          subjectName: currentSubjectConfig.name,
+          paper: selectedPaper,
+          chapterName: selectedChapter?.chapterName || ''
+        }
+      });
     }
   };
 
@@ -898,6 +908,36 @@ export default function MedicalQuestionBank({
             </button>
           </div>
         </div>
+
+        {/* 1.5 Negative Marking Option — exam mode only */}
+        {selectedMode === 'exam' && (
+          <div className="bg-slate-900/90 border border-slate-800 p-5 rounded-3xl space-y-3">
+            <label className="text-xs font-extrabold text-slate-300 block">
+              নেগেটিভ মার্কিং (মেডিকেল নিয়ম)
+            </label>
+            <button
+              type="button"
+              onClick={() => setNegativeMarking(!negativeMarking)}
+              className={`w-full p-4 rounded-2xl border text-left transition-all cursor-pointer flex items-center justify-between ${
+                negativeMarking
+                  ? 'bg-rose-500/10 border-rose-500/50 text-white'
+                  : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
+              }`}
+            >
+              <div>
+                <div className={`font-extrabold text-sm ${negativeMarking ? 'text-rose-400' : 'text-slate-300'}`}>
+                  প্রতি ভুল উত্তরে −০.২৫ নম্বর
+                </div>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  DGHS মেডিকেল ভর্তি পরীক্ষার নিয়ম অনুযায়ী স্কোর হিসাব হবে। স্কিপ করলে নম্বর কাটা হবে না।
+                </p>
+              </div>
+              <div className={`w-11 h-6 rounded-full p-0.5 transition-colors shrink-0 ${negativeMarking ? 'bg-rose-500' : 'bg-slate-700'}`}>
+                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${negativeMarking ? 'translate-x-5' : ''}`} />
+              </div>
+            </button>
+          </div>
+        )}
 
         {/* 2. Question Count Selector */}
         <div className="bg-slate-900/90 border border-slate-800 p-5 rounded-3xl space-y-3">

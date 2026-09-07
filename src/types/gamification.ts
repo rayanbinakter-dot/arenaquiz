@@ -15,11 +15,19 @@ export interface DailyGoal {
   completed: boolean;
 }
 
+export type MedicalBatch = 'hsc2028' | 'hsc2027' | 'hsc2026' | 'hsc2025';
+export type TimerStatus = 'first' | 'second';
+
 export interface StudentGameProfile {
   userId: string;
   selectedRoute?: LearningRoute;
   targetExam?: string;
   selectedSubjects: string[];
+  /** Medical pathway academic info (for merit calculation) */
+  medicalBatch?: MedicalBatch;
+  timerStatus?: TimerStatus;
+  sscGpa?: number | null;
+  hscGpa?: number | null;
   skillDivisions: Record<string, SkillDivision>;
   progressPoints: number;
   helpPoints: number;

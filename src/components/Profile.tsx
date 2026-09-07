@@ -11,6 +11,7 @@ import {
 import UserAvatar from './UserAvatar';
 import { StudentGameProfile, LearningRoute } from '../types/gamification';
 import { INITIAL_ACHIEVEMENTS, getLockedAchievementHint } from '../utils/gamification';
+import ProfileExamAnalytics from './ProfileExamAnalytics';
 
 interface ProfileProps {
   user: any;
@@ -20,6 +21,7 @@ interface ProfileProps {
   onNavigate?: (view: string) => void;
   onUpgradeClick?: () => void;
   onOpenRouteSetup?: () => void;
+  onRetryQuestions?: (questions: any[], title: string) => void;
 }
 
 interface ResultEntry {
@@ -37,7 +39,7 @@ const ROUTE_LABELS: Record<LearningRoute, string> = {
   engineering: 'ইঞ্জিনিয়ারিং ভর্তি প্রস্তুতি'
 };
 
-export default function Profile({ user, userData, gameProfile, onBack, onNavigate, onOpenRouteSetup }: ProfileProps) {
+export default function Profile({ user, userData, gameProfile, onBack, onNavigate, onOpenRouteSetup, onRetryQuestions }: ProfileProps) {
   const [results, setResults] = useState<ResultEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
@@ -264,6 +266,9 @@ export default function Profile({ user, userData, gameProfile, onBack, onNavigat
 
         </div>
       </div>
+
+      {/* 3.5 EXAM ANALYTICS: donut + trend + wrong/skipped browser + retry */}
+      <ProfileExamAnalytics user={user} onRetryQuestions={onRetryQuestions} />
 
       {/* 4. ACHIEVEMENTS SECTION */}
       <div className="space-y-4">

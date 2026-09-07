@@ -114,6 +114,8 @@ export default function Result({ summary, user, userData, onRetry, onGoHome, onB
         assessmentType: summary.assessmentType,
         score: summary.totalScore,
         totalQuestions: summary.totalQuestions,
+        percentage: summary.percentage ?? (summary.totalQuestions > 0 ? Math.round((summary.totalScore / summary.totalQuestions) * 10000) / 100 : 0),
+        negativeMarking: summary.negativeMarking ?? false,
         createdAt: serverTimestamp()
       });
 

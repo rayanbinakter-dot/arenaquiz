@@ -134,7 +134,7 @@ export const RoutineHome: React.FC<RoutineHomeProps> = ({
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-white">{plan.title}</h1>
           <p className="text-slate-400 text-sm mt-1">
-            মোট পরিকল্পিত সময়: Math.round({totalPlannedMinutes / 60}) ঘণ্টা | সম্পন্ন: Math.round({completedMinutes / 60}) ঘণ্টা
+            মোট পরিকল্পিত সময়: {Math.round(totalPlannedMinutes / 60 * 10) / 10} ঘণ্টা | সম্পন্ন: {Math.round(completedMinutes / 60 * 10) / 10} ঘণ্টা
           </p>
         </div>
 

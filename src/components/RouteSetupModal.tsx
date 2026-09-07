@@ -1,40 +1,24 @@
-import { useState } from 'react';
-import { Stethoscope, GraduationCap, Building2, Atom, Check, ArrowRight, X } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { Stethoscope, GraduationCap, Building2, Atom, Check, ArrowRight, X, Info } from 'lucide-react';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
-import { LearningRoute, StudentGameProfile } from '../types/gamification';
-import { syllabus, MEDICAL_SUBJECT_IDS } from '../data/syllabus';
+import { LearningRoute, StudentGameProfile, MedicalBatch, TimerStatus } from '../types/gamification';
+import { syllabus } from '../data/syllabus';
+import { MEDICAL_BATCH_OPTIONS, isValidGpa, SECOND_TIMER_DEDUCTION } from '../utils/medicalMerit';
 
-const MEDICAL_SUBJECTS_LIST = [
-  { id: 'bio1', name: 'জীববিজ্ঞান ১ম পত্র' },
-  { id: 'bio2', name: 'জীববিজ্ঞান ২য় পত্র' },
-  { id: 'chem1', name: 'রসায়ন ১ম পত্র' },
-  { id: 'chem2', name: 'রসায়ন ২য় পত্র' },
-  { id: 'phys1', name: 'পদার্থবিজ্ঞান ১ম পত্র' },
-  { id: 'phys2', name: 'পদার্থবিজ্ঞান ২য় পত্র' },
-  { id: 'english', name: 'ইংরেজি' },
-  { id: 'gk', name: 'সাধারণ জ্ঞান' },
-];
+// প্রতিটি pathway-র সিলেবাস/বিষয় নির্দিষ্ট — শিক্ষার্থীকে বিষয় বাছতে হয় না।
+const FIXED_ROUTE_SUBJECTS: Record<LearningRoute, string[]> = {
+  medical: ['bio1', 'bio2', 'chem1', 'chem2', 'phys1', 'phys2', 'english', 'gk'],
+  academic: ['bio1', 'bio2', 'phys1', 'phys2', 'chem1', 'chem2', 'math1', 'math2'],
+  varsity: syllabus.filter(s => !s.id.startsWith('gst_') && !s.id.startsWith('dcu_')).map(s => s.id),
+  engineering: ['math1', 'math2', 'phys1', 'phys2', 'chem1', 'chem2'],
+};
 
-const getSubjectsForRoute = (route: LearningRoute) => {
-  if (route === 'medical') {
-    return MEDICAL_SUBJECTS_LIST;
-  } else if (route === 'academic') {
-    return [
-      { id: 'bio1', name: 'জীববিজ্ঞান ১ম পত্র' },
-      { id: 'bio2', name: 'জীববিজ্ঞান ২য় পত্র' },
-      { id: 'phys1', name: 'পদার্থবিজ্ঞান ১ম পত্র' },
-      { id: 'phys2', name: 'পদার্থবিজ্ঞান ২য় পত্র' },
-      { id: 'chem1', name: 'রসায়ন ১ম পত্র' },
-      { id: 'chem2', name: 'রসায়ন ২য় পত্র' },
-      { id: 'math1', name: 'উচ্চতর গণিত ১ম পত্র' },
-      { id: 'math2', name: 'উচ্চতর গণিত ২য় পত্র' },
-    ];
-  } else {
-    return syllabus
-      .filter(s => !s.id.startsWith('gst_') && !s.id.startsWith('dcu_'))
-      .map(s => ({ id: s.id, name: s.name }));
-  }
+const FIXED_SUBJECT_LABELS: Record<LearningRoute, string[]> = {
+  medical: ['জীববিজ্ঞান', 'রসায়ন', 'পদার্থবিজ্ঞান', 'ইংরেজি', 'সাধারণ জ্ঞান'],
+  academic: ['জীববিজ্ঞান', 'পদার্থবিজ্ঞান', 'রসায়ন', 'উচ্চতর গণিত'],
+  varsity: ['পদার্থবিজ্ঞান', 'রসায়ন', 'গণিত', 'জীববিজ্ঞান', 'ইংরেজি', 'ICT'],
+  engineering: ['গণিত', 'পদার্থবিজ্ঞান', 'রসায়ন'],
 };
 
 interface RouteOption {
@@ -54,7 +38,7 @@ const ROUTE_OPTIONS: RouteOption[] = [
     id: 'academic',
     title: 'একাডেমিক প্রস্তুতি',
     subtitle: 'SSC / HSC / বোর্ডভিত্তিক অনুশীলন',
-    description: 'পাঠ্যবইয়ের অধ্যায়ভিত্তিক মৌলিক ও উচ্চতর দক্ষতা অনুশীলন।',
+    description: 'পাঠ্যবইয়ের অধ্যায়ভিত্তিক মৌলিক ও উচ্চতর দক্ষতা অনুশীলন।',
     icon: GraduationCap,
     color: 'text-indigo-400',
     bg: 'bg-indigo-500/10',
@@ -74,9 +58,9 @@ const ROUTE_OPTIONS: RouteOption[] = [
   },
   {
     id: 'varsity',
-    title: 'বিশ্ববিদ্যালয় ভর্তি',
-    subtitle: 'GST / বিশ্ববিদ্যালয় ইউনিট প্রস্তুতি',
-    description: 'ঢাকা বিশ্ববিদ্যালয় ও গুচ্ছ বিশ্ববিদ্যালয় ইউনিটের সমন্বিত অনুশীলন।',
+    title: 'বিশ্ববিদ্যালয় ভর্তি',
+    subtitle: 'GST / বিশ্ববিদ্যালয় ইউনিট প্রস্তুতি',
+    description: 'ঢাকা বিশ্ববিদ্যালয় ও গুচ্ছ বিশ্ববিদ্যালয় ইউনিটের সমন্বিত অনুশীলন।',
     icon: Building2,
     color: 'text-cyan-400',
     bg: 'bg-cyan-500/10',
@@ -85,8 +69,8 @@ const ROUTE_OPTIONS: RouteOption[] = [
   },
   {
     id: 'engineering',
-    title: 'ইঞ্জিনিয়ারিং ভর্তি',
-    subtitle: 'গণিত, পদার্থবিজ্ঞান ও রসায়নভিত্তিক প্রস্তুতি',
+    title: 'ইঞ্জিনিয়ারিং ভর্তি',
+    subtitle: 'গণিত, পদার্থবিজ্ঞান ও রসায়নভিত্তিক প্রস্তুতি',
     description: 'গাণিতিক সমস্যার নিখুঁত ধারণা ও সমস্যা সমাধানের দক্ষতা।',
     icon: Atom,
     color: 'text-amber-400',
@@ -120,12 +104,17 @@ export default function RouteSetupModal({
   const [step, setStep] = useState<1 | 2>(1);
   const [selectedRoute, setSelectedRoute] = useState<LearningRoute>(currentRoute || gameProfile?.selectedRoute || 'academic');
   const [targetExam, setTargetExam] = useState<string>(currentTargetExam || gameProfile?.targetExam || 'HSC 2026');
-  const [selectedSubjects, setSelectedSubjects] = useState<string[]>(
-    gameProfile?.selectedSubjects && gameProfile.selectedSubjects.length > 0 
-      ? gameProfile.selectedSubjects 
-      : getSubjectsForRoute(selectedRoute).map(s => s.id)
-  );
   const [saving, setSaving] = useState(false);
+  const [validationError, setValidationError] = useState<string | null>(null);
+
+  // --- Medical-specific academic info ---
+  const [medicalBatch, setMedicalBatch] = useState<MedicalBatch>(gameProfile?.medicalBatch || 'hsc2026');
+  const [timerStatus, setTimerStatus] = useState<TimerStatus>(gameProfile?.timerStatus || 'first');
+  const [sscGpaText, setSscGpaText] = useState<string>(gameProfile?.sscGpa != null ? String(gameProfile.sscGpa) : '');
+  const [hscGpaText, setHscGpaText] = useState<string>(gameProfile?.hscGpa != null ? String(gameProfile.hscGpa) : '');
+
+  const batchInfo = useMemo(() => MEDICAL_BATCH_OPTIONS.find(b => b.id === medicalBatch)!, [medicalBatch]);
+  const needsHscGpa = selectedRoute === 'medical' && batchInfo.needsHscGpa;
 
   const handleSelectRoute = (routeId: LearningRoute) => {
     setSelectedRoute(routeId);
@@ -135,17 +124,34 @@ export default function RouteSetupModal({
     }
   };
 
-  const toggleSubject = (subId: string) => {
-    if (selectedSubjects.includes(subId)) {
-      if (selectedSubjects.length > 1) {
-        setSelectedSubjects(selectedSubjects.filter(id => id !== subId));
-      }
-    } else {
-      setSelectedSubjects([...selectedSubjects, subId]);
+  const handleSelectBatch = (batchId: MedicalBatch) => {
+    setMedicalBatch(batchId);
+    const info = MEDICAL_BATCH_OPTIONS.find(b => b.id === batchId)!;
+    // HSC 2025 বাছলে স্বয়ংক্রিয়ভাবে ২য় টাইমার
+    setTimerStatus(info.defaultTimer);
+    setValidationError(null);
+  };
+
+  const validateMedical = (): boolean => {
+    const ssc = parseFloat(sscGpaText);
+    if (!sscGpaText.trim() || !isValidGpa(ssc)) {
+      setValidationError('SSC GPA আবশ্যক (১.০০ – ৫.০০ এর মধ্যে লিখুন)।');
+      return false;
     }
+    if (needsHscGpa) {
+      const hsc = parseFloat(hscGpaText);
+      if (!hscGpaText.trim() || !isValidGpa(hsc)) {
+        setValidationError('HSC 2025 ব্যাচের জন্য HSC GPA আবশ্যক (১.০০ – ৫.০০)।');
+        return false;
+      }
+    }
+    setValidationError(null);
+    return true;
   };
 
   const handleSave = async () => {
+    if (selectedRoute === 'medical' && !validateMedical()) return;
+
     if (onSave) {
       onSave(selectedRoute, targetExam.trim() || 'সাধারণ প্রস্তুতি');
       return;
@@ -153,11 +159,21 @@ export default function RouteSetupModal({
     if (!user?.uid) return;
     setSaving(true);
 
+    const fixedSubjects = FIXED_ROUTE_SUBJECTS[selectedRoute];
+
+    const medicalFields = selectedRoute === 'medical' ? {
+      medicalBatch,
+      timerStatus,
+      sscGpa: parseFloat(sscGpaText) || null,
+      hscGpa: needsHscGpa ? (parseFloat(hscGpaText) || null) : (hscGpaText.trim() ? parseFloat(hscGpaText) || null : null),
+    } : {};
+
     const updatedProfile: StudentGameProfile = {
       userId: user.uid,
       selectedRoute,
       targetExam: targetExam.trim() || 'সাধারণ প্রস্তুতি',
-      selectedSubjects,
+      selectedSubjects: fixedSubjects,
+      ...medicalFields,
       skillDivisions: gameProfile?.skillDivisions || { [selectedRoute]: 'foundation' },
       progressPoints: gameProfile?.progressPoints || 0,
       helpPoints: gameProfile?.helpPoints || 0,
@@ -183,7 +199,7 @@ export default function RouteSetupModal({
         }, { merge: true });
       }
 
-      onSaveProfile(updatedProfile);
+      onSaveProfile?.(updatedProfile);
       onClose?.();
     } catch (err) {
       console.error('Error saving game profile route:', err);
@@ -211,7 +227,7 @@ export default function RouteSetupModal({
             আপনার প্রস্তুতির পথ বেছে নিন
           </h2>
           <p className="text-xs md:text-sm text-slate-400 max-w-lg mx-auto">
-            আপনার লক্ষ্য অনুযায়ী অনুশীলন, রুটিন ও অগ্রগতি সাজানো হবে।
+            আপনার লক্ষ্য অনুযায়ী অনুশীলন, রুটিন ও অগ্রগতি সাজানো হবে।
           </p>
         </div>
 
@@ -271,52 +287,157 @@ export default function RouteSetupModal({
           </div>
         )}
 
-        {/* STEP 2: TARGET EXAM & SUBJECTS */}
+        {/* STEP 2: TARGET / BATCH INFO */}
         {step === 2 && (
           <div className="space-y-6">
-            <div>
-              <label className="block text-xs font-bold text-slate-300 mb-2">
-                টার্গেট পরীক্ষা বা ব্যাচ (ঐচ্ছিক)
-              </label>
-              <input
-                type="text"
-                value={targetExam}
-                onChange={(e) => setTargetExam(e.target.value)}
-                placeholder="যেমন: HSC 2026 বা MBBS 2026"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
-              />
-            </div>
 
-            <div>
-              <label className="block text-xs font-bold text-slate-300 mb-2">
-                অনুশীলনের বিষয়সমূহ
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {getSubjectsForRoute(selectedRoute).map((subject) => {
-                  const isChecked = selectedSubjects.includes(subject.id);
+            {/* ============ MEDICAL: BATCH + GPA + TIMER ============ */}
+            {selectedRoute === 'medical' ? (
+              <>
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 mb-2">
+                    আপনার HSC ব্যাচ বেছে নিন
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {MEDICAL_BATCH_OPTIONS.map((b) => {
+                      const isChecked = medicalBatch === b.id;
+                      return (
+                        <button
+                          key={b.id}
+                          type="button"
+                          onClick={() => handleSelectBatch(b.id)}
+                          className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+                            isChecked 
+                              ? 'bg-emerald-500/10 border-emerald-500/40 text-white ring-1 ring-emerald-500/50' 
+                              : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700'
+                          }`}
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm font-extrabold">{b.label}</span>
+                            <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${
+                              isChecked ? 'bg-emerald-600 border-emerald-500 text-white' : 'border-slate-700'
+                            }`}>
+                              {isChecked && <Check className="w-3.5 h-3.5" />}
+                            </div>
+                          </div>
+                          <span className={`text-[11px] font-semibold ${isChecked ? 'text-emerald-300' : 'text-slate-500'}`}>
+                            {b.sub}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
 
-                  return (
+                {/* GPA inputs */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-300 mb-2">
+                      SSC GPA <span className="text-rose-400">*</span>
+                    </label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      min="1"
+                      max="5"
+                      value={sscGpaText}
+                      onChange={(e) => { setSscGpaText(e.target.value); setValidationError(null); }}
+                      placeholder="যেমন: 5.00"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                    />
+                    <p className="text-[10px] text-slate-500 mt-1">মেরিট স্কোরে: SSC GPA × ১৫ (সর্বোচ্চ ৭৫)</p>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-300 mb-2">
+                      HSC GPA {needsHscGpa ? <span className="text-rose-400">*</span> : <span className="text-slate-500">(ঐচ্ছিক)</span>}
+                    </label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      min="1"
+                      max="5"
+                      value={hscGpaText}
+                      onChange={(e) => { setHscGpaText(e.target.value); setValidationError(null); }}
+                      placeholder={needsHscGpa ? 'যেমন: 5.00' : 'HSC হয়নি — ফাঁকা রাখুন'}
+                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                    />
+                    <p className="text-[10px] text-slate-500 mt-1">মেরিট স্কোরে: HSC GPA × ২৫ (সর্বোচ্চ ১২৫)</p>
+                  </div>
+                </div>
+
+                {/* Timer status */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 mb-2">
+                    টাইমার স্ট্যাটাস
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
                     <button
-                      key={subject.id}
                       type="button"
-                      onClick={() => toggleSubject(subject.id)}
-                      className={`p-3 rounded-xl border text-left flex items-center justify-between transition-all cursor-pointer ${
-                        isChecked 
-                          ? 'bg-indigo-500/10 border-indigo-500/40 text-white' 
+                      onClick={() => setTimerStatus('first')}
+                      className={`p-3 rounded-xl border text-center text-xs font-extrabold transition-all cursor-pointer ${
+                        timerStatus === 'first'
+                          ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-300 ring-1 ring-emerald-500/50'
                           : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200'
                       }`}
                     >
-                      <span className="text-xs font-bold">{subject.name}</span>
-                      <div className={`w-5 h-5 rounded-md border flex items-center justify-center ${
-                        isChecked ? 'bg-indigo-600 border-indigo-500 text-white' : 'border-slate-700'
-                      }`}>
-                        {isChecked && <Check className="w-3.5 h-3.5" />}
-                      </div>
+                      ১ম টাইমার
+                      <span className="block text-[10px] font-semibold text-slate-500 mt-0.5">কোনো মার্ক কাটা হবে না</span>
                     </button>
-                  );
-                })}
+                    <button
+                      type="button"
+                      onClick={() => setTimerStatus('second')}
+                      className={`p-3 rounded-xl border text-center text-xs font-extrabold transition-all cursor-pointer ${
+                        timerStatus === 'second'
+                          ? 'bg-amber-500/10 border-amber-500/40 text-amber-300 ring-1 ring-amber-500/50'
+                          : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200'
+                      }`}
+                    >
+                      ২য় টাইমার
+                      <span className="block text-[10px] font-semibold text-slate-500 mt-0.5">মোট স্কোর থেকে −{SECOND_TIMER_DEDUCTION} মার্ক</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Fixed syllabus notice */}
+                <div className="flex items-start gap-2.5 bg-slate-950/60 border border-slate-800 rounded-xl p-3.5">
+                  <Info className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <p className="text-[11px] text-slate-400 leading-relaxed">
+                    <span className="text-slate-200 font-bold">মেডিকেল ভর্তির সিলেবাস নির্দিষ্ট:</span>{' '}
+                    {FIXED_SUBJECT_LABELS.medical.join(' • ')} — DGHS মানবণ্টন অনুযায়ী (জীববিজ্ঞান ৩০, রসায়ন ২৫, পদার্থবিজ্ঞান ২০, ইংরেজি ১৫, সাধারণ জ্ঞান ১০)। আলাদা করে বিষয় বাছাইয়ের প্রয়োজন নেই।
+                  </p>
+                </div>
+              </>
+            ) : (
+              /* ============ OTHER ROUTES: TARGET EXAM ONLY ============ */
+              <>
+                <div>
+                  <label className="block text-xs font-bold text-slate-300 mb-2">
+                    টার্গেট পরীক্ষা বা ব্যাচ (ঐচ্ছিক)
+                  </label>
+                  <input
+                    type="text"
+                    value={targetExam}
+                    onChange={(e) => setTargetExam(e.target.value)}
+                    placeholder="যেমন: HSC 2026 বা BUET 2026"
+                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                  />
+                </div>
+
+                <div className="flex items-start gap-2.5 bg-slate-950/60 border border-slate-800 rounded-xl p-3.5">
+                  <Info className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                  <p className="text-[11px] text-slate-400 leading-relaxed">
+                    <span className="text-slate-200 font-bold">এই পথের সিলেবাস নির্দিষ্ট:</span>{' '}
+                    {FIXED_SUBJECT_LABELS[selectedRoute].join(' • ')} — সব বিষয় স্বয়ংক্রিয়ভাবে যুক্ত থাকবে।
+                  </p>
+                </div>
+              </>
+            )}
+
+            {validationError && (
+              <div className="bg-rose-500/10 border border-rose-500/30 rounded-xl px-4 py-3 text-xs font-bold text-rose-300">
+                {validationError}
               </div>
-            </div>
+            )}
 
             <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
               <button

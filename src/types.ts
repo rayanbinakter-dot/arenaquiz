@@ -71,6 +71,10 @@ export interface QuizSummary {
   wrongCount: number;
   skippedCount: number;
   totalScore: number;
+  /** Whether negative marking (−0.25/wrong) was applied to totalScore */
+  negativeMarking?: boolean;
+  /** Score normalized to a 100% basis (always comparable across exams) */
+  percentage?: number;
   results: QuizResult[];
 }
 
