@@ -184,7 +184,7 @@ export default function Profile({ user, userData, gameProfile, onBack, onNavigat
           <div className="space-y-1">
             <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-indigo-400">আপনার প্রস্তুতির পথ</span>
             <h3 className="text-lg font-extrabold text-white">
-              {selectedRoute ? `${targetExam && targetExam !== 'নির্ধারিত হয়নি' ? targetExam + ' ' : ''}${ROUTE_LABELS[selectedRoute as LearningRoute]}` : 'প্রস্তুতির পথ নির্বাচন করা হয়নি'}
+              {selectedRoute ? (targetExam && targetExam !== 'নির্ধারিত হয়নি' ? targetExam : ROUTE_LABELS[selectedRoute as LearningRoute]) : 'প্রস্তুতির পথ নির্বাচন করা হয়নি'}
             </h3>
             <p className="text-xs text-slate-400 font-medium">
               লক্ষ্য: <span className="text-slate-200 font-bold">{selectedRoute ? ROUTE_LABELS[selectedRoute as LearningRoute] : targetExam}</span>
