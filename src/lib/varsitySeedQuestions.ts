@@ -11,6 +11,7 @@ import { dcuChemPeriodicPropertiesData } from '../data/questions_dcu_chem_period
 import { dcuChemEnvironmentalData } from '../data/questions_dcu_chem_environmental';
 import { dcuMathExam1Data } from '../data/questions_dcu_math_exam1';
 import { dcuMathStraightLineData } from '../data/questions_dcu_math_straight_line';
+import { dcuMathExam3Data } from '../data/questions_dcu_math_exam3';
 import { gstMathExam1Data } from '../data/questions_gst_math_exam1';
 import { gstMathExam2Data } from '../data/questions_gst_math_exam2';
 import { ictChap3Data } from '../data/questions_ict_chap3';
@@ -77,6 +78,7 @@ export function getLocalVarsityQuestions(): Question[] {
   // Math DU
   addQuestions(dcuMathStraightLineData, 'higher_math', 'first', 'সরলরেখা', 'du_ka', 'var_math1_ch3');
   addQuestions(dcuMathExam1Data, 'higher_math', 'first', 'ম্যাট্রিক্স ও নির্ণায়ক', 'du_ka', 'var_math1_ch1');
+  addQuestions(dcuMathExam3Data, 'higher_math', 'first', 'বৃত্ত', 'du_ka', 'var_math1_ch4');
 
   // Math GST
   addQuestions(gstMathExam1Data, 'higher_math', 'first', 'অন্তরীকরণ', 'gst_a', 'var_math1_ch9');
