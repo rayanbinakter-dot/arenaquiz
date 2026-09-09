@@ -34,6 +34,7 @@ const hazariQuestionItems: QuestionItem[] = medChem1Chap4HazariRawQuestions.map(
     topicName: q.topic,
     sourceSet: 'hazari',
     sourceSetLabel: 'হাজারী স্যার',
+    sourceQuestionNumber: q.id,
     questionType: 'single_choice',
     stem: q.question_text,
     options,

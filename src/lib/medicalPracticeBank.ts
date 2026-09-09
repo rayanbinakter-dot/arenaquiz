@@ -4,6 +4,7 @@ import {
   TeacherSourceSet, 
   TeacherSourceSetLabel 
 } from '../types/questionBank';
+import { getStableQuestionKey } from './questionMediaOverrides';
 import { Question } from '../types';
 import { syllabus as staticSyllabus } from '../data/syllabus';
 import { phy1Chap4RawQuestions } from '../data/questions_phy1_chap4_newtonian';
@@ -1435,6 +1436,24 @@ export function convertToQuizQuestions(items: QuestionItem[]): Question[] {
     const imageUrl = firstMedia?.url || q.stemImageUrl;
     const altText = firstMedia?.altText;
 
+    // প্রশ্নের পূর্ণ পরিচয় (route/subject/chapter/teacher/নম্বর) সাথে রাখা হয় —
+    // এতে Quiz-এ ছবির override lookup ওই নির্দিষ্ট প্রশ্নেই মেলে,
+    // অন্য অধ্যায়ের একই নম্বরের প্রশ্নের ছবি আর leak করে না।
+    const mediaKey = getStableQuestionKey({
+      id: q.id,
+      route: q.route,
+      subject: (q as any).subject,
+      paper: q.paper,
+      chapterId: q.chapterId,
+      chapterName: q.chapterName,
+      topicId: (q as any).topicId,
+      topicName: q.topicName,
+      teacher: (q as any).teacher,
+      sourceSet: q.sourceSet,
+      sourceQuestionNumber: q.sourceQuestionNumber,
+      stem: q.stem
+    });
+
     return {
       id: idx + 1,
       topic: q.topicName || q.chapterName || '',
@@ -1448,7 +1467,18 @@ export function convertToQuizQuestions(items: QuestionItem[]): Question[] {
       stemImageUrl: imageUrl,
       media: q.media,
       hasImage: Boolean(q.hasImage || imageUrl),
-      altText
-    };
+      altText,
+      // media override resolution context
+      questionKey: mediaKey,
+      route: q.route,
+      subjectId: (q as any).subjectId,
+      subject: (q as any).subject,
+      paper: q.paper,
+      chapterId: q.chapterId,
+      chapterName: q.chapterName,
+      topicName: q.topicName,
+      sourceSet: q.sourceSet,
+      sourceQuestionNumber: q.sourceQuestionNumber
+    } as any;
   });
 }

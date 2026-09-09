@@ -235,10 +235,10 @@ export function getQuestionKeyAliases(q: any): string[] {
     aliases.add(legacyCanonical);
   } catch { /* ignore */ }
 
-  if (q.id !== undefined) aliases.add(String(q.id).toLowerCase());
-  if (q.sourceQuestionNumber !== undefined) aliases.add(String(q.sourceQuestionNumber).toLowerCase());
-  if (q.questionKey) aliases.add(q.questionKey.toLowerCase());
-  if (q.stableKey) aliases.add(q.stableKey.toLowerCase());
+  // NOTE: খালি সংখ্যার alias (যেমন "2") সম্পূর্ণ নিষিদ্ধ — এগুলোর কারণে
+  // এক অধ্যায়ের প্রশ্ন #2 অন্য অধ্যায়ের প্রশ্ন #2-এর ছবি পেয়ে যেত (cross-chapter bleed)।
+  if (q.questionKey) aliases.add(String(q.questionKey).toLowerCase());
+  if (q.stableKey) aliases.add(String(q.stableKey).toLowerCase());
 
   // Legacy format: route__subject__paper__chapter__topic__teacher__id
   const route = slugifyText(q.route || 'academic') || 'academic';
@@ -254,13 +254,13 @@ export function getQuestionKeyAliases(q: any): string[] {
     .toLowerCase();
   aliases.add(legacyKey);
 
-  // Numerical unpadded alias (e.g. academic_ict_ch3_type02_q19)
+  // Numerical unpadded alias (e.g. academic_ict_ch3_type02_q19) —
+  // কেবল যখন প্রশ্নে সত্যিকারের chapter context আছে (default 'ch_general' নয়)
   const rawNum = String(q.sourceQuestionNumber ?? q.id ?? '').replace(/[^\d]/g, '');
-  if (rawNum) {
-    aliases.add(`${route}_${subject}_${normalizeChapterSlug(q.chapterName)}_type02_q${rawNum}`);
-    aliases.add(`${route}_${subject}_${normalizeChapterSlug(q.chapterName)}_q${rawNum}`);
-    aliases.add(`${subject}_${normalizeChapterSlug(q.chapterName)}_q${rawNum}`);
-    aliases.add(`${subject}_${normalizeChapterSlug(q.chapterName)}_${rawNum}`);
+  const chapSlugForAlias = normalizeChapterSlug(q.chapterId || q.chapterName);
+  if (rawNum && chapSlugForAlias !== 'ch_general' && (q.chapterId || q.chapterName)) {
+    aliases.add(`${route}_${subject}_${chapSlugForAlias}_type02_q${rawNum}`);
+    aliases.add(`${route}_${subject}_${chapSlugForAlias}_q${rawNum}`);
   }
 
   return Array.from(aliases);
@@ -285,7 +285,9 @@ export async function fetchQuestionMediaOverrides(forceRefresh: boolean = false)
         // সেগুলোর আসল URL Firestore থেকে আসবে
         Object.entries(parsed).forEach(([k, v]: [string, any]) => {
           const hasPlaceholderUrl = (v?.media || []).some((m: any) => m?.url === '__IN_FIRESTORE__');
-          if (!hasPlaceholderUrl) localCache[k] = v;
+          // দূষিত ছোট/খালি-নম্বর key (পুরনো বাগের alias mirror) সম্পূর্ণ উপেক্ষা করা হয়
+          const isPollutedKey = /^\d+$/.test(k) || k.length < 12 || !k.includes('_');
+          if (!hasPlaceholderUrl && !isPollutedKey) localCache[k] = v;
         });
       }
     } catch (e) {
@@ -298,6 +300,8 @@ export async function fetchQuestionMediaOverrides(forceRefresh: boolean = false)
     const firestoreData: Record<string, QuestionMediaOverrideRecord> = {};
     snap.docs.forEach((docSnap) => {
       const data = docSnap.data() as QuestionMediaOverrideRecord;
+      // খালি-নম্বর id-র দূষিত ডকুমেন্ট উপেক্ষা (পুরনো বাগে তৈরি হয়ে থাকলে)
+      if (/^\d+$/.test(docSnap.id)) return;
       firestoreData[docSnap.id] = {
         ...data,
         stableKey: data.stableKey || docSnap.id,
@@ -390,11 +394,13 @@ export async function saveQuestionMediaOverride(
   }
   memoryOverridesCache[stableKey] = record;
 
-  // Also mirror aliases in memory cache for instant lookup
+  // Also mirror aliases in memory cache for instant lookup —
+  // শুধুমাত্র contextual alias (route/subject/chapter যুক্ত) mirror হয়;
+  // খালি নম্বর বা ছোট key mirror করলে অন্য অধ্যায়ের প্রশ্নে ছবি leak করত।
   if (metadata) {
     const aliases = getQuestionKeyAliases(metadata);
     aliases.forEach((alias) => {
-      if (alias && memoryOverridesCache) {
+      if (alias && alias.includes('_') && alias.length >= 12 && memoryOverridesCache) {
         memoryOverridesCache[alias] = record;
       }
     });
