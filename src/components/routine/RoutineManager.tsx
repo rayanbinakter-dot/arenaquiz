@@ -4,6 +4,7 @@ import { RoutineHome } from './RoutineHome';
 import { RoutineSetupWizard } from './RoutineSetupWizard';
 import { WeeklyRoutine } from './WeeklyRoutine';
 import { TopicAnalysis } from './TopicAnalysis';
+import TopicGalaxy from './TopicGalaxy';
 import { FocusSession } from './FocusSession';
 import { RoutineInsights } from './RoutineInsights';
 import { PlanFeasibilityReport } from './PlanFeasibilityReport';
@@ -16,15 +17,23 @@ interface RoutineManagerProps {
   autoOpenAddTask?: boolean;
   autoFocusToday?: boolean;
   onNavigateToQuiz?: (topicId?: string) => void;
+  userData?: any;
+  gameProfile?: any;
+  onCoinsChanged?: (newCoins: number) => void;
+  onStartGalaxyMission?: (chapterName: string, topicName: string) => void;
 }
 
-export type RoutineTab = 'home' | 'setup' | 'weekly' | 'syllabus' | 'focus' | 'insights' | 'feasibility';
+export type RoutineTab = 'home' | 'setup' | 'weekly' | 'syllabus' | 'galaxy' | 'focus' | 'insights' | 'feasibility';
 
 export const RoutineManager: React.FC<RoutineManagerProps> = ({
   userId,
   autoOpenAddTask,
   autoFocusToday,
   onNavigateToQuiz,
+  userData,
+  gameProfile,
+  onCoinsChanged,
+  onStartGalaxyMission,
 }) => {
   const [activeTab, setActiveTab] = useState<RoutineTab>('home');
   const [plan, setPlan] = useState<StudyPlan | null>(null);
@@ -122,6 +131,7 @@ export const RoutineManager: React.FC<RoutineManagerProps> = ({
           { id: 'home', label: 'হোম ড্যাশবোর্ড' },
           { id: 'weekly', label: 'সাপ্তাহিক রুটিন' },
           { id: 'syllabus', label: 'টপিক বিশ্লেষণ' },
+          { id: 'galaxy', label: '🌌 টপিক গ্যালাক্সি' },
           { id: 'insights', label: 'ইনসাইটস' },
           { id: 'feasibility', label: 'বাস্তবসম্মত রিপোর্ট' },
         ].map((t) => (
@@ -177,6 +187,21 @@ export const RoutineManager: React.FC<RoutineManagerProps> = ({
             if (onNavigateToQuiz) onNavigateToQuiz(topicId);
           }}
         />
+      )}
+
+      {activeTab === 'galaxy' && (
+        <div className="max-w-6xl mx-auto px-4">
+          <TopicGalaxy
+            userId={userId}
+            userData={userData}
+            gameProfile={gameProfile}
+            onCoinsChanged={onCoinsChanged}
+            onStartMission={(chapterName, topicName) => {
+              if (onStartGalaxyMission) onStartGalaxyMission(chapterName, topicName);
+            }}
+            onAddToRoutine={() => setActiveTab('home')}
+          />
+        </div>
       )}
 
       {activeTab === 'focus' && activeFocusSession && (

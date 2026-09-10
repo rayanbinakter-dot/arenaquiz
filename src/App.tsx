@@ -19,6 +19,7 @@ import ProModal from './components/ProModal';
 import Shop from './components/Shop';
 import CategoryPage from './components/CategoryPage';
 import { RoutineManager } from './components/routine/RoutineManager';
+import { INITIAL_MEDICAL_PRACTICE_QUESTIONS, convertToQuizQuestions } from './lib/medicalPracticeBank';
 import { syllabus as staticSyllabus } from './data/syllabus';
 import { sampleChapterData } from './data/questions';
 import { bio1Chap1Data } from './data/questions_bio1_chap1';
@@ -1556,6 +1557,41 @@ export default function App() {
             autoFocusToday={routineNavOptions.focusToday}
             onNavigateToQuiz={(topicId) => {
               setCurrentView('category_academic');
+            }}
+            userData={userData}
+            gameProfile={gameProfile}
+            onCoinsChanged={(newCoins) => {
+              setUserData((prev: any) => ({ ...(prev || {}), coins: newCoins }));
+            }}
+            onStartGalaxyMission={(chapterName, topicName) => {
+              // গ্যালাক্সি মিশন: ঐ অধ্যায়/টপিকের ১০টি প্রশ্নে দ্রুত exam
+              const normalize = (s: string) => (s || '').normalize('NFC').trim();
+              const pool = INITIAL_MEDICAL_PRACTICE_QUESTIONS.filter((q: any) =>
+                normalize(q.chapterName) === normalize(chapterName) &&
+                (!topicName || normalize(q.topicName) === normalize(topicName))
+              );
+              const fallbackPool = pool.length >= 5 ? pool : INITIAL_MEDICAL_PRACTICE_QUESTIONS.filter((q: any) =>
+                normalize(q.chapterName) === normalize(chapterName)
+              );
+              if (fallbackPool.length === 0) {
+                alert('এই অধ্যায়ের প্রশ্ন এখনো যোগ হয়নি — শীঘ্রই আসছে!');
+                return;
+              }
+              const shuffled = [...fallbackPool].sort(() => Math.random() - 0.5).slice(0, 10);
+              const quizQs = convertToQuizQuestions(shuffled as any);
+              setCustomExamQuestions(quizQs);
+              setCustomExamTitle(`🌌 গ্যালাক্সি মিশন: ${chapterName}${topicName ? ' — ' + topicName : ''}`);
+              setQuizMode('exam');
+              setNegativeMarkingEnabled(false);
+              setExamMeta({
+                route: gameProfile?.selectedRoute || 'medical',
+                subjectId: '',
+                subjectName: '',
+                paper: '',
+                chapterName
+              });
+              setExamTimeLimitMinutes(8);
+              setCurrentView('quiz');
             }}
           />
         )}
