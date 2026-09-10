@@ -4,7 +4,7 @@ import { RoutineHome } from './RoutineHome';
 import { RoutineSetupWizard } from './RoutineSetupWizard';
 import { WeeklyRoutine } from './WeeklyRoutine';
 import { TopicAnalysis } from './TopicAnalysis';
-import TopicGalaxy from './TopicGalaxy';
+import PerformanceCommandCenter from './PerformanceCommandCenter';
 import { FocusSession } from './FocusSession';
 import { RoutineInsights } from './RoutineInsights';
 import { PlanFeasibilityReport } from './PlanFeasibilityReport';
@@ -131,7 +131,7 @@ export const RoutineManager: React.FC<RoutineManagerProps> = ({
           { id: 'home', label: 'হোম ড্যাশবোর্ড' },
           { id: 'weekly', label: 'সাপ্তাহিক রুটিন' },
           { id: 'syllabus', label: 'টপিক বিশ্লেষণ' },
-          { id: 'galaxy', label: '🌌 টপিক গ্যালাক্সি' },
+          { id: 'galaxy', label: '📊 কমান্ড সেন্টার' },
           { id: 'insights', label: 'ইনসাইটস' },
           { id: 'feasibility', label: 'বাস্তবসম্মত রিপোর্ট' },
         ].map((t) => (
@@ -191,7 +191,7 @@ export const RoutineManager: React.FC<RoutineManagerProps> = ({
 
       {activeTab === 'galaxy' && (
         <div className="max-w-6xl mx-auto px-4">
-          <TopicGalaxy
+          <PerformanceCommandCenter
             userId={userId}
             userData={userData}
             gameProfile={gameProfile}
